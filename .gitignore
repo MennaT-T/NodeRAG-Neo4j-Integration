@@ -1,0 +1,115 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.pyc
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+noderagvenv*/
+
+# IDE and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.vscode-server/
+
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# Logs and Debug Files
+*.log
+error.log
+logs/
+
+# NodeRAG Cache and Generated Files
+POC_Data/documents/cache/
+POC_Data/documents/info/
+POC_Data/documents/document_hash.json
+cache/
+*.pkl
+*.bin
+*.parquet
+*.jsonl
+
+# Large Binary Files
+*.zip
+*.tar.gz
+*.rar
+POC_Data.zip
+
+# API Keys and Secrets (IMPORTANT!)
+*config.yaml
+!*config.yaml.example
+.env
+.env.local
+.env.production
+*.key
+*.pem
+
+# Neo4j Data (if running locally)
+neo4j_data/
+.neo4j/
+
+# Test and Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+.tox/
+
+# Distribution / Packaging
+dist/
+build/
+*.egg-info/
+*.egg
+.eggs/
+
+# Documentation Build
+docs/_build/
+site/
+_site/
+
+# Temporary Files
+*.tmp
+*.bak
+*.swp
+~*
+.temp/
+temp/
+
+# HTML Visualization Output
+POC_Data/documents/index.html
+index.html
+
+# Database Files
+*.db
+*.sqlite
+*.sqlite3
+
+# Backup Files
+*_backup/
+*.backup
+backup/
+
+# Documentation Temp Files
+docs/
+
+# Old/Duplicate Folders
+NodeRAG-Customized/
+
+# Input/Output Data (optional - uncomment if you don't want to share data)
+# POC_Data/documents/input/
+# POC_Data/documents/input_backup/

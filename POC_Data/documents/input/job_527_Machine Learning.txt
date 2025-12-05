@@ -1,0 +1,78 @@
+Job Title: Machine Learning
+
+Job Description:
+Job Description*
+We are looking for a Machine Learning (ML) Engineer to help us create artificial intelligence/machine learning products. Machine Learning Engineer responsibilities include data modelling and evaluation, applying ML algorithms and Libraries to business use cases, build ML models and evaluate them. You also need knowledge and experience of software engineering and design.
+Roles and Responsibilities*
+· Research, design and frame machine learning systems
+
+· Understand business objectives and apply appropriate ML techniques to solve business problems.
+
+· Select appropriate datasets and data representation methods
+
+· Perform machine learning model tests and experiments
+
+· Perform statistical analysis and fine-tuning using test results
+
+· Extend existing ML libraries and frameworks
+
+· Verifying data quality, and/or ensuring it via data cleaning
+
+· Collaborate with the senior team on opportunities of implementing/using AI/ML products.
+
+· Manage the infrastructure and data pipelines needed to bring code to production
+
+· Select and implement right machine learning algorithms
+
+· Select the right training Data Sets for ML model development
+
+· Provide support to engineers and product managers in implementing machine learning in the product.
+Skills*
+· Proven experience as a Machine Learning Engineer or similar role
+
+· Should have proficiency in programming languages like Python, R and JavaScript for developing ML products.
+
+· Should have grasp on different ML libraries / Services / APIs like Microsoft Cognitive Services /AWS AI and ML services/Google Cognitive Services.
+
+· Ability to choose appropriate tool based on requirement
+
+· Ability to compose different ML components and create new service/product.
+
+· Understanding of data structures, data modelling and software architecture
+
+· Strong knowledge of Machine Learning frameworks such as Tensorflow & Keras or PyTorch and libraries like Scikit-learn.
+
+· Word embedding such as Word2Vec & Sentence2Vec, Wav2Vec
+
+· Experience with Machine Learning techniques for supervised & unsupervised learning, e.g., CNN's, DNN's & RNN's
+
+· Knowledge of relational databases (e. g. MS SQL Server, MySQL) and NoSQL databases (e. g. MongoDB)
+
+· Knowledge in C#, ASP.Net and Angular Framework
+
+· Experience working on Agile Methodologies.
+
+· Knowledge on REST APIs & JSON
+
+· Strong in fundamentals of Natural Language Processing, Machine Learning algorithms, models, and principles.
+
+· Ability to work independently as well as on a team
+
+· Nice to know training and tuning topic modeling algorithms like LDA and NMF.
+Experience and Education*
+
+
+· 3+ years of software development and machine learning implementation experience
+
+Job Type: Full-time
+
+Schedule:
+Day shift
+Education:
+Bachelor's (Preferred)
+Experience:
+Machine learning: 3 years (Required)
+Industry:
+IT Operations & Helpdesk
+Work Remotely:
+No

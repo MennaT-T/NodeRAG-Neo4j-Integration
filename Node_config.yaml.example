@@ -1,0 +1,66 @@
+#==============================================================================
+# AI Model Configuration
+#==============================================================================
+model_config:
+  service_provider: gemini            # AI service provider (e.g., openai, gemini)
+  model_name: gemini-2.5-flash       # Model name for text generation
+  api_keys: YOUR_GEMINI_API_KEY_HERE # Get from: https://aistudio.google.com/app/apikey
+  temperature: 0                      # Temperature parameter for text generation
+  max_tokens: 10000                   # Maximum tokens to generate
+  rate_limit: 1                       # Max concurrent requests (1 = sequential)
+  request_delay: 10                   # Seconds to wait between each request (free tier: 10s)
+
+embedding_config:
+  service_provider: gemini_embedding  # Embedding service provider
+  embedding_model_name: models/text-embedding-004  # Model name for embeddings
+  api_keys: YOUR_GEMINI_API_KEY_HERE # Same API key as above
+  rate_limit: 1                       # Max concurrent requests (1 = sequential)
+  request_delay: 10                   # Seconds to wait between each request
+
+
+#==============================================================================
+# Document Processing Configuration
+#==============================================================================
+config:
+  # Basic Settings
+  main_folder: 'POC_Data/documents'  # Root folder for document processing
+  language: English                   # Document processing language
+  docu_type: mixed                    # Document type (mixed, pdf, txt, etc.)
+  
+  # Chunking Settings
+  chunk_size: 1048                    # Size of text chunks for processing
+  embedding_batch_size: 50            # Batch size for embedding processing
+  
+  # UI Settings
+  use_tqdm: False                     # Enable/disable progress bars
+  use_rich: True                      # Enable/disable rich text formatting
+  
+  # HNSW Index Settings
+  space: l2                          # Distance metric for HNSW (l2, cosine)
+  dim: 768                           # Embedding dimension (768 for text-embedding-004)
+  m: 50                              # Number of connections per layer in HNSW
+  ef: 200                            # Size of dynamic candidate list in HNSW
+  m0: ~                              # Number of bi-directional links in HNSW
+  
+  # Summary Settings
+  Hcluster_size: 39                  # Number of clusters for high-level element matching
+  
+  # Search Server Settings
+  url: '127.0.0.1'                   # Server URL for search service
+  port: 5000                         # Server port number
+  unbalance_adjust: True             # Enable adjustment for unbalanced data
+  cross_node: 10                     # Number of cross nodes to return
+  Enode: 10                          # Number of entity nodes to return
+  Rnode: 30                          # Number of relationship nodes to return
+  Hnode: 10                          # Number of high-level nodes to return
+  HNSW_results: 10                   # Number of HNSW search results 
+  similarity_weight: 1               # Weight for similarity in personalized PageRank
+  accuracy_weight: 1                 # Weight for accuracy in personalized PageRank
+  ppr_alpha: 0.5                     # Damping factor for personalized PageRank
+  ppr_max_iter: 2                    # Maximum iterations for personalized PageRank
+  
+  # Neo4j Storage Settings (Optional)
+  use_neo4j_storage: false           # Save graph to Neo4j instead of pickle
+  neo4j_uri: 'bolt://localhost:7687' # Neo4j connection URI
+  neo4j_user: 'neo4j'                # Neo4j username
+  neo4j_password: 'autoapply123'     # Neo4j password (change in production!)

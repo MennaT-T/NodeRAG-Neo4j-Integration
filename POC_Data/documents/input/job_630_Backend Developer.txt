@@ -1,0 +1,20 @@
+Job Title: Backend Developer
+
+Job Description:
+Bachelor’s Degree in Information Technology or Computer Science
+Minimum 4 years of related work experience in technology
+A minimum of 2 years commercial experience in a node JS developer role
+Basic understanding of front-end technologies, such as HTML5, CSS3, AngularJS etc.- Understanding of networking protocols.- Understanding accessibility and security compliance.- User authentication and authorization between multiple systems, servers, and environments.- Integration of multiple data sources and databases into one system.- Understanding fundamental design principles behind a scalable application.- Understanding differences between multiple delivery platforms, like mobile vs. desktop, and optimizing output to match the specific platform.- Creating database schemas that represent and support business processes.- Implementing automated testing platforms and unit tests.- Proficient understanding of code versioning tools, such as Git, SVN etc.- Hand-on experience in working with AWS (S3, CloudFront, ELB, EC2 etc), integrating it with Node.js
+Job Type: Full-time
+Salary: ₹360,000.00 - ₹600,000.00 per year
+Schedule:
+Day shift
+Monday to Friday
+Weekends
+Experience:
+BACKEND DEVELOPMENT: 2 years (Required)
+work: 2 years (Preferred)
+total work: 2 years (Required)
+Angular / Node JS: 2 years (Required)
+Education:
+Bachelor's (Preferred)

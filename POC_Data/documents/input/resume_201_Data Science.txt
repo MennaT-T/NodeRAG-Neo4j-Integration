@@ -1,0 +1,47 @@
+Rania Ali
+Data Scientist
+rania.ali@email.com |+20 100 123 4567 |/githubgithub.com/rania-ali |/linkedinlinkedin.com/in/rania-ali |raniaali.com
+Education
+Cairo University
+B.Sc. in Computer Science 2014 - 2018, Giza, Egypt
+Skills
+Programming Languages: Python (pandas, numpy, scipy, scikit-learn, matplotlib), SQL, Java,
+JavaScript/jQuery
+Machine Learning: Regression, SVM, Naïve Bayes, KNN, Random Forest, Decision Trees, Boosting
+techniques, Cluster Analysis, Word Embedding, Sentiment Analysis, Natural Language Processing,
+Dimensionality reduction, Topic Modelling (LDA, NMF), PCA & Neural Nets
+Database & Visualizations: MySQL, SQLServer, Cassandra, HBase, ElasticSearch, D3.js, DC.js, Plotly,
+Kibana, Matplotlib, ggplot, Tableau
+Others: Regular Expression, HTML, CSS, Angular 6, Logstash, Kafka, Python Flask, Git, Docker, Computer
+Vision (OpenCV), Deep Learning understanding
+Experience
+Data Science Assurance Associate Full-time - On-site
+Ernst & Young LLP May 2018 - May 2020, Cairo, Egypt
+•Technology Assisted Review (TAR):
+•Core member in developing an automated review platform, implementing predictive coding and topic modelling to
+reduce labor costs and review time in e-discovery.
+•Conducted research and development for classification models, predictive analysis, and mining of text data; moni-
+tored output precision for the entire tool.
+•Developed classifier models to identify “red flags” and fraud-related issues in evidence, adhering to EY standards.
+•Multiple Data Science and Analytic Projects (USA Clients):
+•Text Analytics - Motor Vehicle Customer Review Data:
+•Performed sentiment (Positive, Negative & Neutral) and time series analysis on one year’s customer feedback data
+across four categories.
+•Created heat maps of terms by survey category based on word frequency and plotted Word Clouds for posi-
+tive/negative words.
+•Developed customized Tableau dashboards for effective reporting and visualizations.
+•Chatbot Development:
+•Developed a user-friendly chatbot for an internal product, handling simple questions, providing overviews via a QA
+platform, and offering recommendation responses.
+•Engineered intelligence to build question pipelines based on user requirements and suggested relevant questions.
+•Information Governance:
+•Scanned and parsed data from multiple file formats, extracted metadata, pushed results for ElasticSearch indexing,
+and created customized Kibana dashboards.
+•Performed ROT (Redundant, Outdated, or Trivial) Analysis to identify content for optimized data storage.
+•Conducted full-text search analysis on ElasticSearch to tag Personally Identifiable Information (PII) frequently tar-
+geted during cyber-attacks.
+•Fraud Analytic Platform (FAP):
+•Contributed to FAP , a Fraud Analytics and investigative platform with an inbuilt case manager and suite of analytics
+for various ERP systems.
+•Enabled clients to interrogate accounting systems for anomalies which can be indicators of fraud by running ad-
+vanced analytics.

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "query": "What programming languages does the candidate know?",
+    "category": "technical_skills"
+  },
+  {
+    "id": 2,
+    "query": "Does the candidate have machine learning experience?",
+    "category": "experience"
+  },
+  {
+    "id": 3,
+    "query": "What projects has the candidate worked on?",
+    "category": "projects"
+  },
+  {
+    "id": 4,
+    "query": "What is the candidate's educational background?",
+    "category": "education"
+  },
+  {
+    "id": 5,
+    "query": "What are the main responsibilities in a Software Developer role?",
+    "category": "job_requirements"
+  }
+]
