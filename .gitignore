@@ -72,7 +72,6 @@ htmlcov/
 
 # Distribution / Packaging
 dist/
-build/
 *.egg-info/
 *.egg
 .eggs/
