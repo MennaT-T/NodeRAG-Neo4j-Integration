@@ -24,8 +24,9 @@ class NodeSearch():
         self.hnsw = self.load_hnsw()
         self.mapper = self.load_mapper()
         self.G = self.load_graph()
-        self.id_to_type = {id:self.G.nodes[id].get('type') for id in self.G.nodes}
         self.id_to_text,self.accurate_id_to_text = self.mapper.generate_id_to_text(['entity','high_level_element_title'])
+        # Only create id_to_type for nodes that exist in id_to_text to ensure consistency
+        self.id_to_type = {id:self.G.nodes[id].get('type') for id in self.G.nodes if id in self.id_to_text}
         self.sparse_PPR = sparse_PPR(self.G)
         self._semantic_units = None
             
@@ -127,8 +128,25 @@ class NodeSearch():
         for entity in entities:
             # Split entity into words and create a pattern to match the whole phrase
             words = entity.lower().split()
+            
+            # Try exact phrase match first
             pattern = re.compile(r'\b' + r'\s+'.join(map(re.escape, words)) + r'\b')
             result = [id for id, text in self.accurate_id_to_text.items() if pattern.search(text.lower())]
+            
+            # If no exact match and it's a name-like entity (capitalized), try partial match
+            if not result and len(words) > 0 and entity[0].isupper():
+                # Match if ANY of the words appear as whole words in the text
+                partial_results = []
+                for word in words:
+                    if len(word) > 2:  # Only search for words longer than 2 chars
+                        word_pattern = re.compile(r'\b' + re.escape(word.lower()) + r'\b')
+                        word_matches = [id for id, text in self.accurate_id_to_text.items() 
+                                      if word_pattern.search(text.lower())]
+                        partial_results.extend(word_matches)
+                
+                # Remove duplicates while preserving order
+                result = list(dict.fromkeys(partial_results))
+            
             if result:
                 accurate_results.extend(result)
         

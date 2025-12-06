@@ -167,44 +167,104 @@ def add_message(role: str, user_input: str):
             status_placeholder = st.empty()
             message_placeholder = st.empty()
             full_response = ""
-            
+
             try:
                 # Show retrieval status
                 with status_placeholder.status("Retrieving relevant information..."):
                     searched = st.session_state.settings['search_engine'].search(user_input)
+                    
+                    has_results = searched.retrieved_list is not None and len(searched.retrieved_list) > 0
 
                     # Generate and store relevant info
                     if st.session_state.settings['relevant_info'] == 'On':
-                        if searched.retrieved_list is not None:
+                        if has_results:
                             display_retrieval_list(searched.retrieved_list)
+                        else:
+                            st.info("ℹ️ No specific entities retrieved for this query.")
                 
-                # Show generation status
-                with status_placeholder.status("Generating response..."):
-                    content = st.session_state.settings['search_engine'].stream_answer(user_input,searched.structured_prompt)
+                # Check if we have meaningful context to answer
+                if not has_results or not searched.structured_prompt.strip():
+                    # Extract potential name/entity from query for better error message
+                    import re
+                    name_match = re.search(r'\b([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\b', user_input)
+                    entity_name = name_match.group(1) if name_match else "this entity"
                     
-                    # Fast streaming without artificial delay
-                    for chunk in content:
-                        full_response += chunk
-                        message_placeholder.markdown(full_response + "▌")
-                    
+                    full_response = f"I couldn't find any information about {entity_name} in the knowledge base. The data may not include details about this person or entity."
                     message_placeholder.markdown(full_response)
+                    status_placeholder.empty()
+                else:
+                    # Show generation status
+                    with status_placeholder.status("Generating response..."):
+                        content = st.session_state.settings['search_engine'].stream_answer(user_input, searched.structured_prompt)
+                        
+                        # Fast streaming without artificial delay
+                        for chunk in content:
+                            full_response += chunk
+                            message_placeholder.markdown(full_response + "▌")
+                        
+                        message_placeholder.markdown(full_response)
+                    
+                    with status_placeholder.status("✅ Retrieval and generation completed"):
+                        pass
                     
                 if st.session_state.config['relevant_info'] == 'On':
-                    st.session_state.messages.append({"role": "assistant", "content":full_response , "relevant_info":searched.retrieved_list})
+                    st.session_state.messages.append({"role": "assistant", "content":full_response , "relevant_info":searched.retrieved_list if searched.retrieved_list else []})
                 else:
                     st.session_state.messages.append({"role": "assistant", "content":full_response})
                 
-                with status_placeholder.status("✅ Retrieval and generation completed"):
-                    pass
-                
             except Exception as e:
-                # Log the error but let the LLM handle it gracefully
-                st.warning(f"⚠️ Search encountered an issue: {str(e)}")
-                full_response = "I encountered an error processing your query. Please try rephrasing or check the logs."
+                # Log the error with appropriate handling
+                import traceback
+                error_details = traceback.format_exc()
+                error_str = str(e)
+                
+                # Check for specific error types
+                if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str:
+                    st.error("⚠️ API Rate Limit Exceeded")
+                    st.warning("The API service has rate limited your requests. Please wait a moment before trying again.")
+                    full_response = "I'm currently experiencing rate limiting from the API service. Please try again in a few moments."
+                elif "KeyError" in error_details:
+                    st.warning(f"⚠️ Data mapping issue: Some entities couldn't be retrieved")
+                    full_response = "I encountered a data mapping issue. Some information may be missing from the knowledge base."
+                else:
+                    st.warning(f"⚠️ Search encountered an issue: {error_str}")
+                    full_response = "I encountered an error processing your query. Please try rephrasing or check the logs."
+                
+                with st.expander("🔍 Error Details"):
+                    st.code(error_details)
+                
                 message_placeholder.markdown(full_response)
                 st.session_state.messages.append({"role": "assistant", "content": full_response})
-                
+
+                '''    
+            # Show retrieval status
+            with status_placeholder.status("Retrieving relevant information..."):
+               
+        
+                searched = st.session_state.settings['search_engine'].search(user_input)
+
+                # Generate and store relevant info
+                if st.session_state.settings['relevant_info'] == 'On':
+                    if searched.retrieved_list is not None:
+                        display_retrieval_list(searched.retrieved_list)
             
+            # Show generation status
+            with status_placeholder.status("Generating response..."):
+                content = st.session_state.settings['search_engine'].stream_answer(user_input,searched.structured_prompt)
+                for chunk in content:
+                    for char in chunk:
+                        full_response += char
+                        message_placeholder.markdown(full_response + "▌")
+                        time.sleep(0.02)  # Simulate typing delay
+                message_placeholder.markdown(full_response)
+            if st.session_state.config['relevant_info'] == 'On':
+                st.session_state.messages.append({"role": "assistant", "content":full_response , "relevant_info":searched.retrieved_list})
+            else:
+                st.session_state.messages.append({"role": "assistant", "content":full_response})
+            
+            with status_placeholder.status("✅ Retrieval and generation completed"):
+                pass
+            '''          
         else:
             st.write(user_input)
             

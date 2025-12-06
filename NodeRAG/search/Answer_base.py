@@ -43,7 +43,24 @@ class Retrieval():
     @property
     def retrieved_list(self):
         if self._retrieved_list is None:
-            self._retrieved_list = [(self.id_to_text[id],self.id_to_type[id]) for id in self.search_list]+ [(self.id_to_text[id],'relationship') for id in self.relationship_list]
+            # Only include IDs that exist in both id_to_text and id_to_type dictionaries
+            search_items = [
+                (self.id_to_text[id], self.id_to_type[id]) 
+                for id in self.search_list 
+                if id in self.id_to_text and id in self.id_to_type
+            ]
+            
+            # Handle relationship_list - only include IDs that exist in id_to_text
+            if self.relationship_list:
+                relationship_items = [
+                    (self.id_to_text[id], 'relationship') 
+                    for id in self.relationship_list 
+                    if id in self.id_to_text
+                ]
+            else:
+                relationship_items = []
+            
+            self._retrieved_list = search_items + relationship_items
         return self._retrieved_list
     
     @property
