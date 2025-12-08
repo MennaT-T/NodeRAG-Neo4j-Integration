@@ -21,4 +21,3 @@ __all__ = ['INIT_pipeline',
            'HNSW_pipeline',
            'QA_Pipeline'
 ]
-           ]
