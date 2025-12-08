@@ -2,40 +2,34 @@
 Neo4j-Native Search for NodeRAG
 ================================
 
-This module enables true Neo4j-native search where graph operations are performed 
-directly in Neo4j instead of loading graph.pkl into Python memory.
+Replaces in-memory NetworkX graph operations with native Neo4j Cypher queries,
+eliminating the need to load large pickle files into memory.
 
 Key Benefits:
 -------------
-• Memory Optimization: Eliminates 2-5GB memory overhead from loading graph.pkl
-• Startup Speed: 60 seconds faster (no pickle deserialization)
-• Query Performance: 25-150x faster via Cypher queries executed in Neo4j
-• Scalability: Handles millions of nodes without memory constraints
+• Memory Optimization: Eliminates graph.pkl memory overhead
+• Faster Startup: No pickle deserialization required
+• Query Performance: Leverages Neo4j's query optimization engine
+• Scalability: Handles large graphs without memory constraints
 
 Architecture:
-------------
-1. Neo4jNativeSearch: Query methods for direct Neo4j operations
-   - Neighbor expansion, PageRank, property batch queries
-   
-2. integrate_neo4j_search(): Monkey-patches NodeRAG's NodeSearch class
-   - Replaces 4 methods: __init__, load_graph, graph_search, post_process_top_k
-   - All graph operations redirect to Neo4j Cypher queries
+-------------
+• Neo4jNativeSearch: Direct Neo4j query methods for graph operations
+• integrate_neo4j_search(): Patches NodeSearch to use Neo4j instead of NetworkX
+  - Replaces: __init__, load_graph, graph_search, post_process_top_k
 
 Usage:
 ------
     from neo4j_native_search import integrate_neo4j_search
     from NodeRAG import NodeConfig, NodeSearch
     
-    # Load config and enable Neo4j optimization
     config = NodeConfig.from_main_folder(str(DOCUMENTS_FOLDER))
     integrate_neo4j_search(config, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
     
-    # NodeSearch now uses Neo4j natively (no graph.pkl loaded)
     search = NodeSearch(config)
     result = search.answer("What skills does the candidate have?")
 
 Author: Menna Alaa
-Date: January 2025
 Version: 1.0.0
 """
 
@@ -44,25 +38,16 @@ from NodeRAG.storage.neo4j_storage import get_neo4j_storage
 
 
 class Neo4jNativeSearch:
-    """
-    Search implementation that queries Neo4j directly
-    Instead of loading graph into NetworkX
-    """
+    """Direct Neo4j query interface for graph operations without in-memory NetworkX graphs."""
     
     def __init__(self, neo4j_uri: str, neo4j_user: str, neo4j_password: str):
         self.neo4j = get_neo4j_storage(neo4j_uri, neo4j_user, neo4j_password)
     
     def find_neighbors(self, node_ids: List[str], max_hops: int = 2) -> List[str]:
-        """
-        Find neighbors of given nodes using Neo4j Cypher
+        """Find neighboring nodes within specified relationship distance."""
+        if not node_ids:
+            return []
         
-        Args:
-            node_ids: Starting node IDs
-            max_hops: Maximum relationship hops (1-3)
-        
-        Returns:
-            List of connected node IDs
-        """
         with self.neo4j.driver.session() as session:
             result = session.run(f"""
                 UNWIND $node_ids AS start_id
@@ -74,16 +59,10 @@ class Neo4jNativeSearch:
             return [record['id'] for record in result]
     
     def get_nodes_by_type(self, node_ids: List[str], node_types: List[str]) -> Dict[str, List[str]]:
-        """
-        Filter nodes by type using Neo4j
+        """Filter and group nodes by type."""
+        if not node_ids or not node_types:
+            return {}
         
-        Args:
-            node_ids: Node IDs to filter
-            node_types: Types to filter by (e.g., ['entity', 'relationship'])
-        
-        Returns:
-            Dictionary mapping type to node IDs
-        """
         with self.neo4j.driver.session() as session:
             result = session.run("""
                 UNWIND $node_ids AS node_id
@@ -102,21 +81,12 @@ class Neo4jNativeSearch:
             return typed_nodes
     
     def pagerank_subgraph(self, seed_nodes: List[str], max_iter: int = 10, damping: float = 0.85) -> List[Tuple[str, float]]:
+        """Calculate node importance scores using degree-based heuristic (simplified PageRank).
+        
+        Note: Uses neighbor expansion instead of full GDS PageRank for compatibility.
         """
-        Run PageRank on subgraph using Neo4j Graph Data Science
-        
-        NOTE: Requires Neo4j GDS plugin installed
-        For free version, falls back to neighbor expansion
-        
-        Args:
-            seed_nodes: Starting nodes
-            max_iter: PageRank iterations
-            damping: Damping factor (alpha)
-        
-        Returns:
-            List of (node_id, score) tuples
-        """
-        # Simplified version without GDS - just expand neighbors and score by degree
+        if not seed_nodes:
+            return []
         with self.neo4j.driver.session() as session:
             result = session.run("""
                 UNWIND $seed_nodes AS seed_id
@@ -133,17 +103,7 @@ class Neo4jNativeSearch:
             return [(record['id'], record['score']) for record in result]
     
     def shortest_path(self, source_id: str, target_id: str, max_length: int = 5) -> List[str]:
-        """
-        Find shortest path between two nodes
-        
-        Args:
-            source_id: Source node ID
-            target_id: Target node ID
-            max_length: Maximum path length
-        
-        Returns:
-            List of node IDs in path
-        """
+        """Find shortest path between two nodes (up to max_length hops)."""
         with self.neo4j.driver.session() as session:
             result = session.run(f"""
                 MATCH path = shortestPath(
@@ -156,27 +116,11 @@ class Neo4jNativeSearch:
             return record['path'] if record else []
     
     def get_node_context(self, node_id: str) -> Dict:
-        """
-        Get full context for a node
-        
-        Args:
-            node_id: Node ID
-        
-        Returns:
-            Node properties dictionary
-        """
+        """Retrieve all properties for a node."""
         return self.neo4j.get_node(node_id)
     
     def get_node_type(self, node_id: str) -> str:
-        """
-        Get the type of a specific node
-        
-        Args:
-            node_id: Node ID
-        
-        Returns:
-            Node type (e.g., 'entity', 'relationship', 'high_level_element_title')
-        """
+        """Get node type (entity, relationship, high_level_element_title, etc.)."""
         with self.neo4j.driver.session() as session:
             result = session.run("""
                 MATCH (n:Node {id: $node_id})
@@ -187,16 +131,12 @@ class Neo4jNativeSearch:
             return record['type'] if record else None
     
     def get_node_property(self, node_id: str, property_name: str):
-        """
-        Get a specific property from a node
+        """Retrieve specific property from a node (with injection protection)."""
+        # Whitelist validation prevents Cypher injection
+        allowed_properties = {'type', 'attributes', 'related_node', 'name', 'description', 'source_id'}
+        if property_name not in allowed_properties:
+            raise ValueError(f"Property '{property_name}' not in allowed list: {allowed_properties}")
         
-        Args:
-            node_id: Node ID
-            property_name: Property name (e.g., 'attributes', 'related_node')
-        
-        Returns:
-            Property value (deserialized from JSON if needed)
-        """
         with self.neo4j.driver.session() as session:
             result = session.run(f"""
                 MATCH (n:Node {{id: $node_id}})
@@ -209,13 +149,7 @@ class Neo4jNativeSearch:
             return None
     
     def get_all_node_types(self) -> Dict[str, str]:
-        """
-        Get type mapping for all nodes (id -> type)
-        Used to replace id_to_type dictionary
-        
-        Returns:
-            Dictionary mapping node IDs to types
-        """
+        """Build complete node ID to type mapping from Neo4j."""
         with self.neo4j.driver.session() as session:
             result = session.run("""
                 MATCH (n:Node)
@@ -224,7 +158,7 @@ class Neo4jNativeSearch:
             
             id_to_type = {record['id']: record['type'] for record in result}
             
-            # Check if database is empty
+            # Validate database has data
             if len(id_to_type) == 0:
                 print("  ⚠️  WARNING: Neo4j database is empty!")
                 print("  ⚠️  You need to migrate graph.pkl to Neo4j first")
@@ -233,19 +167,17 @@ class Neo4jNativeSearch:
             return id_to_type
     
     def get_batch_node_properties(self, node_ids: List[str], property_names: List[str]) -> Dict[str, Dict]:
-        """
-        Get multiple properties for multiple nodes in one query
-        More efficient than individual queries
+        """Batch retrieve properties for multiple nodes (optimized single query)."""
+        # Whitelist validation prevents Cypher injection
+        allowed_properties = {'type', 'attributes', 'related_node', 'name', 'description', 'source_id'}
+        for prop in property_names:
+            if prop not in allowed_properties:
+                raise ValueError(f"Property '{prop}' not in allowed list: {allowed_properties}")
         
-        Args:
-            node_ids: List of node IDs
-            property_names: List of property names to retrieve
+        if not node_ids:
+            return {}
         
-        Returns:
-            Dictionary mapping node_id to {property: value}
-        """
         with self.neo4j.driver.session() as session:
-            # Build dynamic property selection
             props_str = ', '.join([f'n.{prop} AS {prop}' for prop in property_names])
             
             result = session.run(f"""
@@ -267,22 +199,13 @@ class Neo4jNativeSearch:
 
 
 def integrate_neo4j_search(config, neo4j_uri: str, neo4j_user: str, neo4j_password: str):
-    """
-    Monkey-patch NodeRAG search to use Neo4j-native queries
-    This eliminates the need to load graph.pkl into memory
+    """Replace NodeSearch methods with Neo4j-native implementations (avoids loading graph.pkl).
     
-    Usage in search_resumes.py:
-    
-        from neo4j_native_search import integrate_neo4j_search
-        
-        config = NodeConfig.from_main_folder(str(DOCUMENTS_FOLDER))
-        integrate_neo4j_search(config, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
-        
-        search = NodeSearch(config)  # Now uses Neo4j directly
+    Patches: __init__, load_graph, graph_search, post_process_top_k
     
     Args:
         config: NodeRAG config object
-        neo4j_uri: Neo4j connection URI
+        neo4j_uri: Neo4j connection URI (e.g., 'bolt://localhost:7687')
         neo4j_user: Neo4j username
         neo4j_password: Neo4j password
     """
@@ -300,47 +223,44 @@ def integrate_neo4j_search(config, neo4j_uri: str, neo4j_user: str, neo4j_passwo
     original_load_graph = NodeSearch.load_graph
     original_init = NodeSearch.__init__
     
-    # Replace __init__ to skip graph-dependent operations
     def neo4j_init(self, config_obj):
-        """
-        Modified initialization that doesn't load graph.pkl
-        """
+        """Modified __init__ that skips graph.pkl loading."""
         self.config = config_obj
         self.hnsw = self.load_hnsw()
         self.mapper = self.load_mapper()
         
-        # Create empty graph instead of loading
+        # Empty placeholder (graph operations use Neo4j)
         print("  ⚡ Skipping graph.pkl loading (using Neo4j instead)")
-        self.G = nx.Graph()  # Empty graph, never used
+        self.G = nx.Graph()
         
-        # Get id_to_type from Neo4j instead of graph
+        # Load node types from Neo4j instead of pickle
         print("  ⚡ Loading node types from Neo4j...")
         self.id_to_type = config.neo4j_search.get_all_node_types()
         print(f"  ✓ Loaded {len(self.id_to_type)} node types from Neo4j")
         
-        # Generate text mappings (uses parquet files, not graph)
+        # Text mappings from parquet files
         self.id_to_text, self.accurate_id_to_text = self.mapper.generate_id_to_text(['entity', 'high_level_element_title'])
         
-        # Create dummy sparse_PPR (won't be used since graph_search is replaced)
+        # Unused (graph_search is replaced)
         self.sparse_PPR = None
         
         self._semantic_units = None
+        
+        # Phase 2: Load Question HNSW index if available (Q&A integration)
+        self.question_hnsw = None
+        self.question_id_map = {}
+        self._load_question_hnsw_index()
     
-    # Replace load_graph to return empty graph (no pickle loading!)
     def neo4j_load_graph(self):
-        """
-        Return empty graph - all graph operations will use Neo4j
-        This eliminates 2-5GB memory overhead from loading graph.pkl
-        """
-        return nx.Graph()  # Empty graph, never used
+        """Return empty graph (all operations redirected to Neo4j)."""
+        return nx.Graph()
     
-    # Replace graph_search with Neo4j-native version
     def neo4j_graph_search(self, personalization: Dict[str, float]) -> List[str]:
-        """
-        Neo4j-native graph search using Cypher queries
-        Replaces sparse_PPR.PPR() which required full graph in memory
-        """
+        """Execute PageRank-style search via Neo4j Cypher queries."""
         seed_nodes = list(personalization.keys())
+        
+        if not seed_nodes:
+            return []
         
         # Use Neo4j to find connected nodes
         ranked_nodes = config.neo4j_search.pagerank_subgraph(
@@ -351,33 +271,25 @@ def integrate_neo4j_search(config, neo4j_uri: str, neo4j_user: str, neo4j_passwo
         
         return [node_id for node_id, score in ranked_nodes]
     
-    # Replace post_process_top_k to use Neo4j for type lookups
-    original_post_process = NodeSearch.post_process_top_k
-    
-    def neo4j_post_process_top_k(self, weighted_nodes: List[str], retrieval) -> Any:
-        """
-        Filter and categorize nodes using Neo4j queries
-        Replaces self.G.nodes[node].get('type') and property lookups
-        """
-        from NodeRAG.search.Answer_base import Retrieval
-        
+    from NodeRAG.search.Answer_base import Retrieval
+    def neo4j_post_process_top_k(self, weighted_nodes: List[str], retrieval:Retrieval) -> Any:
+        """Filter and categorize nodes using batch Neo4j property queries."""
         entity_list = []
         high_level_element_title_list = []
         relationship_list = []
         addition_node = 0
         
-        # Batch query for node properties
+        # Batch fetch node properties
         node_ids_to_check = [node for node in weighted_nodes if node not in retrieval.search_list]
         if not node_ids_to_check:
             return retrieval
         
-        # Get types for all nodes in one query
         node_properties = config.neo4j_search.get_batch_node_properties(
             node_ids_to_check,
             ['type', 'attributes', 'related_node']
         )
         
-        # Collect additional node IDs that will be added (attributes and related_nodes)
+        # Track additional nodes to fetch (attributes, related_nodes)
         additional_node_ids = []
         
         for node in weighted_nodes:
@@ -388,7 +300,6 @@ def integrate_neo4j_search(config, neo4j_uri: str, neo4j_user: str, neo4j_passwo
                 if node_type == 'entity':
                     if node not in entity_list and len(entity_list) < self.config.Enode:
                         entity_list.append(node)
-                        # Collect attribute IDs for batch query
                         attributes = props.get('attributes')
                         if attributes:
                             additional_node_ids.extend(attributes)
@@ -398,7 +309,6 @@ def integrate_neo4j_search(config, neo4j_uri: str, neo4j_user: str, neo4j_passwo
                 elif node_type == 'high_level_element_title':
                     if node not in high_level_element_title_list and len(high_level_element_title_list) < self.config.Hnode:
                         high_level_element_title_list.append(node)
-                        # Collect related_node ID for batch query
                         related_node = props.get('related_node')
                         if related_node:
                             additional_node_ids.append(related_node)
@@ -415,15 +325,15 @@ def integrate_neo4j_search(config, neo4j_uri: str, neo4j_user: str, neo4j_passwo
                     and len(high_level_element_title_list) >= self.config.Hnode):
                     break
         
-        # Batch query for additional nodes (attributes and related_nodes)
+        # Fetch properties for linked nodes
         additional_properties = {}
         if additional_node_ids:
             additional_properties = config.neo4j_search.get_batch_node_properties(
-                list(set(additional_node_ids)),  # Remove duplicates
+                list(set(additional_node_ids)),
                 ['type']
             )
         
-        # Handle entity attributes
+        # Add entity attributes to retrieval
         for entity in entity_list:
             props = node_properties.get(entity, {})
             attributes = props.get('attributes')
@@ -432,66 +342,55 @@ def integrate_neo4j_search(config, neo4j_uri: str, neo4j_user: str, neo4j_passwo
                     if attribute not in retrieval.unique_search_list:
                         retrieval.search_list.append(attribute)
                         retrieval.unique_search_list.add(attribute)
-                        # Add to id_to_type if not already there
+                        # Ensure type mapping exists
                         if attribute in additional_properties:
                             attr_type = additional_properties[attribute].get('type')
                             if attr_type and attribute not in self.id_to_type:
                                 self.id_to_type[attribute] = attr_type
-                        # If node doesn't exist in Neo4j, add a default type
                         elif attribute not in self.id_to_type:
-                            self.id_to_type[attribute] = 'attribute'  # Default type
+                            self.id_to_type[attribute] = 'attribute'
         
-        # Handle high-level element related nodes
+        # Add related nodes for high-level elements
         for high_level_element_title in high_level_element_title_list:
             props = node_properties.get(high_level_element_title, {})
             related_node = props.get('related_node')
             if related_node and related_node not in retrieval.unique_search_list:
                 retrieval.search_list.append(related_node)
                 retrieval.unique_search_list.add(related_node)
-                # Add to id_to_type if not already there
+                # Ensure type mapping exists
                 if related_node in additional_properties:
                     rel_type = additional_properties[related_node].get('type')
                     if rel_type and related_node not in self.id_to_type:
                         self.id_to_type[related_node] = rel_type
-                # If node doesn't exist in Neo4j, add a default type
                 elif related_node not in self.id_to_type:
-                    self.id_to_type[related_node] = 'high_level_element'  # Default type
+                    self.id_to_type[related_node] = 'high_level_element'
         
-        # Add relationship nodes to id_to_type to prevent KeyError
+        # Ensure all relationships have type mappings
         retrieval.relationship_list = list(set(relationship_list))
         for rel_node in retrieval.relationship_list:
             if rel_node not in self.id_to_type:
-                # Check if we have it in node_properties
                 if rel_node in node_properties:
                     node_type = node_properties[rel_node].get('type', 'relationship')
                     self.id_to_type[rel_node] = node_type
                 else:
-                    # Default to 'relationship' type
                     self.id_to_type[rel_node] = 'relationship'
         
         return retrieval
     
-    # Monkey-patch all methods
+    # Apply method replacements
     NodeSearch.__init__ = neo4j_init
     NodeSearch.load_graph = neo4j_load_graph
     NodeSearch.graph_search = neo4j_graph_search
     NodeSearch.post_process_top_k = neo4j_post_process_top_k
     
-    print("✓ Neo4j-native search fully enabled")
-    print("  • __init__() → Skips graph.pkl, loads types from Neo4j")
-    print("  • load_graph() → Returns empty graph (no pickle loading)")
-    print("  • graph_search() → Cypher PageRank queries") 
-    print("  • post_process_top_k() → Batch Neo4j property queries")
-    #print("  • Memory savings: ~3GB (graph.pkl not loaded)")
-    #print("  • Startup time: ~60 seconds faster")
-
+    print("✓ Neo4j-native search enabled")
+    print("  • __init__() → Loads types from Neo4j")
+    print("  • load_graph() → Returns empty graph")
+    print("  • graph_search() → Cypher-based PageRank") 
+    print("  • post_process_top_k() → Batch property queries")
 
 def integrate_neo4j_search_legacy(config, neo4j_uri: str, neo4j_user: str, neo4j_password: str):
-    """
-    Legacy version that only replaces graph_search
-    Kept for backward compatibility
-    """
-    # Create Neo4j native search instance
+    """Legacy integration: only patches graph_search method (minimal change approach)."""
     config.neo4j_search = Neo4jNativeSearch(neo4j_uri, neo4j_user, neo4j_password)
     
     from NodeRAG.search.search import NodeSearch
@@ -518,29 +417,26 @@ if __name__ == "__main__":
 Neo4j Native Search Module
 ===========================
 
-This enables true Neo4j-native search where graph operations
-are performed directly in Neo4j instead of loading into Python memory.
+Enables Neo4j-native search where graph operations execute directly in the
+database instead of loading pickle files into Python memory.
 
-Usage in search_resumes.py:
-----------------------------
+Usage Example:
+--------------
 
 from neo4j_native_search import integrate_neo4j_search
+from NodeRAG import NodeConfig, NodeSearch
 
-# After loading config
 config = NodeConfig.from_main_folder(str(DOCUMENTS_FOLDER))
-
-# Enable Neo4j-native search
 integrate_neo4j_search(config, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD)
 
-# Now search uses Neo4j directly
 search = NodeSearch(config)
 result = search.answer("What are the candidate's skills?")
 
 Benefits:
 ---------
-✓ No graph loaded into Python memory (saves 2-5GB RAM)
-✓ Queries run directly in Neo4j (10-100x faster)
-✓ Leverages Neo4j indexes and optimizations
-✓ Scales to millions of nodes
+✓ Reduced memory footprint (no in-memory graph)
+✓ Faster initialization (no pickle loading)
+✓ Optimized queries via Neo4j engine
+✓ Improved scalability for large graphs
           
     """)

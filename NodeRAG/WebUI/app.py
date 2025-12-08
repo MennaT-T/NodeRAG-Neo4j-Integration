@@ -70,6 +70,11 @@ def load_config(path):
         st.session_state.config = all_config['config']
         st.session_state.model_config = all_config['model_config']
         st.session_state.embedding_config = all_config['embedding_config']
+        # Create NodeConfig instance to get effective_main_folder for multi-user support
+        try:
+            st.session_state.node_config = NGConfig(all_config())
+        except:
+            st.session_state.node_config = None
 
 def all_config():
     """Get all the config from the session state"""
@@ -78,6 +83,12 @@ def all_config():
         'model_config': st.session_state.model_config,
         'embedding_config': st.session_state.embedding_config
     }
+
+def get_effective_main_folder():
+    """Get the effective main folder (user-specific if user_id is set)"""
+    if hasattr(st.session_state, 'node_config') and st.session_state.node_config:
+        return st.session_state.node_config.effective_main_folder
+    return st.session_state.config.get('main_folder')
     
 def save_config(path):
     """Save the config to the config file"""
@@ -281,9 +292,11 @@ def handle_user_input():
         
 def check_building_status(placeholder):
     """Check the building status"""
-    with placeholder.status("Checking Building Status"): 
-            if os.path.exists(os.path.join(st.session_state.config['main_folder'], 'info/state.json')):
-                with open(os.path.join(st.session_state.config['main_folder'], 'info/state.json'), 'r') as f:
+    with placeholder.status("Checking Building Status"):
+            effective_main_folder = get_effective_main_folder()
+            state_path = os.path.join(effective_main_folder, 'info', 'state.json')
+            if os.path.exists(state_path):
+                with open(state_path, 'r') as f:
                     state = json.load(f)
                 st.markdown(f"🔄 Building Status: {state['Current_state']}")
                 return True
@@ -352,7 +365,10 @@ def sidebar():
                 st.session_state.settings['engine_running'] = True
                 st.write("Search Engine is running")
                 if not st.session_state.indices:
-                    st.session_state.indices = json.load(open(os.path.join(st.session_state.config['main_folder'], 'info/indices.json'), 'r'))
+                    effective_main_folder = get_effective_main_folder()
+                    indices_path = os.path.join(effective_main_folder, 'info', 'indices.json')
+                    if os.path.exists(indices_path):
+                        st.session_state.indices = json.load(open(indices_path, 'r'))
                 
             elif not Enable_Search and st.session_state.settings.get('engine_running'):
                 st.session_state.settings['engine_running'] = False
@@ -382,7 +398,12 @@ def sidebar():
         # RAG Build Settings
         with st.expander("🔧 RAG Settings", expanded=False):
             # Basic Settings
-            st.markdown("Main Folder: " + st.session_state.config['main_folder'])
+            effective_main_folder = get_effective_main_folder()
+            user_id = st.session_state.config.get('user_id')
+            folder_display = effective_main_folder
+            if user_id:
+                folder_display += f" (User: {user_id})"
+            st.markdown("Main Folder: " + folder_display)
             
             new_folder = st.text_input("Enter folder path:",key="main_folder")
             
@@ -493,7 +514,7 @@ def sidebar():
             elif st.session_state.model_config['service_provider'] == 'gemini':
                 st.session_state.model_config['model_name'] = st.selectbox(
                     "Language Model",
-                    ["gemini-2.0-flash-lite-preview-02-05"],
+                    ["gemini-2.5-flash","gemini-2.5-flash-lite","gemini-2.0-flash-lite"],
                     help="Select the language model to use"
                 )
             

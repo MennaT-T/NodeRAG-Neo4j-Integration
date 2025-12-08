@@ -129,9 +129,9 @@ class Embedding_pipeline():
         self.config.tracker.set(len(LLM_store),desc='Rerun embedding')
         
         for store in LLM_store:
-            input_data = store['input_data']
+            input_data = store['input']
             meta_data = store['meta_data']
-            store.pop('input_data')
+            store.pop('input')
             store.pop('meta_data')
             tasks.append(self.request_save(input_data,store,self.config))
         
@@ -140,7 +140,7 @@ class Embedding_pipeline():
         self.insert_embeddings()
         self.delete_embedding_cache()
         self.check_error_cache()
-        await self.main_async()
+        await self.main()
         
     async def request_save(self,
                            input_data:Embedding_message,

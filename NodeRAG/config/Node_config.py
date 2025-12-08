@@ -56,29 +56,46 @@ class NodeConfig():
         if not os.path.exists(self.main_folder):
             raise ValueError(f'main_folder {self.main_folder} does not exist')
         
-        self.input_folder = self.main_folder + '/input'
-        self.cache = self.main_folder + '/cache'
-        self.info = self.main_folder + '/info'
+        # Multi-user support: route to user-specific folder if user_id is provided
+        self.user_id = self.config.get('user_id')
         
-        self.embedding_path = self.cache + '/embedding.parquet'
-        self.text_path = self.cache + '/text.parquet'
-        self.documents_path = self.cache + '/documents.parquet'
-        self.text_decomposition_path = self.cache + '/text_decomposition.jsonl'
-        self.semantic_units_path = self.cache + '/semantic_units.parquet'
-        self.entities_path = self.cache + '/entities.parquet'
-        self.relationship_path = self.cache + '/relationship.parquet'
-        self.graph_path = self.cache + '/new_graph.pkl'
-        self.attributes_path = self.cache + '/attributes.parquet'
-        self.embedding_cache = self.cache + '/embedding_cache.jsonl'
-        self.embedding = self.cache + '/embedding.parquet'
-        self.base_graph_path = self.cache + '/graph.pkl'
-        self.summary_path = self.cache + '/community_summary.jsonl'
-        self.high_level_elements_path = self.cache + '/high_level_elements.parquet'
-        self.high_level_elements_titles_path = self.cache + '/high_level_elements_titles.parquet'
-        self.HNSW_path = self.cache + '/HNSW.bin'
-        self.hnsw_graph_path = self.cache + '/hnsw_graph.pkl'
-        self.id_map_path = self.cache + '/id_map.parquet'
-        self.LLM_error_cache = self.cache + '/LLM_error.jsonl'
+        if self.user_id:
+            self.effective_main_folder = os.path.join(self.main_folder, 'users', f'user_{self.user_id}')
+            # Create user folder if it doesn't exist
+            if not os.path.exists(self.effective_main_folder):
+                os.makedirs(self.effective_main_folder, exist_ok=True)
+        else:
+            self.effective_main_folder = self.main_folder
+        
+        self.input_folder = os.path.join(self.effective_main_folder, 'input')
+        self.cache = os.path.join(self.effective_main_folder, 'cache')
+        self.info = os.path.join(self.effective_main_folder, 'info')
+        
+        self.embedding_path = os.path.join(self.cache, 'embedding.parquet')
+        self.text_path = os.path.join(self.cache, 'text.parquet')
+        self.documents_path = os.path.join(self.cache, 'documents.parquet')
+        self.text_decomposition_path = os.path.join(self.cache, 'text_decomposition.jsonl')
+        self.semantic_units_path = os.path.join(self.cache, 'semantic_units.parquet')
+        self.entities_path = os.path.join(self.cache, 'entities.parquet')
+        self.relationship_path = os.path.join(self.cache, 'relationship.parquet')
+        self.graph_path = os.path.join(self.cache, 'new_graph.pkl')
+        self.attributes_path = os.path.join(self.cache, 'attributes.parquet')
+        self.embedding_cache = os.path.join(self.cache, 'embedding_cache.jsonl')
+        self.embedding = os.path.join(self.cache, 'embedding.parquet')
+        self.base_graph_path = os.path.join(self.cache, 'graph.pkl')
+        self.summary_path = os.path.join(self.cache, 'community_summary.jsonl')
+        self.high_level_elements_path = os.path.join(self.cache, 'high_level_elements.parquet')
+        self.high_level_elements_titles_path = os.path.join(self.cache, 'high_level_elements_titles.parquet')
+        self.HNSW_path = os.path.join(self.cache, 'HNSW.bin')
+        self.hnsw_graph_path = os.path.join(self.cache, 'hnsw_graph.pkl')
+        self.id_map_path = os.path.join(self.cache, 'id_map.parquet')
+        self.LLM_error_cache = os.path.join(self.cache, 'LLM_error.jsonl')
+        
+        # Q&A Pipeline paths (Phase 2)
+        self.questions_path = os.path.join(self.cache, 'questions.parquet')
+        self.answers_path = os.path.join(self.cache, 'answers.parquet')
+        self.question_hnsw_path = os.path.join(self.cache, 'question_hnsw.bin')
+        self.question_id_map_path = os.path.join(self.cache, 'question_id_map.parquet')
         
         
         self.embedding_batch_size = self.config.get('embedding_batch_size',50)
@@ -102,11 +119,18 @@ class NodeConfig():
         self.ppr_max_iter = self.config.get('ppr_max_iter',8)
         self.unbalance_adjust = self.config.get('unbalance_adjust',False)
         
+        # Q&A search parameters (Phase 2)
+        self.qa_top_k = self.config.get('qa_top_k', 3)
+        self.qa_similarity_threshold = self.config.get('qa_similarity_threshold', 0.6)
         
-        self.indices_path = self.info + '/indices.json'
-        self.state_path = self.info + '/state.json'
-        self.document_hash_path = self.info + '/document_hash.json'
-        self.info_path = self.info + '/info.log'
+        # Q&A API configuration (Phase 2)
+        self.qa_api = self.config.get('qa_api', {})
+        
+        
+        self.indices_path = os.path.join(self.info, 'indices.json')
+        self.state_path = os.path.join(self.info, 'state.json')
+        self.document_hash_path = os.path.join(self.info, 'document_hash.json')
+        self.info_path = os.path.join(self.info, 'info.log')
         if not os.path.exists(self.info):
             os.makedirs(self.info)
         if not os.path.exists(self.info_path):
@@ -231,8 +255,8 @@ class NodeConfig():
             raise ValueError('embedding_client is not set properly')
         if self.semantic_text_splitter is None:
             raise ValueError('semantic_text_splitter is not set properly')
-        if not os.path.exists(self.main_folder):
-            raise ValueError('main_folder does not exist')
+        if not os.path.exists(self.effective_main_folder):
+            raise ValueError('effective_main_folder does not exist')
 
     def record_info(self,message:str) -> None:
         

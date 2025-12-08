@@ -85,7 +85,7 @@ class Attribution_generation_pipeline:
     def get_important_nodes(self):
         
         node_importance = NodeImportance(self.G,self.config.console)
-        important_nodes = node_importance.main()
+        important_nodes = node_importance.main() # Executes K-core + Betweenness
         
         if os.path.exists(self.config.attributes_path):
             attributes = storage.load(self.config.attributes_path)
@@ -101,12 +101,14 @@ class Attribution_generation_pipeline:
         semantic_neighbours = ''+'\n'
         relationship_neighbours = ''+'\n'
        
+        # Gather context from neighbors
         for neighbour in self.G.neighbors(node):
             if self.G.nodes[neighbour]['type'] == 'semantic_unit':
                 semantic_neighbours += f'{self.mapper.get(neighbour,"context")}\n'
             elif self.G.nodes[neighbour]['type'] == 'relationship':
                 relationship_neighbours += f'{self.mapper.get(neighbour,"context")}\n'
        
+        # Format prompt
         query = self.prompt_manager.attribute_generation.format(entity = entity,semantic_units = semantic_neighbours,relationships = relationship_neighbours)
         return query
     

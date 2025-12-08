@@ -27,6 +27,11 @@ config:
   language: English                   # Document processing language
   docu_type: mixed                    # Document type (mixed, pdf, txt, etc.)
   
+  # Multi-User Support (Phase 2 - Optional)
+  # When user_id is provided, data will be routed to: main_folder/users/user_{user_id}/
+  # Leave commented out for single-user mode
+  # user_id: 12345
+  
   # Chunking Settings
   chunk_size: 1048                    # Size of text chunks for processing
   embedding_batch_size: 50            # Batch size for embedding processing
@@ -59,8 +64,20 @@ config:
   ppr_alpha: 0.5                     # Damping factor for personalized PageRank
   ppr_max_iter: 2                    # Maximum iterations for personalized PageRank
   
-  # Neo4j Storage Settings (Optional)
-  use_neo4j_storage: false           # Save graph to Neo4j instead of pickle
+  # Neo4j Storage Settings (Your Custom Integration)
+  # Replaces pickle-based storage with Neo4j database for memory optimization
   neo4j_uri: 'bolt://localhost:7687' # Neo4j connection URI
   neo4j_user: 'neo4j'                # Neo4j username
-  neo4j_password: 'autoapply123'     # Neo4j password (change in production!)
+  neo4j_password: 'autoapply123'     # Neo4j password (CHANGE IN PRODUCTION!)
+  
+  # Q&A Integration Settings (Phase 2 - Teammate's Feature)
+  # Enables fetching and indexing question/answer pairs from external API
+  qa_api:
+    enabled: false                    # Enable/disable Q&A integration (set to true to activate)
+    use_mock: true                    # Use mock JSON file (true) or call real API (false)
+    mock_data_path: 'mock_data/mock_qa_data.json'  # Path to mock JSON file (relative to main_folder)
+    base_url: 'http://localhost:8000'  # Backend API base URL (used when use_mock=false)
+  
+  # Q&A Search Parameters (Phase 2)
+  qa_top_k: 3                         # Number of Q&A pairs to retrieve per search
+  qa_similarity_threshold: 0.6        # Minimum similarity score to boost Q&A results (0-1)

@@ -7,6 +7,7 @@ from .embedding import Embedding_pipeline
 from .summary_generation import SummaryGeneration
 from .Insert_text import Insert_text
 from .HNSW_graph import HNSW_pipeline
+from .qa_pipeline import QA_Pipeline
 
 
 __all__ = ['INIT_pipeline',
@@ -17,5 +18,6 @@ __all__ = ['INIT_pipeline',
            'Embedding_pipeline',
            'SummaryGeneration',
            'Insert_text',
-           'HNSW_pipeline'
-           ]
+           'HNSW_pipeline',
+           'QA_Pipeline'
+]

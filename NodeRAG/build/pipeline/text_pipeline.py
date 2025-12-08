@@ -58,8 +58,16 @@ class text_pipline():
             clear_cache(self.config.LLM_error_cache)
             
             await self.rerun_request(LLM_store)
-            self.config.tracker.close()
+            # Filter out already processed texts before continuing
+            if os.path.exists(self.config.text_decomposition_path):
+                if os.path.getsize(self.config.text_decomposition_path) > 0:
+                    self.increment()
+            # After rerun, continue with normal processing of any remaining texts
+            # This handles both: (1) new texts added since last run, (2) texts that were never attempted
             await self.text_decomposition_pipline()
+            self.config.tracker.close()
+            # CRITICAL: Check if any errors occurred during rerun
+            self.check_error_cache()
                     
         async def rerun_request(self,LLM_store:List[Dict]) -> None:
             tasks = []
@@ -67,11 +75,12 @@ class text_pipline():
             self.config.tracker.set(len(LLM_store),'Rerun LLM on error cache of text decomposition pipeline')
             
             for store in LLM_store:
-                input_data = store['input_data']
-                store.pop('input_data')
+                input_data = store['input']
+                store.pop('input')
                 input_data.update({'response_format':self.config.prompt_manager.text_decomposition})    
                 tasks.append(self.request_save(input_data,store,self.config))
             await asyncio.gather(*tasks)
+            self.config.tracker.close()
         
         async def request_save(self,
                                input_data:LLM_message,
