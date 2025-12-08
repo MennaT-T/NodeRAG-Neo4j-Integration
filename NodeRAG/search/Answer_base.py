@@ -43,7 +43,24 @@ class Retrieval():
     @property
     def retrieved_list(self):
         if self._retrieved_list is None:
-            self._retrieved_list = [(self.id_to_text[id],self.id_to_type[id]) for id in self.search_list]+ [(self.id_to_text[id],'relationship') for id in self.relationship_list]
+            retrieved = []
+            
+            # Add items from search_list with error handling
+            for id in self.search_list:
+                if id in self.id_to_text and id in self.id_to_type:
+                    retrieved.append((self.id_to_text[id], self.id_to_type[id]))
+                else:
+                    print(f"Warning: Node ID '{id}' not found in text mappings (skipping)")
+            
+            # Add items from relationship_list with error handling
+            if self.relationship_list:
+                for id in self.relationship_list:
+                    if id in self.id_to_text:
+                        retrieved.append((self.id_to_text[id], 'relationship'))
+                    else:
+                        print(f"Warning: Relationship ID '{id}' not found in text mappings (skipping)")
+            
+            self._retrieved_list = retrieved
         return self._retrieved_list
     
     @property

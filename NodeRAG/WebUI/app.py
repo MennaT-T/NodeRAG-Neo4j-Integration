@@ -433,7 +433,7 @@ def sidebar():
             elif st.session_state.model_config['service_provider'] == 'gemini':
                 st.session_state.model_config['model_name'] = st.selectbox(
                     "Language Model",
-                    ["gemini-2.0-flash-lite-preview-02-05"],
+                    ["gemini-2.5-flash","gemini-2.5-flash-lite","gemini-2.0-flash-lite"],
                     help="Select the language model to use"
                 )
             

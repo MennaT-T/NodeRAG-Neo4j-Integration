@@ -142,10 +142,20 @@ class NodeSearch():
         
         ans = Answer(query,retrieval)
         
+        # Check if any relevant information was retrieved
+        if not retrieval.search_list and not retrieval.relationship_list:
+            ans.response = "I couldn't find any relevant information in the knowledge graph to answer your question. The requested information may not be available in the current dataset."
+            return ans
+        
         if id_type:
             retrieved_info = ans.structured_prompt
         else:
             retrieved_info = ans.unstructured_prompt
+        
+        # Check if retrieved_info is empty after processing
+        if not retrieved_info or retrieved_info.strip() == '':
+            ans.response = "I couldn't find any relevant information in the knowledge graph to answer your question. The requested information may not be available in the current dataset."
+            return ans
         
         query = self.config.prompt_manager.answer.format(info=retrieved_info,query=query)
         response = self.config.API_client.request({'query':query})
@@ -165,10 +175,20 @@ class NodeSearch():
         
         ans = Answer(query,retrieval)
         
+        # Check if any relevant information was retrieved
+        if not retrieval.search_list and not retrieval.relationship_list:
+            ans.response = "I couldn't find any relevant information in the knowledge graph to answer your question. The requested information may not be available in the current dataset."
+            return ans
+        
         if id_type:
             retrieved_info = ans.structured_prompt
         else    :
             retrieved_info = ans.unstructured_prompt
+
+        # Check if retrieved_info is empty after processing
+        if not retrieved_info or retrieved_info.strip() == '':
+            ans.response = "I couldn't find any relevant information in the knowledge graph to answer your question. The requested information may not be available in the current dataset."
+            return ans
 
         query = self.config.prompt_manager.answer.format(info=retrieved_info,query=query)
         
@@ -200,7 +220,8 @@ class NodeSearch():
         relationship_list = []
     
         addition_node = 0
-        
+
+        # Extract top entities from PageRank results
         for node in weighted_nodes:
             if node not in retrieval.search_list:
                 type = self.G.nodes[node].get('type')
@@ -227,7 +248,8 @@ class NodeSearch():
                     and len(relationship_list) >= self.config.Rnode 
                     and len(high_level_element_title_list) >= self.config.Hnode):
                     break
-        
+
+        # For each selected entity, include its attributes
         for entity in entity_list:
             attributes = self.G.nodes[entity].get('attributes')
             if attributes:

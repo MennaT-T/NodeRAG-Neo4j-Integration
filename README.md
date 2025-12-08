@@ -2,7 +2,7 @@
 
 **Graph-based Retrieval-Augmented Generation (RAG) with Neo4j optimization for intelligent document search and question answering.**
 
-This is a customized version of [NodeRAG](https://github.com/HKUDS/NodeRAG) that replaces in-memory graph storage with **Neo4j-native operations**, delivering 95% memory reduction and 25x faster queries for production workloads.
+This is a customized version of [NodeRAG](https://github.com/Terry-Xu-666/NodeRAG) that replaces in-memory graph storage with **Neo4j-native operations**, delivering memory reduction and faster queries for production workloads.
 
 ---
 
@@ -13,7 +13,7 @@ This is a customized version of [NodeRAG](https://github.com/HKUDS/NodeRAG) that
 Documents → Embedding → Graph Construction → pickle file (2-5GB)
                                               ↓
 Query → Load graph.pkl to RAM → NetworkX operations → LLM → Answer
-        (60s startup, 2-5GB memory)
+        (2-5GB memory)
 ```
 
 ### Custom Neo4j-Optimized Architecture
@@ -21,17 +21,8 @@ Query → Load graph.pkl to RAM → NetworkX operations → LLM → Answer
 Documents → Embedding → Graph Construction → Neo4j Database
                                               ↓
 Query → Direct Cypher queries (no loading) → LLM → Answer
-        (<2s startup, ~100MB memory)
+        (~100MB memory)
 ```
-
-### Key Improvements
-
-| Metric | Original | With Neo4j | Improvement |
-|--------|----------|------------|-------------|
-| **Memory Usage** | 2-5 GB | ~100 MB | **95% reduction** |
-| **Startup Time** | 60-90 seconds | <2 seconds | **97% faster** |
-| **Query Latency** | 1-5 seconds | 50-200ms | **10-25x faster** |
-| **Scalability** | Limited by RAM | Millions of nodes | **Unlimited** |
 
 ### Technical Implementation
 
@@ -118,8 +109,8 @@ Query → Direct Cypher queries (no loading) → LLM → Answer
 ### Step 1: Clone and Install
 
 ```bash
-git clone https://github.com/zeyadsalah22/NODERAG.git
-cd NODERAG
+git clone https://github.com/MennaT-T/NodeRAG-Neo4j-Integration.git
+cd NodeRAG-Neo4j-Integration
 
 # Create virtual environment
 python -m venv venv
@@ -313,7 +304,7 @@ for query in queries:
 ## 📁 Project Structure
 
 ```
-NODERAG/
+NodeRAG-Neo4j-Integration/
 ├── README.md                          # This file
 ├── requirements.txt                   # Python dependencies
 ├── Node_config.yaml.example          # Configuration template
@@ -334,17 +325,13 @@ NODERAG/
 │   └── visualize_graph.py            # Graph visualization
 │
 ├── POC_Data/documents/
-│   ├── Node_config.yaml              # Your configuration (gitignored)
-│   ├── input/                        # ← ADD YOUR DATA HERE
-│   │   ├── resume_*.txt
-│   │   └── job_*.txt
-│   ├── cache/                        # Generated embeddings (auto-created)
-│   └── info/                         # Graph metadata (auto-created)
-│
-└── docs/                             # Detailed technical documentation
-    ├── NEO4J_OPTIMIZATION_SUMMARY.md
-    ├── SEARCH_ARCHITECTURE_EXPLAINED.md
-    └── ...
+    ├── Node_config.yaml              # Your configuration (gitignored)
+    ├── input/                        # ← ADD YOUR DATA HERE
+    │   ├── resume_*.txt
+    │   └── job_*.txt
+    ├── cache/                        # Generated embeddings (auto-created)
+    └── info/                         # Graph metadata (auto-created)
+
 ```
 
 ---
@@ -522,31 +509,9 @@ class NodeSearch:
 
 ---
 
-## 📚 Documentation
-
-For in-depth technical details, see:
-
-- **[NEO4J_OPTIMIZATION_SUMMARY.md](docs/NEO4J_OPTIMIZATION_SUMMARY.md)**: Performance analysis and benchmarks
-- **[SEARCH_ARCHITECTURE_EXPLAINED.md](docs/SEARCH_ARCHITECTURE_EXPLAINED.md)**: How the search algorithm works
-- **[NEO4J_INTEGRATION_GUIDE.md](docs/NEO4J_INTEGRATION_GUIDE.md)**: Migration guide from pickle to Neo4j
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Key areas for improvement:
-
-- [ ] Support for incremental document updates
-- [ ] REST API with FastAPI
-- [ ] Multiple document formats (PDF, DOCX)
-- [ ] Advanced Neo4j GDS algorithms
-- [ ] Query caching with Redis
-
----
-
 ## 📄 License
 
-This project is based on [NodeRAG](https://github.com/HKUDS/NodeRAG) with custom Neo4j storage optimization.
+This project is based on [NodeRAG](https://github.com/Terry-Xu-666/NodeRAG) with custom Neo4j storage optimization.
 
 ---
 
