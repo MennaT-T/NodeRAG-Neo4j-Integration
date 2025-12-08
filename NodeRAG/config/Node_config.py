@@ -67,35 +67,35 @@ class NodeConfig():
         else:
             self.effective_main_folder = self.main_folder
         
-        self.input_folder = self.effective_main_folder + '/input'
-        self.cache = self.effective_main_folder + '/cache'
-        self.info = self.effective_main_folder + '/info'
+        self.input_folder = os.path.join(self.effective_main_folder, 'input')
+        self.cache = os.path.join(self.effective_main_folder, 'cache')
+        self.info = os.path.join(self.effective_main_folder, 'info')
         
-        self.embedding_path = self.cache + '/embedding.parquet'
-        self.text_path = self.cache + '/text.parquet'
-        self.documents_path = self.cache + '/documents.parquet'
-        self.text_decomposition_path = self.cache + '/text_decomposition.jsonl'
-        self.semantic_units_path = self.cache + '/semantic_units.parquet'
-        self.entities_path = self.cache + '/entities.parquet'
-        self.relationship_path = self.cache + '/relationship.parquet'
-        self.graph_path = self.cache + '/new_graph.pkl'
-        self.attributes_path = self.cache + '/attributes.parquet'
-        self.embedding_cache = self.cache + '/embedding_cache.jsonl'
-        self.embedding = self.cache + '/embedding.parquet'
-        self.base_graph_path = self.cache + '/graph.pkl'
-        self.summary_path = self.cache + '/community_summary.jsonl'
-        self.high_level_elements_path = self.cache + '/high_level_elements.parquet'
-        self.high_level_elements_titles_path = self.cache + '/high_level_elements_titles.parquet'
-        self.HNSW_path = self.cache + '/HNSW.bin'
-        self.hnsw_graph_path = self.cache + '/hnsw_graph.pkl'
-        self.id_map_path = self.cache + '/id_map.parquet'
-        self.LLM_error_cache = self.cache + '/LLM_error.jsonl'
+        self.embedding_path = os.path.join(self.cache, 'embedding.parquet')
+        self.text_path = os.path.join(self.cache, 'text.parquet')
+        self.documents_path = os.path.join(self.cache, 'documents.parquet')
+        self.text_decomposition_path = os.path.join(self.cache, 'text_decomposition.jsonl')
+        self.semantic_units_path = os.path.join(self.cache, 'semantic_units.parquet')
+        self.entities_path = os.path.join(self.cache, 'entities.parquet')
+        self.relationship_path = os.path.join(self.cache, 'relationship.parquet')
+        self.graph_path = os.path.join(self.cache, 'new_graph.pkl')
+        self.attributes_path = os.path.join(self.cache, 'attributes.parquet')
+        self.embedding_cache = os.path.join(self.cache, 'embedding_cache.jsonl')
+        self.embedding = os.path.join(self.cache, 'embedding.parquet')
+        self.base_graph_path = os.path.join(self.cache, 'graph.pkl')
+        self.summary_path = os.path.join(self.cache, 'community_summary.jsonl')
+        self.high_level_elements_path = os.path.join(self.cache, 'high_level_elements.parquet')
+        self.high_level_elements_titles_path = os.path.join(self.cache, 'high_level_elements_titles.parquet')
+        self.HNSW_path = os.path.join(self.cache, 'HNSW.bin')
+        self.hnsw_graph_path = os.path.join(self.cache, 'hnsw_graph.pkl')
+        self.id_map_path = os.path.join(self.cache, 'id_map.parquet')
+        self.LLM_error_cache = os.path.join(self.cache, 'LLM_error.jsonl')
         
         # Q&A Pipeline paths (Phase 2)
-        self.questions_path = self.cache + '/questions.parquet'
-        self.answers_path = self.cache + '/answers.parquet'
-        self.question_hnsw_path = self.cache + '/question_hnsw.bin'
-        self.question_id_map_path = self.cache + '/question_id_map.parquet'
+        self.questions_path = os.path.join(self.cache, 'questions.parquet')
+        self.answers_path = os.path.join(self.cache, 'answers.parquet')
+        self.question_hnsw_path = os.path.join(self.cache, 'question_hnsw.bin')
+        self.question_id_map_path = os.path.join(self.cache, 'question_id_map.parquet')
         
         
         self.embedding_batch_size = self.config.get('embedding_batch_size',50)
@@ -127,10 +127,10 @@ class NodeConfig():
         self.qa_api = self.config.get('qa_api', {})
         
         
-        self.indices_path = self.info + '/indices.json'
-        self.state_path = self.info + '/state.json'
-        self.document_hash_path = self.info + '/document_hash.json'
-        self.info_path = self.info + '/info.log'
+        self.indices_path = os.path.join(self.info, 'indices.json')
+        self.state_path = os.path.join(self.info, 'state.json')
+        self.document_hash_path = os.path.join(self.info, 'document_hash.json')
+        self.info_path = os.path.join(self.info, 'info.log')
         if not os.path.exists(self.info):
             os.makedirs(self.info)
         if not os.path.exists(self.info_path):

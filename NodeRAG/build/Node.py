@@ -250,7 +250,7 @@ class NodeRag():
             except Exception as e:
                 self.store_state()
                 self.Error_type = State.ERROR
-                raise f'Error happened in {self.Current_state} pipeline, please check the error log.{e}'
+                raise Exception(f'Error happened in {self.Current_state} pipeline, please check the error log.{e}')
            
         if self.Error_type == State.ERROR_CACHE:
         
@@ -262,7 +262,7 @@ class NodeRag():
             except Exception as e:
                 self.Error_type = State.ERROR_CACHE
                 self.store_state()
-                raise f'Error happened in {self.Current_state} pipeline, please check the error log.{e}'
+                raise Exception(f'Error happened in {self.Current_state} pipeline, please check the error log.{e}')
         
         self.Error_type = State.NO_ERROR
        
