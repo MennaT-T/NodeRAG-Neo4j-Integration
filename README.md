@@ -1,14 +1,19 @@
-# NodeRAG with Neo4j Custom Storage
+# NodeRAG with Neo4j Custom Storage + Q&A Integration
 
-**Graph-based Retrieval-Augmented Generation (RAG) with Neo4j optimization for intelligent document search and question answering.**
+**Graph-based Retrieval-Augmented Generation (RAG) with Neo4j optimization and external Q&A integration for intelligent document search and question answering.**
 
-This is a customized version of [NodeRAG](https://github.com/Terry-Xu-666/NodeRAG) that replaces in-memory graph storage with **Neo4j-native operations**, delivering memory reduction and faster queries for production workloads.
+This is a customized version of [NodeRAG](https://github.com/Terry-Xu-666/NodeRAG) that combines:
+- **Neo4j-native operations** for memory-efficient graph storage (replaces 2-5GB pickle files)
+- **Q&A Pipeline integration** for job-specific question/answer pairs from external APIs
+- **Multi-user support** for isolated data environments
 
 ---
 
-## 🎯 What's New: Neo4j Custom Storage
+## 🎯 What's New: Dual Feature Integration
 
-### Original NodeRAG Architecture
+### Feature 1: Neo4j Custom Storage (Memory Optimization)
+
+**Original NodeRAG Architecture**
 ```
 Documents → Embedding → Graph Construction → pickle file (2-5GB)
                                               ↓
@@ -16,13 +21,29 @@ Query → Load graph.pkl to RAM → NetworkX operations → LLM → Answer
         (2-5GB memory)
 ```
 
-### Custom Neo4j-Optimized Architecture
+**Custom Neo4j-Optimized Architecture**
 ```
 Documents → Embedding → Graph Construction → Neo4j Database
                                               ↓
 Query → Direct Cypher queries (no loading) → LLM → Answer
         (~100MB memory)
 ```
+
+### Feature 2: Q&A Integration Pipeline
+
+**Q&A Architecture**
+```
+External API/Mock Data → Q&A Pairs → Separate HNSW Index
+                                              ↓
+Query → Q&A Vector Search → Context Boost → LLM Answer
+        (job-specific questions/answers)
+```
+
+**Key Benefits**:
+- Pre-indexed job-specific questions (e.g., "What's the notice period?")
+- Separate HNSW index for Q&A pairs (doesn't interfere with document search)
+- PageRank boost for Q&A nodes when query matches question context
+- Mock mode for testing without API dependencies
 
 ### Technical Implementation
 
@@ -31,11 +52,13 @@ Query → Direct Cypher queries (no loading) → LLM → Answer
 - **Method Patching**: Replaces 4 core NodeRAG methods to bypass pickle loading
 - **Batch Operations**: Single queries fetch all node properties (vs Python loops)
 - **Native PageRank**: Graph traversal executed in Neo4j (vs NetworkX in memory)
+- **Q&A Index Support**: Loads question HNSW index alongside document index
 
 **Modified Pipeline**:
 1. **Graph Construction** (one-time): Store nodes/relationships in Neo4j via `migrate_to_neo4j.py`
-2. **Query Processing**: Direct Cypher queries for neighbor expansion and ranking
-3. **Hybrid Storage**: Graph structure in Neo4j + vectors in HNSW + text in Parquet
+2. **Q&A Pipeline** (optional): Fetch Q&A pairs from API and create separate index
+3. **Query Processing**: Dual HNSW search (documents + Q&A) with Cypher-based PageRank
+4. **Hybrid Storage**: Graph in Neo4j + vectors in HNSW + text in Parquet
 
 ---
 
@@ -47,15 +70,24 @@ Query → Direct Cypher queries (no loading) → LLM → Answer
 ├─────────────────────────────────────────────────────────────────┤
 │  Documents (resumes, job descriptions)                           │
 │  → POC_Data/documents/input/*.txt                               │
+│                                                                  │
+│  Q&A Pairs (optional)                                            │
+│  → External API or mock_data/mock_qa_data.json                  │
 └────────────────┬────────────────────────────────────────────────┘
                  │
                  ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                     PROCESSING LAYER                             │
 ├─────────────────────────────────────────────────────────────────┤
+│  Document Pipeline:                                              │
 │  1. Text Chunking (1048 tokens)                                 │
 │  2. Embedding Generation (Gemini text-embedding-004)            │
 │  3. Graph Construction (Entity/Relationship/Hierarchy nodes)    │
+│                                                                  │
+│  Q&A Pipeline (optional):                                        │
+│  1. Fetch Q&A pairs from API/mock                               │
+│  2. Create Question + Answer nodes                              │
+│  3. Generate separate Q&A embeddings                            │
 └────────────────┬────────────────────────────────────────────────┘
                  │
                  ▼
@@ -63,12 +95,12 @@ Query → Direct Cypher queries (no loading) → LLM → Answer
 │                      STORAGE LAYER                               │
 │                    (HYBRID APPROACH)                             │
 ├─────────────────────────────────────────────────────────────────┤
-│  [Neo4j Database]          [HNSW Index]      [Parquet Files]   │
-│   Graph Structure           Vector Search      Full Text        │
-│   • Nodes (id, type)        • Embeddings       • Complete       │
-│   • Relationships           • Fast k-NN          content        │
-│   • Properties              • ~10-50ms          • Metadata      │
-│   • Cypher queries                                              │
+│  [Neo4j Database]          [HNSW Indices]      [Parquet Files]  │
+│   Graph Structure           Vector Search       Full Text        │
+│   • Document nodes          • Doc embeddings    • Documents      │
+│   • Q&A nodes               • Q&A embeddings    • Q&A pairs      │
+│   • Relationships           • Fast k-NN          • Metadata      │
+│   • Cypher queries          • ~10-50ms                           │
 └────────────────┬────────────────────────────────────────────────┘
                  │
                  ▼
@@ -77,7 +109,28 @@ Query → Direct Cypher queries (no loading) → LLM → Answer
 ├─────────────────────────────────────────────────────────────────┤
 │  User Query: "What skills does candidate X have?"               │
 │                                                                  │
-│  Step 1: Vector Similarity (HNSW)                               │
+│  Step 1: Dual Vector Search                                     │
+│   ├─→ Document HNSW: Find relevant document chunks              │
+│   └─→ Q&A HNSW: Find matching questions (if qa_api.enabled)    │
+│                                                                  │
+│  Step 2: Graph Expansion (Neo4j Cypher) ← CUSTOM OPTIMIZATION   │
+│   └─→ MATCH (seed)-[:CONNECTED*1..2]-(neighbor)                │
+│   └─→ PageRank-style relevance scoring                          │
+│   └─→ Q&A boost: +weight if query matches indexed questions    │
+│   └─→ Batch property retrieval                                  │
+│                                                                  │
+│  Step 3: Context Assembly                                       │
+│   └─→ Fetch full text from Parquet files                        │
+│   └─→ Include Q&A context if similarity > threshold             │
+│   └─→ Build structured prompt with entity/relationship context  │
+│                                                                  │
+│  Step 4: LLM Generation (Gemini)                                │
+│   └─→ Generate natural language answer with Q&A context         │
+└────────────────┬────────────────────────────────────────────────┘
+                 │
+                 ▼
+           Final Answer
+```
 │   └─→ Find top-k relevant nodes by embedding distance           │
 │                                                                  │
 │  Step 2: Graph Expansion (Neo4j Cypher) ← CUSTOM OPTIMIZATION   │
@@ -168,6 +221,16 @@ config:
   neo4j_user: 'neo4j'
   neo4j_password: 'autoapply123'     # ← Change if needed
   
+  # Q&A Integration (Optional - Phase 2 Feature)
+  qa_api:
+    enabled: false                    # Set to true to enable Q&A features
+    use_mock: true                    # true = use mock JSON, false = call API
+    mock_data_path: 'mock_data/mock_qa_data.json'
+    base_url: 'http://localhost:8000' # API endpoint (if use_mock=false)
+  
+  qa_top_k: 3                         # Number of Q&A pairs to retrieve
+  qa_similarity_threshold: 0.6        # Minimum similarity to boost Q&A results
+  
   # Search parameters (defaults work well)
   chunk_size: 1048
   cross_node: 10
@@ -204,13 +267,15 @@ This will:
 2. Generate embeddings using Gemini
 3. Build graph structure (entities, relationships, hierarchy)
 4. Create HNSW index for vector search
-5. Save to pickle file and parquet files
+5. **[Optional]** Run Q&A pipeline if `qa_api.enabled: true` in config
+6. Save to pickle file and parquet files
 
 **Expected output:**
 ```
 ✓ Loading documents...
 ✓ Generating embeddings...
 ✓ Building graph...
+✓ Running Q&A pipeline... (if enabled)
 ✓ Saving graph to cache/
 ```
 
@@ -223,7 +288,7 @@ python utils/migrate_to_neo4j.py
 
 This will:
 1. Load the graph from pickle file
-2. Create nodes in Neo4j with properties
+2. Create nodes in Neo4j with properties (including Q&A nodes if present)
 3. Create relationships between nodes
 4. Create indexes for fast lookups
 
@@ -299,6 +364,68 @@ for query in queries:
     print(f"A: {result.response}")
 ```
 
+### Using Q&A Integration (Optional)
+
+**Step 1: Enable Q&A in Configuration**
+
+```yaml
+# In POC_Data/documents/Node_config.yaml
+config:
+  qa_api:
+    enabled: true                     # Enable Q&A pipeline
+    use_mock: true                    # Use mock data for testing
+    mock_data_path: 'mock_data/mock_qa_data.json'
+```
+
+**Step 2: Create Mock Q&A Data**
+
+Create `POC_Data/documents/mock_data/mock_qa_data.json`:
+
+```json
+{
+  "data": [
+    {
+      "question_id": "q1",
+      "question_text": "What is your notice period?",
+      "answer_text": "My notice period is 2 weeks",
+      "job_title": "Software Engineer",
+      "metadata": {"category": "employment"}
+    },
+    {
+      "question_id": "q2",
+      "question_text": "What is your expected salary?",
+      "answer_text": "My expected salary range is $80,000-$100,000",
+      "job_title": "Software Engineer",
+      "metadata": {"category": "compensation"}
+    }
+  ]
+}
+```
+
+**Step 3: Rebuild Graph with Q&A**
+
+```bash
+# Build graph - Q&A pipeline will run automatically
+python -m NodeRAG.build -f "POC_Data\documents"
+
+# Migrate to Neo4j (includes Q&A nodes)
+python utils/migrate_to_neo4j.py
+```
+
+**Step 4: Query with Q&A Context**
+
+```python
+# Q&A nodes are automatically searched alongside documents
+result = search.answer("What is the candidate's notice period?")
+# Answer will include context from indexed Q&A pairs
+```
+
+**How Q&A Boosts Search**:
+- Query embeddings are searched in both document and Q&A HNSW indices
+- If Q&A similarity > `qa_similarity_threshold` (default 0.6), Q&A nodes get PageRank boost
+- LLM receives both document context and relevant Q&A pairs
+- Results are more accurate for common job-related questions
+
 ---
 
 ## 📁 Project Structure
@@ -316,6 +443,14 @@ NodeRAG-Neo4j-Integration/
 │   ├── storage/
 │   │   └── neo4j_storage.py          # Neo4j graph storage class
 │   ├── search/                       # Search algorithms
+│   ├── build/
+│   │   ├── component/
+│   │   │   ├── question.py           # ⭐ Q&A: Question node class
+│   │   │   └── answer.py             # ⭐ Q&A: Answer node class
+│   │   └── pipeline/
+│   │       └── qa_pipeline.py        # ⭐ Q&A: Pipeline for API integration
+│   ├── utils/
+│   │   └── qa_api_client.py          # ⭐ Q&A: API client (mock + real)
 │   ├── WebUI/                        # Streamlit interface
 │   └── ...
 │
@@ -329,7 +464,11 @@ NodeRAG-Neo4j-Integration/
     ├── input/                        # ← ADD YOUR DATA HERE
     │   ├── resume_*.txt
     │   └── job_*.txt
+    ├── mock_data/                    # ← Q&A mock data (optional)
+    │   └── mock_qa_data.json
     ├── cache/                        # Generated embeddings (auto-created)
+    ├── questions.parquet             # Q&A questions (auto-created)
+    ├── answers.parquet               # Q&A answers (auto-created)
     └── info/                         # Graph metadata (auto-created)
 
 ```
