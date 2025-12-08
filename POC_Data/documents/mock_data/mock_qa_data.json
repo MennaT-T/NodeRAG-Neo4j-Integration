@@ -1,104 +1,67 @@
-{
-  "data": [
-    {
-      "question_id": "q1",
-      "question_text": "What is your notice period?",
-      "answer_text": "My notice period is 2 weeks from the date of acceptance",
-      "job_title": "Software Engineer",
-      "metadata": {
-        "category": "employment",
-        "priority": "high"
-      }
-    },
-    {
-      "question_id": "q2",
-      "question_text": "What is your expected salary?",
-      "answer_text": "My expected salary range is $80,000-$100,000 annually, depending on the role and benefits",
-      "job_title": "Software Engineer",
-      "metadata": {
-        "category": "compensation",
-        "priority": "high"
-      }
-    },
-    {
-      "question_id": "q3",
-      "question_text": "Are you willing to relocate?",
-      "answer_text": "Yes, I am open to relocation for the right opportunity, particularly to tech hubs",
-      "job_title": "Software Engineer",
-      "metadata": {
-        "category": "logistics",
-        "priority": "medium"
-      }
-    },
-    {
-      "question_id": "q4",
-      "question_text": "What is your current job title?",
-      "answer_text": "I am currently working as a Senior Software Developer",
-      "job_title": "Software Engineer",
-      "metadata": {
-        "category": "employment",
-        "priority": "high"
-      }
-    },
-    {
-      "question_id": "q5",
-      "question_text": "Do you have experience with Python?",
-      "answer_text": "Yes, I have 5+ years of experience with Python, including Django, Flask, and data science libraries",
-      "job_title": "Python Developer",
-      "metadata": {
-        "category": "technical_skills",
-        "priority": "high"
-      }
-    },
-    {
-      "question_id": "q6",
-      "question_text": "What databases are you familiar with?",
-      "answer_text": "I have experience with PostgreSQL, MySQL, MongoDB, and Neo4j. I'm proficient in both SQL and NoSQL databases",
-      "job_title": "Database Administrator",
-      "metadata": {
-        "category": "technical_skills",
-        "priority": "high"
-      }
-    },
-    {
-      "question_id": "q7",
-      "question_text": "Can you work remotely?",
-      "answer_text": "Yes, I have 3 years of remote work experience and have a dedicated home office setup",
-      "job_title": "Software Engineer",
-      "metadata": {
-        "category": "logistics",
-        "priority": "medium"
-      }
-    },
-    {
-      "question_id": "q8",
-      "question_text": "What is your availability for interviews?",
-      "answer_text": "I am available for interviews on weekdays after 5 PM and anytime on weekends",
-      "job_title": "Software Engineer",
-      "metadata": {
-        "category": "logistics",
-        "priority": "low"
-      }
-    },
-    {
-      "question_id": "q9",
-      "question_text": "Do you have experience with machine learning?",
-      "answer_text": "Yes, I have worked on several ML projects using TensorFlow, scikit-learn, and PyTorch",
-      "job_title": "Machine Learning Engineer",
-      "metadata": {
-        "category": "technical_skills",
-        "priority": "high"
-      }
-    },
-    {
-      "question_id": "q10",
-      "question_text": "What is your preferred tech stack?",
-      "answer_text": "I prefer working with Python/Django for backend, React for frontend, and PostgreSQL for databases",
-      "job_title": "Full Stack Developer",
-      "metadata": {
-        "category": "technical_skills",
-        "priority": "medium"
-      }
-    }
-  ]
-}
+[
+  {
+    "question_id": "q1",
+    "question": "What is your notice period?",
+    "answer": "My notice period is 2 weeks from the date of acceptance",
+    "job_title": "Software Engineer",
+    "company_name": "Tech Corp",
+    "submission_date": "2024-01-15T10:30:00Z"
+  },
+  {
+    "question_id": "q2",
+    "question": "What is your expected salary?",
+    "answer": "My expected salary range is $80,000-$100,000 annually, depending on the role and benefits",
+    "job_title": "Software Engineer",
+    "company_name": "Tech Corp",
+    "submission_date": "2024-01-16T14:20:00Z"
+  },
+  {
+    "question_id": "q3",
+    "question": "Are you willing to relocate?",
+    "answer": "Yes, I am open to relocation for the right opportunity, particularly to tech hubs",
+    "job_title": "Software Engineer",
+    "company_name": "Innovation Labs",
+    "submission_date": "2024-01-18T09:15:00Z"
+  },
+  {
+    "question_id": "q4",
+    "question": "What is your current job title?",
+    "answer": "I am currently working as a Senior Software Developer",
+    "job_title": "Software Engineer",
+    "company_name": "Data Systems Co",
+    "submission_date": "2024-01-20T11:45:00Z"
+  },
+  {
+    "question_id": "q5",
+    "question": "Do you have experience with Python?",
+    "answer": "Yes, I have 5+ years of experience with Python, including Django, Flask, and data science libraries",
+    "job_title": "Python Developer",
+    "company_name": "AI Innovations",
+    "submission_date": "2024-01-22T13:30:00Z"
+  },
+  {
+    "question_id": "q6",
+    "question": "Describe your experience with machine learning.",
+    "answer": "I have worked on several ML projects including recommendation systems and NLP applications using scikit-learn and TensorFlow",
+    "job_title": "Machine Learning Engineer",
+    "company_name": "AI Innovations",
+    "submission_date": "2024-02-01T10:00:00Z"
+  },
+  {
+    "question_id": "q7",
+    "question": "What JavaScript frameworks are you familiar with?",
+    "answer": "I have extensive experience with React, Node.js, and Express. I've built multiple full-stack applications",
+    "job_title": "Full Stack Developer",
+    "company_name": "WebDev Corp",
+    "submission_date": "2024-02-05T15:20:00Z"
+  },
+  {
+    "question_id": "q8",
+    "question": "Tell me about a challenging project you've worked on.",
+    "answer": "I led the development of a distributed data processing pipeline that handled millions of records daily using Redis and RabbitMQ",
+    "job_title": "Senior Developer",
+    "company_name": "Enterprise Systems",
+    "submission_date": "2024-02-10T16:45:00Z"
+  }
+]
+   

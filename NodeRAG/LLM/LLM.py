@@ -401,9 +401,16 @@ class Gemini_Embedding(LLM):
                           max_time=30, 
                           max_tries=4)
     def _create_embedding(self, input: Embedding_message) -> Embedding_output:
+        # Extract the actual text content from Embedding_message
+        # input is either a list of Embedding_message or single Embedding_message
+        if isinstance(input, list):
+            contents = [msg['input'] if isinstance(msg, dict) else msg for msg in input]
+        else:
+            contents = input['input'] if isinstance(input, dict) else input
+        
         response = self.client.models.embed_content(
             model=self.model_name,
-            contents=input
+            contents=contents
         )
         return [res.values for res in response.embeddings]
 
@@ -418,9 +425,16 @@ class Gemini_Embedding(LLM):
                           max_time=30, 
                           max_tries=4)
     async def _create_embedding_async(self, input: Embedding_message) -> Embedding_output:
+        # Extract the actual text content from Embedding_message
+        # input is either a list of Embedding_message or single Embedding_message
+        if isinstance(input, list):
+            contents = [msg['input'] if isinstance(msg, dict) else msg for msg in input]
+        else:
+            contents = input['input'] if isinstance(input, dict) else input
+        
         response = await self.client.aio.models.embed_content(
             model=self.model_name,
-            contents=input
+            contents=contents
         )
         return [res.values for res in response.embeddings]
 

@@ -49,12 +49,12 @@ class QA_Pipeline:
             self.config.console.print('[yellow][DEBUG QA Pipeline] No API client provided, skipping[/yellow]')
             return self.G
         
-        # Get user_id from config
-        user_id = getattr(self.config, 'user_id', None)
+        # Get user_id from config.qa_api (not top-level config.user_id which is for multi-user folder routing)
+        user_id = self.config.qa_api.get('user_id', None) if hasattr(self.config, 'qa_api') else None
         self.config.console.print(f'[yellow][DEBUG QA Pipeline] user_id: {user_id}[/yellow]')
         if not user_id:
             # No user_id means no Q&A data to load
-            self.config.console.print('[yellow][DEBUG QA Pipeline] No user_id, skipping[/yellow]')
+            self.config.console.print('[yellow][DEBUG QA Pipeline] No user_id in qa_api config, skipping[/yellow]')
             return self.G
         
         try:

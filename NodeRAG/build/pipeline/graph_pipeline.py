@@ -186,7 +186,18 @@ class Graph_pipeline:
         json_format = self.prompt_manager.relationship_reconstraction_json
         input_data = {'query':query,'response_format':json_format}
         response = await self.API_request(input_data)
-        return [response.get('source'),response.get('relationship'),response.get('target')]
+        
+        # Handle error responses (when API returns string or None instead of dict)
+        if not isinstance(response, dict):
+            # Return the original relationship as fallback
+            # Pad or truncate to ensure exactly 3 elements
+            if len(relationship) >= 3:
+                return relationship[:3]
+            else:
+                # Pad with empty strings if less than 3 elements
+                return relationship + [''] * (3 - len(relationship))
+        
+        return [response.get('source', ''),response.get('relationship', ''),response.get('target', '')]
                 
             
            
