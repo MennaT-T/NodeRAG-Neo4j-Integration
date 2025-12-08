@@ -69,6 +69,14 @@ class high_level_element_index(readable_index):
     pass
 
 class question_index(readable_index):
+    """Index for Question nodes (Phase 2: Q&A integration)"""
+    pass
+
+class answer_index(readable_index):
+    """Index for Answer nodes (Phase 2: Q&A integration)"""
+    pass
+
+class question_index(readable_index):
     """Index counter for Question nodes (Q&A integration)"""
     pass
 

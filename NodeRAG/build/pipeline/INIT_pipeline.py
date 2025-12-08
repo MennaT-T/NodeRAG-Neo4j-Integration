@@ -21,11 +21,12 @@ class INIT_pipeline():
             return genid(''.join(self.documents_path),"sha256")
     
     def check_folder_structure(self):
-        if not os.path.exists(self.config.main_folder):
-            raise ValueError(f'Main folder {self.config.main_folder} does not exist')
+        if not os.path.exists(self.config.effective_main_folder):
+            raise ValueError(f'Effective main folder {self.config.effective_main_folder} does not exist')
         
         if not os.path.exists(self.config.input_folder):
-            raise ValueError(f'Input folder {self.config.input_folder} does not exist')
+            os.makedirs(self.config.input_folder, exist_ok=True)
+            self.config.console.print(f'[yellow]Created input folder: {self.config.input_folder}[/yellow]')
         
     def load_files(self):
         

@@ -245,6 +245,11 @@ def integrate_neo4j_search(config, neo4j_uri: str, neo4j_user: str, neo4j_passwo
         self.sparse_PPR = None
         
         self._semantic_units = None
+        
+        # Phase 2: Load Question HNSW index if available (Q&A integration)
+        self.question_hnsw = None
+        self.question_id_map = {}
+        self._load_question_hnsw_index()
     
     def neo4j_load_graph(self):
         """Return empty graph (all operations redirected to Neo4j)."""

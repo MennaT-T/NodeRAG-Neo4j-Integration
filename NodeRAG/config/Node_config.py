@@ -56,9 +56,20 @@ class NodeConfig():
         if not os.path.exists(self.main_folder):
             raise ValueError(f'main_folder {self.main_folder} does not exist')
         
-        self.input_folder = self.main_folder + '/input'
-        self.cache = self.main_folder + '/cache'
-        self.info = self.main_folder + '/info'
+        # Multi-user support: route to user-specific folder if user_id is provided
+        self.user_id = self.config.get('user_id')
+        
+        if self.user_id:
+            self.effective_main_folder = os.path.join(self.main_folder, 'users', f'user_{self.user_id}')
+            # Create user folder if it doesn't exist
+            if not os.path.exists(self.effective_main_folder):
+                os.makedirs(self.effective_main_folder, exist_ok=True)
+        else:
+            self.effective_main_folder = self.main_folder
+        
+        self.input_folder = self.effective_main_folder + '/input'
+        self.cache = self.effective_main_folder + '/cache'
+        self.info = self.effective_main_folder + '/info'
         
         self.embedding_path = self.cache + '/embedding.parquet'
         self.text_path = self.cache + '/text.parquet'
@@ -79,6 +90,12 @@ class NodeConfig():
         self.hnsw_graph_path = self.cache + '/hnsw_graph.pkl'
         self.id_map_path = self.cache + '/id_map.parquet'
         self.LLM_error_cache = self.cache + '/LLM_error.jsonl'
+        
+        # Q&A Pipeline paths (Phase 2)
+        self.questions_path = self.cache + '/questions.parquet'
+        self.answers_path = self.cache + '/answers.parquet'
+        self.question_hnsw_path = self.cache + '/question_hnsw.bin'
+        self.question_id_map_path = self.cache + '/question_id_map.parquet'
         
         
         self.embedding_batch_size = self.config.get('embedding_batch_size',50)
@@ -101,6 +118,13 @@ class NodeConfig():
         self.ppr_alpha = self.config.get('ppr_alpha',0.5)
         self.ppr_max_iter = self.config.get('ppr_max_iter',8)
         self.unbalance_adjust = self.config.get('unbalance_adjust',False)
+        
+        # Q&A search parameters (Phase 2)
+        self.qa_top_k = self.config.get('qa_top_k', 3)
+        self.qa_similarity_threshold = self.config.get('qa_similarity_threshold', 0.6)
+        
+        # Q&A API configuration (Phase 2)
+        self.qa_api = self.config.get('qa_api', {})
         
         
         self.indices_path = self.info + '/indices.json'
@@ -231,8 +255,8 @@ class NodeConfig():
             raise ValueError('embedding_client is not set properly')
         if self.semantic_text_splitter is None:
             raise ValueError('semantic_text_splitter is not set properly')
-        if not os.path.exists(self.main_folder):
-            raise ValueError('main_folder does not exist')
+        if not os.path.exists(self.effective_main_folder):
+            raise ValueError('effective_main_folder does not exist')
 
     def record_info(self,message:str) -> None:
         

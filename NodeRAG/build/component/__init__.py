@@ -4,6 +4,8 @@ from .relationship import Relationship,relation_index_counter
 from .attribute import Attribute,attribute_index_counter
 from .document import document,document_index_counter
 from .text_unit import Text_unit,text_unit_index_counter
+from .question import Question,question_index_counter
+from .answer import Answer,answer_index_counter
 
 
 from .community import (
@@ -23,6 +25,8 @@ __all__ = [
     'Community_summary',
     'document',
     'Text_unit',
+    'Question',
+    'Answer',
     'semantic_unit_index_counter',
     'entity_index_counter',
     'relation_index_counter',
@@ -31,5 +35,7 @@ __all__ = [
     'high_level_element_index_counter',
     'document_index_counter',
     'text_unit_index_counter',
+    'question_index_counter',
+    'answer_index_counter',
     'High_level_elements'
 ]
