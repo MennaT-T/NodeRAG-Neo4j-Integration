@@ -38,11 +38,35 @@ class QA_Pipeline:
         Returns:
             Updated graph with Q&A nodes
         """
-        # Load existing graph
-        if os.path.exists(self.config.graph_path):
-            self.G = self.storage_obj.load_pickle(self.config.graph_path)
+        # Load existing graph (from Neo4j if enabled, otherwise pickle)
+        use_neo4j = getattr(self.config, 'use_neo4j_storage', False)
+        
+        if use_neo4j:
+            # Load from Neo4j
+            try:
+                from ...storage.neo4j_storage import get_neo4j_storage
+                
+                neo4j_uri = getattr(self.config, 'neo4j_uri', 'bolt://localhost:7687')
+                neo4j_user = getattr(self.config, 'neo4j_user', 'neo4j')
+                neo4j_password = getattr(self.config, 'neo4j_password', 'password')
+                
+                self.config.console.print('[yellow]Loading graph from Neo4j...[/yellow]')
+                neo4j_storage = get_neo4j_storage(neo4j_uri, neo4j_user, neo4j_password)
+                self.G = neo4j_storage.load_graph()
+                self.config.console.print(f'[green]Loaded graph from Neo4j: {len(self.G.nodes)} nodes, {len(self.G.edges)} edges[/green]')
+            except Exception as e:
+                self.config.console.print(f'[yellow]Failed to load from Neo4j: {e}[/yellow]')
+                self.config.console.print('[yellow]Falling back to pickle...[/yellow]')
+                if os.path.exists(self.config.graph_path):
+                    self.G = self.storage_obj.load_pickle(self.config.graph_path)
+                else:
+                    self.G = nx.DiGraph()
         else:
-            self.G = nx.DiGraph()
+            # Traditional pickle loading
+            if os.path.exists(self.config.graph_path):
+                self.G = self.storage_obj.load_pickle(self.config.graph_path)
+            else:
+                self.G = nx.DiGraph()
         
         # Skip if no API client provided
         if not self.api_client:
@@ -212,8 +236,8 @@ class QA_Pipeline:
                 print(f'[QA Pipeline] Skipping embedding generation (question_texts: {len(question_texts)}, embedding_client: {self.config.embedding_client is not None})')  # Use print() so it persists
                 sys.stdout.flush()
             
-            # Save updated graph
-            self.storage_obj(self.G).save_pickle(self.config.graph_path)
+            # Save updated graph (with Neo4j support)
+            self.save_graph()
             
             # Count nodes in graph before saving
             question_count = len([n for n in self.G.nodes() if self.G.nodes[n].get('type') == 'question'])
@@ -439,6 +463,43 @@ class QA_Pipeline:
                 'weight': node_data.get('weight', 0)
             })
         return answers
+    
+    def save_graph(self):
+        """Save graph with Q&A nodes to Neo4j or pickle"""
+        # Check if Neo4j storage is enabled
+        use_neo4j = getattr(self.config, 'use_neo4j_storage', False)
+        
+        if use_neo4j:
+            # Save to Neo4j
+            try:
+                from ...storage.neo4j_storage import get_neo4j_storage
+                
+                neo4j_uri = getattr(self.config, 'neo4j_uri', 'bolt://localhost:7687')
+                neo4j_user = getattr(self.config, 'neo4j_user', 'neo4j')
+                neo4j_password = getattr(self.config, 'neo4j_password', 'password')
+                
+                self.config.console.print('[yellow]Saving Q&A nodes to Neo4j...[/yellow]')
+                neo4j_storage = get_neo4j_storage(neo4j_uri, neo4j_user, neo4j_password)
+                
+                # Save updated graph (with Q&A nodes)
+                neo4j_storage.save_graph(self.G)
+                self.config.console.print('[green]Q&A nodes saved to Neo4j[/green]')
+                self.config.console.print(f'[green]  → Total: {len(self.G.nodes)} nodes, {len(self.G.edges)} edges[/green]')
+                
+                # Also save pickle as backup (optional)
+                if getattr(self.config, 'neo4j_backup_pickle', True):
+                    self.storage_obj(self.G).save_pickle(self.config.graph_path)
+                    self.config.console.print('[green]  → Pickle backup saved[/green]')
+                    
+            except Exception as e:
+                self.config.console.print(f'[red]Failed to save Q&A nodes to Neo4j: {e}[/red]')
+                self.config.console.print('[yellow]Falling back to pickle storage...[/yellow]')
+                self.storage_obj(self.G).save_pickle(self.config.graph_path)
+                self.config.console.print('[green]Graph stored (pickle)[/green]')
+        else:
+            # Traditional pickle storage
+            self.storage_obj(self.G).save_pickle(self.config.graph_path)
+            self.config.console.print('[green]Graph stored[/green]')
     
     def save(self):
         """Save questions and answers to parquet files - saves ALL nodes from graph"""

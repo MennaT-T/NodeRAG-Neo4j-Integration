@@ -190,21 +190,36 @@ class NodeSearch():
         return retrieval
 
     def decompose_query(self,query:str):
-        import json
+        """
+        Decompose query into entities for accurate search.
         
+        Returns:
+            List of entity strings extracted from the query
+        """
         query = self.config.prompt_manager.decompose_query.format(query=query)
         response = self.config.API_client.request({'query':query,'response_format':self.config.prompt_manager.decomposed_text_json})
         
-        # Handle case where response is a string instead of dict
+        # Handle case where LLM returns a string instead of dict (error or format issue)
         if isinstance(response, str):
+            # Try to parse as JSON
+            import json
             try:
                 response = json.loads(response)
             except json.JSONDecodeError:
-                # If JSON parsing fails, return empty list
-                print(f"Warning: Could not parse response as JSON. Got: {response[:100]}")
+                # If parsing fails, log warning and return empty list
+                print(f"[WARNING] decompose_query received string response instead of JSON: {response[:100]}...")
+                print(f"[WARNING] Returning empty entities list. Query decomposition failed.")
                 return []
         
-        return response.get('elements', [])
+        # Ensure response is a dict and has 'elements' key
+        if isinstance(response, dict) and 'elements' in response:
+            return response['elements']
+        else:
+            # Handle unexpected response format
+            print(f"[WARNING] decompose_query received unexpected response format: {type(response)}")
+            print(f"[WARNING] Response content: {str(response)[:200]}...")
+            print(f"[WARNING] Returning empty entities list.")
+            return []
     
     
     def accurate_search(self, entities: List[str]) -> List[str]:
@@ -221,9 +236,15 @@ class NodeSearch():
         return accurate_results
     
     
-    def answer(self,query:str,id_type:bool=True):
+    def answer(self,query:str,id_type:bool=True,job_context:str=None):
+        """
+        Generate answer for a query with optional job context
         
-        
+        Args:
+            query: The question to answer
+            id_type: Whether to use structured (True) or unstructured (False) prompt
+            job_context: Optional job description/context for tailoring the answer
+        """
         retrieval = self.search(query)
         
         ans = Answer(query,retrieval)
@@ -243,7 +264,25 @@ class NodeSearch():
             ans.response = "I couldn't find any relevant information in the knowledge graph to answer your question. The requested information may not be available in the current dataset."
             return ans
         
-        query = self.config.prompt_manager.answer.format(info=retrieved_info,query=query)
+        # Format Q&A history from retrieval.qa_results for style consistency
+        qa_history = ""
+        if hasattr(retrieval, 'qa_results') and retrieval.qa_results:
+            qa_history_parts = []
+            for qa_pair in retrieval.qa_results[:3]:  # Use top 3 Q&A pairs for style reference
+                question = qa_pair.get('question', '')
+                answer = qa_pair.get('answer', '')  # Get answer text from qa_pair
+                if question and answer:
+                    qa_history_parts.append(f"Q: {question}\nA: {answer}\n")
+            if qa_history_parts:
+                qa_history = "\n".join(qa_history_parts)
+        
+        # Format prompt with all context sections
+        query = self.config.prompt_manager.answer.format(
+            info=retrieved_info,
+            query=query,
+            job_context=job_context or "",
+            qa_history=qa_history or "No previous answers available."
+        )
         response = self.config.API_client.request({'query':query})
         
         # Handle case where response is a string - it should be the answer text
@@ -254,9 +293,15 @@ class NodeSearch():
         
         return ans    
     
-    async def answer_async(self,query:str,id_type:bool=True):
+    async def answer_async(self,query:str,id_type:bool=True,job_context:str=None):
+        """
+        Generate answer for a query asynchronously with optional job context
         
-        
+        Args:
+            query: The question to answer
+            id_type: Whether to use structured (True) or unstructured (False) prompt
+            job_context: Optional job description/context for tailoring the answer
+        """
         retrieval = self.search(query)
         
         ans = Answer(query,retrieval)
@@ -276,7 +321,25 @@ class NodeSearch():
             ans.response = "I couldn't find any relevant information in the knowledge graph to answer your question. The requested information may not be available in the current dataset."
             return ans
 
-        query = self.config.prompt_manager.answer.format(info=retrieved_info,query=query)
+        # Format Q&A history from retrieval.qa_results for style consistency
+        qa_history = ""
+        if hasattr(retrieval, 'qa_results') and retrieval.qa_results:
+            qa_history_parts = []
+            for qa_pair in retrieval.qa_results[:3]:  # Use top 3 Q&A pairs for style reference
+                question = qa_pair.get('question', '')
+                answer = qa_pair.get('answer', '')  # Get answer text from qa_pair
+                if question and answer:
+                    qa_history_parts.append(f"Q: {question}\nA: {answer}\n")
+            if qa_history_parts:
+                qa_history = "\n".join(qa_history_parts)
+        
+        # Format prompt with all context sections
+        query = self.config.prompt_manager.answer.format(
+            info=retrieved_info,
+            query=query,
+            job_context=job_context or "",
+            qa_history=qa_history or "No previous answers available."
+        )
         
         ans.response = await self.config.API_client({'query':query})
         
@@ -363,8 +426,7 @@ class NodeSearch():
                 if answer_hash_id is None:
                     print(f"[DEBUG Q&A Search]   -> Warning: No answer node found for question {question_hash_id}")
                 
-                # Calculate similarity score (1 - distance for cosine)
-                similarity = 1 - distance
+                similarity = 1.0 - distance  # Convert distance to similarity (cosine distance)
                 
                 results.append({
                     'question_hash_id': question_hash_id,
@@ -372,17 +434,21 @@ class NodeSearch():
                     'question': question_text,
                     'answer': answer_text,
                     'similarity': similarity,
-                    'distance': float(distance)
+                    'distance': distance,
+                    'job_title': question_node.get('job_title'),
+                    'company_name': question_node.get('company_name'),
+                    'submission_date': question_node.get('submission_date'),
+                    'question_id': question_node.get('question_id')
                 })
             
             print(f"[DEBUG Q&A Search] Returning {len(results)} Q&A pairs")
             return results
             
         except Exception as e:
-            import sys
-            print(f"[ERROR] Q&A search failed: {e}", file=sys.stderr)
+            # If search fails, return empty list (don't break regular search)
             import traceback
-            traceback.print_exc()
+            print(f"[DEBUG Q&A Search] EXCEPTION in _search_qa_pairs: {e}")
+            print(f"[DEBUG Q&A Search] Traceback: {traceback.format_exc()}")
             return []
         
     

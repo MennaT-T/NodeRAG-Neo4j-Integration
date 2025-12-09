@@ -26,12 +26,12 @@ class State(Enum):
     DOCUMENT_PIPELINE = "Document pipeline"
     TEXT_PIPELINE = "Text pipeline" 
     GRAPH_PIPELINE = "Graph pipeline"
+    QA_PIPELINE = "Q&A pipeline"
     ATTRIBUTE_PIPELINE = "Attribute pipeline"
     EMBEDDING_PIPELINE = "Embedding pipeline"
     SUMMARY_PIPELINE = "Summary pipeline"
     INSERT_TEXT = "Insert text pipeline"
     HNSW_PIPELINE = "HNSW pipeline"
-    QA_PIPELINE = "Q&A pipeline"
     FINISHED = "FINISHED"
     ERROR = "ERROR"
     ERROR_LOG = "ERROR_LOG"
@@ -71,6 +71,7 @@ class NodeRag():
             State.DOCUMENT_PIPELINE,
             State.TEXT_PIPELINE,
             State.GRAPH_PIPELINE,
+            State.QA_PIPELINE,
             State.ATTRIBUTE_PIPELINE,
             State.EMBEDDING_PIPELINE,
             State.SUMMARY_PIPELINE,
@@ -104,16 +105,37 @@ class NodeRag():
         self.observers.append(observer)
     
     def _init_qa_api_client(self):
-        """Initialize Q&A API client from config (Phase 2)"""
-        from ..utils.qa_api_client import QAAPIClient
-        
-        qa_config = self.config.qa_api
-        return QAAPIClient(
-            api_base_url=qa_config.get('base_url', ''),
-            use_mock=qa_config.get('use_mock', True),
-            mock_data_path=qa_config.get('mock_data_path', 'mock_data/mock_qa_data.json'),
-            main_folder=self.config.main_folder
-        )
+        """Initialize Q&A API client from config"""
+        try:
+            from ..utils.qa_api_client import QAAPIClient
+            
+            # Access config correctly: self.config.config is the nested config dict
+            api_config = self.config.config.get('qa_api', {})
+            if not api_config or not api_config.get('enabled', False):
+                return None
+            
+            # Determine if using mock data or real API
+            use_mock = api_config.get('use_mock', True)
+            api_base_url = api_config.get('base_url')
+            mock_data_path = api_config.get('mock_data_path')
+            
+            # If mock_data_path is relative, resolve relative to main_folder
+            if mock_data_path and not os.path.isabs(mock_data_path):
+                # Resolve relative to the original main_folder (not effective_main_folder)
+                # because mock data might be shared across users
+                main_folder = self.config.main_folder
+                mock_data_path = os.path.join(main_folder, mock_data_path)
+                mock_data_path = os.path.normpath(mock_data_path)
+            
+            client = QAAPIClient(
+                api_base_url=api_base_url,
+                mock_data_path=mock_data_path,
+                use_mock=use_mock
+            )
+            return client
+        except Exception as e:
+            self.config.console.print(f"[yellow]Warning: Failed to initialize QA API client: {e}[/yellow]")
+            return None
         
 
     def set_state(self,state:State):
@@ -156,21 +178,22 @@ class NodeRag():
                         self.config.whole_time()
                         return
 
-                self.config.console.print(f"[bold green]Processing {self.Current_state.value} pipeline...[/bold green]")
-                await self.state_pipeline_map[self.Current_state](self.config).main()
-                self.config.console.print(f"[bold green]Processing {self.Current_state.value} pipeline finished.[/bold green]")
-                
-                # Phase 2: Run Q&A pipeline after GRAPH_PIPELINE if enabled
-                if self.Current_state == State.GRAPH_PIPELINE and hasattr(self.config, 'qa_api') and self.config.qa_api.get('enabled', False):
-                    self.config.console.print(f"[bold green]Q&A integration enabled. Running Q&A pipeline...[/bold green]")
-                    try:
-                        qa_api_client = self._init_qa_api_client()
-                        qa_pipeline = QA_Pipeline(self.config, qa_api_client)
+                # Special handling for QA_PIPELINE (requires API client initialization)
+                if self.Current_state == State.QA_PIPELINE:
+                    api_client = self._init_qa_api_client()
+                    if api_client:
+                        self.config.console.print(f"[bold green]Processing {self.Current_state.value}...[/bold green]")
+                        qa_pipeline = QA_Pipeline(self.config, api_client)
                         await qa_pipeline.main()
-                        self.config.console.print(f"[bold green]Q&A pipeline finished.[/bold green]")
-                    except Exception as e:
-                        self.config.console.print(f"[bold yellow]Warning: Q&A pipeline failed: {e}[/bold yellow]")
-                        self.config.console.print(f"[bold yellow]Continuing with standard pipeline...[/bold yellow]")
+                        self.config.console.print(f"[bold green]Processing {self.Current_state.value} finished.[/bold green]")
+                    else:
+                        # Skip QA pipeline if not configured or disabled
+                        self.config.console.print(f"[yellow]Skipping {self.Current_state.value} (not configured or disabled)[/yellow]")
+                else:
+                    # Standard pipeline execution
+                    self.config.console.print(f"[bold green]Processing {self.Current_state.value} pipeline...[/bold green]")
+                    await self.state_pipeline_map[self.Current_state](self.config).main()
+                    self.config.console.print(f"[bold green]Processing {self.Current_state.value} pipeline finished.[/bold green]")
         
         except Exception as e:
             error_message = str(e)
