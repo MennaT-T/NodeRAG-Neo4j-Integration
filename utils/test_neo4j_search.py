@@ -41,7 +41,7 @@ def test_search():
     print("✓ Search engine ready")
     
     # Test query
-    test_query = "What skills does Salma Ali have?"
+    test_query = "what is your experience in python?"
     print(f"\n[4] Testing query: '{test_query}'")
     print("-"*70)
     

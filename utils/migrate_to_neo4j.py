@@ -14,12 +14,12 @@ from NodeRAG import NodeConfig
 import pickle
 
 
-def migrate_graph_to_neo4j(main_folder: str, neo4j_uri: str, neo4j_user: str, neo4j_password: str):
+def migrate_graph_to_neo4j(config: 'NodeConfig', neo4j_uri: str, neo4j_user: str, neo4j_password: str):
     """
     Migrate existing graph.pkl to Neo4j database
     
     Args:
-        main_folder: Path to NodeRAG documents folder
+        config: NodeConfig object (handles multi-user routing)
         neo4j_uri: Neo4j connection URI
         neo4j_user: Neo4j username
         neo4j_password: Neo4j password
@@ -28,12 +28,32 @@ def migrate_graph_to_neo4j(main_folder: str, neo4j_uri: str, neo4j_user: str, ne
     print("NodeRAG Graph Migration to Neo4j")
     print("=" * 70)
     
-    # Load the existing graph
-    graph_path = os.path.join(main_folder, 'cache', 'graph.pkl')
+    # Use effective_main_folder for multi-user support
+    if hasattr(config, 'user_id') and config.user_id:
+        print(f"\n[INFO] Multi-user mode: user_id = {config.user_id}")
+        print(f"[INFO] Using effective_main_folder: {config.effective_main_folder}")
     
-    if not os.path.exists(graph_path):
-        print(f"\n❌ Error: Graph file not found at {graph_path}")
-        print("Please build the graph first: python -m NodeRAG.build -f <folder>")
+    # Try to find the graph file (check both base_graph_path and graph_path)
+    graph_path = None
+    if hasattr(config, 'base_graph_path') and os.path.exists(config.base_graph_path):
+        graph_path = config.base_graph_path
+        print(f"\n[INFO] Using base_graph_path: {graph_path}")
+    elif hasattr(config, 'graph_path') and os.path.exists(config.graph_path):
+        graph_path = config.graph_path
+        print(f"\n[INFO] Using graph_path: {graph_path}")
+    else:
+        # Try both paths and show which ones don't exist
+        paths_checked = []
+        if hasattr(config, 'base_graph_path'):
+            paths_checked.append(config.base_graph_path)
+        if hasattr(config, 'graph_path'):
+            paths_checked.append(config.graph_path)
+        
+        print(f"\n❌ Error: Graph file not found")
+        print("Checked paths:")
+        for p in paths_checked:
+            print(f"  - {p}")
+        print("\nPlease build the graph first: python -m NodeRAG.build -f <folder>")
         return False
     
     print(f"\n[1/3] Loading graph from {graph_path}...")
@@ -108,7 +128,7 @@ if __name__ == "__main__":
     # Configuration (adjusted for utils subdirectory)
     MAIN_FOLDER = str(Path(__file__).parent.parent / "POC_Data" / "documents")
     
-    # Load config to get Neo4j credentials
+    # Load config to get Neo4j credentials AND handle multi-user routing
     from NodeRAG import NodeConfig
     config = NodeConfig.from_main_folder(MAIN_FOLDER)
     
@@ -125,9 +145,9 @@ if __name__ == "__main__":
         print("  neo4j_password: 'your-password'")
         sys.exit(1)
     
-    # Run migration
+    # Run migration (pass config object instead of main_folder string)
     success = migrate_graph_to_neo4j(
-        MAIN_FOLDER,
+        config,
         NEO4J_URI,
         NEO4J_USER,
         NEO4J_PASSWORD

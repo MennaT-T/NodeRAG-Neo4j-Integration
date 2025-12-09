@@ -383,6 +383,21 @@ class NodeSearch():
             print(f"[DEBUG Q&A Search] HNSW returned {len(labels[0])} labels, {len(distances[0])} distances")
             
             results = []
+            
+            # Check if using Neo4j-native mode
+            use_neo4j = self.config.config.get('use_neo4j_storage', False)
+            neo4j_storage = None
+            
+            if use_neo4j:
+                # Import and connect to Neo4j for Q&A node retrieval
+                from NodeRAG.storage.neo4j_storage import get_neo4j_storage
+                neo4j_uri = self.config.config.get('neo4j_uri')
+                neo4j_user = self.config.config.get('neo4j_user')
+                neo4j_password = self.config.config.get('neo4j_password')
+                if neo4j_uri and neo4j_user and neo4j_password:
+                    neo4j_storage = get_neo4j_storage(neo4j_uri, neo4j_user, neo4j_password)
+                    print(f"[DEBUG Q&A Search] Neo4j mode enabled - querying Neo4j directly")
+            
             for idx, (label, distance) in enumerate(zip(labels[0], distances[0])):
                 question_hash_id = self.question_id_map.get(label)
                 print(f"[DEBUG Q&A Search] Result {idx+1}: label={label}, distance={distance:.4f}, question_hash_id={question_hash_id}")
@@ -390,38 +405,86 @@ class NodeSearch():
                 if not question_hash_id:
                     print(f"[DEBUG Q&A Search]   -> Skipping: no hash_id found for label {label}")
                     continue
-                    
-                if question_hash_id not in self.G.nodes():
-                    print(f"[DEBUG Q&A Search]   -> Skipping: question node {question_hash_id} not in graph")
-                    continue
                 
-                question_node = self.G.nodes[question_hash_id]
-                question_text = question_node.get('text', '')
-                print(f"[DEBUG Q&A Search]   -> Found question: '{question_text[:50]}...'")
+                # Get question node - from Neo4j if enabled, otherwise from in-memory graph
+                question_node = None
+                question_text = None
+                
+                if use_neo4j and neo4j_storage:
+                    # Query Neo4j directly (use 'id' property, not 'hash_id')
+                    try:
+                        with neo4j_storage.driver.session() as session:
+                            result = session.run("""
+                                MATCH (q:Node {id: $node_id, type: 'question'})
+                                RETURN q.text as text, q.job_title as job_title, 
+                                       q.company_name as company_name, q.submission_date as submission_date,
+                                       q.question_id as question_id
+                            """, node_id=question_hash_id)
+                            record = result.single()
+                            if record:
+                                question_node = {
+                                    'text': record['text'],
+                                    'job_title': record['job_title'],
+                                    'company_name': record['company_name'],
+                                    'submission_date': record['submission_date'],
+                                    'question_id': record['question_id']
+                                }
+                                question_text = record['text']
+                                print(f"[DEBUG Q&A Search]   -> Found question in Neo4j: '{question_text[:50]}...'")
+                            else:
+                                print(f"[DEBUG Q&A Search]   -> Skipping: question node {question_hash_id} not in Neo4j")
+                                continue
+                    except Exception as e:
+                        print(f"[DEBUG Q&A Search]   -> Error querying Neo4j: {e}")
+                        continue
+                else:
+                    # Use in-memory graph
+                    if question_hash_id not in self.G.nodes():
+                        print(f"[DEBUG Q&A Search]   -> Skipping: question node {question_hash_id} not in graph")
+                        continue
+                    question_node = self.G.nodes[question_hash_id]
+                    question_text = question_node.get('text', '')
+                    print(f"[DEBUG Q&A Search]   -> Found question: '{question_text[:50]}...'")
                 
                 # Get answer node (connected via 'has_answer' edge)
                 answer_hash_id = None
                 answer_text = None
                 
-                # Use neighbors() for undirected graphs
-                neighbors = list(self.G.neighbors(question_hash_id)) if hasattr(self.G, 'neighbors') else []
-                
-                for neighbor in neighbors:
-                    # Check edge data - try both directions
-                    edge_data = None
-                    if (question_hash_id, neighbor) in self.G.edges:
-                        edge_data = self.G.edges[question_hash_id, neighbor]
-                    elif (neighbor, question_hash_id) in self.G.edges:
-                        edge_data = self.G.edges[neighbor, question_hash_id]
+                if use_neo4j and neo4j_storage:
+                    # Query Neo4j for answer node (use 'id' property, not 'hash_id')
+                    try:
+                        with neo4j_storage.driver.session() as session:
+                            result = session.run("""
+                                MATCH (q:Node {id: $node_id, type: 'question'})-[:CONNECTED_TO]->(a:Node {type: 'answer'})
+                                RETURN a.id as hash_id, a.text as text
+                            """, node_id=question_hash_id)
+                            record = result.single()
+                            if record:
+                                answer_hash_id = record['hash_id']
+                                answer_text = record['text']
+                                print(f"[DEBUG Q&A Search]   -> Found answer in Neo4j: '{answer_text[:50]}...'")
+                    except Exception as e:
+                        print(f"[DEBUG Q&A Search]   -> Error querying answer from Neo4j: {e}")
+                else:
+                    # Use in-memory graph
+                    neighbors = list(self.G.neighbors(question_hash_id)) if hasattr(self.G, 'neighbors') else []
                     
-                    if edge_data and edge_data.get('type') == 'has_answer':
-                        # Verify neighbor is an answer node
-                        if self.G.nodes[neighbor].get('type') == 'answer':
-                            answer_hash_id = neighbor
-                            answer_node = self.G.nodes[neighbor]
-                            answer_text = answer_node.get('text', '')
-                            print(f"[DEBUG Q&A Search]   -> Found answer: '{answer_text[:50]}...'")
-                            break
+                    for neighbor in neighbors:
+                        # Check edge data - try both directions
+                        edge_data = None
+                        if (question_hash_id, neighbor) in self.G.edges:
+                            edge_data = self.G.edges[question_hash_id, neighbor]
+                        elif (neighbor, question_hash_id) in self.G.edges:
+                            edge_data = self.G.edges[neighbor, question_hash_id]
+                        
+                        if edge_data and edge_data.get('type') == 'has_answer':
+                            # Verify neighbor is an answer node
+                            if self.G.nodes[neighbor].get('type') == 'answer':
+                                answer_hash_id = neighbor
+                                answer_node = self.G.nodes[neighbor]
+                                answer_text = answer_node.get('text', '')
+                                print(f"[DEBUG Q&A Search]   -> Found answer: '{answer_text[:50]}...'")
+                                break
                 
                 if answer_hash_id is None:
                     print(f"[DEBUG Q&A Search]   -> Warning: No answer node found for question {question_hash_id}")
@@ -435,10 +498,10 @@ class NodeSearch():
                     'answer': answer_text,
                     'similarity': similarity,
                     'distance': distance,
-                    'job_title': question_node.get('job_title'),
-                    'company_name': question_node.get('company_name'),
-                    'submission_date': question_node.get('submission_date'),
-                    'question_id': question_node.get('question_id')
+                    'job_title': question_node.get('job_title') if question_node else None,
+                    'company_name': question_node.get('company_name') if question_node else None,
+                    'submission_date': question_node.get('submission_date') if question_node else None,
+                    'question_id': question_node.get('question_id') if question_node else None
                 })
             
             print(f"[DEBUG Q&A Search] Returning {len(results)} Q&A pairs")
