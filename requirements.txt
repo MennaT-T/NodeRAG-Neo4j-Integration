@@ -35,3 +35,22 @@ tqdm==4.67.1
 # Utilities
 PyYAML==6.0.2
 requests==2.32.3
+
+# ================================
+# FastAPI Backend Dependencies
+# ================================
+
+# Web Framework
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.18
+
+# API Validation & Serialization
+pydantic==2.10.4
+
+# Async Support
+aiofiles==24.1.0
+
+# CORS & Security (production)
+# python-jose[cryptography]==3.3.0  # For JWT auth (optional)
+# passlib[bcrypt]==1.7.4  # For password hashing (optional)
