@@ -66,9 +66,10 @@ config:
   
   # Neo4j Storage Settings (Your Custom Integration)
   # Replaces pickle-based storage with Neo4j database for memory optimization
+  use_neo4j_storage: True            # Save graph to Neo4j instead of pickle
   neo4j_uri: 'bolt://localhost:7687' # Neo4j connection URI
   neo4j_user: 'neo4j'                # Neo4j username
-  neo4j_password: 'autoapply123'     # Neo4j password (CHANGE IN PRODUCTION!)
+  neo4j_password: 'YOUR_NEO4J_PASSWORD'  # Neo4j password (CHANGE IN PRODUCTION!)
   
   # Q&A Integration Settings (Phase 2 - Teammate's Feature)
   # Enables fetching and indexing question/answer pairs from external API
@@ -77,6 +78,7 @@ config:
     use_mock: true                    # Use mock JSON file (true) or call real API (false)
     mock_data_path: 'mock_data/mock_qa_data.json'  # Path to mock JSON file (relative to main_folder)
     base_url: 'http://localhost:8000'  # Backend API base URL (used when use_mock=false)
+    user_id: 1                        # User ID to fetch Q&A pairs for
   
   # Q&A Search Parameters (Phase 2)
   qa_top_k: 3                         # Number of Q&A pairs to retrieve per search

@@ -149,6 +149,22 @@ class NodeConfig():
         self._embedding_config = config['embedding_config']
         self._language = self.config['language']
         
+        # Override API keys from environment variables if available (for Docker)
+        if os.environ.get('GOOGLE_API_KEY'):
+            self._model_config['api_keys'] = os.environ.get('GOOGLE_API_KEY')
+            self._embedding_config['api_keys'] = os.environ.get('GOOGLE_API_KEY')
+        elif os.environ.get('OPENAI_API_KEY'):
+            self._model_config['api_keys'] = os.environ.get('OPENAI_API_KEY')
+            self._embedding_config['api_keys'] = os.environ.get('OPENAI_API_KEY')
+        
+        # Override Neo4j settings from environment variables if available (for Docker)
+        if os.environ.get('NEO4J_URI'):
+            self.config['neo4j_uri'] = os.environ.get('NEO4J_URI')
+        if os.environ.get('NEO4J_USER'):
+            self.config['neo4j_user'] = os.environ.get('NEO4J_USER')
+        if os.environ.get('NEO4J_PASSWORD'):
+            self.config['neo4j_password'] = os.environ.get('NEO4J_PASSWORD')
+        
         try:
             self.API_client = set_api_client(API_client(self.model_config))
         except:

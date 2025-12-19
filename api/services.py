@@ -84,10 +84,10 @@ class NodeRAGService:
                 self.config.config['user_id'] = user_id
                 self.config.user_id = user_id
             
-            # Get Neo4j credentials from config
-            self.neo4j_uri = self.config.config.get('neo4j_uri')
-            self.neo4j_user = self.config.config.get('neo4j_user')
-            self.neo4j_password = self.config.config.get('neo4j_password')
+            # Get Neo4j credentials - environment variables take precedence over config
+            self.neo4j_uri = os.environ.get('NEO4J_URI') or self.config.config.get('neo4j_uri')
+            self.neo4j_user = os.environ.get('NEO4J_USER') or self.config.config.get('neo4j_user')
+            self.neo4j_password = os.environ.get('NEO4J_PASSWORD') or self.config.config.get('neo4j_password')
             
             return True
         except Exception as e:

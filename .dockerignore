@@ -1,0 +1,71 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib64
+venv
+.venv
+ENV
+env
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Testing
+.tox
+.coverage
+.coverage.*
+htmlcov
+.pytest_cache
+.hypothesis
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.docker
+
+# Documentation (optional - uncomment if you want to exclude)
+# docs/
+# *.md
+
+# Development files
+*.bak
+*.tmp
+.env.local
+.env.*.local
+
+# Jupyter
+.ipynb_checkpoints
+
+# Keep these (don't ignore)
+!requirements.txt
+!POC_Data/documents/Node_config.yaml.example
