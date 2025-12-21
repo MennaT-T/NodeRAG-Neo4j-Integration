@@ -230,6 +230,9 @@ async def get_config():
     config = dict(noderag_service.config.config)
     config.pop('neo4j_password', None)  # Remove password
     
+    # Return the actual resolved main_folder (with MAIN_FOLDER env var applied)
+    config['main_folder'] = noderag_service.config.main_folder
+    
     return ConfigResponse(
         success=True,
         message="Configuration retrieved",
