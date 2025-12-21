@@ -49,7 +49,8 @@ class NodeConfig():
         
 
         self.config = config['config']
-        self.main_folder = self.config.get('main_folder')
+        # Allow environment variable to override main_folder (for Docker)
+        self.main_folder = os.environ.get('MAIN_FOLDER') or self.config.get('main_folder')
         if self.main_folder is None:
             raise ValueError('main_folder is not set')
         

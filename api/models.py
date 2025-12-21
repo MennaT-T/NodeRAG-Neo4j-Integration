@@ -255,7 +255,11 @@ class Neo4jSyncRequest(BaseModel):
     """Request to sync with Neo4j"""
     full_sync: bool = Field(
         default=False,
-        description="Full sync (clears Neo4j first) vs incremental sync"
+        description="Full sync (clears Neo4j data for user first) vs incremental sync"
+    )
+    user_id: Optional[str] = Field(
+        default=None,
+        description="User ID to sync data for (multi-tenant filtering)"
     )
 
 

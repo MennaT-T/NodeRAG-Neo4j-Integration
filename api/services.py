@@ -17,6 +17,7 @@ from typing import Optional, Dict, Any, List, Tuple
 from datetime import datetime
 import json
 import threading
+from concurrent.futures import ThreadPoolExecutor
 
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -24,6 +25,9 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from NodeRAG import NodeConfig, NodeSearch, NodeRag
 from NodeRAG.storage.neo4j_storage import get_neo4j_storage, close_neo4j_storage
 from NodeRAG.build.component import Question, Answer
+
+# Thread pool for running synchronous NodeRAG operations
+_executor = ThreadPoolExecutor(max_workers=2)
 
 
 class NodeRAGService:
@@ -309,6 +313,66 @@ class BuildService:
         self.noderag = noderag_service
         self._build_tasks: Dict[str, Dict[str, Any]] = {}
     
+    def _run_build_sync(
+        self,
+        folder: str,
+        user_id: Optional[str],
+        build_id: str,
+        sync_to_neo4j: bool,
+        incremental: bool
+    ) -> Dict[str, Any]:
+        """
+        Synchronous build function to run in thread pool.
+        This avoids asyncio.run() conflicts with FastAPI's event loop.
+        """
+        try:
+            # Reset singleton for fresh build
+            NodeConfig._instance = None
+            
+            self.noderag.config = NodeConfig.from_main_folder(folder)
+            
+            if user_id:
+                self.noderag.config.config['user_id'] = user_id
+                self.noderag.config.user_id = user_id
+            
+            # Run build pipeline
+            self._build_tasks[build_id]["current_stage"] = "building"
+            
+            ng = NodeRag(self.noderag.config, web_ui=True)
+            ng.run()
+            
+            self._build_tasks[build_id]["stages_completed"].append("build")
+            
+            # Sync to Neo4j if requested
+            nodes_created = 0
+            edges_created = 0
+            neo4j_synced = False
+            
+            if sync_to_neo4j:
+                self._build_tasks[build_id]["current_stage"] = "syncing_neo4j"
+                
+                neo4j_service = Neo4jSyncService(self.noderag)
+                sync_result = neo4j_service.sync_to_neo4j(full_sync=not incremental, user_id=user_id)
+                
+                if sync_result["success"]:
+                    nodes_created = sync_result["nodes_synced"]
+                    edges_created = sync_result["relationships_synced"]
+                    neo4j_synced = True
+                    self._build_tasks[build_id]["stages_completed"].append("neo4j_sync")
+            
+            return {
+                "success": True,
+                "nodes_created": nodes_created,
+                "edges_created": edges_created,
+                "neo4j_synced": neo4j_synced
+            }
+            
+        except Exception as e:
+            return {
+                "success": False,
+                "error": str(e)
+            }
+    
     async def build_graph(
         self, 
         folder_path: Optional[str] = None,
@@ -342,54 +406,35 @@ class BuildService:
             # Initialize config
             folder = folder_path or self.noderag.default_folder
             
-            # Reset singleton for fresh build
-            NodeConfig._instance = None
-            
-            self.noderag.config = NodeConfig.from_main_folder(folder)
-            
-            if user_id:
-                self.noderag.config.config['user_id'] = user_id
-                self.noderag.config.user_id = user_id
-            
-            # Run build pipeline
-            self._build_tasks[build_id]["current_stage"] = "building"
-            
-            ng = NodeRag(self.noderag.config, web_ui=True)
-            ng.run()
-            
-            self._build_tasks[build_id]["stages_completed"].append("build")
-            
-            # Sync to Neo4j if requested
-            nodes_created = 0
-            edges_created = 0
-            neo4j_synced = False
-            
-            if sync_to_neo4j:
-                self._build_tasks[build_id]["current_stage"] = "syncing_neo4j"
-                
-                neo4j_service = Neo4jSyncService(self.noderag)
-                sync_result = neo4j_service.sync_to_neo4j(full_sync=not incremental)
-                
-                if sync_result["success"]:
-                    nodes_created = sync_result["nodes_synced"]
-                    edges_created = sync_result["relationships_synced"]
-                    neo4j_synced = True
-                    self._build_tasks[build_id]["stages_completed"].append("neo4j_sync")
+            # Run build in thread pool to avoid asyncio.run() conflict
+            loop = asyncio.get_event_loop()
+            result = await loop.run_in_executor(
+                _executor,
+                self._run_build_sync,
+                folder,
+                user_id,
+                build_id,
+                sync_to_neo4j,
+                incremental
+            )
             
             duration = time.time() - start_time
             
-            self._build_tasks[build_id]["status"] = "completed"
-            self._build_tasks[build_id]["current_stage"] = "finished"
-            
-            return {
-                "success": True,
-                "build_id": build_id,
-                "status": "completed",
-                "duration_seconds": duration,
-                "nodes_created": nodes_created,
-                "edges_created": edges_created,
-                "neo4j_synced": neo4j_synced
-            }
+            if result["success"]:
+                self._build_tasks[build_id]["status"] = "completed"
+                self._build_tasks[build_id]["current_stage"] = "finished"
+                
+                return {
+                    "success": True,
+                    "build_id": build_id,
+                    "status": "completed",
+                    "duration_seconds": duration,
+                    "nodes_created": result.get("nodes_created", 0),
+                    "edges_created": result.get("edges_created", 0),
+                    "neo4j_synced": result.get("neo4j_synced", False)
+                }
+            else:
+                raise Exception(result.get("error", "Build failed"))
             
         except Exception as e:
             self._build_tasks[build_id]["status"] = "failed"
@@ -794,12 +839,13 @@ class Neo4jSyncService:
     def __init__(self, noderag_service: NodeRAGService):
         self.noderag = noderag_service
     
-    def sync_to_neo4j(self, full_sync: bool = False) -> Dict[str, Any]:
+    def sync_to_neo4j(self, full_sync: bool = False, user_id: Optional[str] = None) -> Dict[str, Any]:
         """
         Sync the graph to Neo4j.
         
         Args:
-            full_sync: If True, clears Neo4j first. If False, does incremental sync.
+            full_sync: If True, clears Neo4j data for user first. If False, does incremental sync.
+            user_id: User ID for filtering data (multi-tenant support)
             
         Returns:
             Sync result information
@@ -827,15 +873,15 @@ class Neo4jSyncService:
             storage_obj = self.noderag.get_neo4j_storage()
             
             if full_sync:
-                # Clear and rebuild
-                storage_obj.clear_database()
-                storage_obj.save_graph(graph, batch_size=1000)
+                # Clear only this user's data, then rebuild
+                storage_obj.clear_database(user_id=user_id)
+                storage_obj.save_graph(graph, batch_size=1000, user_id=user_id)
             else:
-                # Incremental sync - add new nodes/edges
-                # This is a simplified implementation
-                storage_obj.save_graph(graph, batch_size=1000)
+                # Incremental sync - add new nodes/edges with user_id
+                storage_obj.save_graph(graph, batch_size=1000, user_id=user_id)
             
-            stats = storage_obj.get_statistics()
+            # Get stats for this user only
+            stats = storage_obj.get_statistics(user_id=user_id)
             duration = time.time() - start_time
             
             return {
@@ -843,15 +889,19 @@ class Neo4jSyncService:
                 "nodes_synced": stats['total_nodes'],
                 "relationships_synced": stats['total_relationships'],
                 "duration_seconds": duration,
-                "sync_type": "full" if full_sync else "incremental"
+                "sync_type": "full" if full_sync else "incremental",
+                "user_id": user_id
             }
             
         except Exception as e:
             return {"success": False, "error": str(e)}
     
-    def get_neo4j_stats(self) -> Dict[str, Any]:
+    def get_neo4j_stats(self, user_id: Optional[str] = None) -> Dict[str, Any]:
         """
         Get Neo4j database statistics.
+        
+        Args:
+            user_id: If provided, only get stats for this user
         
         Returns:
             Database statistics
@@ -861,26 +911,32 @@ class Neo4jSyncService:
         
         try:
             storage = self.noderag.get_neo4j_storage()
-            stats = storage.get_statistics()
+            stats = storage.get_statistics(user_id=user_id)
             
             return {
                 "success": True,
                 "total_nodes": stats['total_nodes'],
                 "total_relationships": stats['total_relationships'],
                 "node_types": stats['node_types'],
-                "connected": True
+                "connected": True,
+                "user_id": user_id
             }
         except Exception as e:
             return {"success": False, "error": str(e)}
     
-    def clear_neo4j(self) -> bool:
-        """Clear all data from Neo4j"""
+    def clear_neo4j(self, user_id: Optional[str] = None) -> bool:
+        """
+        Clear data from Neo4j
+        
+        Args:
+            user_id: If provided, only clear this user's data. If None, clear all.
+        """
         if not self.noderag.is_neo4j_connected:
             return False
         
         try:
             storage = self.noderag.get_neo4j_storage()
-            storage.clear_database()
+            storage.clear_database(user_id=user_id)
             return True
         except:
             return False

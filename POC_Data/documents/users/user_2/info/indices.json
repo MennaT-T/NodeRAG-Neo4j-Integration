@@ -1,10 +1,10 @@
 {
-  "document_index": 1,
-  "text_unit_index": 1,
-  "semantic_unit_index": 6,
-  "entity_index": 66,
-  "relation_index": 61,
-  "attribute_index": 4,
-  "community_summary_index": 12,
-  "high_level_element_index": 16
+  "document_index": 2,
+  "text_unit_index": 2,
+  "semantic_unit_index": 12,
+  "entity_index": 132,
+  "relation_index": 122,
+  "attribute_index": 9,
+  "community_summary_index": 24,
+  "high_level_element_index": 33
 }

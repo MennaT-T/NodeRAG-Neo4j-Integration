@@ -720,20 +720,21 @@ async def bulk_create_qa_pairs(request: BulkQACreate):
 # ============================================================================
 
 @app.get("/neo4j/stats", response_model=Neo4jStatsResponse, tags=["Neo4j"])
-async def get_neo4j_stats():
+async def get_neo4j_stats(user_id: Optional[str] = Query(None, description="Filter stats by user ID")):
     """
     Get Neo4j database statistics.
     
     Returns node counts, relationship counts, and type distribution.
+    Optionally filter by user_id.
     """
-    result = neo4j_service.get_neo4j_stats()
+    result = neo4j_service.get_neo4j_stats(user_id=user_id)
     
     if not result["success"]:
         raise HTTPException(status_code=503, detail=result.get("error", "Neo4j not available"))
     
     return Neo4jStatsResponse(
         success=True,
-        message="Statistics retrieved",
+        message=f"Statistics retrieved{' for user_id=' + user_id if user_id else ''}",
         total_nodes=result["total_nodes"],
         total_relationships=result["total_relationships"],
         node_types=result["node_types"],
@@ -746,20 +747,22 @@ async def sync_to_neo4j(request: Neo4jSyncRequest):
     """
     Sync the graph to Neo4j.
     
-    **Full Sync** (`full_sync=True`): Clears Neo4j and re-imports everything.
+    **Full Sync** (`full_sync=True`): Clears Neo4j data for user and re-imports everything.
     Use after major changes or to ensure consistency.
     
     **Incremental Sync** (`full_sync=False`): Adds/updates nodes without clearing.
     Faster but may leave orphaned nodes from deleted data.
+    
+    **user_id**: If provided, only syncs/clears data for this user.
     """
-    result = neo4j_service.sync_to_neo4j(full_sync=request.full_sync)
+    result = neo4j_service.sync_to_neo4j(full_sync=request.full_sync, user_id=request.user_id)
     
     if not result["success"]:
         raise HTTPException(status_code=500, detail=result.get("error", "Sync failed"))
     
     return Neo4jSyncResponse(
         success=True,
-        message="Sync completed successfully",
+        message=f"Sync completed successfully{' for user_id=' + request.user_id if request.user_id else ''}",
         nodes_synced=result["nodes_synced"],
         relationships_synced=result["relationships_synced"],
         duration_seconds=result["duration_seconds"],
@@ -768,20 +771,23 @@ async def sync_to_neo4j(request: Neo4jSyncRequest):
 
 
 @app.post("/neo4j/clear", response_model=BaseResponse, tags=["Neo4j"])
-async def clear_neo4j():
+async def clear_neo4j(user_id: Optional[str] = Query(None, description="Only clear data for this user ID")):
     """
-    Clear all data from Neo4j database.
+    Clear data from Neo4j database.
     
-    **WARNING**: This permanently deletes all nodes and relationships!
+    **WARNING**: If no user_id provided, permanently deletes ALL nodes and relationships!
+    
+    With user_id: Only deletes data for that specific user.
     """
-    success = neo4j_service.clear_neo4j()
+    success = neo4j_service.clear_neo4j(user_id=user_id)
     
     if not success:
         raise HTTPException(status_code=500, detail="Failed to clear Neo4j")
     
+    msg = f"Neo4j data cleared for user_id={user_id}" if user_id else "Neo4j database cleared (all data)"
     return BaseResponse(
         success=True,
-        message="Neo4j database cleared"
+        message=msg
     )
 
 
