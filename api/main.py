@@ -307,7 +307,8 @@ async def build_graph(request: BuildRequest, background_tasks: BackgroundTasks):
             folder_path=request.folder_path,
             incremental=request.incremental,
             sync_to_neo4j=request.sync_to_neo4j,
-            user_id=request.user_id
+            user_id=request.user_id,
+            force_rebuild=request.force_rebuild
         )
         
         if not result["success"]:
@@ -376,7 +377,7 @@ async def search(request: SearchRequest):
         )
     
     try:
-        result = search_service.search(request.query, top_k=request.top_k)
+        result = search_service.search(request.query, top_k=request.top_k, user_id=request.user_id)
         
         nodes = [
             RetrievedNode(
@@ -429,7 +430,7 @@ async def answer_question(request: SearchRequest):
         )
     
     try:
-        result = search_service.answer(request.query, job_context=request.job_context)
+        result = search_service.answer(request.query, job_context=request.job_context, user_id=request.user_id)
         
         nodes = [
             RetrievedNode(

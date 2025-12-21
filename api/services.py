@@ -77,16 +77,20 @@ class NodeRAGService:
         try:
             folder = folder_path or self.default_folder
             
-            # Reset singleton for new config if user_id changes
-            if user_id:
-                NodeConfig._instance = None
+            # Reset singleton for new config
+            NodeConfig._instance = None
             
-            self.config = NodeConfig.from_main_folder(folder)
+            # Load config and set user_id BEFORE creating NodeConfig so paths are correct
+            import yaml
+            config_path = NodeConfig.create_config_file(folder)
+            with open(config_path, 'r') as f:
+                config_dict = yaml.safe_load(f)
             
-            # Set user_id if provided
+            # Set user_id in config BEFORE creating NodeConfig
             if user_id:
-                self.config.config['user_id'] = user_id
-                self.config.user_id = user_id
+                config_dict['config']['user_id'] = user_id
+            
+            self.config = NodeConfig(config_dict)
             
             # Get Neo4j credentials - environment variables take precedence over config
             self.neo4j_uri = os.environ.get('NEO4J_URI') or self.config.config.get('neo4j_uri')
@@ -174,17 +178,34 @@ class SearchService:
     def __init__(self, noderag_service: NodeRAGService):
         self.noderag = noderag_service
     
-    def search(self, query: str, top_k: int = 10) -> Dict[str, Any]:
+    def _ensure_user_context(self, user_id: Optional[str] = None):
+        """
+        Ensure search engine is initialized for the correct user.
+        Reinitializes if user_id differs from current config.
+        """
+        if user_id:
+            current_user = getattr(self.noderag.config, 'user_id', None) if self.noderag.config else None
+            if current_user != user_id:
+                # Need to reinitialize for different user
+                NodeConfig._instance = None
+                self.noderag.initialize(user_id=user_id)
+                self.noderag.initialize_neo4j()
+                self.noderag.initialize_search()
+    
+    def search(self, query: str, top_k: int = 10, user_id: Optional[str] = None) -> Dict[str, Any]:
         """
         Perform search without generating an answer.
         
         Args:
             query: Search query
             top_k: Number of results to return
+            user_id: User ID for multi-user support
             
         Returns:
             Search results dictionary
         """
+        self._ensure_user_context(user_id)
+        
         if not self.noderag.search_engine:
             raise RuntimeError("Search engine not initialized")
         
@@ -242,17 +263,20 @@ class SearchService:
         finally:
             self.noderag.config.HNSW_results = original_hnsw_results
     
-    def answer(self, query: str, job_context: Optional[str] = None) -> Dict[str, Any]:
+    def answer(self, query: str, job_context: Optional[str] = None, user_id: Optional[str] = None) -> Dict[str, Any]:
         """
         Generate an answer for a query.
         
         Args:
             query: The question to answer
             job_context: Optional job description context
+            user_id: User ID for multi-user support
             
         Returns:
             Answer with search results
         """
+        self._ensure_user_context(user_id)
+        
         if not self.noderag.search_engine:
             raise RuntimeError("Search engine not initialized")
         
@@ -319,21 +343,47 @@ class BuildService:
         user_id: Optional[str],
         build_id: str,
         sync_to_neo4j: bool,
-        incremental: bool
+        incremental: bool,
+        force_rebuild: bool = False
     ) -> Dict[str, Any]:
         """
         Synchronous build function to run in thread pool.
         This avoids asyncio.run() conflicts with FastAPI's event loop.
         """
         try:
-            # Reset singleton for fresh build
+            # Reset singleton for fresh build with user-specific config
             NodeConfig._instance = None
             
-            self.noderag.config = NodeConfig.from_main_folder(folder)
+            # Create config and set user_id BEFORE NodeConfig initializes paths
+            config_path = NodeConfig.create_config_file(folder)
+            import yaml
+            with open(config_path, 'r') as f:
+                config_dict = yaml.safe_load(f)
             
+            # Set user_id in config BEFORE creating NodeConfig
             if user_id:
-                self.noderag.config.config['user_id'] = user_id
-                self.noderag.config.user_id = user_id
+                config_dict['config']['user_id'] = user_id
+            
+            self.noderag.config = NodeConfig(config_dict)
+            
+            # Clear cache if force_rebuild is True OR if switching users
+            cache_dir = self.noderag.config.cache
+            should_clear_cache = force_rebuild
+            
+            # Auto-clear if switching to a different user and cache from previous user exists
+            if user_id and os.path.exists(cache_dir):
+                # Check if cache belongs to a different user by checking parent folder
+                cache_parent = os.path.dirname(cache_dir)
+                expected_user_folder = os.path.join(self.noderag.config.main_folder, 'users', f'user_{user_id}')
+                if cache_parent != expected_user_folder:
+                    should_clear_cache = True
+            
+            if should_clear_cache and os.path.exists(cache_dir):
+                self._build_tasks[build_id]["current_stage"] = "clearing_cache"
+                print(f"[INFO] Clearing cache: {cache_dir}")
+                shutil.rmtree(cache_dir)
+                os.makedirs(cache_dir, exist_ok=True)
+                self._build_tasks[build_id]["stages_completed"].append("cache_cleared")
             
             # Run build pipeline
             self._build_tasks[build_id]["current_stage"] = "building"
@@ -378,7 +428,8 @@ class BuildService:
         folder_path: Optional[str] = None,
         incremental: bool = True,
         sync_to_neo4j: bool = True,
-        user_id: Optional[str] = None
+        user_id: Optional[str] = None,
+        force_rebuild: bool = False
     ) -> Dict[str, Any]:
         """
         Build or rebuild the knowledge graph.
@@ -388,6 +439,7 @@ class BuildService:
             incremental: Whether to do incremental build
             sync_to_neo4j: Sync to Neo4j after build
             user_id: User ID for multi-user support
+            force_rebuild: Force rebuild by clearing cache
             
         Returns:
             Build result information
@@ -415,7 +467,8 @@ class BuildService:
                 user_id,
                 build_id,
                 sync_to_neo4j,
-                incremental
+                incremental,
+                force_rebuild
             )
             
             duration = time.time() - start_time

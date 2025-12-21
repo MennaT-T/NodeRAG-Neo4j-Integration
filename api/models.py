@@ -94,6 +94,10 @@ class BuildRequest(BaseModel):
         default=None,
         description="User ID for multi-user support"
     )
+    force_rebuild: bool = Field(
+        default=False,
+        description="Force rebuild by clearing cache (useful when switching users or forcing fresh build)"
+    )
 
 
 class BuildStatusResponse(BaseResponse):

@@ -48,6 +48,16 @@ logs/
 .DS_Store
 Thumbs.db
 
+# Config files with API keys (SECURITY)
+**/Node_config.yaml
+POC_Data/documents/users/*/
+POC_Data/documents/Node_config.yaml
+POC_Data/documents/web_ui_config.yaml
+*.yaml
+.env
+.env.*
+!.env.example
+
 # Docker
 Dockerfile*
 docker-compose*.yml
