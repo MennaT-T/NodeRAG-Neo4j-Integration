@@ -385,10 +385,16 @@ class BuildService:
                 os.makedirs(cache_dir, exist_ok=True)
                 self._build_tasks[build_id]["stages_completed"].append("cache_cleared")
             
+            # Clear state file for fresh rebuild
+            state_file = os.path.join(self.noderag.config.info, 'state.json')
+            if force_rebuild and os.path.exists(state_file):
+                print(f"[INFO] Clearing state file: {state_file}")
+                os.remove(state_file)
+            
             # Run build pipeline
             self._build_tasks[build_id]["current_stage"] = "building"
             
-            ng = NodeRag(self.noderag.config, web_ui=True)
+            ng = NodeRag(self.noderag.config, web_ui=True, incremental=incremental)
             ng.run()
             
             self._build_tasks[build_id]["stages_completed"].append("build")

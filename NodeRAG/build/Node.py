@@ -39,10 +39,11 @@ class State(Enum):
     NO_ERROR = "NO_ERROR"
     
 class NodeRag():
-    def __init__(self,config:NodeConfig,web_ui:bool=False):
+    def __init__(self,config:NodeConfig,web_ui:bool=False, incremental:bool=True):
         self._Current_state=State.INIT
         self.Error_type=State.NO_ERROR
         self.Is_incremental=False
+        self.force_full_build = not incremental  # If incremental=False, force full build
         self.config=config
         self.console = self.config.console
         self.config.config_integrity()
@@ -173,10 +174,15 @@ class NodeRag():
                                 sys.exit()
                         
                     else:
-                        self.console.print("[bold green]Pipeline finished. No incremental mode.[/bold green]")
-                        self.store_state()
-                        self.config.whole_time()
-                        return
+                        if self.force_full_build:
+                            self.console.print("[bold green]Forced full rebuild - continuing with pipeline.[/bold green]")
+                            self.Current_state = State.DOCUMENT_PIPELINE
+                            self.Is_incremental = False
+                        else:
+                            self.console.print("[bold green]Pipeline finished. No incremental mode.[/bold green]")
+                            self.store_state()
+                            self.config.whole_time()
+                            return
 
                 # Special handling for QA_PIPELINE (requires API client initialization)
                 if self.Current_state == State.QA_PIPELINE:
