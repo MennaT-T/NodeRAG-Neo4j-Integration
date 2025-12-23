@@ -79,3 +79,4 @@ docker-compose*.yml
 # Keep these (don't ignore)
 !requirements.txt
 !POC_Data/documents/Node_config.yaml.example
+!NodeRAG/config/Node_config.yaml
