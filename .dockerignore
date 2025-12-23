@@ -53,10 +53,14 @@ Thumbs.db
 POC_Data/documents/users/*/
 POC_Data/documents/Node_config.yaml
 POC_Data/documents/web_ui_config.yaml
-*.yaml
 .env
 .env.*
 !.env.example
+
+# Exclude yaml files EXCEPT the template config
+*.yaml
+!NodeRAG/config/Node_config.yaml
+!requirements.txt
 
 # Docker
 Dockerfile*
@@ -75,8 +79,3 @@ docker-compose*.yml
 
 # Jupyter
 .ipynb_checkpoints
-
-# Keep these (don't ignore)
-!requirements.txt
-!POC_Data/documents/Node_config.yaml.example
-!NodeRAG/config/Node_config.yaml
