@@ -57,7 +57,7 @@ def get_token_counter(model_name:str) -> token_counter:
     
     if 'gpt' in model_name:
         return tiktoken_counter(model_name)
-    elif 'gemini' in model_name:
+    elif 'gemini' in model_name or 'gemma' in model_name:
         token = tiktoken_counter('gpt-4o')
         token.token_limit_bound = 1280000
         return token

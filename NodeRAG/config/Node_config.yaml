@@ -3,7 +3,7 @@
 #==============================================================================
 model_config:
   service_provider: gemini            # AI service provider (e.g., openai, gemini)
-  model_name: gemini-2.5-flash          # Model name for text generation
+  model_name: models/gemma-3-12b-it #gemini-2.5-flash          # Model name for text generation
   api_keys: YOUR_GEMINI_API_KEY_HERE    # Your API key
   temperature: 0                # Temperature parameter for text generation
   max_tokens: 10000                  # Maximum tokens to generate
