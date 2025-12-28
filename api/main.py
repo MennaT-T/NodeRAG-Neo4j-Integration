@@ -46,13 +46,17 @@ Run with:
   uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
 """
 
-from fastapi import FastAPI, HTTPException, BackgroundTasks, Query
+from fastapi import FastAPI, HTTPException, BackgroundTasks, Query, File, UploadFile, Form, Header, Depends
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import APIKeyHeader
 from contextlib import asynccontextmanager
 from typing import Optional, List
 from datetime import datetime
 import time
 import asyncio
+import os
+
+from .file_parser import parse_file
 
 from .models import (
     # Base
@@ -139,9 +143,16 @@ app = FastAPI(
     - Document management (resumes, job descriptions)
     - Q&A pair management
     - Neo4j integration
+    
+    **Authentication:**
+    Most endpoints require an API key. Click the 🔓 Authorize button and enter your API key.
+    Set the NODERAG_API_KEY environment variable in your .env file.
     """,
     version="1.0.0",
-    lifespan=lifespan
+    lifespan=lifespan,
+    swagger_ui_parameters={
+        "persistAuthorization": True
+    }
 )
 
 # Add CORS middleware
@@ -152,6 +163,41 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+# ============================================================================
+# Authentication
+# ============================================================================
+
+# Define API Key security scheme for Swagger UI
+api_key_header = APIKeyHeader(
+    name="X-API-Key",
+    description="API Key for accessing protected endpoints. Set NODERAG_API_KEY in your .env file.",
+    auto_error=False
+)
+
+async def verify_api_key(x_api_key: str = Depends(api_key_header)):
+    """
+    Verify API key for protected endpoints.
+    
+    The API key should be provided in the X-API-Key header.
+    Set NODERAG_API_KEY environment variable to configure.
+    """
+    expected_key = os.environ.get('NODERAG_API_KEY')
+    
+    # If no key is configured, skip authentication (development mode)
+    if not expected_key:
+        print("[WARNING] NODERAG_API_KEY not set - authentication disabled")
+        return True
+    
+    # Validate API key
+    if not x_api_key or x_api_key != expected_key:
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid or missing API key. Provide X-API-Key header."
+        )
+    
+    return True
 
 
 # ============================================================================
@@ -280,7 +326,7 @@ async def initialize_service(
 # Build Pipeline Endpoints
 # ============================================================================
 
-@app.post("/build", response_model=BuildResponse, tags=["Build"])
+@app.post("/build", response_model=BuildResponse, tags=["Build"], dependencies=[Depends(verify_api_key)])
 async def build_graph(request: BuildRequest, background_tasks: BackgroundTasks):
     """
     Build or rebuild the knowledge graph.
@@ -357,7 +403,7 @@ async def get_build_status(build_id: str):
 # Search & Q&A Endpoints
 # ============================================================================
 
-@app.post("/search", response_model=SearchResponse, tags=["Search"])
+@app.post("/search", response_model=SearchResponse, tags=["Search"], dependencies=[Depends(verify_api_key)])
 async def search(request: SearchRequest):
     """
     Search the knowledge graph.
@@ -405,7 +451,7 @@ async def search(request: SearchRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.post("/answer", response_model=AnswerResponse, tags=["Search"])
+@app.post("/answer", response_model=AnswerResponse, tags=["Search"], dependencies=[Depends(verify_api_key)])
 async def answer_question(request: SearchRequest):
     """
     Generate an AI answer for a question.
@@ -491,23 +537,74 @@ async def list_documents(user_id: Optional[str] = Query(None)):
     )
 
 
-@app.post("/documents", response_model=DocumentUploadResponse, tags=["Documents"])
-async def upload_document(request: DocumentUploadRequest):
+@app.post("/documents", response_model=DocumentUploadResponse, tags=["Documents"], dependencies=[Depends(verify_api_key)])
+async def upload_document(
+    file: UploadFile = File(...),
+    document_type: str = Form("resume"),
+    user_id: Optional[str] = Form(None),
+    filename: Optional[str] = Form(None)
+):
     """
-    Upload a new document.
+    Upload a binary document file (PDF, DOCX, TXT).
     
-    Documents are stored in the input folder and will be processed
-    on the next build. Supports resumes, job descriptions, and general text.
+    The file will be parsed automatically to extract text content,
+    then stored in the input folder for processing.
+    
+    **Supported Formats**: PDF, DOCX, TXT
+    **Max File Size**: 10MB
     
     **Note**: After uploading, run `/build` with `incremental=True` to 
     add the document to the knowledge graph.
     """
+    # Initialize NodeRAGService with user_id if provided
+    if user_id:
+        init_success = noderag_service.initialize(user_id=user_id)
+        if not init_success:
+            raise HTTPException(
+                status_code=500,
+                detail=f"Failed to initialize service for user {user_id}"
+            )
+    
+    # Read file bytes
+    file_bytes = await file.read()
+    
+    # Validate file size (10MB limit)
+    max_size = 10 * 1024 * 1024  # 10MB
+    if len(file_bytes) > max_size:
+        raise HTTPException(
+            status_code=413, 
+            detail=f"File too large. Maximum size is 10MB. Received: {len(file_bytes) / 1024 / 1024:.2f}MB"
+        )
+    
+    # Use provided filename or fall back to uploaded filename
+    final_filename = filename or file.filename
+    
+    # Parse file to extract text
+    try:
+        content = parse_file(file_bytes, final_filename)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=f"File parsing failed: {str(e)}")
+    except ImportError as e:
+        raise HTTPException(status_code=500, detail=f"Parser dependency missing: {str(e)}")
+    
+    # Validate extracted content
+    if not content or len(content.strip()) < 10:
+        raise HTTPException(
+            status_code=400, 
+            detail="Extracted content is too short or empty. Please check the file."
+        )
+    
+    # Upload using existing document service
     result = document_service.upload_document(
-        content=request.content,
-        filename=request.filename,
-        document_type=request.document_type,
-        user_id=request.user_id,
-        metadata=request.metadata
+        content=content,
+        filename=final_filename,
+        document_type=document_type,
+        user_id=user_id,
+        metadata={
+            "original_filename": file.filename,
+            "content_type": file.content_type,
+            "file_size_bytes": len(file_bytes)
+        }
     )
     
     if not result["success"]:
@@ -515,7 +612,7 @@ async def upload_document(request: DocumentUploadRequest):
     
     return DocumentUploadResponse(
         success=True,
-        message="Document uploaded successfully",
+        message=f"Document uploaded and parsed successfully. Extracted {len(content)} characters.",
         document=DocumentInfo(**result["document"]),
         requires_rebuild=result["requires_rebuild"]
     )
@@ -629,7 +726,7 @@ async def list_qa_pairs(user_id: Optional[str] = Query(None)):
     )
 
 
-@app.post("/qa-pairs", response_model=QAPairResponse, tags=["Q&A Pairs"])
+@app.post("/qa-pairs", response_model=QAPairResponse, tags=["Q&A Pairs"], dependencies=[Depends(verify_api_key)])
 async def create_qa_pair(request: QAPairCreate):
     """
     Create a new Q&A pair.
@@ -683,7 +780,7 @@ async def delete_qa_pair(question_hash_id: str):
     )
 
 
-@app.post("/qa-pairs/bulk", response_model=BaseResponse, tags=["Q&A Pairs"])
+@app.post("/qa-pairs/bulk", response_model=BaseResponse, tags=["Q&A Pairs"], dependencies=[Depends(verify_api_key)])
 async def bulk_create_qa_pairs(request: BulkQACreate):
     """
     Create multiple Q&A pairs at once.
@@ -746,7 +843,7 @@ async def get_neo4j_stats(user_id: Optional[str] = Query(None, description="Filt
     )
 
 
-@app.post("/neo4j/sync", response_model=Neo4jSyncResponse, tags=["Neo4j"])
+@app.post("/neo4j/sync", response_model=Neo4jSyncResponse, tags=["Neo4j"], dependencies=[Depends(verify_api_key)])
 async def sync_to_neo4j(request: Neo4jSyncRequest):
     """
     Sync the graph to Neo4j.
@@ -774,7 +871,7 @@ async def sync_to_neo4j(request: Neo4jSyncRequest):
     )
 
 
-@app.post("/neo4j/clear", response_model=BaseResponse, tags=["Neo4j"])
+@app.post("/neo4j/clear", response_model=BaseResponse, tags=["Neo4j"], dependencies=[Depends(verify_api_key)])
 async def clear_neo4j(user_id: Optional[str] = Query(None, description="Only clear data for this user ID")):
     """
     Clear data from Neo4j database.

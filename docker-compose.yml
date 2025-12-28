@@ -58,6 +58,12 @@ services:
       # LLM API Keys (set in .env file)
       - OPENAI_API_KEY=${OPENAI_API_KEY:-}
       - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
+      # Backend Authentication (set in .env file)
+      - BACKEND_AUTH_TOKEN=${BACKEND_AUTH_TOKEN:-}
+      # NodeRAG API Key (for securing NodeRAG endpoints)
+      - NODERAG_API_KEY=${NODERAG_API_KEY:-}
+      # Disable Rich console to prevent "Only one live display" errors in API mode
+      - DISABLE_RICH_CONSOLE=true
     volumes:
       # Mount data directory for persistence
       - ./POC_Data:/app/POC_Data

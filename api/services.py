@@ -394,6 +394,17 @@ class BuildService:
             # Run build pipeline
             self._build_tasks[build_id]["current_stage"] = "building"
             
+            # Reset state to clear any previous ERROR state
+            state_path = os.path.join(self.noderag.config.info, 'state.json')
+            if os.path.exists(state_path):
+                # Reset to INIT state
+                with open(state_path, 'w') as f:
+                    json.dump({
+                        'Current_state': 'INIT',
+                        'Error_type': 'NO_ERROR',
+                        'Is_incremental': incremental
+                    }, f)
+            
             ng = NodeRag(self.noderag.config, web_ui=True, incremental=incremental)
             ng.run()
             

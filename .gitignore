@@ -53,6 +53,7 @@ POC_Data.zip
 # API Keys and Secrets (IMPORTANT!)
 *config.yaml
 !*config.yaml.example
+!NodeRAG/config/Node_config.yaml
 .env
 .env.local
 .env.production

@@ -139,7 +139,9 @@ class NodeConfig():
                 f.write('')
         self.info_logger = setup_logger('info_logger',self.info_path)
         self.timer = []
-        self.tracker = Tracker(self.cache,use_rich=True)
+        # Disable Rich console in API/Docker environments to avoid "Only one live display" errors
+        use_rich_console = os.environ.get('DISABLE_RICH_CONSOLE', 'false').lower() != 'true'
+        self.tracker = Tracker(self.cache, use_rich=use_rich_console)
         self.rich_console = rich_console()
         self.console = self.rich_console.console
         self.indices = self.load_indices()

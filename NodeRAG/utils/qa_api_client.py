@@ -18,7 +18,8 @@ class QAAPIClient:
     
     def __init__(self, api_base_url: Optional[str] = None, 
                  mock_data_path: Optional[str] = None,
-                 use_mock: bool = False):
+                 use_mock: bool = False,
+                 auth_token: Optional[str] = None):
         """
         Initialize API client.
         
@@ -26,10 +27,12 @@ class QAAPIClient:
             api_base_url: Base URL of the backend API (e.g., "https://api.example.com")
             mock_data_path: Path to mock JSON file (for development)
             use_mock: If True, use mock data instead of calling API
+            auth_token: Bearer token for API authentication (optional)
         """
         self.api_base_url = api_base_url
         self.mock_data_path = mock_data_path
         self.use_mock = use_mock or (api_base_url is None)
+        self.auth_token = auth_token
     
     def get_qa_pairs_by_user(self, user_id: str) -> List[Dict]:
         """
@@ -74,8 +77,13 @@ class QAAPIClient:
         
         endpoint = f"{self.api_base_url}/api/questions/user/{user_id}"
         
+        # Prepare headers with Bearer token if provided
+        headers = {}
+        if self.auth_token:
+            headers['Authorization'] = f'Bearer {self.auth_token}'
+        
         try:
-            response = requests.get(endpoint, timeout=30)
+            response = requests.get(endpoint, headers=headers, timeout=30)
             response.raise_for_status()
             qa_pairs = response.json()
             

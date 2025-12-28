@@ -30,7 +30,9 @@ class text_pipline():
             self.config.tracker.set(len(self.texts),'Text Decomposition')
             
             for index, row in self.texts.iterrows():
-                text = Text_unit(row['context'],row['hash_id'],row['text_id'])
+                # Handle both 'hash_id' and 'id' column names (Neo4j uses 'id')
+                node_id = row.get('hash_id', row.get('id'))
+                text = Text_unit(row['context'], node_id, row['text_id'])
                 async_task.append(text.text_decomposition(self.config))
             await asyncio.gather(*async_task)
             
@@ -43,7 +45,10 @@ class text_pipline():
                 for line in f:
                     line = json.loads(line)
                     exist_hash_id.append(line['hash_id'])
-            self.texts = self.texts[~self.texts['hash_id'].isin(exist_hash_id)]
+            
+            # Handle both 'hash_id' and 'id' column names (Neo4j uses 'id')
+            id_column = 'hash_id' if 'hash_id' in self.texts.columns else 'id'
+            self.texts = self.texts[~self.texts[id_column].isin(exist_hash_id)]
             
         async def rerun(self) -> None:
             

@@ -120,6 +120,9 @@ class NodeRag():
             api_base_url = api_config.get('base_url')
             mock_data_path = api_config.get('mock_data_path')
             
+            # Get auth token from environment variable (set in .env for Docker)
+            auth_token = os.environ.get('BACKEND_AUTH_TOKEN')
+            
             # If mock_data_path is relative, resolve relative to main_folder
             if mock_data_path and not os.path.isabs(mock_data_path):
                 # Resolve relative to the original main_folder (not effective_main_folder)
@@ -131,7 +134,8 @@ class NodeRag():
             client = QAAPIClient(
                 api_base_url=api_base_url,
                 mock_data_path=mock_data_path,
-                use_mock=use_mock
+                use_mock=use_mock,
+                auth_token=auth_token
             )
             return client
         except Exception as e:
