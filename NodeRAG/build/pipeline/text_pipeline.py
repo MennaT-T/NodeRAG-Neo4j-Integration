@@ -115,7 +115,7 @@ class text_pipline():
             for store in LLM_store:
                 input_data = store['input']
                 store.pop('input')
-                input_data.update({'response_format':self.config.prompt_manager.text_decomposition})    
+                input_data.update({'response_format':self.config.prompt_manager.text_decomposition_json})    
                 tasks.append(self.request_save(input_data,store,self.config))
             await asyncio.gather(*tasks)
             self.config.tracker.close()

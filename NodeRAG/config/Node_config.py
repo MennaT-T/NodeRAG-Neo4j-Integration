@@ -191,7 +191,7 @@ class NodeConfig():
             
             
             
-        self.prompt_manager = prompt_manager(self._language)
+        self.prompt_manager = prompt_manager(self._language, self.model_config['model_name'])
 
 
 

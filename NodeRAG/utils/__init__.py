@@ -9,6 +9,7 @@ from .PPR import sparse_PPR
 from .graph_operator import IGraph,MultigraphConcat
 from .HNSW import HNSW
 from .yaml_operation import YamlHandler
+from .json_parser import safe_json_parse
 
 __all__ = [
     'Tracker',
@@ -22,5 +23,6 @@ __all__ = [
     'IGraph',
     'MultigraphConcat',
     'HNSW',
-    'YamlHandler'
+    'YamlHandler',
+    'safe_json_parse'
 ]

@@ -6,6 +6,7 @@ from .attribute_generation_prompt import attribute_generation_prompt, attribute_
 from .community_summary import community_summary, community_summary_Chinese
 from .decompose import decompos_query,decompos_query_Chinese
 from .answer import answer_prompt, answer_prompt_Chinese
+from .schema_to_prompt import schema_to_prompt_instruction
 from ...LLM.LLM_state import get_api_client
 
 
@@ -13,27 +14,44 @@ API_request = get_api_client()
 
 class prompt_manager():
     
-    def __init__(self, language:str):
+    def __init__(self, language:str, model_name:str = None):
         self.language = language
+        self.model_name = model_name or ''
+    
+    def _is_gemma_model(self) -> bool:
+        """Check if current model is a Gemma model (doesn't support JSON mode)"""
+        return 'gemma' in self.model_name.lower()
         
     @property
     def text_decomposition(self):
         match self.language:
             case 'English':
-                return text_decomposition_prompt
+                base_prompt = text_decomposition_prompt
             case "Chinese":
-                return text_decomposition_prompt_Chinese
+                base_prompt = text_decomposition_prompt_Chinese
             case _:
-                return self.translate(text_decomposition_prompt)
+                base_prompt = self.translate(text_decomposition_prompt)
+        
+        # Append schema instructions for Gemma models
+        if self._is_gemma_model():
+            base_prompt += schema_to_prompt_instruction('text_decomposition')
+        
+        return base_prompt
     @property
     def relationship_reconstraction(self):
         match self.language:
             case 'English':
-                return relationship_reconstraction_prompt
+                base_prompt = relationship_reconstraction_prompt
             case "Chinese":
-                return relationship_reconstraction_prompt_Chinese
+                base_prompt = relationship_reconstraction_prompt_Chinese
             case _:
-                return self.translate(relationship_reconstraction_prompt)
+                base_prompt = self.translate(relationship_reconstraction_prompt)
+        
+        # Append schema instructions for Gemma models
+        if self._is_gemma_model():
+            base_prompt += schema_to_prompt_instruction('relationship_reconstraction')
+        
+        return base_prompt
             
     @property
     def attribute_generation(self):
@@ -49,20 +67,32 @@ class prompt_manager():
     def community_summary(self):
         match self.language:
             case 'English':
-                return community_summary
+                base_prompt = community_summary
             case "Chinese":
-                return community_summary_Chinese
+                base_prompt = community_summary_Chinese
             case _:
-                return self.translate(community_summary)
+                base_prompt = self.translate(community_summary)
+        
+        # Append schema instructions for Gemma models
+        if self._is_gemma_model():
+            base_prompt += schema_to_prompt_instruction('high_level_element')
+        
+        return base_prompt
     @property
     def decompose_query(self):
         match self.language:
             case 'English':
-                return decompos_query
+                base_prompt = decompos_query
             case "Chinese":
-                return decompos_query_Chinese
+                base_prompt = decompos_query_Chinese
             case _:
-                return self.translate(decompos_query)
+                base_prompt = self.translate(decompos_query)
+        
+        # Append schema instructions for Gemma models
+        if self._is_gemma_model():
+            base_prompt += schema_to_prompt_instruction('decomposed_text')
+        
+        return base_prompt
     @property
     def answer(self):
         match self.language:

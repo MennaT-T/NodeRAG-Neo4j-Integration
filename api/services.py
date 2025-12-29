@@ -494,6 +494,14 @@ class BuildService:
                 self._build_tasks[build_id]["status"] = "completed"
                 self._build_tasks[build_id]["current_stage"] = "finished"
                 
+                # Auto-reload search engine after successful build
+                # This ensures /answer endpoint works immediately without calling /initialize
+                try:
+                    self.noderag.initialize_search()
+                    print(f"✓ Search engine reloaded for user_id={user_id}")
+                except Exception as e:
+                    print(f"⚠ Failed to reload search engine: {e}")
+                
                 return {
                     "success": True,
                     "build_id": build_id,

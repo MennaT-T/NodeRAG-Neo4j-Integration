@@ -91,14 +91,27 @@ class QAAPIClient:
             if not isinstance(qa_pairs, list):
                 raise ValueError(f"API returned invalid format: expected list, got {type(qa_pairs)}")
             
-            # Validate each item has required fields
-            required_fields = ['question_id', 'question', 'answer', 'job_title', 'company_name', 'submission_date']
+            # Transform camelCase (from C# backend) to snake_case (Python convention)
+            # Map: questionId -> question_id, jobTitle -> job_title, etc.
+            transformed_pairs = []
             for item in qa_pairs:
-                missing_fields = [field for field in required_fields if field not in item]
+                transformed_item = {
+                    'question_id': item.get('questionId') or item.get('question_id'),
+                    'question': item.get('question'),
+                    'answer': item.get('answer'),
+                    'job_title': item.get('jobTitle') or item.get('job_title'),
+                    'company_name': item.get('companyName') or item.get('company_name'),
+                    'submission_date': item.get('submissionDate') or item.get('submission_date'),
+                }
+                
+                # Validate all required fields are present
+                missing_fields = [k for k, v in transformed_item.items() if v is None]
                 if missing_fields:
                     raise ValueError(f"API response missing required fields: {missing_fields}")
+                
+                transformed_pairs.append(transformed_item)
             
-            return qa_pairs
+            return transformed_pairs
             
         except requests.exceptions.RequestException as e:
             raise ConnectionError(f"Failed to fetch Q&A pairs from API: {e}")

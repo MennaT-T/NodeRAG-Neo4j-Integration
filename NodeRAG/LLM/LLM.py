@@ -3,12 +3,15 @@ import backoff
 from ..utils.lazy_import import LazyImport
 from json import JSONDecodeError
 import json
+import sys
 
 
 from ..logging.error import (
     error_handler,
     error_handler_async
 )
+
+from ..utils.json_parser import safe_json_parse
 
 from ..LLM.LLM_base import (
     LLM_message,
@@ -275,6 +278,10 @@ class Gemini(LLM):
         }
         return options
     
+    def _is_gemma_model(self) -> bool:
+        """Check if current model is a Gemma model (doesn't support JSON mode)"""
+        return 'gemma' in self.model_name.lower()
+    
     @backoff.on_exception(backoff.expo, 
                           (ResourceExhausted, TooManyRequests, InternalServerError, JSONDecodeError), 
                           max_time=30, 
@@ -287,17 +294,33 @@ class Gemini(LLM):
             "contents": messages,
         }
         if response_format:
-
-            config = genai.types.GenerateContentConfig(
-                temperature=self.config.get("temperature", 0.0),
-                max_output_tokens=self.config.get("max_tokens", 10000),
-                response_mime_type="application/json",
-                response_schema=response_format,
-            )
-            response = self.client.models.generate_content(**params,config=config)
-            json_response = response.text
-            json_response = json.loads(json_response)
-            return json_response
+            # Check if this is a Gemma model (doesn't support JSON mode)
+            if self._is_gemma_model():
+                # Gemma: don't use JSON mode, schema is already in prompt
+                config = genai.types.GenerateContentConfig(
+                    temperature=self.config.get("temperature", 0.0),
+                    max_output_tokens=self.config.get("max_tokens", 10000),
+                )
+                response = self.client.models.generate_content(**params, config=config)
+                
+                # Use safe parser to extract JSON from markdown-wrapped responses
+                json_response = safe_json_parse(response.text)
+                if json_response is None:
+                    raise JSONDecodeError(f"Failed to parse JSON from Gemma response", response.text, 0)
+                
+                return json_response
+            else:
+                # Gemini: use native JSON mode
+                config = genai.types.GenerateContentConfig(
+                    temperature=self.config.get("temperature", 0.0),
+                    max_output_tokens=self.config.get("max_tokens", 10000),
+                    response_mime_type="application/json",
+                    response_schema=response_format,
+                )
+                response = self.client.models.generate_content(**params, config=config)
+                json_response = response.text
+                json_response = json.loads(json_response)
+                return json_response
         else:
 
 
@@ -305,7 +328,7 @@ class Gemini(LLM):
                 temperature=self.config.get("temperature", 0.0),
                 max_output_tokens=self.config.get("max_tokens", 10000),
             )
-            response = self.client.models.generate_content(**params,config=config)
+            response = self.client.models.generate_content(**params, config=config)
             return response.text
         
     @backoff.on_exception(backoff.expo, 
@@ -319,16 +342,33 @@ class Gemini(LLM):
             "contents": messages,
         }
         if response_format:
-            config = genai.types.GenerateContentConfig(
-                temperature=self.config.get("temperature", 0.0),
-                max_output_tokens=self.config.get("max_tokens", 10000),
-                response_mime_type="application/json",
-                response_schema=response_format,
-            )
-            response = await self.client.aio.models.generate_content(**params,config=config)
-            json_response = response.text
-            json_response = json.loads(json_response)
-            return json_response
+            # Check if this is a Gemma model (doesn't support JSON mode)
+            if self._is_gemma_model():
+                # Gemma: don't use JSON mode, schema is already in prompt
+                config = genai.types.GenerateContentConfig(
+                    temperature=self.config.get("temperature", 0.0),
+                    max_output_tokens=self.config.get("max_tokens", 10000),
+                )
+                response = await self.client.aio.models.generate_content(**params, config=config)
+                
+                # Use safe parser to extract JSON from markdown-wrapped responses
+                json_response = safe_json_parse(response.text)
+                if json_response is None:
+                    raise JSONDecodeError(f"Failed to parse JSON from Gemma response", response.text, 0)
+                
+                return json_response
+            else:
+                # Gemini: use native JSON mode
+                config = genai.types.GenerateContentConfig(
+                    temperature=self.config.get("temperature", 0.0),
+                    max_output_tokens=self.config.get("max_tokens", 10000),
+                    response_mime_type="application/json",
+                    response_schema=response_format,
+                )
+                response = await self.client.aio.models.generate_content(**params, config=config)
+                json_response = response.text
+                json_response = json.loads(json_response)
+                return json_response
             
 
         else:
@@ -336,7 +376,7 @@ class Gemini(LLM):
                 temperature=self.config.get("temperature", 0.0),
                 max_output_tokens=self.config.get("max_tokens", 10000),
             )
-            response = await self.client.aio.models.generate_content(**params,config=config)
+            response = await self.client.aio.models.generate_content(**params, config=config)
             return response.text
 
 

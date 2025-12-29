@@ -40,7 +40,6 @@ class Text_unit(Unit_base):
         input_data = {'query':prompt,'response_format':json_format}
         meta_data = {'text_hash_id':self.hash_id,'text_id':self.human_readable_id}
 
-     
         response = await config.API_client(input_data,cache_path =config.LLM_error_cache,meta_data = meta_data)
         
         if response == 'Error cached':
