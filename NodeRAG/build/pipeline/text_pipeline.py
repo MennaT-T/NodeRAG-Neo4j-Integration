@@ -26,8 +26,14 @@ class text_pipline():
         
         async def text_decomposition_pipline(self) -> None:
             
+            # Skip if no texts to process
+            if len(self.texts) == 0:
+                self.config.console.print("[green]No texts to process - all already decomposed[/green]")
+                return
+            
             async_task = []
-            self.config.tracker.set(len(self.texts),'Text Decomposition')
+            total_texts = len(self.texts)
+            self.config.tracker.set(total_texts, 'Text Decomposition')
             
             for index, row in self.texts.iterrows():
                 # Handle both 'hash_id' and 'id' column names (Neo4j uses 'id')
@@ -41,13 +47,40 @@ class text_pipline():
             
             exist_hash_id = []
             
-            with open(self.config.text_decomposition_path,'r',encoding='utf-8') as f:
-                for line in f:
-                    line = json.loads(line)
-                    exist_hash_id.append(line['hash_id'])
+            # Read cache file with error handling for malformed entries
+            try:
+                with open(self.config.text_decomposition_path,'r',encoding='utf-8') as f:
+                    for line_num, line in enumerate(f, 1):
+                        line = line.strip()
+                        if not line:  # Skip empty lines
+                            continue
+                        try:
+                            line_data = json.loads(line)
+                            # The cache file stores 'text_hash_id', not 'hash_id'
+                            hash_key = line_data.get('text_hash_id') or line_data.get('hash_id')
+                            if hash_key:
+                                exist_hash_id.append(hash_key)
+                        except json.JSONDecodeError:
+                            # Skip malformed JSON lines
+                            continue
+            except FileNotFoundError:
+                # Cache file doesn't exist yet, nothing to filter
+                return
+            except Exception as e:
+                # Log error but continue - better to process than fail silently
+                self.config.console.print(f"[yellow]Warning: Error reading cache file: {e}[/yellow]")
+                return
             
             # Handle both 'hash_id' and 'id' column names (Neo4j uses 'id')
+            if len(self.texts) == 0:
+                return  # Nothing to filter
+            
             id_column = 'hash_id' if 'hash_id' in self.texts.columns else 'id'
+            if id_column not in self.texts.columns:
+                # Column doesn't exist, can't filter
+                self.config.console.print(f"[yellow]Warning: Column '{id_column}' not found in texts DataFrame[/yellow]")
+                return
+            
             self.texts = self.texts[~self.texts[id_column].isin(exist_hash_id)]
             
         async def rerun(self) -> None:
@@ -93,8 +126,10 @@ class text_pipline():
             
             response = await self.config.client(input_data,cache_path=self.config.LLM_error_cache,meta_data = meta_data)
             
+            # Write complete data structure with metadata (same format as text_unit.text_decomposition)
             with open(self.config.text_decomposition_path,'a',encoding='utf-8') as f:
-                await f.write(json.dumps(response)+'\n')
+                data = {**meta_data, 'response': response}
+                f.write(json.dumps(data, ensure_ascii=False) + '\n')
             
             self.config.tracker.update()
             
@@ -102,17 +137,51 @@ class text_pipline():
             
             if os.path.exists(self.config.LLM_error_cache):
                 num = 0
+                error_details = []
                 
                 with open(self.config.LLM_error_cache,'r',encoding='utf-8') as f:
                     for line in f:
-                        num += 1
+                        line = line.strip()
+                        if line:
+                            num += 1
+                            try:
+                                error_data = json.loads(line)
+                                # Try to extract useful info
+                                meta = error_data.get('meta_data', {})
+                                text_id = meta.get('text_id', 'unknown')
+                                text_hash = meta.get('text_hash_id', 'unknown')[:8] if meta.get('text_hash_id') else 'unknown'
+                                error_details.append(f"  - Text ID: {text_id}, Hash: {text_hash}")
+                            except:
+                                error_details.append(f"  - Error entry #{num}")
                         
                 if num > 0:
-                    self.config.console.print(f"[red]LLM Error Detected,There are {num} errors")
-                    self.config.console.print("[red]Please check the error log")
-                    self.config.console.print("[red]The error cache is named LLM_error.jsonl, stored in the cache folder")
+                    self.config.console.print(f"[red]LLM Error Detected: There are {num} errors")
+                    if error_details:
+                        self.config.console.print("[yellow]Affected texts:")
+                        for detail in error_details[:5]:  # Show first 5
+                            self.config.console.print(f"[yellow]{detail}")
+                        if len(error_details) > 5:
+                            self.config.console.print(f"[yellow]  ... and {len(error_details) - 5} more")
+                    
+                    # Try to read error.log if it exists
+                    error_log_path = os.path.join(os.getcwd(), 'error.log')
+                    if os.path.exists(error_log_path):
+                        try:
+                            with open(error_log_path, 'r', encoding='utf-8') as f:
+                                error_lines = f.readlines()
+                                if error_lines:
+                                    self.config.console.print("[red]Recent error messages from error.log:")
+                                    # Show last 3 error lines
+                                    for line in error_lines[-3:]:
+                                        if line.strip():
+                                            self.config.console.print(f"[red]  {line.strip()[:200]}")  # First 200 chars
+                        except Exception as e:
+                            pass
+                    
+                    self.config.console.print("[red]Error cache file: LLM_error.jsonl (in cache folder)")
+                    self.config.console.print("[red]Error log file: error.log (in working directory)")
                     self.config.console.print("[red]Please fix the error and run the pipeline again")
-                    raise Exception("Error happened in text decomposition pipeline, Error cached.")
+                    raise Exception(f"Error happened in text decomposition pipeline: {num} error(s) cached. Check error.log for details.")
 
         @info_timer(message='Text Pipeline')
         async def main(self) -> None:

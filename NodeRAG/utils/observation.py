@@ -85,8 +85,24 @@ class Tracker():
 class tqdm_observer(Observer):
     def __init__(self):
         self.tqdm_instance = None
+        self._closed = False
         
     def reset(self,total_task:int,desc:str=""):
+        # Close existing instance before creating a new one
+        if self.tqdm_instance is not None:
+            try:
+                self.tqdm_instance.close()
+            except:
+                pass
+            self.tqdm_instance = None
+        
+        # Reset closed flag when creating new instance
+        self._closed = False
+        
+        # Ensure total_task is a valid integer (minimum 1 to avoid "?" display)
+        if total_task is None or total_task < 0:
+            total_task = 0
+        
         if desc == "":
             self.tqdm_instance = tqdm(total=total_task,
                           bar_format="{l_bar}\033[92m{bar}\033[0m| \033[92m{n_fmt}/{total_fmt}\033[0m [\033[92m{elapsed}\033[0m<\033[92m{remaining}\033[0m]", 
@@ -100,11 +116,31 @@ class tqdm_observer(Observer):
                           ncols=80)
             
     def update(self,process_state:ProcessState):
-        self.tqdm_instance.n = process_state.current_task
-        self.tqdm_instance.refresh()
+        # Safety check: only update if instance exists, is valid, and not closed
+        if self._closed:
+            return  # Don't update if already closed
+            
+        if self.tqdm_instance is not None:
+            try:
+                # Ensure we don't exceed the total (prevent going beyond 100%)
+                if process_state.current_task > process_state.total_tasks and process_state.total_tasks > 0:
+                    # Cap at total to prevent exceeding 100%
+                    self.tqdm_instance.n = process_state.total_tasks
+                else:
+                    self.tqdm_instance.n = process_state.current_task
+                self.tqdm_instance.refresh()
+            except (AttributeError, ValueError, TypeError):
+                # Instance was closed or invalid, ignore update
+                pass
         
     def close(self):
-        self.tqdm_instance.close()
+        self._closed = True
+        if self.tqdm_instance is not None:
+            try:
+                self.tqdm_instance.close()
+                self.tqdm_instance = None
+            except:
+                pass
             
     
 class rich_console():
