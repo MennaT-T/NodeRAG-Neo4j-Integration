@@ -9,7 +9,7 @@ neo4j==6.0.3
 # AI/ML
 google-generativeai>=0.8.0
 google-genai==1.52.0
-openai==1.66.3
+openai>=1.66.3
 
 # Graph Processing
 networkx==3.4.2
@@ -35,15 +35,15 @@ tqdm==4.67.1
 
 # Utilities
 PyYAML==6.0.2
-requests==2.32.3
+requests>=2.32.3
 
 # ================================
 # FastAPI Backend Dependencies
 # ================================
 
 # Web Framework
-fastapi==0.115.6
-uvicorn[standard]==0.34.0
+fastapi>=0.115.6
+uvicorn[standard]>=0.34.0
 python-multipart==0.0.18
 
 # API Validation & Serialization

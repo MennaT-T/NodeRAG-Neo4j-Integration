@@ -69,7 +69,7 @@ docker-compose*.yml
 
 # Documentation (optional - uncomment if you want to exclude)
 # docs/
-# *.md
+*.md
 
 # Development files
 *.bak
