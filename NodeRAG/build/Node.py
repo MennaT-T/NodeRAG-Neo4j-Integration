@@ -121,7 +121,8 @@ class NodeRag():
             mock_data_path = api_config.get('mock_data_path')
             
             # Get auth token from environment variable (set in .env for Docker)
-            auth_token = os.environ.get('BACKEND_AUTH_TOKEN')
+            #auth_token = os.environ.get('BACKEND_AUTH_TOKEN')
+            auth_token = os.getenv("BACKEND_AUTH_TOKEN", "")
             
             # If mock_data_path is relative, resolve relative to main_folder
             if mock_data_path and not os.path.isabs(mock_data_path):
