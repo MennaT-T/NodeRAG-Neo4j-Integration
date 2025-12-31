@@ -159,6 +159,12 @@ class NodeConfig():
         elif os.environ.get('OPENAI_API_KEY'):
             self._model_config['api_keys'] = os.environ.get('OPENAI_API_KEY')
             self._embedding_config['api_keys'] = os.environ.get('OPENAI_API_KEY')
+
+        print("=== DEBUG: Environment Variables ===", file=sys.stderr)
+        print(f"NEO4J_URI: {os.environ.get('NEO4J_URI', 'NOT SET')}", file=sys.stderr)
+        print(f"NEO4J_USER: {os.environ.get('NEO4J_USER', 'NOT SET')}", file=sys.stderr)
+        print(f"NEO4J_PASSWORD: {'SET' if os.environ.get('NEO4J_PASSWORD') else 'NOT SET'}", file=sys.stderr)
+        print("====================================", file=sys.stderr)
         
         # Override Neo4j settings from environment variables if available (for Docker)
         if os.environ.get('NEO4J_URI'):
