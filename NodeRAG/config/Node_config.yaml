@@ -61,15 +61,15 @@ config:
   
   # Neo4j Storage Settings (Optional)
   use_neo4j_storage: True          # Save graph to Neo4j instead of pickle (requires Neo4j running)
-  neo4j_uri: ''  # Neo4j connection URI
+  neo4j_uri: 'bolt://localhost:7687'  # Neo4j connection URI
   neo4j_user: 'neo4j'               # Neo4j username
-  neo4j_password: ''    # Neo4j password
+  neo4j_password: 'YOUR_NEO4J_PASSWORD'    # Neo4j password
   
   # Q&A API Integration (Optional)
   qa_api:
     enabled: True                      # Enable Q&A node creation from backend API
     # base_url: 'https://gp-backend-2.onrender.com'  # Backend API URL (only used if use_mock is False)
-    base_url: 'https://gp-backend-2.onrender.com'  # Backend API URL (host.docker.internal works from Docker to host on Windows/Mac)
+    base_url: 'http://host.docker.internal:5253'  # Backend API URL (host.docker.internal works from Docker to host on Windows/Mac)
     use_mock: False                     # Use mock data file instead of API (for testing)
     mock_data_path: 'mock_data/mock_qa_data.json'  # Path to mock Q&A data file
     user_id: 1                         # User ID to fetch Q&A pairs for
