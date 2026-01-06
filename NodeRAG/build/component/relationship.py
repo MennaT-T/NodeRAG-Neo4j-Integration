@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Any
 from .unit import Unit_base
 from ...storage import genid
 from ...utils.readable_index import relation_index
@@ -10,12 +10,20 @@ relation_index_counter = relation_index()
 
 class Relationship(Unit_base):
     
-    def __init__(self, relationship_tuple: List[str] = None, text_hash_id: str = None, 
-                 frozen_set: frozenset = None, context: str = None,human_readable_id:int = None):
+    def __init__(self, relationship_tuple: List[Any] = None, text_hash_id: str = None, 
+                 frozen_set: frozenset = None, context: str = None, human_readable_id: int = None):       
         if relationship_tuple:
-            self.relationship_tuple = relationship_tuple
-            self.source = Entity(relationship_tuple[0], text_hash_id)
-            self.target = Entity(relationship_tuple[2], text_hash_id)
+            # Sanitize tuple elements to avoid "sequence item 0: expected str instance, NoneType found"
+            cleaned_tuple: List[str] = [
+                "" if v is None else str(v) for v in relationship_tuple
+            ]
+            # Ensure we have at least 3 elements
+            if len(cleaned_tuple) < 3:
+                cleaned_tuple = (cleaned_tuple + ["", "", ""])[:3]
+
+            self.relationship_tuple = cleaned_tuple
+            self.source = Entity(cleaned_tuple[0], text_hash_id)
+            self.target = Entity(cleaned_tuple[2], text_hash_id)
             self.unique_relationship = frozenset((self.source.hash_id,self.target.hash_id))
             self.raw_context = " ".join(self.relationship_tuple)
             self._human_readable_id = None
@@ -53,8 +61,11 @@ class Relationship(Unit_base):
     def __hash__(self):
         return hash(self.unique_relationship)
     
-    def add(self,relationship_tuple:List[str]):
-        raw_context = " ".join(relationship_tuple)
+    def add(self, relationship_tuple: List[Any]):
+        cleaned_tuple: List[str] = [
+            "" if v is None else str(v) for v in relationship_tuple
+        ]
+        raw_context = " ".join(cleaned_tuple)
         self.raw_context = self.raw_context + "\t" + raw_context
 
     def __str__(self):
