@@ -325,10 +325,3 @@ class Graph_pipeline:
         self.indices.store_all_indices(self.config.indices_path)
         self.save_data()
         
-        
-        
-            
-    
-    
-                
-        

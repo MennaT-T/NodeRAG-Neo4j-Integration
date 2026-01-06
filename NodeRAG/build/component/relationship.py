@@ -10,16 +10,8 @@ relation_index_counter = relation_index()
 
 class Relationship(Unit_base):
     
-    def __init__(self, relationship_tuple: List[Any] = None, text_hash_id: str = None, 
-                 frozen_set: frozenset = None, context: str = None, human_readable_id: int = None):
-        """
-        `relationship_tuple` is expected to be a 3-item sequence of strings:
-        [source, relationship, target]. In practice, upstream LLM output can
-        sometimes contain `None` or non-string items, which will break when
-        joined. To make the pipeline robust (especially in remote environments
-        with slightly different LLM behaviour), we defensively coerce all
-        elements to strings here.
-        """
+    def __init__(self, relationship_tuple: List[str] = None, text_hash_id: str = None, 
+                 frozen_set: frozenset = None, context: str = None,human_readable_id:int = None):
         if relationship_tuple:
             # Sanitize tuple elements to avoid "sequence item 0: expected str instance, NoneType found"
             cleaned_tuple: List[str] = [
@@ -69,15 +61,8 @@ class Relationship(Unit_base):
     def __hash__(self):
         return hash(self.unique_relationship)
     
-    def add(self, relationship_tuple: List[Any]):
-        """
-        Append additional raw contexts for the same logical relationship.
-        As above, sanitize any None/non-string elements before joining.
-        """
-        cleaned_tuple: List[str] = [
-            "" if v is None else str(v) for v in relationship_tuple
-        ]
-        raw_context = " ".join(cleaned_tuple)
+    def add(self,relationship_tuple:List[str]):
+        raw_context = " ".join(relationship_tuple)
         self.raw_context = self.raw_context + "\t" + raw_context
 
     def __str__(self):
