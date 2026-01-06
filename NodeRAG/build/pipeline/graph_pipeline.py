@@ -145,10 +145,21 @@ class Graph_pipeline:
     async def add_relationships(self,relationships:List[str],text_hash_id:str):
         
         entities_hash_id = []
+        # Guard against None / non-iterable relationships coming from LLM output
+        if not relationships:
+            return entities_hash_id
+
         for relationship in relationships:
+            # Skip completely empty entries
+            if relationship is None:
+                continue
+            
+            # Ensure we are working with a string before splitting
+            if not isinstance(relationship, str):
+                relationship = str(relationship)
             
             relationship = relationship.split(',')
-            relationship = [i.strip() for i in relationship]
+            relationship = [i.strip() for i in relationship if i is not None]
             
             if len(relationship) != 3:
                 relationship = await self.reconstruct_relationship(relationship)
