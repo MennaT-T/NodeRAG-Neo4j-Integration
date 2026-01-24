@@ -156,12 +156,15 @@ app = FastAPI(
 )
 
 # Add CORS middleware
+# Configure CORS for Railway and Render deployments
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Configure appropriately for production
+    allow_origins=["*"],  # Allow all origins (configure for production if needed)
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD"],
     allow_headers=["*"],
+    expose_headers=["*"],
+    max_age=3600,  # Cache preflight requests for 1 hour
 )
 
 
@@ -340,35 +343,38 @@ async def build_graph(request: BuildRequest, background_tasks: BackgroundTasks):
     6. HNSW index creation
     7. (Optional) Neo4j sync
     
-    The build runs in the background. Use `/build/{build_id}/status` to check progress.
+    **The build runs in the background and returns immediately.**
+    Use `/build/{build_id}/status` to check progress.
     
     **Incremental Build**: When `incremental=True`, only new/changed documents are processed.
     This is faster but requires an existing graph.
     
     **Full Rebuild**: When `incremental=False`, the entire graph is rebuilt from scratch.
     """
-    # Synchronous build for simplicity (can be made async with background tasks)
     try:
+        # Always run in background to avoid timeout (builds can take 10+ minutes)
         result = await build_service.build_graph(
             folder_path=request.folder_path,
             incremental=request.incremental,
             sync_to_neo4j=request.sync_to_neo4j,
             user_id=request.user_id,
-            force_rebuild=request.force_rebuild
+            force_rebuild=request.force_rebuild,
+            background=True  # Always run in background to avoid HTTP timeout
         )
         
         if not result["success"]:
             raise HTTPException(status_code=500, detail=result.get("error", "Build failed"))
         
+        # Return immediately with build_id - build is running in background
         return BuildResponse(
             success=True,
-            message="Build completed successfully",
+            message=result.get("message", "Build started in background. Use /build/{build_id}/status to check progress."),
             build_id=result["build_id"],
-            status=BuildStatus.COMPLETED,
-            duration_seconds=result.get("duration_seconds"),
-            nodes_created=result.get("nodes_created", 0),
-            edges_created=result.get("edges_created", 0),
-            neo4j_synced=result.get("neo4j_synced", False)
+            status=BuildStatus.RUNNING,  # Always RUNNING initially
+            duration_seconds=None,  # Not available yet
+            nodes_created=None,  # Not available yet
+            edges_created=None,  # Not available yet
+            neo4j_synced=None  # Not available yet
         )
     except HTTPException:
         raise

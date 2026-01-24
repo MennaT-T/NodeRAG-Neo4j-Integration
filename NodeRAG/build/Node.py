@@ -121,7 +121,8 @@ class NodeRag():
             mock_data_path = api_config.get('mock_data_path')
             
             # Get auth token from environment variable (set in .env for Docker)
-            auth_token = os.environ.get('BACKEND_AUTH_TOKEN')
+            #auth_token = os.environ.get('BACKEND_AUTH_TOKEN')
+            auth_token = os.getenv("BACKEND_AUTH_TOKEN", "")
             
             # If mock_data_path is relative, resolve relative to main_folder
             if mock_data_path and not os.path.isabs(mock_data_path):
@@ -162,26 +163,37 @@ class NodeRag():
                     self.Current_state = self.state_sequence[index+1]
                 
                 if self.Current_state == State.FINISHED:
+                    # In web_ui mode (API), always finish after one complete run
+                    # Don't auto-restart even if incremental files detected or force_full_build is True
+                    if self.web_ui:
+                        self.console.print("[bold green]Pipeline finished successfully.[/bold green]")
+                        self.store_state()
+                        self.config.whole_time()
+                        return
+                    
+                    # Interactive mode: allow user to decide
                     if self.Is_incremental:
-                        if self.web_ui:
-                            self.console.print("[bold green]Detected incremental file, Continue building.[/bold green]")
+                        user_input = self.console.input("[bold green]Detected incremental file, Please enter 'y' to continue. Any other input will cancel the pipeline.[/bold green]")
+                        if user_input.lower() == 'y':
+                            self.console.print("[bold green]Pipeline finished. No incremental mode.[/bold green]")
                             self.Current_state = State.DOCUMENT_PIPELINE
                             self.Is_incremental = False
                         else:
-                            user_input = self.console.input("[bold green]Detected incremental file, Please enter 'y' to continue. Any other input will cancel the pipeline.[/bold green]")
+                            self.console.print("[bold red]Pipeline cancelled by user.[/bold red]")
+                            sys.exit()
+                    else:
+                        if self.force_full_build:
+                            # Only restart in interactive mode, not web_ui mode
+                            user_input = self.console.input("[bold green]Forced full rebuild detected. Enter 'y' to restart pipeline, any other key to finish.[/bold green]")
                             if user_input.lower() == 'y':
-                                self.console.print("[bold green]Pipeline finished. No incremental mode.[/bold green]")
+                                self.console.print("[bold green]Restarting pipeline.[/bold green]")
                                 self.Current_state = State.DOCUMENT_PIPELINE
                                 self.Is_incremental = False
                             else:
-                                self.console.print("[bold red]Pipeline cancelled by user.[/bold red]")
-                                sys.exit()
-                        
-                    else:
-                        if self.force_full_build:
-                            self.console.print("[bold green]Forced full rebuild - continuing with pipeline.[/bold green]")
-                            self.Current_state = State.DOCUMENT_PIPELINE
-                            self.Is_incremental = False
+                                self.console.print("[bold green]Pipeline finished.[/bold green]")
+                                self.store_state()
+                                self.config.whole_time()
+                                return
                         else:
                             self.console.print("[bold green]Pipeline finished. No incremental mode.[/bold green]")
                             self.store_state()

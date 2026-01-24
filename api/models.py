@@ -114,9 +114,9 @@ class BuildResponse(BaseResponse):
     build_id: str
     status: BuildStatus
     duration_seconds: Optional[float] = None
-    nodes_created: int = 0
-    edges_created: int = 0
-    neo4j_synced: bool = False
+    nodes_created: Optional[int] = None
+    edges_created: Optional[int] = None
+    neo4j_synced: Optional[bool] = None
 
 
 # ============================================================================

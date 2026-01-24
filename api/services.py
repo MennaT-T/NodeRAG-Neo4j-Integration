@@ -446,7 +446,8 @@ class BuildService:
         incremental: bool = True,
         sync_to_neo4j: bool = True,
         user_id: Optional[str] = None,
-        force_rebuild: bool = False
+        force_rebuild: bool = False,
+        background: bool = True
     ) -> Dict[str, Any]:
         """
         Build or rebuild the knowledge graph.
@@ -457,9 +458,10 @@ class BuildService:
             sync_to_neo4j: Sync to Neo4j after build
             user_id: User ID for multi-user support
             force_rebuild: Force rebuild by clearing cache
+            background: If True, return immediately and run in background
             
         Returns:
-            Build result information
+            Build result information (build_id immediately if background=True)
         """
         build_id = str(uuid.uuid4())[:8]
         start_time = time.time()
@@ -471,60 +473,111 @@ class BuildService:
             "started_at": datetime.now()
         }
         
-        try:
-            # Initialize config
-            folder = folder_path or self.noderag.default_folder
-            
-            # Run build in thread pool to avoid asyncio.run() conflict
-            loop = asyncio.get_event_loop()
-            result = await loop.run_in_executor(
-                _executor,
-                self._run_build_sync,
-                folder,
-                user_id,
-                build_id,
-                sync_to_neo4j,
-                incremental,
-                force_rebuild
-            )
-            
-            duration = time.time() - start_time
-            
-            if result["success"]:
-                self._build_tasks[build_id]["status"] = "completed"
-                self._build_tasks[build_id]["current_stage"] = "finished"
+        # Initialize config
+        folder = folder_path or self.noderag.default_folder
+        
+        def run_build():
+            """Background build function - runs in separate thread"""
+            try:
+                # _run_build_sync is synchronous, so we can call it directly
+                result = self._run_build_sync(
+                    folder,
+                    user_id,
+                    build_id,
+                    sync_to_neo4j,
+                    incremental,
+                    force_rebuild
+                )
                 
-                # Auto-reload search engine after successful build
-                # This ensures /answer endpoint works immediately without calling /initialize
-                try:
-                    self.noderag.initialize_search()
-                    print(f"✓ Search engine reloaded for user_id={user_id}")
-                except Exception as e:
-                    print(f"⚠ Failed to reload search engine: {e}")
+                duration = time.time() - start_time
                 
-                return {
-                    "success": True,
-                    "build_id": build_id,
-                    "status": "completed",
-                    "duration_seconds": duration,
-                    "nodes_created": result.get("nodes_created", 0),
-                    "edges_created": result.get("edges_created", 0),
-                    "neo4j_synced": result.get("neo4j_synced", False)
-                }
-            else:
-                raise Exception(result.get("error", "Build failed"))
-            
-        except Exception as e:
-            self._build_tasks[build_id]["status"] = "failed"
-            self._build_tasks[build_id]["error"] = str(e)
+                if result["success"]:
+                    self._build_tasks[build_id]["status"] = "completed"
+                    self._build_tasks[build_id]["current_stage"] = "finished"
+                    self._build_tasks[build_id]["duration_seconds"] = duration
+                    self._build_tasks[build_id]["nodes_created"] = result.get("nodes_created", 0)
+                    self._build_tasks[build_id]["edges_created"] = result.get("edges_created", 0)
+                    self._build_tasks[build_id]["neo4j_synced"] = result.get("neo4j_synced", False)
+                    
+                    # Auto-reload search engine after successful build
+                    try:
+                        self.noderag.initialize_search()
+                        print(f"Search engine reloaded for user_id={user_id}")
+                    except Exception as e:
+                        print(f"Failed to reload search engine: {e}")
+                else:
+                    self._build_tasks[build_id]["status"] = "failed"
+                    self._build_tasks[build_id]["error"] = result.get("error", "Build failed")
+                    self._build_tasks[build_id]["duration_seconds"] = time.time() - start_time
+            except Exception as e:
+                import traceback
+                error_trace = traceback.format_exc()
+                self._build_tasks[build_id]["status"] = "failed"
+                self._build_tasks[build_id]["error"] = f"{str(e)}\n{error_trace}"
+                self._build_tasks[build_id]["duration_seconds"] = time.time() - start_time
+        
+        if background:
+            # Run in background thread and return immediately
+            import threading
+            thread = threading.Thread(target=run_build, daemon=True)
+            thread.start()
             
             return {
-                "success": False,
+                "success": True,
                 "build_id": build_id,
-                "status": "failed",
-                "error": str(e),
-                "duration_seconds": time.time() - start_time
+                "status": "running",
+                "message": "Build started in background. Use /build/{build_id}/status to check progress."
             }
+        else:
+            # Run synchronously (for testing/debugging)
+            try:
+                loop = asyncio.get_event_loop()
+                result = await loop.run_in_executor(
+                    _executor,
+                    self._run_build_sync,
+                    folder,
+                    user_id,
+                    build_id,
+                    sync_to_neo4j,
+                    incremental,
+                    force_rebuild
+                )
+                
+                duration = time.time() - start_time
+                
+                if result["success"]:
+                    self._build_tasks[build_id]["status"] = "completed"
+                    self._build_tasks[build_id]["current_stage"] = "finished"
+                    
+                    try:
+                        self.noderag.initialize_search()
+                        print(f"✓ Search engine reloaded for user_id={user_id}")
+                    except Exception as e:
+                        print(f"⚠ Failed to reload search engine: {e}")
+                    
+                    return {
+                        "success": True,
+                        "build_id": build_id,
+                        "status": "completed",
+                        "duration_seconds": duration,
+                        "nodes_created": result.get("nodes_created", 0),
+                        "edges_created": result.get("edges_created", 0),
+                        "neo4j_synced": result.get("neo4j_synced", False)
+                    }
+                else:
+                    raise Exception(result.get("error", "Build failed"))
+                
+            except Exception as e:
+                self._build_tasks[build_id]["status"] = "failed"
+                self._build_tasks[build_id]["error"] = str(e)
+                
+                return {
+                    "success": False,
+                    "build_id": build_id,
+                    "status": "failed",
+                    "error": str(e),
+                    "duration_seconds": time.time() - start_time
+                }
     
     def get_build_status(self, build_id: str) -> Dict[str, Any]:
         """Get the status of a build operation"""
