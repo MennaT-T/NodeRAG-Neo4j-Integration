@@ -1,0 +1,4 @@
+user_id,resume_path,document_type,filename
+script_test_v1,E:/Graduation Project 2/NodeRAG-Neo4j-Integration/POC_Data/documents/input/resume_201_Data Science.txt,resume,
+script_test_v2,E:/Graduation Project 2/NodeRAG-Neo4j-Integration/POC_Data/documents/input/resume_237_Data Science.txt,resume,
+script_test_v3,E:/Graduation Project 2/NodeRAG-Neo4j-Integration/POC_Data/documents/input/resume_3_INFORMATION-TECHNOLOGY.txt,resume,

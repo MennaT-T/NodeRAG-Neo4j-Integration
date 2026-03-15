@@ -1,0 +1,3 @@
+user_id,resume_path,document_type,filename
+1,E:/Graduation Project 2/NodeRAG-Neo4j-Integration/POC_Data/documents/input/user1_resume.pdf,resume,
+2,E:/Graduation Project 2/NodeRAG-Neo4j-Integration/POC_Data/documents/input/user2_resume.pdf,resume,
