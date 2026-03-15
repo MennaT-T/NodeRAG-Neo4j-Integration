@@ -3,7 +3,7 @@
 #==============================================================================
 model_config:
   service_provider: gemini            # AI service provider (e.g., openai, gemini)
-  model_name: models/gemma-3-12b-it          # Model name for text generation
+  model_name: models/gemma-3-27b-it          # Model name for text generation
   api_keys: ''    # Your API key
   temperature: 0                # Temperature parameter for text generation
   max_tokens: 10000                  # Maximum tokens to generate
@@ -12,7 +12,7 @@ model_config:
 
 embedding_config:
   service_provider: gemini_embedding  # Embedding service provider (must be gemini_embedding for Gemini embeddings)
-  embedding_model_name: models/text-embedding-004  # Model name for text embeddings
+  embedding_model_name: models/gemini-embedding-001  # Model name for text embeddings
   api_keys: '' # Your API key
   rate_limit: 1                       # Max concurrent requests (1 = sequential)
   request_delay: 15                   # Seconds to wait between each request (increased from 6)
@@ -37,7 +37,7 @@ config:
   
   # HNSW Index Settings
   space: l2                         # Distance metric for HNSW (l2, cosine)
-  dim: 768                         # Embedding dimension (768 for text-embedding-004)
+  dim: 3072                        # Embedding dimension (3072 for models/gemini-embedding-001)
   m: 50                             # Number of connections per layer in HNSW
   ef: 200                           # Size of dynamic candidate list in HNSW
   m0: ~                             # Number of bi-directional links in HNSW
