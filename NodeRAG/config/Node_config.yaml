@@ -4,7 +4,7 @@
 model_config:
   service_provider: gemini            # AI service provider (e.g., openai, gemini)
   model_name: models/gemma-3-27b-it          # Model name for text generation
-  api_keys: 'AIzaSyDGbGQ89LrKIiHuiIlqs4jxkUoYzkRrflQ'    # Your API key
+  api_keys: ''    # Your API key
   temperature: 0                # Temperature parameter for text generation
   max_tokens: 10000                  # Maximum tokens to generate
   rate_limit: 1                       # Max concurrent requests (1 = sequential)
@@ -13,7 +13,7 @@ model_config:
 embedding_config:
   service_provider: gemini_embedding  # Embedding service provider (must be gemini_embedding for Gemini embeddings)
   embedding_model_name: models/gemini-embedding-001  # Model name for text embeddings
-  api_keys: 'AIzaSyDGbGQ89LrKIiHuiIlqs4jxkUoYzkRrflQ' # Your API key
+  api_keys: '' # Your API key
   rate_limit: 1                       # Max concurrent requests (1 = sequential)
   request_delay: 15                   # Seconds to wait between each request (increased from 6)
 
@@ -63,7 +63,7 @@ config:
   use_neo4j_storage: True          # Save graph to Neo4j instead of pickle (requires Neo4j running)
   neo4j_uri: 'bolt://localhost:7687'  # Neo4j connection URI
   neo4j_user: 'neo4j'               # Neo4j username
-  neo4j_password: 'autoapply123'    # Neo4j password
+  neo4j_password: ''    # Neo4j password
   
   # Q&A API Integration (Optional)
   qa_api:
