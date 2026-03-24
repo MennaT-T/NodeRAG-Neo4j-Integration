@@ -1,0 +1,13 @@
+user_id,resume_path,document_type,filename
+63,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/231_Data Science.pdf,resume,231_Data Science.pdf
+64,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/234_Data Science.pdf,resume,234_Data Science.pdf
+65,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/342_Web Designing.pdf,resume,342_Web Designing.pdf
+66,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/343_Web Designing.pdf,resume,343_Web Designing.pdf
+67,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/345_Web Designing.pdf,resume,345_Web Designing.pdf
+68,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/355_Web Designing.pdf,resume,355_Web Designing.pdf
+69,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/360_Web Designing.pdf,resume,360_Web Designing.pdf
+70,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/367_Web Designing.pdf,resume,367_Web Designing.pdf
+71,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/372_Web Designing.pdf,resume,372_Web Designing.pdf
+72,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/375_Web Designing.pdf,resume,375_Web Designing.pdf
+73,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/380_Web Designing.pdf,resume,380_Web Designing.pdf
+74,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/385_Web Designing.pdf,resume,385_Web Designing.pdf

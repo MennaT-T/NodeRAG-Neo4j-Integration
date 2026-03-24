@@ -1,0 +1,2 @@
+user_id,resume_path,document_type,filename
+1008_ETL_Developer,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/1008_ETL Developer.pdf,resume,1008_ETL Developer.pdf

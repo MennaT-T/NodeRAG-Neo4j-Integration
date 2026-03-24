@@ -1,0 +1,133 @@
+{
+  "generated_at": "2026-03-24T11:03:03.284775",
+  "overall": {
+    "mode": "QA",
+    "total_rows": 359,
+    "successful": 359,
+    "failed": 0,
+    "success_rate_pct": 100.0,
+    "total_elapsed_s": 10925.07,
+    "latency_s": {
+      "avg": 30.367,
+      "min": 21.478,
+      "max": 45.03,
+      "median": 28.621,
+      "std_dev": 3.978
+    },
+    "tokens": {
+      "avg": 3219.6,
+      "total": 1155823,
+      "min": 1391,
+      "max": 4980
+    },
+    "avg_answer_length_chars": 1761.1
+  },
+  "per_job_title": {
+    "Database Administrator": {
+      "total": 79,
+      "successful": 79,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 35.969,
+        "min": 28.527,
+        "max": 45.03,
+        "median": 35.847,
+        "std_dev": 3.58
+      },
+      "avg_tokens": 3002.2
+    },
+    "DevOps Engineer": {
+      "total": 280,
+      "successful": 280,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 28.786,
+        "min": 21.478,
+        "max": 43.433,
+        "median": 28.375,
+        "std_dev": 2.307
+      },
+      "avg_tokens": 3280.9
+    }
+  },
+  "per_user": {
+    "user_117": {
+      "total": 9,
+      "successful": 9,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 34.046,
+        "min": 28.527,
+        "max": 37.729,
+        "median": 35.788,
+        "std_dev": 3.45
+      },
+      "avg_tokens": 2943.2
+    },
+    "user_118": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 36.216,
+        "min": 29.001,
+        "max": 45.03,
+        "median": 35.985,
+        "std_dev": 3.521
+      },
+      "avg_tokens": 3009.7
+    },
+    "user_119": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 29.284,
+        "min": 24.671,
+        "max": 43.433,
+        "median": 28.235,
+        "std_dev": 3.328
+      },
+      "avg_tokens": 2905.1
+    },
+    "user_120": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 28.205,
+        "min": 21.478,
+        "max": 30.629,
+        "median": 28.444,
+        "std_dev": 1.405
+      },
+      "avg_tokens": 4164.5
+    },
+    "user_121": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 28.348,
+        "min": 26.36,
+        "max": 31.068,
+        "median": 28.257,
+        "std_dev": 0.741
+      },
+      "avg_tokens": 3738.5
+    },
+    "user_122": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 29.309,
+        "min": 25.658,
+        "max": 42.71,
+        "median": 28.547,
+        "std_dev": 2.575
+      },
+      "avg_tokens": 2315.5
+    }
+  }
+}

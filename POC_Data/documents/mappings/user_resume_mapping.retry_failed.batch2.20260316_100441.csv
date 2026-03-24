@@ -1,0 +1,3 @@
+user_id,resume_path,document_type,filename
+70,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/367_Web Designing.pdf,resume,367_Web Designing.pdf
+71,/opt/NodeRAG-Neo4j-Integration/POC_Data/documents/input_resumes/372_Web Designing.pdf,resume,372_Web Designing.pdf

@@ -1,0 +1,315 @@
+{
+  "generated_at": "2026-03-21T22:37:05.597139",
+  "overall": {
+    "mode": "QA",
+    "total_rows": 1001,
+    "successful": 1001,
+    "failed": 0,
+    "success_rate_pct": 100.0,
+    "total_elapsed_s": 28061.59,
+    "latency_s": {
+      "avg": 27.982,
+      "min": 18.725,
+      "max": 40.195,
+      "median": 27.725,
+      "std_dev": 1.385
+    },
+    "tokens": {
+      "avg": 3078.2,
+      "total": 3081265,
+      "min": 1906,
+      "max": 5508
+    },
+    "avg_answer_length_chars": 1675.8
+  },
+  "per_job_title": {
+    "Database Administrator": {
+      "total": 350,
+      "successful": 350,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 27.682,
+        "min": 21.39,
+        "max": 30.712,
+        "median": 27.679,
+        "std_dev": 0.941
+      },
+      "avg_tokens": 3377.1
+    },
+    "Full Stack Developer": {
+      "total": 49,
+      "successful": 49,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 28.366,
+        "min": 24.835,
+        "max": 33.539,
+        "median": 27.959,
+        "std_dev": 1.528
+      },
+      "avg_tokens": 2993.4
+    },
+    "Java Developer": {
+      "total": 553,
+      "successful": 553,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 28.026,
+        "min": 24.885,
+        "max": 40.195,
+        "median": 27.721,
+        "std_dev": 1.401
+      },
+      "avg_tokens": 2902.4
+    },
+    "JavaScript Developer": {
+      "total": 1,
+      "successful": 1,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 18.725,
+        "min": 18.725,
+        "max": 18.725,
+        "median": 18.725,
+        "std_dev": 0.0
+      },
+      "avg_tokens": 4038.0
+    },
+    "Software Engineer": {
+      "total": 48,
+      "successful": 48,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 29.47,
+        "min": 25.657,
+        "max": 32.597,
+        "median": 29.546,
+        "std_dev": 1.926
+      },
+      "avg_tokens": 2990.5
+    }
+  },
+  "per_user": {
+    "user_71": {
+      "total": 1,
+      "successful": 1,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 18.725,
+        "min": 18.725,
+        "max": 18.725,
+        "median": 18.725,
+        "std_dev": 0.0
+      },
+      "avg_tokens": 4038.0
+    },
+    "user_75": {
+      "total": 17,
+      "successful": 17,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 29.153,
+        "min": 26.825,
+        "max": 32.392,
+        "median": 28.225,
+        "std_dev": 1.662
+      },
+      "avg_tokens": 3468.5
+    },
+    "user_76": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 29.487,
+        "min": 26.856,
+        "max": 35.214,
+        "median": 29.345,
+        "std_dev": 1.727
+      },
+      "avg_tokens": 2653.1
+    },
+    "user_77": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 29.21,
+        "min": 25.836,
+        "max": 33.539,
+        "median": 29.078,
+        "std_dev": 1.882
+      },
+      "avg_tokens": 2653.9
+    },
+    "user_78": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 28.535,
+        "min": 26.439,
+        "max": 34.029,
+        "median": 28.019,
+        "std_dev": 1.475
+      },
+      "avg_tokens": 2869.4
+    },
+    "user_79": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 28.277,
+        "min": 25.303,
+        "max": 40.195,
+        "median": 27.837,
+        "std_dev": 2.183
+      },
+      "avg_tokens": 2425.7
+    },
+    "user_80": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 27.659,
+        "min": 24.835,
+        "max": 28.776,
+        "median": 27.66,
+        "std_dev": 0.636
+      },
+      "avg_tokens": 3462.0
+    },
+    "user_81": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 27.534,
+        "min": 24.995,
+        "max": 28.571,
+        "median": 27.582,
+        "std_dev": 0.513
+      },
+      "avg_tokens": 2646.5
+    },
+    "user_82": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 27.372,
+        "min": 24.974,
+        "max": 28.723,
+        "median": 27.381,
+        "std_dev": 0.648
+      },
+      "avg_tokens": 2770.2
+    },
+    "user_83": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 27.584,
+        "min": 24.885,
+        "max": 28.477,
+        "median": 27.636,
+        "std_dev": 0.579
+      },
+      "avg_tokens": 3498.1
+    },
+    "user_84": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 27.577,
+        "min": 25.915,
+        "max": 28.798,
+        "median": 27.572,
+        "std_dev": 0.424
+      },
+      "avg_tokens": 3088.4
+    },
+    "user_85": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 27.558,
+        "min": 21.39,
+        "max": 29.219,
+        "median": 27.814,
+        "std_dev": 1.397
+      },
+      "avg_tokens": 4252.8
+    },
+    "user_86": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 27.653,
+        "min": 26.155,
+        "max": 29.608,
+        "median": 27.591,
+        "std_dev": 0.578
+      },
+      "avg_tokens": 2859.7
+    },
+    "user_87": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 27.908,
+        "min": 21.494,
+        "max": 30.712,
+        "median": 27.855,
+        "std_dev": 1.164
+      },
+      "avg_tokens": 3563.9
+    },
+    "user_88": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 27.684,
+        "min": 26.572,
+        "max": 29.675,
+        "median": 27.608,
+        "std_dev": 0.618
+      },
+      "avg_tokens": 3161.7
+    },
+    "user_89": {
+      "total": 70,
+      "successful": 70,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 27.606,
+        "min": 25.704,
+        "max": 29.289,
+        "median": 27.502,
+        "std_dev": 0.579
+      },
+      "avg_tokens": 3047.5
+    },
+    "user_90": {
+      "total": 3,
+      "successful": 3,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 26.867,
+        "min": 25.657,
+        "max": 27.748,
+        "median": 27.195,
+        "std_dev": 0.885
+      },
+      "avg_tokens": 3850.0
+    }
+  }
+}
