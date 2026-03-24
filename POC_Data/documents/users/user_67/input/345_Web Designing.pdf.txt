@@ -1,0 +1,62 @@
+Mostafa Zaki
+Web and Graphics Designer
+mostafa.zaki@email.com |+20 101 234 5678 |/githubgithub.com/mostafa-zaki |/linkedinlinkedin.com/in/mostafa-zaki |
+mostafazaki.com
+Education
+Nagpur University Nagpur, Maharashtra, India
+Bachelor of Engineering in Information Technology September 2015
+Maharashtra State Board of Secondary Maharashtra, India
+HSC Secondary & Higher Secondary May 2011
+Maharashtra State Board of Secondary Maharashtra, India
+SSC Secondary & Higher Secondary June 2009
+Experience
+Web and Graphics Designer Full-time
+Virtuous Media Point 2017 - 2019
+Web and Graphics Designer Full-time
+e-sense IT Solution Pvt. Ltd. October 2015 - September 2017
+•Designed website solutions by studying information needs, conferring with users, and studying systems flow, data
+usage, and work processes.
+•Understood process requirements and provided use cases for business, functional & technical requirements.
+•Interacted with users for requirement gathering, prepared functional specifications and low-level design documents.
+•Participated in the Software Development Life Cycle (SDLC) and Agile methodology right from requirement analy-
+sis.
+•Performed detailed design of modules along with their implementation, and documentation of integrated software
+modules developed by other team members.
+•Developed various modules as per customer requirement and identified and fixed numerous bugs related to code,
+database connectivity, and UI defects.
+•Analyzed and modified existing codes to incorporate changes in application/user requirements; wrote new codes as
+required.
+•Coded, implemented, and integrated complex programs using technologies such as HTML5, CSS3, JavaScript, jQuery,
+and Bootstrap.
+•Demonstrated strong command of Graphics designing with effective ideas.
+Web Designing and Development Intern Internship
+e-sense IT Solution Pvt. Ltd. June 2015 - September 2015
+•Completed an internship program focused on Web Designing and Development.
+Projects
+Web Development Projects 2015 - 2017
+•Developed websites including www.nitka.com, Nagpur United Corporation (Admin Panel), Mintmetrix.com, Tagline
+Videos (Admin Panel), Smartbadge (Admin Panel).
+•Utilized HTML5, CSS3, Bootstrap, JavaScript, jQuery with Sublime Text for development.
+•Designed e-commerce websites like www.shreekiaspack.co.in, www.3staragroproducts.com, www.luckystationery.co.in
+using HTML5, CSS3, Bootstrap, JavaScript and Notepad ++.
+•Created various logos, brochures, advertising banners, visiting cards, pamphlets, and hoardings.
+Major Project: WEB BASED DISEASE DIAGNOSIS EXPERT SYSTEM 1 Year (during Bachelor’s)
+•Developed a web-based system providing online consultation for specific diseases, offering suggestions for health
+problems.
+Mini Project: SHOPPING MANAGEMENT SYSTEM During Bachelor’s
+•Developed a Shopping Management System using C ++.
+
+Awards & Honors
+Presented in Project Competition in Innovesta 15 - Priyadarshini Indira Gandhi College of Engineering, Nagpur, 2015
+Presented in National Level Paper Presentation in TECH-WAVE 2015 - S.R.M.C.E., Nagpur, 2015
+Skills
+Programming Languages: C (Basic) - JAVA (Basic) - C ++
+Web Technologies: HTML5 - CSS3 - Bootstrap - JavaScript - jQuery
+Databases: MySQL 5.0
+Design Tools: Corel Draw - Adobe Photoshop - Adobe Illustrator
+IDEs & Tools: Sublime Text - Notepad - Notepad ++
+Operating Systems: Windows XP - Windows 7
+Extracurricular Activities
+Co-ordinator in Project Competition During Bachelor’s
+FACE-IT
+•Coordinated a project competition as part of extracurricular involvement.

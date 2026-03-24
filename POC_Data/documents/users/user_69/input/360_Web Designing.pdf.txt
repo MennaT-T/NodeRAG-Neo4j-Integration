@@ -1,0 +1,68 @@
+Nagwa Hassan
+Web & Graphics Designer
+nagwa.hassan@email.com|+20 101 234 5678|/githubgithub.com/nagwa-hassan|/linkedinlinkedin.com/in/nagwa-hassan|
+nagwahassan.com
+Education
+Nagpur University
+Bachelor of Engineering in Information Technology September 2011 - September 2015, Nagpur, Maharashtra
+Experience
+Web Designing and Development SpecialistFull-time - On-site
+e-sense IT Solution pvt.ltd January 2015 - August 2016, Nagpur, Maharashtra
+•Designed website solutions by studying information needs, conferring with users, and studying systems flow, data
+usage, and work processes.
+•Understood process requirements and provided use cases for business, functional & technical requirements.
+•Interacted with users for requirement gathering, prepared functional specifications and low-level design documents.
+•Participated in the Software Development Life Cycle (SDLC) and Agile methodology right from requirement analy-
+sis.
+•Performed detailed design of modules along with their implementation, and documentation of integrated software
+modules developed by other team members.
+•Developed various modules as per customer requirement and identified and fixed number of bugs related to code,
+Database connectivity, UI Defects and so on.
+•Analyzed and modified existing codes to incorporate a number of changes in the application/user requirements,
+wrote new codes as required.
+•Coded, implemented and integrated complex programs using technologies such as HTML5, CSS3, JavaScript, jQuery,
+Bootstrap.
+Web and Graphics DesignerFull-time - On-site
+Virtuous Media Point August 2016 - July 2018, Pune, Maharashtra
+•Gained 24 months of professional experience in developing responsive web interfaces using HTML5, CSS3, Bootstrap,
+JavaScript, and jQuery.
+•Applied 24 months of expertise in graphic design utilizing Corel Draw and Adobe Photoshop for various digital and
+print media.
+•Developed engaging visual content and layouts with 12 months of experience in Adobe Illustrator.
+•Demonstrated strong command of Graphics designing with effective ideas and innovative approaches.
+Projects
+Web-Based Disease Diagnosis Expert SystemAugust 2014 - July 2015
+B.E. Final Year Project
+•Developed a web-based expert system providing online consultation for particular diseases, offering intelligent sug-
+gestions for health problems.
+Multiple Web Design Projects (e.g., nitka.com, Nagpur united corporation (admin), Mintmetrix.com, Tagline videos (admin), Smartbadge (admin))Various
+•Designed and developed administrative interfaces and public-facing websites utilizing HTML5, CSS3, Bootstrap,
+JavaScript, and jQuery, primarily using Sublime Text.
+E-commerce & Business Websites (e.g., shreekiaspack.co.in, 3staragroproducts.com, luckystationery.co.in)Various
+•Developed responsive websites for various businesses incorporating HTML5, CSS3, Bootstrap, and JavaScript, with
+development primarily in Notepad++.
+Graphic Design Portfolio Ongoing
+
+•Created a diverse range of graphic design assets including logos, brochures, advertising banners, visiting cards,
+pamphlets, and hoardings for various clients.
+Shopping Management System 2013
+Mini Project
+•Developed a console-based Shopping Management System using C++.
+Awards & Honors
+Presented in Project Competition in Innovesta 15 - Priyadarshini Indira Gandhi College of Engineering, Nagpur, 2015
+Presented in National Level Paper Presentation in TECH-WAVE 2015 - S.R.M.C.E., Nagpur, 2015
+Skills
+Programming Languages:C (Basic) - JAVA (Basic)
+Web Technologies:HTML5 - CSS3 - Bootstrap - JavaScript - jQuery
+Graphic Design Tools:Corel Draw - Adobe Photoshop - Adobe Illustrator
+Databases:MySQL 5.0
+IDE & Tools:Sublime Text - Notepad++
+Operating Systems:Windows XP - Windows 7
+Languages
+C: Basic
+JAVA: Basic
+Extracurricular Activities
+Co-ordinator 2013 - 2014
+FACE-IT
+•Coordinated project competitions within the FACE-IT organization, fostering teamwork and technical skills among
+participants.

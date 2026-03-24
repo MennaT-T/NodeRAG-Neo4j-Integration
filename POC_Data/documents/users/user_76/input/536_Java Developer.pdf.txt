@@ -1,0 +1,38 @@
+Yasmin Sayed
+Java Developer
+yasmin.sayed@email.com |+20 101 234 5678 |/githubgithub.com/yasmin-sayed |/linkedinlinkedin.com/in/yasmin-sayed |
+yasmin-sayed.com
+Summary
+Strong communication, collaboration & team building skills with proficiency at grasping new technical concepts quickly
+and utilizing them in a productive manner. Experienced in web application development and resolving project-related
+issues efficiently. Able to communicate effectively with multifunctional teams, programmers, and technical staff at all
+levels. Possesses good knowledge of Java, SQL, Ext JS, JSP , XML, and Web services, complemented by strong interpersonal
+& analytical skills in resolving complex software issues.
+Education
+Manoharbhai Patel Institute of Engineering and Technology
+B.E. Computer Technology Jan. 2017, Gondia, MAHARASHTRA, IN
+S.M.P. Science College
+Higher Secondary Certificate (HSC) Gondia, MAHARASHTRA, IN
+Experience
+Java Developer Full-time
+Xoriant Solutions Pvt Ltd Sep. 2017 - Present
+•Developed various modules for Hertz, focusing on frontend screens and backend webservices to handle XML and
+JSON data.
+•Executed full-stack development from backend to middleware to frontend, ensuring seamless integration and func-
+tionality.
+•Performed bug fixing and proactive development of enhancements to improve application performance and user
+experience.
+•Resolved application incidents within defined SLAs and created task tickets for tracking and resolution.
+•Debugged and provided solutions for workflow issues, ensuring smooth application operations.
+•Addressed database issues and offered technical support to Business Analysts (BAs).
+•Monitored deployments and assessed their impact on ongoing jobs, ensuring minimal disruption.
+•Contributed to the automation of daily activities and process-based organization, increasing efficiency.
+•Achieved on-time, within-budget delivery, consistently meeting customer quality expectations.
+•Maintained a comprehensive knowledge base of domain specifics, known defects, issues, processes, and development
+techniques.
+Skills
+Programming Languages: Java - SQL - PL/SQL - C - C++ - JSP
+Web Technologies: BootStrap - Ext JS - XML - Web Services
+Databases: Oracle - MS-SQL - MS-Access - MS-Excel
+Tools: Toad - Eclipse - SoapBox - Postman
+Operating Systems: Windows

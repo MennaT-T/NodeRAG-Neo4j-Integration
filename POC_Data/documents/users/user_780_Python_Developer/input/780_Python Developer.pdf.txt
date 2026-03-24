@@ -1,0 +1,42 @@
+Ali Said
+Python Developer
+ali.said@email.com |+20 100 123 4567 |/githubgithub.com/ali-said |/linkedinlinkedin.com/in/ali-said
+Education
+Savitribai Phule Pune University Pune, Maharashtra
+Bachelor of Engineering, Computer June 2018
+Experience
+Python Developer
+Atos Syntel Jan 2019 - Present
+•Working as a developer in the field of computer vision for a US based client in the banking domain.
+•Design and development of computer vision based algorithms for image preprocessing using OpenCV , PIL, and
+Numpy.
+•Unit testing and debugging the code and maintaining the versions using Git.
+Projects
+Innovation Challenge Submissions 2018
+•Project idea selected for the final prototyping round in KPIT-Sparkle 2018.
+•Submitted a project idea to the Accenture Innovation 2018 challenge.
+Smart Ambulance System (Poster Presentation) 2017
+•Developed and presented a poster on a ’Smart Ambulance’ concept, securing First Rank in a college-level competi-
+tion.
+Certificates
+ESD Program - Zensar Technologies, 2017
+Employability Training - Barclays, Global Talent Track, & NASSCOM Foundation, 2015
+Awards & Honors
+Project Idea Selected for Final Prototyping Round - KPIT-Sparkle, 2018
+First Rank, College Poster Presentation (Smart Ambulance) - JSCOE, 2017
+Secured Sponsorship of Rs. 15,000 - Platinum Auto, 2017
+Participant, Avishkar Innovation Fair - Savitribai Phule Pune University, 2017
+Skills
+Programming & Frameworks: Python, Django, REST API
+Databases: MySQL
+Web Technologies: HTML5
+Tools & Libraries: Git, OpenCV , PIL, Numpy
+Extracurricular Activities
+Treasurer, IEEE Student Branch 2017 - 2018
+JSCOE, Pune
+•Managed financial accounts and budgeting for the student branch activities.
+•Organized an IEEE workshop on ’Excellence in English and Public Speaking’ in 2017.
+Team Leader, College Events 2016 - 2017
+JSCOE, Pune
+•Led teams in various college technical and cultural events.
+•Participated in multiple inter-college technical competitions at SCOE, PICT, and AISSMS.

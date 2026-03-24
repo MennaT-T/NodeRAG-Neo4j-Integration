@@ -1,0 +1,58 @@
+Marwa Gamal
+Web Designer
+marwa.gamal@email.com |+20 101 234 5678 |/githubgithub.com/marwa-gamal |/linkedinlinkedin.com/in/marwa-gamal |
+marwagamal.com
+Education
+G.H.Raisoni College of Engineering
+B.E. in Computer Science Engineering (CSE) January 2015, Nagpur, India
+Experience
+Web Designer Full-time
+Trust Systems and Software February 2015 - May 2017, Nagpur, India
+•Renovated complete UI for TrustBank-CBS, making it modern, user-friendly, maintainable, and optimized for bank
+use.
+•Shared UI structure and guidelines with a 50-member development team for consistent implementation.
+•Achieved project completion targets within stipulated timeframes across multiple projects.
+•Designed and developed modern, responsive UI for Loan Bazar (Loan Appraisal), an MVC-based application stream-
+lining loan applications.
+•Created required graphics using Photoshop for various projects, including TrustBank-CBS and Loan Bazar.
+•Designed and developed modern, responsive UI for Capital Security Bond Application, an MVC-based platform for
+purchasing gold bonds.
+•Designed and developed the UI Dashboard for SoftGST, a web-based ASP application for generating GSTR returns
+and reconciliation.
+•Designed and developed the landing page for Trust Analytica, a mobile web app displaying bank asset, liability,
+income, and expenses.
+•Provided UI implementation support to developers for Trust Analytica.
+Web Designer & Developer Freelance/Contract
+Jallosh Band & An Endeavor Foundation June 2017 - December 2018, Remote
+•Communicated effectively with clients to understand and gather website requirements.
+•Created detailed mock-ups and wireframes for client websites.
+•Designed, developed, and hosted complete websites, ensuring timely delivery and client satisfaction.
+Digital Data & Client Relations Specialist Part-time/Contract
+10MagicalFingers January 2019 - Present, Remote
+•Engaged in national and international client interaction, managing communications and expectations.
+•Responsible for the efficient management and organization of digital data.
+Projects
+TSR Technology Services Website tsrtechnologyservices.com
+•Designed, developed, and hosted the complete website in line with client requirements and stipulated timelines.
+Vidarbha Merchants Urban Co-Op Bank Website vmcbank.com
+•Communicated with stakeholders to understand needs, then designed, developed, and hosted the full website.
+GISSS Website gisss.co.in
+•Managed the full lifecycle of website development, from mock-ups to hosting, achieving project goals on time.
+Softtrust USA Website softtrustusa.com
+•Understood client specifications, designed and developed the website, and ensured successful hosting.
+An Endeavor Foundation Website
+•Worked with the client to define requirements, created design mocks, and delivered a fully designed and hosted
+website.
+
+Skills
+Web Technologies: Angular JS - HTML5 - CSS3 - SASS - Bootstrap - Jquery - Javascript - Angular 4
+Software: Brackets - Visual Studio - Photoshop - Visual Studio Code
+Design & Tools: UI/UX Design - Photoshop - Mock-up Creation
+Other: Client Communication - Digital Data Management
+Extracurricular Activities
+Web Designer 2013 - 2014
+College Magazine OCEAN G.H.Raisoni College of Engineering, Nagpur, India
+•Contributed to the design and layout of the college’s official magazine, enhancing its visual appeal.
+Participant October 2009
+Photography Competition Click Maharashtra State Board, Nagpur, India
+•Participated in a state-level photography competition, showcasing creative skills.

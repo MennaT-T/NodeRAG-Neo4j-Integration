@@ -1,0 +1,59 @@
+Ashraf Kamal
+Data Scientist
+ashraf.kamal@email.com |+20 102 345 6789 |/githubgithub.com/ashraf-kamal |/linkedinlinkedin.com/in/ashraf-kamal |
+ashrafkamal.com
+Education
+PGP in Data Science 2014 - 2015
+Aegis School of Data Science & Business Mumbai, India
+B.E. in Electronics & Communication 2010 - 2014
+IES IPS Academy Indore, India
+Experience
+Adjunct Faculty, Spark and Machine Learning On-Site
+Aegis School of Data Science & Business 2017 - Present
+•Work on industry projects to provide solutions, teaching undergraduate and graduate-level courses in Spark and
+Machine Learning.
+•Mentored 7-12 Data Science enthusiasts annually, all pursuing graduate studies in Data Science and Business Ana-
+lytics.
+•Reviewed and evaluated 20-40 Research Papers for the Data Science Congress by Aegis School of Business Mumbai.
+•Headed "Data Science Delivered," a solution-providing organization within Aegis, managing 4-5 live projects using
+Data Science techniques.
+Data Scientist On-Site
+IBM Egypt 2016 - 2017
+•Primarily focused on developing and implementing Data Science solutions using IBM Bluemix and IBM Watson
+platforms.
+Data Science Intern On-Site
+Aegis School of Data Science & Business Nov 2015 - Jan 2016
+•Furnished executive leadership with insights, analytics, reports, and recommendations for strategic planning across
+business units, channels, and product lines.
+Volunteer Experience
+Team Member 2018 - Present
+Data Science for Social Goods Committee Cairo, Egypt
+•Developed "Let’s find a missing Child" product using Data Science for social cause, aiding community efforts.
+Projects
+Chat Bot using AWS LEX and TensorFlow (Python)
+•Developed a chatbot for academic institutions to handle course-related queries, reducing human effort and errors.
+•Enabled 24x7 client handling for academic institutions and participants.
+Web scraping using Selenium web driver (Python)
+•Scraped data from an online messaging portal in text format and identified inherent patterns.
+Data Visualization and Data insights (Hadoop Eco System, Hive, PySpark, QlikSense)
+•Built business solutions for an Internet Service Provider to manage daily data generation.
+•Visualized data and identified usage patterns to generate comprehensive reports.
+Image Based Fraud Detection (Microsoft Face API, PySpark, Open CV)
+•Recognized facial similarity to a given database for fraud prevention in loan applications.
+•Compared extracted faces with database images to identify individuals hiding their identity, preventing fraud at
+initial stages.
+Churn Analysis for Internet Service Provider (R, Python, Machine Learning, Hadoop)
+
+•Identified customers likely to churn within a specified period.
+•Proposed incentive offers to retain identified at-risk customers.
+Sentiment Analysis (Python, NLP , Apache Spark service in IBM Bluemix)
+•Performed sentiment analysis on Twitter data for mobile network service providers to determine positive, negative,
+or neutral opinions.
+•Captured emotions from tweets and conducted comparative analysis of service perceptions.
+Certificates
+Skills
+Programming & Tools: Python, R, Spark, PySpark, AWS LEX, TensorFlow, Selenium WebDriver, Hadoop
+Ecosystem, Hive, QlikSense, Microsoft Face API, OpenCV , NLP , Tableau, IBM Bluemix, IBM Watson
+Data Science: Machine Learning, Predictive Modeling, Data Mining, Algorithms, Data Analysis, Data
+Visualization, Business Intelligence, Decision Analytics, Big Data Queries and Interpretation, KPI Dashboards,
+Data-Driven Personalization, Research & Forecasts

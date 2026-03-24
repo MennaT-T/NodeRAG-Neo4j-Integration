@@ -1,0 +1,85 @@
+Youssef Khalil
+SAP BO Developer
+youssef.khalil@email.com |+20 123 456 7890 |/githubgithub.com/youssef-khalil |/linkedinlinkedin.com/in/youssef-khalil |
+youssefkhalil.com
+Education
+University Name CGPA: 3.86
+Degree Name Date, Location
+Experience
+SAP BO Developer Full-time
+Credit Suisse Date - Date
+•Analyzed user requirements and sorted the best possible ways of optimizing performance of universe.
+•CV and generated views development in HANA studio
+•Handling day to day activities involved in development of Business Objects as per the client requirements.
+•Worked as a team member with backend counterpart to understand the Business Requirements.
+•Developing and maintaining universes.
+•Raised OSS tickets to SAP for issues and implemented suggestion/workaround in development.
+•Fixed webi issues reported by users.
+•Created BIAR file and promoted to higher environments by change request.
+•Project handover to team and documentation for reference.
+Projects
+Nestle Globe Date - Date
+•Analyzed user requirements and sorted the best possible ways of optimizing performance of universe.
+•CV and generated views development in HANA studio
+•Handling day to day activities involved in development of Business Objects as per the client requirements.
+•Worked as a team member with backend counterpart to understand the Business Requirements.
+•Developing and maintaining universes.
+•Raised OSS tickets to SAP for issues and implemented suggestion/workaround in development.
+•Implemented Union pruning in concept in universe to optimize performance by partition selection in HANA views
+by passing value to prompt.
+•Fixed webi issues reported by users.
+•Created BIAR file and promoted to higher environments by change request.
+•Project handover to team and documentation for reference.
+Nestle TCT Date - Date
+•Involved with users to understand the Business Requirements and implement feature in a generic way.
+•Suggested best visualization components in dashboard to use.
+•Analyzing user requirements and finding the best possible ways of representing the data.
+•Bug Fixes and feature enhancement in application.
+Nestle BA Date - Date
+•Involved with customer to understand the Business Requirements in order to present the data in a meaningful
+manner and suggested component selection to visualize data in most effectively.
+•Analyzing user requirements and finding the best possible ways of representing the data.
+•Changes in BW query according to requirement
+•Interacting with client team for requirement gathering and analysis.
+•Implemented ideas in bex and design studio app to optimize performance with help of successful POC.
+Warner Bros Date - Date
+•Working as a team member to understand the Business Requirements.
+
+•Performed CMC activities like user & user group creation, providing access to objects and folders. Created folders
+for reports, connection, universes and provided user security, connection pointing to universe.
+•Worked on issue related to connection, universe objects and webi reports enhancements.
+•Raised OSS messages to SAP to seek solution related to BO tool and limitations.
+•Worked on webi report, universe defects and enhancements.
+•Meeting with users to understand issue, suggest best solution and ETA.
+•Worked on query builder to find BO objects metadata for investigation.
+•Created of BIAR format using promotion management.
+Nordea Date - Date
+•Involved in activities to understand the Business Requirements.
+•Analyzing user requirements and finding the best possible ways of representing the data.
+•Designing and developing interactive webi reports as per client’s dynamic requirements.
+•Developed webi reports having blocks, graphs and linked report with summary report.
+•After development performing unit test activities and presentation to users.
+•Implementation of Business Object i.e. Webi from one Environment to another using BIAR File.
+•Fixed issues in webi reports related to data and report formatting and made changes in report requested by users in
+MAT.
+•Prepared RDD for reports and performed unit testing.
+•Provided KT to users and supports teams.
+Certificates
+SAP Business Intelligence Version SAP BO 4.2
+Skills
+SAP BO: Design Studio - IDT - Webi - UDT - CMC
+Backend DB: HANA - BW - Bex Queries - SQL
+Tools: HPSM ticketing tool - Query builder
+Extracurricular Activities
+SAP BO Developer 72 months
+Accenture, Pune
+•Environment: SAP BO 4.2, IDT, HANA views
+•Role: SAP BO Developer and HANA developer
+SAP BO Developer Date - Date
+Tech Mahindra Pvt. Ltd. Bangalore
+•Environment: SAP BO 4.2, IDT, HANA views
+•Role: SAP BO Developer and HANA developer
+SAP BO Developer Date - Date
+CapGemini Pvt. Ltd. Bangalore
+•Tools: Teradata DB, SAP BO 4.1 Webi, IDT, CMC
+•Role: SAP BO Developer

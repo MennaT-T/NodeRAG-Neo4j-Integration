@@ -1,0 +1,74 @@
+Sara Hassan
+Database Administrator
+sara.hassan@email.com |+20 101 234 5678 |/githubgithub.com/sara-hassan |/linkedinlinkedin.com/in/sara-hassan |
+sarahassan.com
+Education
+PDACOE, Gulbarga, Autonomous Institution
+B. Tech Computer Science 2010 - 2014, Gulbarga, India
+Experience
+Database Administrator III On-Site
+BNY Mellon International Operations (India) PVT. LTD Aug 2018 - Present, Mumbai, India
+•SQL Server Administration:
+•Installation and configuration of database servers using slipstream, setting up all maintenance jobs as per standard
+policy on standalone as well as cluster environments with latest service packs.
+•Installation of SSRS, uploading of .rdls, assigning correct data sources to reports, and granting necessary access to
+users & developers on reporting website; aware of SSIS and designing packages.
+•Creation and management of logins and users for database applications, assigning permissions, and resolving user
+login issues.
+•Migration of SQL Server 2005/2008 servers to higher versions.
+•Setup of database refresh jobs on QA, DEV , and UAT environments, and fixing orphaned users.
+•Troubleshooting performance-related issues.
+•Collaborated with developers on multiple projects, providing all required support for testing in QA, UAT & DEV
+environments.
+•Led Disaster Recovery (DR) tests for the database team.
+•Participated in database purge and archive activities.
+•Developed codes for automating database administration tasks.
+•Worked on automating DR tasks to start agent jobs on multiple servers, and restoring log-shipped databases without
+manual intervention post-DR activities.
+•Provided support to vendor databases, followed up on vendor calls, and timely escalated to next level when there is
+no update in a predefined timeline.
+•Installation and configuration of smsql on Windows Server; scheduled jobs for creation and deletion of clones on
+SQL Server, and maintained backups using smsql.
+•MongoDB Administration:
+•Installation and configuration of MongoDB server.
+•Creation of databases and collections.
+•Creation of new users and granting access using Ops manager.
+•Monitoring of database servers using Ops manager.
+•Oracle & Sybase Administration:
+•Managing and maintaining multiple instances of Databases on Linux and Windows servers.
+•Monitoring daily jobs including backups, refresh, and maintenance jobs.
+Database Administrator On-Site
+Hewlett-Packard India Sales PVT. LTD. (On the payroll of Softenger India PVT. LTD)Sep 2014 - Jul 2018, Bengaluru, India
+•Installed SQL Server on standalone as well as Windows cluster environments with latest service packs, including
+slipstream installation.
+•Installed reporting services.
+•Created logins and users, assigning permissions as per requests.
+•Performed security audits for all logins, including maintenance of unused and orphan user logins.
+•Created & maintained daily and weekly jobs/maintenance plans, including backup, index rebuild/reorganize, up-
+date statistics, and database consistency checks.
+•Created linked servers and ensured connectivity between servers.
+
+•Monitored disk space proactively & managed space using data and log file shrinking.
+•Monitored blocking, deadlocks, open transactions, and slow running queries during performance issues, highlighting
+costly queries to developers.
+•Configured alerts for deadlock and blocking to maintain performance.
+•Implemented high availability technologies like log shipping, AlwaysOn, mirroring, and its troubleshooting; pos-
+sessed knowledge of replication.
+•Successfully completed migration of Databases from one server to another.
+•Performed DR drills (Online/Offline) on a quarterly basis.
+•Utilized PowerShell scripting to monitor, restart SQL service, and get email alerts for service status.
+•Maintained TNS entries for Oracle clients as per client requests.
+•Interacted with customers for requirements.
+•Contacted customers to update the status of handling issues and service requests at every stage of resolution.
+•Managed proper escalation and notification matrix for all support levels.
+Skills
+Operating Systems: Microsoft Windows Server (2003, 2008, 2008 R2, 2012)
+Database Management: SQL Server - Sybase ASE Server - Oracle - MongoDB
+Database Tools: SSMS - DBArtisan - Studio 3T - SnapShot Manager for SQL Server - MongoDB Ops Manager
+High Availability & DR: Log Shipping - AlwaysOn - Mirroring - Replication - DR Drills - smsql
+Scripting & Automation: PowerShell Scripting - SQL Automation
+Monitoring & Ticketing: HP Service Manager (7.0, 9.0) - SolarWinds DPA - JIRA
+Web Servers: IIS 7.0
+Reporting & ETL: SSRS - SSIS
+Other Technical: TNS Entries
+Soft Skills: Customer Interaction - Problem Escalation - Troubleshooting - Performance Tuning

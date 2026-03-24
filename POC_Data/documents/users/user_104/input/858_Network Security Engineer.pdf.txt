@@ -1,0 +1,62 @@
+Yasmin Nasser
+Senior Network Security Analyst
+yasmin.nasser@email.com |+20 101 234 5678 |/githubgithub.com/yasmin-nasser |/linkedinlinkedin.com/in/yasmin-nasser |
+yasminnasser.com
+Education
+Mumbai University
+Bachelor of Engineering, Information Technology Jan 2010, Mumbai, India
+Experience
+Senior Network Security Analyst Full-time
+Accenture Oct 2019 – Present, Cairo, Egypt
+•Install, configure, upgrade, and troubleshoot Cisco ASA firewalls (5500-X) including Single and multi-context fire-
+walls.
+•Perform F5 LTM configuration (VIP , pools), SSL offloading, certificate renewals, code upgrade and troubleshoot
+issues.
+•Manage Pulse Secure (Juniper) including creating Roles/Realm, policies for remote access, reverse proxy and code
+upgrade.
+•Handle PAC file configuration and maintenance.
+•Prepare design documents (HLD, LLD), IP Schema and Configuration of all network devices as per customer re-
+quirements in a data center environment.
+•Responsible for Incident Management, Change Management, and Problem Management following ITIL processes.
+•Key projects: Led a resiliency project for firewall policy lockdown, software code upgrades on all firewalls and load
+balancers, and end-to-end coordination for firewall deployment.
+•Utilized Cisco Security Manager 4.x for centralized security management.
+Network Security Engineer Full-time
+Zensar Technologies Oct 2016 – Sep 2019, Giza, Egypt
+•Install, upgrade Checkpoint firewalls (GAIA R75, R77) and perform policy deployment.
+•Troubleshoot Checkpoint firewalls, Palo Alto firewalls, and Cisco ASAs for multiple sites across US, Canada, and
+EMEA regions.
+•Configure, upgrade, and troubleshoot Cisco Routers (29xx, 28xx, 19xx), Cisco Switches (2960, 3560), and Cisco Meraki
+AP in Meraki Cloud.
+•Perform F5 LTM configuration and troubleshoot operational issues.
+Network Security Administrator Full-time
+Infosys Technologies Oct 2014 – Sep 2016, Alexandria, Egypt
+•Install, configure, upgrade, and troubleshoot Checkpoint firewalls, Cisco Routers, and Switches.
+•Configure, monitor, and troubleshoot issues within the organization’s LAN, WAN, and customer connectivity net-
+works.
+•Interface with vendors and service providers to ensure efficient and effective resolution of hardware or software
+problems with minimal downtime.
+Security Event Analyst Full-time
+HCL-Comnet Oct 2012 – Sep 2014, Cairo, Egypt
+•Perform event monitoring and administration of RSA enVision 4.1 SIEM.
+•Proficiently researched traffic patterns to identify false-positives and/or malicious traffic within IDS, IPS, scanners
+(Qualys) and firewalls.
+•Gained experience in writing correlation rules, parsers & developing UDS for unsupported device logs.
+•Analyzed a large volume of security events while maintaining a high quality of analysis.
+•Handled Change Configuration Management processes.
+Network Administrator Full-time
+Wipro Technologies Feb 2010 – Sep 2012, Giza, Egypt
+
+•Administered, managed, and troubleshot multi-vendor Network Infrastructure including Cisco and Juniper Plat-
+forms (Cisco Router 3845, Cisco stack-wise switches 3750E and 2960 access switch, Cisco 4500 chassis, Cisco 5550/20
+ASA firewalls, Juniper SA 6500 SSL VPN).
+•Handled provisioning and troubleshooting of access issues related to RSA and Entrust (2FA) User Accounts.
+•Executed network and security device configuration backups on a weekly and monthly basis.
+Skills
+Firewall & Security: Cisco ASA, Checkpoint firewall (GAIA, Splat), Palo Alto firewalls, Cisco Security
+Management (CSM), Checkpoint SmartCenter, Palo Alto Panorama, RSAEnvision 4.1 SIEM, IDS, IPS, Qualys
+Scanners, Pulse Secure (Juniper) SSL VPN, RSA and Entrust (2FA)
+Networking: F5 Load Balancer (LTM), Cisco Routers (29xx, 28xx, 19xx), Cisco Switches (2960, 3560), Cisco
+Meraki AP (Meraki Cloud), LAN/WAN Connectivity
+Tools & Methodologies: BMC Remedy, Service-now, ITIL Process (Incident, Change, Problem Management)
+Programming: Python, VB Scripting

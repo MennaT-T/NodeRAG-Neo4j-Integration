@@ -1,0 +1,63 @@
+Ali Abdel Aziz
+Senior Network Security Analyst
+ali.abdelaziz@email.com |+20 102 345 6789 |/githubgithub.com/ali-abdel-aziz |/linkedinlinkedin.com/in/ali-abdel-aziz |
+aliabdelaziz.com
+Education
+Mumbai University
+Bachelor of Engineering in Information Technology January 2006 – January 2010, Mumbai, India
+Experience
+Senior Network Security Analyst Full-time - On-site
+Accenture January 2018 – Present
+•Installed, configured, upgraded, and troubleshot Cisco ASA firewalls (5500-X) including Single and multi-context
+firewalls.
+•Performed F5 LTM configuration (VIP , pools), SSL offloading, certificate renewals, code upgrade, and troubleshot
+issues.
+•Managed Pulse Secure (Juniper) including creating Roles/Realm, policies for remote access, reverse proxy, and code
+upgrade.
+•Configured PAC files.
+•Prepared design documents (HLD, LLD), IP Schema, and Configuration of all network devices as per customer
+requirements in a data center environment.
+•Performed Incident Management, Change Management, and Problem Management (ITIL process).
+•Managed key projects, including firewall policy lockdown, software code upgrade on all firewalls and load balancers,
+and end-to-end coordination for firewall deployment.
+•Utilized Cisco Security Manager 4.x.
+Network Security Engineer Full-time - On-site
+Zensar Technologies January 2015 – December 2017
+•Installed and upgraded Checkpoint firewalls GAIA R75, R77, and performed policy deployment.
+•Troubleshot Checkpoint firewalls, Palo Alto firewall, and Cisco ASA’s for multiple sites in US, Canada, and EMEA
+regions.
+•Configured, upgraded, and troubleshot Cisco Routers (29xx, 28xx, 19xx), Cisco switches (2960, 3560), and Cisco
+Meraki AP in Meraki Cloud.
+•Performed F5 LTM configuration and troubleshooting of operational issues.
+Network Security Engineer Full-time - On-site
+Infosys Technologies January 2012 – December 2014
+•Installed, configured, upgraded, and troubleshot Checkpoint firewalls, Cisco Routers, and Switches.
+•Configured, monitored, and troubleshot issues within organization LAN, WAN, and customer connectivity net-
+works.
+•Interfaced with vendors and service providers ensuring efficient and effective resolution of hardware or software
+problems with minimal downtime.
+Security Operations Engineer Full-time - On-site
+HCL-Comnet January 2010 – December 2011
+•Performed event monitoring and administration of RSA enVision 4.1 SIEM.
+•Proficient in researching traffic patterns to identify false-positives and/or malicious traffic within IDS, IPS, scanners
+(Qualys), and firewalls.
+•Experienced in writing correlation rules, parsers, and developing UDS for unsupported device logs.
+•Analyzed a large volume of security events while maintaining a high quality of analysis.
+•Gained exposure to Change Configuration Management.
+Network & Security Administrator Full-time - On-site
+Wipro Technologies January 2008 – December 2009
+
+•Administered, managed, and troubleshot multi-vendor Network Infrastructure consisting of Cisco, Juniper Platforms
+(Cisco Router 3845, Cisco stack-wise switches 3750E and 2960 access switch, Cisco 4500 chassis, Cisco 5550/20 ASA
+firewalls, Juniper SA 6500 SSL VPN).
+•Provisioned and troubleshot access issues related to RSA and Entrust (2FA) User Accounts.
+•Took all network and security devices configuration backups on a weekly and monthly basis.
+Skills
+Firewalls & Security: Cisco ASA, Checkpoint (GAIA, Splat), Palo Alto, F5 LTM, Cisco Security Manager
+(CSM), Checkpoint SmartCenter, Palo Alto Panorama, RSA Envision 4.1, IDS, IPS, Qualys, Pulse Secure
+(Juniper), SSL VPN, 2FA
+Networking: Cisco Routers (29xx, 28xx, 19xx, 3845), Cisco Switches (2960, 3560, 3750E, 4500 chassis), Cisco
+Meraki AP , LAN, WAN, IP Schema
+Tools & Methodologies: BMC Remedy, Service-now, ITIL Process, Incident Management, Change
+Management, Problem Management, Design Documents (HLD, LLD), Configuration Management
+Programming/Scripting: Python, VB Scripting

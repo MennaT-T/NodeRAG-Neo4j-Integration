@@ -1,0 +1,55 @@
+Yasmin Abdel Aziz
+Full Stack Java Developer
+yasmin.abdelaziz@email.com |+20 100 123 4567 |/githubgithub.com/yasmin-abdel-aziz |/linkedin
+linkedin.com/in/yasmin-abdel-aziz |yasminabdelaziz.com
+Education
+M.C.A Graduated: January 2018
+Pune University Pune, Maharashtra, India
+B.C.A Graduated: January 2015
+Amravati University Amravati, Maharashtra, India
+H.S.C Graduated: January 2012
+Amravati University Amravati, Maharashtra, India
+S.S.C Graduated: January 2010
+Amravati University Amravati, Maharashtra, India
+Experience
+Java Developer Full-time
+Salcluster Technologies June 2020 - March 2021, Cairo, Egypt
+•Worked as a Java developer, successfully developing 3 projects using Java Servlet, JSP , Ajax, and various web tech-
+nologies.
+•Utilized Core Java, Servlet and JSP , HTML5, CSS3, Bootstrap, JavaScript, JQuery, and Ajax to build robust web
+applications.
+Software Engineer Full-time
+OmegaSoft Technologies Pvt. Ltd. January 2020 - May 2020, Giza, Egypt
+•Developed projects leveraging Java Spring Hibernate, AngularJs, Ajax, KendoUI, and Bootstrap.
+•Implemented applications following MVC Architecture and Service-based Programming principles.
+•Contributed to key project modules including Login, Registration, Role Assignment, and Payment functionalities.
+Projects
+GST And Sales Billing Softwares Duration: 1.5 Months
+•Developed a web application using Java (Servlet and JSP), JavaScript, JQuery, Ajax, and MySQL for backend billing
+operations.
+•Implemented GST Billing, invoice generation, and printing functionalities for clients.
+•Designed with five master pages (customer, item, UOM, setup, reason) and four common pages (sales order, pay-
+ments, sales return, invoice).
+Dinman News Website Duration: 1 Month
+•Built a website using Java (Servlet and JSP), JavaScript, JQuery, Ajax, and MySQL for displaying online video and
+text news.
+Agri Management Website Duration: 1.5 Months
+•Created a web application with Java (Servlet and JSP), JavaScript, JQuery, Ajax, and MySQL for purchasing and
+selling agricultural products across India.
+Employment Times (Internship Project) Duration: 4 Months
+•Developed a client website using Java, Spring, Hibernate, AngularJs, Ajax, and MySQL for posting newspapers across
+India, featuring 12 modules.
+•Implemented Admin Panel, E-paper Posting, Subscriptions, advertisement features, and direct social media sharing.
+•Designed a lightweight website using MVC and Service-based Architecture, incorporating an online payment module
+for debit/credit cards and E-Wallets.
+
+Certificates
+Java Developer Certificate - Unanth Technical Institute
+Java Certificate - SoloLearn
+Command Line Crash Course certificate - Udemy
+Skills
+Programming Languages: Java (Servlet, JSP , Spring Boot)
+Web Technologies: HTML5, CSS3, Bootstrap, JavaScript, JQuery, Ajax, AngularJS
+Database: MySQL
+IDEs & Tools: Eclipse, Spring Tool Suite, NetBeans, Sublime Text, Atom
+Operating Systems: Windows XP , 7, 8, 10

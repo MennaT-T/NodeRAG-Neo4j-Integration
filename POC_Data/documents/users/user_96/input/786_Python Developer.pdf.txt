@@ -1,0 +1,60 @@
+Mahmoud Mohamed
+Python Developer
+mahmoud.mohamed@email.com |+20 102 345 6789 |/githubgithub.com/mahmoud-mohamed |/linkedin
+linkedin.com/in/mahmoud-mohamed |mahmoudmohamed.com
+Education
+Savitribai Phule Pune University
+Bachelor of Engineering, Computer Pune, Maharashtra, June 2018
+Maharashtra State Board
+HSC June 2014
+Maharashtra State Board
+SSC June 2012
+Experience
+Python Developer Full-time - On-site
+Atos Syntel July 2018 - October 2019
+•Worked as a developer in the field of computer vision for a US-based client in the banking domain.
+•Designed and developed computer vision-based algorithms for image preprocessing using OpenCV , PIL, and Numpy.
+•Performed unit testing, debugged code, and maintained versions using Git.
+Projects
+KPIT-Sparkle Project 2018
+•Project idea selected for the final prototyping round in the KPIT-Sparkle competition in Pune.
+Accenture Innovation Project 2018
+•Submitted a project idea to the Accenture Innovation competition in Pune.
+Smart Ambulance System 2017
+•Developed and presented a poster on a Smart Ambulance system for a college-level competition.
+•Achieved 1stRank for the poster presentation at college level.
+Certificates
+ESD Program - Zensar Technologies, Pune, 2017
+Employability Training - Barclays, Global Talent Track, and NASSCOM Foundation, 2015
+Medical IoT Workshop - IEEE Standard’s Association at VIP , Pune, 2017
+Introduction to Arduino Workshop - SCOE, Pune, 2016
+Robotics for Juniors Workshop - Computer Society of India at SKNCOE, Pune, 2016
+Awards & Honors
+1stRank for college-level Poster Presentation on Smart Ambulance - Pune, 2017
+Project Idea Selected for Final Prototyping Round in KPIT-Sparkle - Pune, 2018
+
+Skills
+Programming: Python
+Databases: MySQL, General Database Concepts
+Frameworks/Libraries: Django, OpenCV , PIL, NumPy
+Web Technologies: HTML5, REST API
+Tools & Version Control: Git
+Extracurricular Activities
+Treasurer 2017 - 2018
+IEEE Student Branch at JSCOE
+•Managed finances and supported organizational activities for the student branch in Pune.
+Team Leader 2016 - 2017
+College Technical and Cultural Events
+•Led teams in organizing and executing various technical and cultural events.
+Workshop Organizer 2017
+IEEE Student Branch
+•Organized an IEEE workshop on ’Excellence in English and Public Speaking’ in Pune.
+Sponsorship Coordinator 2017
+Platinum Auto
+•Secured sponsorship of Rs. 15,000 from Platinum Auto (formerly Royal Enfield) in Pune.
+Participant 2017
+Avishkar, Savitribai Phule Pune University
+•Participated in Avishkar, a university-level competition conducted by Savitribai Phule Pune University.
+Technical Competition Participant 2016 - 2017
+Various Colleges (SCOE, PICT, AISSMS)
+•Actively participated in multiple inter-college technical competitions across Pune.

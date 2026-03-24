@@ -35,9 +35,9 @@ error.log
 logs/
 
 # NodeRAG Cache and Generated Files
-POC_Data/documents/cache/
-POC_Data/documents/info/
-POC_Data/documents/document_hash.json
+# POC_Data/documents/cache/
+# POC_Data/documents/info/
+# POC_Data/documents/document_hash.json
 cache/
 *.pkl
 *.bin
@@ -91,7 +91,7 @@ _site/
 temp/
 
 # HTML Visualization Output
-POC_Data/documents/index.html
+# POC_Data/documents/index.html
 index.html
 
 # Database Files
@@ -114,7 +114,7 @@ Neo4j_integration.md
 NODERAG_BACKEND_INTEGRATION.md
 
 # User Data and Testing Documents
-POC_Data/documents/users/
+# POC_Data/documents/users/
 
 # Cursor/IDE Plans
 .cursor/

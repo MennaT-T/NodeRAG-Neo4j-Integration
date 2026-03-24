@@ -1,0 +1,54 @@
+Sayed Rashid
+Java Developer
+sayed.rashid@email.com |+20 100 123 4567 |/githubgithub.com/sayed-rashid |/linkedinlinkedin.com/in/sayed-rashid |
+sayedrashid.com
+Education
+M.C.A January 2018
+Pune University Pune, Maharashtra, India
+B.C.A January 2015
+Amravati University Amravati, Maharashtra, India
+H.S.C January 2012
+Amravati University Amravati, Maharashtra, India
+S.S.C January 2010
+Amravati University Amravati, Maharashtra, India
+Experience
+Full Stack Java Developer On-Site
+Salcluster Technologies LLP . 2020 – 2021, Pune, India
+•Worked as a Java developer, contributing to the development of web applications.
+•Developed 3 projects using Java Servlet, JSP , Ajax, and various web technologies.
+•Utilized Core Java, Servlet, JSP , HTML5, CSS3, Bootstrap, JavaScript, JQuery, and Ajax to build robust solutions.
+Software Developer On-Site
+OmegaSoft Technologies Pvt. Ltd. 2019 – 2020, Pune, India
+•Developed solutions using Java Spring Hibernate, AngularJs, Ajax, KendoUI, and Bootstrap.
+•Applied MVC Architecture and Service-based Programming principles in project development.
+•Contributed to project modules focusing on Login Registration, Role Assignment, and Payment functionalities.
+Intern Software Developer Internship
+Client Project: Employment Times (via Internship Program) Early 2019, Pune, India
+•Developed a comprehensive website using Java, Spring, Hibernate, AngularJs, Ajax, and MySQL.
+•Implemented 12 modules including Admin Panel, E-paper Posting, Subscriptions, and Payment processing.
+•Designed a lightweight website using MVC Architecture and Service-based Architecture, supporting online adver-
+tisements and social media sharing.
+•Integrated a secure Payment module allowing online transactions via debit/credit cards and E-Wallets.
+Projects
+GST And Sales Billing Softwares Completed (1.5 Months)
+github.com/sayed-rashid/GSTBilling •Developed a web application for GST billing, invoice generation, and printing using Java (Servlet, JSP), JavaScript,
+JQuery, Ajax, and MySQL.
+•Implemented five master pages (customer, item, UOM, setup, reason) and four common pages (sales order, payments,
+sales return, invoice).
+Dinman News Website Completed (1 Month)
+github.com/sayed-rashid/DinmanNews •Created a client-facing news website for displaying online video and text news using Java (Servlet, JSP), JavaScript,
+JQuery, Ajax, and MySQL.
+Agri Management Website Completed (1.5 Months)
+github.com/sayed-rashid/AgriManagement •Built a web application for nationwide purchasing and selling of vegetables, utilizing Java (Servlet, JSP), JavaScript,
+JQuery, Ajax, and MySQL.
+
+Certificates
+Java Developer Certificate - Unanth Technical Institute
+Java Certificate - SoloLearn
+Command Line Crash Course Certificate - Udemy
+Skills
+Programming Languages: Java (Servlet, JSP , Spring Boot)
+Web Technology: HTML5, CSS3, Bootstrap, JavaScript, JQuery, Ajax, AngularJs
+Database: MySQL
+IDE and Tools: Eclipse, Spring Tool Suite, NetBeans, Sublime Text, Atom
+Operating Systems: Windows XP , 7, 8, 10

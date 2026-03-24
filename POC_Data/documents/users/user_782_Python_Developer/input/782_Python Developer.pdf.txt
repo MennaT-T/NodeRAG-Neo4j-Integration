@@ -1,0 +1,46 @@
+Ashraf Ibrahim
+Python RESTful API Developer
+ashraf.ibrahim@email.com |+20 101 234 5678 |/githubgithub.com/ashraf-ibrahim |/linkedinlinkedin.com/in/ashraf-ibrahim
+Summary
+Experienced Python Developer with a strong background in the full Software Development Life Cycle (SDLC) and Agile
+methodologies. Proficient in requirement gathering, creating solution documents, and debugging/testing applications.
+Skilled in backend development with Python, various databases, and cloud deployment using Pivotal Cloud Foundry. A
+hardworking, result-oriented team player with excellent communication skills.
+Education
+Cairo University Giza, Egypt
+M.Sc., Computer Science 2011
+Cairo University CGPA: 3.86
+B.Sc., Computer Science 2009, Giza, Egypt
+Experience
+Python Developer Full-time
+Egy-Tech Solutions, Cairo, Egypt July 2011 - Present
+•Developed and maintained production-level Python applications, specializing in RESTful API development using
+Flask and Django with MySQL/MongoDB backends.
+•Managed projects using Agile and SDLC methodologies, participating in all stages from requirement gathering and
+customer interaction to deployment.
+•Acted as a Change Controller, responsible for promoting code changes through Development, UAT, and LIVE envi-
+ronments using Pivotal Cloud Foundry (PCF).
+•Gained extensive experience (7+ years) with IBM AS/400 systems, including development in RPG/RPGLE, CL,
+DB2/400, and SQL for the Movex/M3 ERP system.
+•Created and supported solutions using M3 Java and Streamserve for complex ERP functionalities.
+•Proficient in debugging and testing applications built with Python and on AS/400 platforms to ensure high-quality
+deliverables.
+Certificates
+Internal Python, Web Crawling, Web Scraping, and Data Science
+Internal MongoDB, MySQL, and PostgreSQL
+Internal Django, Angular 6, HTML, and CSS
+Internal Core Java and M3 ERP (Java)
+IBM I series AS/400 Training (Maples Institute)
+Internal MOVEX ERP (AS400/RPG/RPGLE) and Streamserve
+Internal M3 Enterprise Collaborator (MEC) training
+German A1 Level (Goethe-Institute)
+Skills
+Languages & Frameworks: Python, Java, Flask, Django, SQL, RPG/400, CL/400, ILE RPG
+Databases: MongoDB, MySQL, PostgreSQL, DB2/400
+Tools & Platforms: Git, Pivotal Cloud Foundry (PCF), IBM AS/400, Movex/M3 ERP , Streamserve
+Methodologies & Skills: Agile, SDLC, RESTful APIs, Requirement Gathering, Debugging & Testing
+
+Languages
+Arabic : Native
+English : Fluent
+German : A1 Level

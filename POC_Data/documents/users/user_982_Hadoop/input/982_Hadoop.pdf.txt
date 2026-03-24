@@ -1,0 +1,67 @@
+Eslam Kamal
+Hadoop Developer
+eslam.kamal@email.com |+20 100 123 4567 |/githubgithub.com/eslam-kamal |/linkedinlinkedin.com/in/eslam-kamal |
+eslamkamal.com
+Summary
+Experienced Hadoop Developer with over 2 years of professional experience in big data ecosystems, skilled in data ware-
+housing, ingestion, processing, and optimization. Proficient in Apache Hadoop, Hive, Sqoop, Flume, Python, and SQL,
+with a strong background in developing robust data pipelines and performing cluster health management.
+Education
+Medi-caps Institute of Technology & Management Indore, Madhya Pradesh, India
+B.E. Electronics & Communication May 2011 – May 2015
+Experience
+Hadoop Developer Full-time
+Tata Consultancy Services June 2015 – Present
+•Provided engineering support for analytics and application teams within the Data Lake program, focusing on
+Hadoop cluster setup, governance, and smooth functioning.
+•Developed a proactive Health Check utility for Data Lake, ensuring continuous monitoring of Hadoop components
+and automating HTML email reports for daily checks and post-upgrade validations.
+•Designed and implemented robust data pipeline utilities to ingest data from RDBMS to Hive external tables using
+Sqoop, incorporating data quality checks such as row count validation.
+•Automated various cluster health, usage, and capacity reports leveraging Unix shell scripting, enhancing operational
+efficiency.
+•Optimized Hive queries to significantly improve performance and minimize Hadoop resource utilization, leading to
+more efficient data processing.
+•Configured and deployed Flume agents for streaming data into the Hadoop ecosystem, supporting real-time data
+ingestion needs.
+•Conducted benchmark testing on Hive and Impala queries to assess and improve query performance across the
+Hadoop platform.
+•Involved in critical cluster setup activities, including edge node configuration and High Availability (HA) implemen-
+tation for essential services like Hive Server2, Impala, and HDFS.
+•Filtered and refined data using advanced technologies such as Pig and Regex Serde, ensuring data relevance and
+quality for analysis.
+•Executed Dataiku benchmark testing against Impala, Hive, and Greenplum database to evaluate performance differ-
+entials in data processing.
+•Migrated data from Greenplum database to Hadoop via Sqoop pipelines, processing and storing it in Hive tables for
+subsequent performance testing.
+•Addressed and resolved Hadoop ecosystem-related issues, ensuring the stability and reliability of the WM Hadoop
+ecosystem.
+•Rescheduled jobs from Autosys to TWS job hosting to achieve better performance and optimize job execution sched-
+ules.
+Project: ABSA- Reconciliations, UBC and WMDATALAKE COE Clients: Barclays, Union Bank of California, Morgan Stanley
+Tata Consultancy Services Within above tenure •Led the migration of data from RDBMS to Hadoop (Hive) to enhance data governance, lineage, auditing, and moni-
+toring capabilities, addressing limitations of RDBMS in processing vast amounts of data.
+•Optimized SQL queries for data that did not require migration, ensuring efficient handling of existing database
+assets.
+•Developed complex Hive queries and logic to facilitate seamless data movement from RDBMS to the Hadoop ecosys-
+tem.
+•Wrote Hive queries to analyze required data according to specific business requirements, aiding in rapid analysis
+and decision-making.
+
+•Further optimized Hive queries to maximize performance and minimize Hadoop resource utilization, critical for
+large-scale data processing.
+•Created and implemented Sqoop commands and scripts for efficient data transfer from RDBMS to the Hadoop
+platform.
+Project: Intellimatch Reconciliation Migration Role: Developer
+Tata Consultancy Services Within above tenure •Extracted business requirements, analyzed, and implemented them in developing new reconciliations.
+•Migrated static setups of reconciliations from Intellimatch version 8.1 to 9.1, ensuring system compatibility and
+functionality.
+•Performed backend development, primarily focusing on writing SQL queries to provide necessary data for new
+reconciliation processes.
+Certificates
+Initial Learning Program - Tata Consultancy Services, June 2015 – August 2015
+Skills
+Programming Languages: Apache Hadoop, Python, Shell Scripting, SQL, Scala
+Big Data Technologies: Hive, Pig, Sqoop, Flume, Oozie, Impala, HDFS, Spark, MapReduce
+Tools & Platforms: Dataiku, Unravel, Cloudera, Putty, HUE, Cloudera Manager, Eclipse, Resource Manager
+Operating Systems: Unix

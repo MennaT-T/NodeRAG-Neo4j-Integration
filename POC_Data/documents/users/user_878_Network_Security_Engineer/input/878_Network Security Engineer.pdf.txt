@@ -1,0 +1,62 @@
+Ashraf Sayed
+Senior Network Security Analyst
+ashraf.sayed@email.com |+20 102 345 6789 |/githubgithub.com/ashraf-sayed |/linkedinlinkedin.com/in/ashraf-sayed |
+ashrafsayed.com
+Education
+Mumbai University
+Bachelor of Engineering in Information Technology January 2006 - January 2010, Mumbai, Maharashtra
+Experience
+Senior Network Security Analyst Full-time
+Accenture Egypt May 2020 - Present, Cairo, Egypt
+•Install, configure, upgrade, and troubleshoot Cisco ASA firewalls (5500-X), including single and multi-context fire-
+walls.
+•Configure F5 LTM (VIP , pools), perform SSL offloading, certificate renewals, code upgrades, and troubleshoot related
+issues.
+•Manage Pulse Secure (Juniper), including creating Roles/Realm, policies for remote access, reverse proxy, and code
+upgrades.
+•Configure PAC files.
+•Prepare design documents (HLD, LLD), IP Schema, and configurations for network devices as per customer require-
+ments in data center environments.
+•Perform Incident Management, Change Management, and Problem Management (ITIL process).
+•Worked on key resiliency projects like firewall policy lockdown, software code upgrades on all firewalls and load
+balancers, and end-to-end coordination for firewall deployment.
+•Utilized Cisco Security Manager 4.x.
+Network Security Analyst Full-time
+Zensar Technologies Egypt May 2017 - April 2020, Giza, Egypt
+•Install, upgrade Checkpoint firewalls (GAIA R75, R77) and manage policy deployment.
+•Troubleshoot Checkpoint firewalls, Palo Alto firewalls, and Cisco ASAs for multiple sites across US, Canada, and
+EMEA regions.
+•Configure, upgrade, and troubleshoot Cisco Routers (29xx, 28xx, 19xx), Cisco Switches (2960, 3560), and Cisco Meraki
+AP in Meraki Cloud.
+•Perform F5 LTM configuration and troubleshoot operational issues.
+Network Security Engineer Full-time
+Infosys Technologies Egypt May 2014 - April 2017, Alexandria, Egypt
+•Install, configure, upgrade, and troubleshoot Checkpoint firewalls, Cisco Routers, and Switches.
+•Configure, monitor, and troubleshoot issues within organization LAN, WAN, and customer connectivity networks.
+•Interface with vendors and service providers, ensuring efficient and effective resolution of hardware or software
+problems with minimal downtime.
+Security Operations Analyst Full-time
+HCL-Comnet Egypt May 2011 - April 2014, New Cairo, Egypt
+•Monitor and administer RSA enVision 4.1 SIEM.
+•Proficient in researching traffic patterns to identify false-positives and/or malicious traffic within IDS, IPS, scanners
+(Qualys), and firewalls.
+•Experienced in writing correlation rules, parsers, and developing UDS for unsupported device logs.
+•Analyze a large volume of security events while maintaining high quality of analysis.
+•Exposed to Change Configuration Management.
+Network Administrator Full-time
+Wipro Technologies Egypt January 2010 - April 2011, Helwan, Egypt
+•Administer, manage, and troubleshoot multi-vendor Network Infrastructure consisting of Cisco and Juniper Plat-
+forms (Cisco Router 3845, Cisco stack-wise switches 3750E and 2960 access switch, Cisco 4500 chassis, Cisco 5550/20
+ASA firewalls, Juniper SA 6500 SSL VPN).
+•Provision and troubleshoot access issues related to RSA and Entrust (2FA) User Accounts.
+•Perform weekly and monthly backups of all network and security device configurations.
+
+Skills
+Firewalls & Security: Cisco ASA - Checkpoint (GAIA, Splat) - Palo Alto - Firewall Management (Cisco CSM,
+Checkpoint SmartCenter, Palo Alto Panorama) - RSAEnvision 4.1 - IDS - IPS - Qualys - SIEM - Pulse Secure
+(Juniper SSL VPN) - Cisco Meraki AP
+Networking & Load Balancing: F5 LTM - Cisco Routers (29xx, 28xx, 19xx, 3845) - Cisco Switches (2960,
+3560, 3750E, 4500) - LAN - WAN
+Tools & Methodologies: BMC Remedy - Service-now - ITIL Process (Incident/Change/Problem
+Management) - HLD - LLD
+Programming & Scripting: Python - VB Scripting

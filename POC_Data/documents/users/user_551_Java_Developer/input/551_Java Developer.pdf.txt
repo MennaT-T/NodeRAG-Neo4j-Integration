@@ -1,0 +1,42 @@
+Ibrahim Sayed
+Java Developer
+ibrahim.sayed@email.com |+20 100 123 4567 |/githubgithub.com/ibrahim-sayed |/linkedinlinkedin.com/in/ibrahim-sayed |
+ibrahimsayed.com
+Education
+Vidyalankar Institute of Technology
+B.E. Information Technology June 2016, Mumbai, India
+Thakur Polytechnic
+Diploma in Information Technology May 2013, Mumbai, India
+Experience
+Java Developer Full-time
+Tech Mahindra July 2016 - March 2018, Mumbai, India
+•Involved in applying change requests to current modules and developing new features for enterprise Java applica-
+tions.
+•Conducted detailed requirement analysis and development for user stories, ensuring robust solutions, and performed
+comprehensive dev unit testing.
+•Handled end-to-end issues and resolved bugs efficiently across various modules.
+•Contributed to migration efforts, including upgrading Java versions from 1.6 to 1.8 for improved performance and
+compatibility.
+•Prepared required program-level and user-level documentation for developed functionalities.
+Projects
+OR-Formatter Application July 2016 - December 2017
+Environment: Java, MySQL, Shell Script, Jenkins.•Developed an application to process Geneva Modified File (GMF) from Geneva server, generating Bill backup and
+Bill Invoices for client customers of BT.
+•Applied change requests to current modules and contributed to requirement analysis and development for user
+stories.
+•Performed thorough dev unit testing for user stories and effectively handled E2E issues and bug fixes.
+•Prepared necessary program-level and user-level documentation for the application.
+STAA Middleware Layer January 2018 - March 2018
+Environment: Java EJB, MySQL, Shell Script, Weblogic12c Server, Jenkins.•Developed STAA, an encapsulation middleware layer acting as an interface between client’s operational support
+systems and Legacy systems.
+•Transformed legacy data into various formats such as TLV; input received in XML/HTTP format, with validations
+performed before sending to backend systems (CSS and COSMOSS Databases).
+•Created services using Java/J2EE and contributed to requirement analysis, development, and dev unit testing for
+user stories.
+•Handled E2E issues, performed bug fixing, and successfully managed migration from Java 1.6 to Java 1.8.
+Skills
+Programming Languages: Java/J2EE, Swift, HTML, Shell Script
+Databases: MySQL
+Tools & Technologies: SVN, Jenkins, Hudson, Weblogic12c, Android
+IDEs & Software: Android Studio, Eclipse, Oracle, Xcode
+Operating Systems: Windows 10, Mac OS (High Sierra)

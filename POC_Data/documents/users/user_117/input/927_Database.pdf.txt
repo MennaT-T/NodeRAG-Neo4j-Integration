@@ -1,0 +1,72 @@
+Sayed Salah
+Database Administrator
+sayed.salah@email.com |+20 101 234 5678 |/githubgithub.com/sayed-salah |/linkedinlinkedin.com/in/sayed-salah |
+sayedsalah.com
+Education
+SGBAU Amravati University CGPA: 7.21
+Bachelor of Engineering (B.E.) in Computer Science and Engineering 2014, Amravati, India
+Experience
+Database Administrator Full-time - On-Site
+BNY Mellon Jan 2017 - Present, Cairo, Egypt
+•Managed critical production, pre-production, test, and reporting databases across various platforms, overseeing
+capacity management and upgrades.
+•Handled day-to-day database activities, including proactive monitoring and incident management, adhering to ITIL
+processes.
+•Built and provisioned new databases as per requirements, preparing them for go-live in collaboration with multiple
+teams.
+•Executed scheduled database patching (CPU, PSU) and installed latest patches on production, development, and test
+environments following Oracle recommendations.
+•Successfully upgraded databases from Oracle 11g to 12c, ensuring seamless transition and minimal downtime.
+•Expanded storage capacity by adding disks to ASM disk groups to support growing data volumes.
+•Built and managed Disaster Recovery (DR) databases using Active Data Guard, ensuring synchronization with pro-
+duction and resolving replication issues.
+•Monitored and managed Data Guard configurations, including checking lagging status, resolving archive log gaps,
+and monitoring RFS/MRP processes.
+•Resolved tablespace-related issues, optimizing storage utilization and preventing outages.
+•Managed user access and profiles, implementing robust security policies and ensuring compliance.
+•Performed database imports and exports using Data Pump for data migration and replication tasks.
+•Maintained a centralized inventory of all managed databases for streamlined tracking and management.
+•Refreshed test environments from production databases to provide accurate and up-to-date data for development
+and testing.
+•Collaborated with Oracle Support to troubleshoot and resolve complex Oracle errors, ensuring timely resolution.
+•Scheduled and managed daily and weekly database backups using RMAN, including troubleshooting RMAN-related
+issues.
+•Performed database cloning using RMAN for various purposes, including test environment provisioning.
+•Participated in cutover activities to upgrade applications to higher versions, coordinating with application teams.
+•Strictly followed ITIL processes in incident and change management, ensuring structured and controlled operations.
+•Provided weekly reports on database issues in team meetings and actively participated in suggesting service im-
+provement plans.
+•Executed database migrations from one server to another or across different platforms, ensuring data integrity.
+•Conducted Root Cause Analysis (RCA) and impact analysis reporting during production outages to prevent recur-
+rence.
+Database & System Administrator Full-time - On-Site
+Brose India 2014 - Dec 2016, Pune, India
+•Managed internal databases and servers across Brose’s global operations, ensuring stability and performance.
+•Provided 24x7 on-call support in rotational shifts, responding to critical alerts and ad-hoc business user requests.
+•Performed day-to-day database activities, monitoring DBA group emails for alerts and issues.
+•Executed database creation and patching activities, maintaining up-to-date and secure environments.
+•Managed frequent database backups using Data Pump and RMAN, ensuring data recoverability.
+•Performed database refreshes using RMAN and Data Pump for development and testing purposes.
+
+•Executed database recovery using data copies and RMAN, minimizing data loss during incidents.
+•Monitored logs and traces for issue resolution, proactively identifying and addressing potential problems.
+•Created new VM servers and prepared them for go-live, also managing decommissioning as per requirements.
+•Conducted weekly patching of Windows servers using SCCM, ensuring system security and compliance.
+•Monitored and troubleshooted daily and weekly OS backups using Symantec Netbackup.
+•Managed user accounts for both OS and database users, maintaining access controls and security policies.
+•Monitored OS-level alerts using SCOM, ensuring proactive response to system health issues.
+•Project: Data Center Migration (Onsite Project)
+•Successfully led and executed a data center migration project, relocating all servers and databases to a new facility.
+•Installed Oracle 11g on Linux platforms, configuring for optimal performance and stability.
+•Worked on service requests (Incidents / Change / Request), managing ticketing and resolution processes.
+•Created users and managed user privileges, implementing granular access control for databases.
+•Configured RMAN backup strategies for databases, ensuring robust disaster recovery capabilities.
+•Performed patching of databases to maintain security and incorporate new features.
+•Configured physical standby databases using Data Guard for high availability and disaster recovery.
+•Cloned servers and migrated them to new clusters, optimizing infrastructure and resource utilization.
+Skills
+Databases: Oracle RDBMS (10g, 11g, 12c)
+Technologies/Utilities: Data Pump - RMAN - Data Guard - ASM - RAC - Golden Gate - Netbackup - SCOM
+- SCCM - VMWare vSphere
+Tools: OCC - PUTTY - SQLPLUS - SQL Developer
+Operating Systems: RHEL 6.0 - RHEL 6.5 - UNIX - Microsoft Windows

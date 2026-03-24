@@ -1,0 +1,43 @@
+Yasmin Nasser
+Java Developer
+yasmin.nasser@email.com |+20 101 234 5678 |/githubgithub.com/yasmin-nasser |/linkedinlinkedin.com/in/yasmin-nasser |
+portfolio
+Education
+Vidyalankar Institute of Technology
+B.E. Information Technology June 2016, Goregaon, Maharashtra, India
+Thakur Polytechnic
+Diploma, Information Technology May 2013, Mumbai, Maharashtra, India
+St. John’s Universal School
+High School Diploma May 2010, Mumbai, Maharashtra, India
+Experience
+Java Developer On-Site
+Tech Mahindra September 2016 - June 2018, Cairo, Egypt
+•Played the role of Java developer involved in applying change requests to current modules.
+•Worked on requirement analysis and development for user stories, including performing dev unit testing.
+•Handled end-to-end issues and fixed bugs, ensuring application stability and performance.
+•Prepared required program-level and user-level documentation for various projects.
+•Contributed to creating services using Java/J2EE and participated in migration from Java 1.6 to Java 1.8.
+Projects
+OR-Formatter September 2016 - August 2017
+Project at Tech Mahindra•Developed an application processing Geneva Modified Files (GMF) to generate Bill backup and Bill Invoices for BT
+clients.
+•Played a key role in applying change requests to existing modules and enhancing functionality.
+•Conducted requirement analysis, development for user stories, and performed rigorous dev unit testing.
+•Addressed end-to-end issues and implemented bug fixes, ensuring data accuracy and system reliability.
+•Responsible for preparing comprehensive program-level and user-level documentation.
+•Technologies: Java, MySQL, Shell script; Webserver: Jenkins.
+STAA (Service Telephony Access Abstraction) September 2017 - June 2018
+Project at Tech Mahindra•Engineered an encapsulation middleware layer acting as an interface between client’s operational support systems
+and Legacy systems.
+•Implemented data transformation logic for legacy data into various formats, including TLV .
+•Processed XML/HTTP inputs, performed validations, and sent responses to CSS and COSMOSS databases.
+•Developed business methods deployed as EJBs on WebLogic Server, shared across various market-facing units.
+•Performed requirement analysis, development for user stories, and conducted dev unit testing.
+•Managed end-to-end issues and bug fixes, contributing to system stability and performance.
+•Successfully contributed to the migration of applications from Java 1.6 to Java 1.8.
+•Technologies: Java EJB, MySQL, Shell script; Webserver: Weblogic12c Server, Jenkins.
+Skills
+Programming Languages: Java/J2EE - Swift - HTML - Shell script
+Databases: MySQL
+Tools & Frameworks: SVN - Jenkins - Hudson - Weblogic12c - Eclipse - Xcode
+Software & OS: Android Studio - Oracle - Windows 10 - Mac (High Sierra)

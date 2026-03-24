@@ -1,0 +1,34 @@
+Tarek Ibrahim
+Python Developer
+tarek.ibrahim@email.com |+20 100 123 4567 |/githubgithub.com/tarek-ibrahim |/linkedinlinkedin.com/in/tarek-ibrahim
+Education
+Dr. Babasaheb Ambedkar Marathwada University CGPA: 3.7/4.0
+Bachelor of Engineering (BE) May 2022, Aurangabad, India
+Experience
+Python Developer Full-Time
+Arsys Inovics pvt ltd Jun. 2022 - Present, Cairo, Egypt
+•Participated in the entire project lifecycle including Design, Development, Deployment, Testing, Implementation, and
+support.
+•Developed views and templates with Python and Django’s view controller and templating language to create user-
+friendly website interfaces.
+•Created CRUD methods (get, post, put, delete) to make requests to the API server and tested Restful APIs using
+Postman.
+•Worked with JSON based REST Web services and wrote Python routines using modules such as requests and urllib
+for web crawling and data fetching.
+•Created unit test cases for critical modules to ensure code quality and reliability.
+•Utilized Agile/Scrum methodologies and Jira for issue management and to track sprint cycles.
+•Created a Git repository and added the project to GitHub for version control and code deployment.
+Projects
+F-MAS (Frequency Monitoring and Analysis Systems) Jan. 2023 - Jun. 2023
+•Developed a system for managing network inventory, network communication, fault management & network traffic
+analysis for telecommunications service providers.
+•The Operations Support Systems (OSS) component provides support for various elements used in Public Switched
+Telephone Networks.
+•Built using Django, Django REST API, MySQL, PyMySQL, Python, HTML5, and CSS3.
+Skills
+Programming Languages: Python
+Frameworks & Libraries: Django, Django REST Framework (DRF), SQLAlchemy, Requests, Urllib
+Databases: MySQL, Oracle, Sqlite, MongoDB
+Web Technologies: HTML, CSS, RESTful Web Services, JSON
+Operating Systems: Windows, Unix
+Tools & Methodologies: Git, GitHub, Jira, Agile, Scrum

@@ -1,0 +1,125 @@
+Noha Ahmed
+Dot Net Developer
+noha.ahmed@email.com |+20 123 456 7890 |/githubgithub.com/noha-ahmed |/linkedinlinkedin.com/in/noha-ahmed |
+nohaahmed.com
+Education
+MCM Pune University
+Pune, Maharashtra
+B.Sc. Computer Science DAVV University
+Indore, Madhya Pradesh
+Experience
+Dot Net Developer Cognizant Technology Solutions
+Cairo, Egypt
+•I am working as a dot net developer.
+Dot Net Developer Ni-Lux Software Ltd.
+Giza, Egypt
+•I was worked as a dot net developer.
+Ni-lux Software Ltd
+Cairo, Egypt
+Projects
+Politician Website
+•I developed Politician website. In this website there is Home Page, Quick Facts, Category, Biography, Gallery, and
+ContactUs Page. It is a totally dynamic website.
+•Operating System: Windows 7, Development Tools: Visual Studio 2013, Database Server: SQL Server 2012, Technol-
+ogy: .NET Framework 4.5, ASP .Net MVC5, Presentation Layer: HTML, CSS, Jquery, Bootstrap
+•Understanding requirements, Coding and unit testing.
+Coaching Management System (CMS)
+•This software helps to manage institute (Student, Teacher, Courses, Batches, Fees, Attendance, and Marks) . Provide
+easy reports like outstanding Fees, Marks, and Attendance etc. This software is specially designed for coaching
+institute.
+•Operating System: Windows 7, Database Server: SQL Server 2012, Technology: .NET Framework 4.5, ASP .Net MVC5,
+Presentation Layer: HTML, CSS, JavaScript, Jquery, Bootstrap
+•Project includes the feature of testing type and the activity on the project activities.
+•Project includes the online management and test process.
+•Worked in Development of Back-end Like Data Collections.
+•Database Schema Designing, and Create Database Dictionary & Made Database Constraints.
+•I was also worked on Front-end Designing like Screen Generations, form Designing & Applying client side Valida-
+tion.
+•SRS documentation and Development.
+Hospital Management System (HMS)
+•Hospital Management System is powerful, flexible, and easy to use and designed and developed to deliver real
+conceivable benefits to hospitals and clinics and more importantly it is backed by reliable and dependable.
+
+•Hospital Management System is designed for multispecialty hospitals, to cover a wide range of hospital administra-
+tion and management processes. It is an integrated end-to-end Hospital Management System that provides relevant
+information across the hospital to support effective decision making for patient care, hospital administration and
+critical financial accounting, in a seamless flow.
+•Presentation Layer: HTML, CSS, JavaScript, Jquery, Kendo UI Business Layer: .NET Framework 4.5, ASP .Net MVC5
+Database Layer: SQL Server 2012 Operating System: Windows 7
+•Project includes the feature of testing type and the activity on the project activities.
+•Project includes the online management and test process.
+•Worked in Development of Back-end Like Data Collections.
+•Database Schema Designing, and Create Database Dictionary & Made Database Constraints.
+•I was also worked on Front-end Designing like Screen Generations, form Designing & Applying client side Valida-
+tion.
+•SRS documentation and Development.
+Ticket Booking Software (BESS)
+•Online Ticket Booking System is a Web based application. You can directly book the ticket by this application. This
+application is implemented for Bus, Tour and Travel Agency.
+•Presentation Layer: HTML, CSS, JavaScript, Jquery, KendoUI Business Layer: .NET Framework 4.5, ASP .Net MVC5
+Database Layer: SQL Server 2012 Operating System: Windows 7
+•Project includes the feature of testing type and the activity on the project activities.
+•Project includes the online management and test process.
+•Worked in Development of Back-end Like Data Collections.
+•Database Schema Designing, and Create Database Dictionary & Made Database Constraints.
+•I was also worked on Front-end Designing like Screen Generations, form Designing & Applying client side Valida-
+tion.
+•SRS documentation and Development.
+School Management System (SMS)
+•School Management System is complete school management software designed to automate a school’s diverse op-
+erations from classes, exams to school events calendar. This school software has a powerful online community to
+bring parents, teachers and student on a common interactive platform. It is paperless office automation solution for
+today’s modern schools. The School Management System provides the facility to carry out all day to day activities
+of the school, making them fast, easy, efficient and accurate.
+•Presentation Layer: HTML, CSS, JavaScript, Jquery Business Layer: .NET Framework 4.5, ASP .Net MVC5 Database
+Layer: SQL Server 2012 Operating System: Windows 7
+•Project includes the feature of testing type and the activity on the project activities.
+•Project includes the online management and test process.
+•Worked in Development of Back-end Like Data Collections.
+•Database Schema Designing, and Create Database Dictionary & Made Database Constraints.
+•I was also worked on Front-end Designing like Screen Generations, form Designing & Applying client side Valida-
+tion.
+•SRS documentation and Development.
+CREDIT MONITORING application
+•Using the CREDIT MONITORING application, RMs, UHs, Credit Controllers and CMUs are able to monitor and
+manage the following items online, update the regularization dates and add their comments as well as generate
+reports: - Overdrafts - Past Dues - SBLC / FG Expiry - Mortgage Expiry - Cheques Returns & Failed Direct Debit -
+NBF vs. CB Classification Relationship Manager The relationship manager can only update the Regularization Date
+and the RM Comments. All other fields will be disabled (greyed-out) for the relationship manager. On updating the
+Regularization Date and the RM Comments, a successful message will be displayed to the RM and then the RM will
+be navigated to the Dashboard screen again. Credit Controller (CCU) The credit controller can only update the CCU
+Comments, if and only if the Regularization Date and RM Comments are present. Otherwise, the CCU Comments
+
+field will be disabled (greyed-out) . All other fields will also be disabled (greyed-out) for the CCU. On updating
+the CCU Comments, a successful message will be displayed to the CCU and then the CCU will be navigated to the
+Dashboard screen. CMU The CMU can only update the CMU comments, if and only if the CCU Comments are
+present. Otherwise, the CMU Comments field should be disabled (greyed-out) . All other fields will be disabled
+(greyed-out) for the CMU. On updating the CMU Comments, a successful message will be displayed to the CMU
+and then the CMU will be navigated to the Dashboard screen. UH The UH can only update the UH comments All
+other fields will be disabled (greyed-out) for the UH. On updating the UH Comments, a successful message will be
+displayed to the UH and then the UH will be navigated to the Dashboard screen.
+•Presentation Layer: HTML, CSS, JavaScript, Jquery Business Layer: .NET Framework 4.5, ASP .Net MVC5 Database
+Layer: SQL Server 2012 Operating System: Windows 7
+•Understanding requirements, Coding and unit testing.
+•SRS documentation and Development.
+Skills
+Language: C - C# - OOP
+Dot Net Technologies: ASP .Net MVC - ADO.Net - Entity Framework - LINQ
+Web Technologies: HTML - CSS - Browser Scripting JavaScript - Jquery - Ajax - JSON
+Web Browser: Internet Explorer 8.0 - Mozilla Firefox10
+Front-end-framework: Bootstrap - Kendo UI
+Database: SQL Server 2012
+Development Tools: Visual Studio 2013
+Operating Systems: MS Window 2007
+Entity Framework: Exprience - Less than 1 year months
+C: Exprience - Less than 1 year months
+Asp.Net: Exprience - Less than 1 year months
+Javascript: Exprience - Less than 1 year months
+OOP: Exprience - Less than 1 year months
+ASP.Net MVC: Exprience - Less than 1 year months
+CSS: Exprience - Less than 1 year months
+Ajax: Exprience - Less than 1 year months
+SQL: Exprience - Less than 1 year months
+Jquery: Exprience - Less than 1 year months
+HTML: Exprience - Less than 1 year months
+JSON: Exprience - Less than 1 year months

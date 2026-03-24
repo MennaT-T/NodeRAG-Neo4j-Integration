@@ -1,0 +1,67 @@
+Hassan Kamal
+Data Science Assurance Associate
+hassan.kamal@email.com |+20 100 123 4567 |/githubgithub.com/hassan-kamal |/linkedinlinkedin.com/in/hassan-kamal |
+hassankamal.com
+Education
+Cairo University CGPA: 3.86
+Bachelor of Science in Computer Science May 2019, Giza, Egypt
+Experience
+Data Science Assurance Associate Full-time
+EY Egypt July 2020 - Present, Cairo, Egypt
+•Developed and enhanced data science solutions for fraud investigations and dispute services, leveraging advanced
+analytics and machine learning.
+•Designed and implemented predictive coding and topic modeling solutions to automate document review processes
+in e-discovery, significantly reducing labor costs and time.
+•Conducted research and development for classification models, predictive analysis, and mining information from
+text data; analyzed outputs and monitored precision.
+•Collaborated on multiple data science and analytic projects for USA clients, applying diverse techniques to customer
+review data, chatbots, and information governance.
+Projects
+TECHNOLOGY ASSISTED REVIEW (TAR) Platform Development July 2020 - June 2022
+EY Egypt•Developed an automated review platform for e-discovery, implementing predictive coding and topic modeling to
+automate reviews and reduce labor costs and time.
+•Conducted research and development for classification models, predictive analysis, and mining information from
+text data; analyzed outputs and monitored precision.
+•Built classifier models to identify "red flags" and fraud-related issues, adhering to EY standards.
+•Utilized: Python, scikit-learn, TF-IDF, word2vec, doc2vec, cosine similarity, Naive Bayes, LDA, NMF for topic mod-
+eling, Vader and TextBlob for sentiment analysis, Matplotlib, Tableau.
+TEXT ANALYTICS - Motor Vehicle Customer Review Data Jan 2021 - Apr 2021
+EY Egypt•Performed sentiment (Positive, Negative & Neutral) and time series analysis on customer comments from one year’s
+feedback survey data.
+•Created heat maps of terms by survey category based on word frequency and plotted Word clouds for extracted
+positive and negative words.
+•Developed customized Tableau dashboards for effective reporting and visualizations.
+•Utilized: Python, Natural Language Processing, NLTK, spaCy, topic modeling, sentiment analysis, word embedding,
+scikit-learn, JavaScript/JQuery, SQL Server.
+CHATBOT Development May 2021 - Aug 2021
+EY Egypt•Developed a user-friendly chatbot for a product, handling simple questions about operations and reservations.
+•Provided an overview of the tool via a QA platform and offered recommendation responses to build a chain of
+relevant answers.
+•Designed the chatbot to intelligently build a pipeline of questions based on user requirements.
+•Utilized: Python, Natural Language Processing, NLTK, spaCy, topic modeling, sentiment analysis, word embedding,
+scikit-learn, JavaScript/JQuery, SQL Server.
+INFORMATION GOVERNANCE Project Sep 2021 - Dec 2021
+EY Egypt•Scanned and parsed data from multiple file formats, extracted metadata, pushed results for ElasticSearch indexing,
+and created customized Kibana dashboards.
+•Performed ROT Analysis (Redundant, Outdated, or Trivial) to identify content and facilitate informed decisions
+about stored information.
+
+•Conducted full-text search analysis on ElasticSearch to tag Personally Identifiable Information (PII) like social security
+numbers, addresses, and names, countering information risk.
+•Utilized: Python, Flask, ElasticSearch, Kibana.
+FRAUD ANALYTIC PLATFORM (FAP) Jan 2022 - Apr 2022
+EY Egypt•Contributed to FAP , a built-in fraud analytics and investigative platform with a case manager and suite of analytics
+for various ERP systems.
+•Enabled clients to interrogate their accounting systems for identifying anomalies indicative of fraud by running
+advanced analytics.
+•Utilized: HTML, JavaScript, SQL Server, JQuery, CSS, Bootstrap, Node.js, D3.js, DC.js.
+Skills
+Programming Languages: Python (pandas, numpy, scipy, scikit-learn, matplotlib), SQL, Java,
+JavaScript/JQuery
+Machine Learning: Regression, SVM, Naive Bayes, KNN, Random Forest, Decision Trees, Boosting
+techniques, Cluster Analysis, Word Embedding, Sentiment Analysis, Natural Language Processing,
+Dimensionality reduction, Topic Modelling (LDA, NMF), PCA & Neural Networks
+Database & Visualizations: MySQL, SQL Server, Cassandra, HBase, ElasticSearch, D3.js, DC.js, Plotly,
+Kibana, Matplotlib, ggplot, Tableau
+Tools & Technologies: Regular Expression, HTML, CSS, Angular 6, Logstash, Kafka, Python Flask, Git,
+Docker, Computer Vision (Open CV), Deep learning

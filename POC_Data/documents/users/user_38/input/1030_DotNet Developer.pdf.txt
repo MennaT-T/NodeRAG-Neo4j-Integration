@@ -1,0 +1,80 @@
+Marwa Ali
+Dot Net Developer
+marwa.ali@email.com |+20 123 456 7890 |/githubgithub.com/marwa-ali |/linkedinlinkedin.com/in/marwa-ali |marwaali.com
+Education
+MCM Pune University
+Pune, Maharashtra
+B.Sc. Computer Science DAVV University
+Indore, Madhya Pradesh
+Experience
+Dot Net Developer Cognizant Technology Solutions
+Cairo, Egypt
+•Working as a dot net developer.
+Dot Net Developer Ni-Lux Software Ltd.
+Giza, Egypt
+•Worked as a dot net developer.
+Ni-lux Software Ltd
+Cairo, Egypt
+•
+Projects
+Politician Website
+•Developed Politician website with Home Page, Quick Facts, Category, Biography, Gallery, and ContactUs Page.
+•Environment: Windows 7, Visual Studio 2013, SQL Server 2012, .NET Framework 4.5, ASP .Net MVC5, HTML, CSS,
+Jquery, Bootstrap.
+•Responsibilities: Understanding requirements, Coding and unit testing.
+Coaching Management System (CMS)
+•Software to manage institute (Student, Teacher, Courses, Batches, Fees, Attendance, and Marks).
+•Environment: Windows 7, SQL Server 2012, .NET Framework 4.5, ASP .Net MVC5, HTML, CSS, JavaScript, Jquery,
+Bootstrap.
+•Features: Testing type and the activity on the project activities, online management and test process.
+•Responsibilities: Development of Back-end Like Data Collections, Database Schema Designing, and Create Database
+Dictionary & Made Database Constraints, Front-end Designing like Screen Generations, form Designing & Applying
+client side Validation, SRS documentation and Development.
+Hospital Management System (HMS)
+•Hospital Management System is powerful, flexible, and easy to use and designed and developed to deliver real
+conceivable benefits to hospitals and clinics and more importantly it is backed by reliable and dependable.
+•Environment: Presentation Layer: HTML, CSS, JavaScript, Jquery, Kendo UI Business Layer: .NET Framework 4.5,
+ASP .Net MVC5 Database Layer: SQL Server 2012 Operating System: Windows 7
+•Features: Project includes the feature of testing type and the activity on the project activities. Project includes the
+online management and test process.
+•Responsibilities: Worked in Development of Back-end Like Data Collections, Database Schema Designing, and Create
+Database Dictionary & Made Database Constraints, I was also worked on Front-end Designing like Screen Genera-
+tions, form Designing & Applying client side Validation, SRS documentation and Development.
+
+Ticket Booking Software (BESS)
+•Online Ticket Booking System is a Web based application. You can directly book the ticket by this application. This
+application is implemented for Bus, Tour and Travel Agency.
+•Environment: Presentation Layer: HTML, CSS, JavaScript, Jquery, KendoUI Business Layer: .NET Framework 4.5,
+ASP .Net MVC5 Database Layer: SQL Server 2012 Operating System: Windows 7
+•Features: Project includes the feature of testing type and the activity on the project activities. Project includes the
+online management and test process.
+•Responsibilities: Worked in Development of Back-end Like Data Collections, Database Schema Designing, and Create
+Database Dictionary & Made Database Constraints, I was also worked on Front-end Designing like Screen Genera-
+tions, form Designing & Applying client side Validation, SRS documentation and Development.
+School Management System (SMS)
+•School Management System is complete school management software designed to automate a school’s diverse oper-
+ations from classes, exams to school events calendar.
+•Environment: Presentation Layer: HTML, CSS, JavaScript, Jquery Business Layer: .NET Framework 4.5, ASP .Net
+MVC5 Database Layer: SQL Server 2012 Operating System: Windows 7
+•Features: Project includes the feature of testing type and the activity on the project activities. Project includes the
+online management and test process.
+•Responsibilities: Worked in Development of Back-end Like Data Collections, Database Schema Designing, and Create
+Database Dictionary & Made Database Constraints, I was also worked on Front-end Designing like Screen Genera-
+tions, form Designing & Applying client side Validation, SRS documentation and Development.
+CREDIT MONITORING application
+•CREDIT MONITORING application for RMs, UHs, Credit Controllers and CMUs to monitor and manage items
+online, update regularization dates and add comments as well as generate reports.
+•Environment: Presentation Layer: HTML, CSS, JavaScript, Jquery Business Layer: .NET Framework 4.5, ASP .Net
+MVC5 Database Layer: SQL Server 2012 Operating System: Windows 7
+•Responsibilities: Understanding requirements, Coding and unit testing. SRS documentation and Development.
+Certificates
+Skills
+Language: C - C#
+OOP: Object-Oriented Programming
+Dot Net Technologies: ASP .Net MVC - ADO.Net - Entity Framework - LINQ
+Web Technologies: HTML - CSS - JavaScript - Jquery - Ajax - JSON
+Front-end-framework: Bootstrap - Kendo UI
+Database: SQL Server 2012
+Development Tools: Visual Studio 2013
+Operating Systems: MS Window 2007
+Extracurricular Activities

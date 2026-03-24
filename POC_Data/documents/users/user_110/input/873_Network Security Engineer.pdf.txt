@@ -1,0 +1,63 @@
+Omar Salah
+Senior Network Security Analyst
+omar.salah@email.com |+20 100 123 4567 |/githubgithub.com/omar-salah |/linkedinlinkedin.com/in/omar-salah |
+omarsalah.com
+Education
+Mumbai University
+Bachelor of Engineering Information Technology January 2006 – January 2010, Mumbai, Maharashtra
+Experience
+Senior Network Security Analyst On-Site
+Accenture July 2018 – Present, Cairo, Egypt
+•Install, configure, upgrade, and troubleshoot Cisco ASA firewalls (5500-X), including single and multi-context fire-
+walls.
+•Manage F5 LTM configuration (VIP , pools), SSL offloading, certificate renewals, code upgrade, and troubleshoot
+related issues.
+•Administer Pulse Secure (Juniper), including creating Roles/Realm, policies for remote access, reverse proxy, and
+code upgrades.
+•Implement PAC file configurations and prepare design documents (HLD, LLD), IP Schema, and configurations for
+network devices in data center environments.
+•Proficient in Incident Management, Change Management, and Problem Management following ITIL processes.
+•Utilized Cisco Security Manager 4.x for efficient network security management.
+Network Security Engineer On-Site
+Zensar Technologies February 2016 – June 2018, Giza, Egypt
+•Installed and upgraded Checkpoint firewalls (GAIA R75, R77) and managed policy deployments.
+•Troubleshot Checkpoint firewalls, Palo Alto firewalls, and Cisco ASA’s for multiple sites across US, Canada, and
+EMEA regions.
+•Configured, upgraded, and troubleshot Cisco Routers (29xx, 28xx, 19xx), Cisco switches (2960, 3560), and Cisco
+Meraki AP in Meraki Cloud.
+•Performed F5 LTM configuration and resolved operational issues.
+Network Engineer On-Site
+Infosys Technologies May 2014 – January 2016, Alexandria, Egypt
+•Installed, configured, upgraded, and troubleshot Checkpoint firewalls, Cisco Routers, and Switches.
+•Configured, monitored, and troubleshot issues within organization LAN, WAN, and customer connectivity net-
+works.
+•Interfaced with vendors and service providers to ensure efficient resolution of hardware or software problems with
+minimal downtime.
+Network Security Administrator On-Site
+HCL-Comnet November 2012 – April 2014, Cairo, Egypt
+•Managed event monitoring and administration of RSA enVision 4.1 SIEM.
+•Proficient in researching traffic patterns to identify false-positives and/or malicious traffic within IDS, IPS, scanners
+(Qualys), and firewalls.
+•Experienced in writing correlation rules, parsers, and developing UDS for unsupported device logs.
+•Analyzed a large volume of security events while maintaining a high quality of analysis.
+•Gained exposure to Change Configuration Management processes.
+Junior Network Administrator On-Site
+Wipro Technologies February 2010 – October 2012, Giza, Egypt
+•Administered, managed, and troubleshot multi-vendor network infrastructure including Cisco (Router 3845, switches
+3750E, 2960, 4500 chassis, 5550/20 ASA firewalls) and Juniper Platforms (SA 6500 SSL VPN).
+•Provisioned and troubleshot access issues related to RSA and Entrust (2FA) User Accounts.
+•Executed weekly and monthly backups of all network and security device configurations.
+
+Projects
+Resiliency Project - Firewall Policy Lockdown Within Accenture
+•Worked on resiliency project including firewall policy lockdown to enhance network security posture.
+•Executed software code upgrades on all firewalls and load balancers, ensuring system stability and performance.
+•Provided end-to-end coordination for major firewall deployment initiatives.
+Skills
+Firewall Technologies: Cisco ASA - Checkpoint (GAIA, Splat) - Palo Alto - F5 Load Balancer (LTM)
+Firewall Management: Cisco Security Manager (CSM) - Checkpoint SmartCenter - Palo Alto Panorama
+Networking: Cisco Routers - Cisco Switches - Cisco Meraki AP - LAN/WAN - Data Center Environments
+Security Management: RSA Envision 4.1 (SIEM) - IDS/IPS - Qualys Scanners - Correlation Rules - Parsers -
+UDS Development - Pulse Secure (Juniper)
+Tools & Processes: BMC Remedy - Service-now - ITIL (Incident, Change, Problem Management)
+Programming/Scripting: Python - VB Scripting

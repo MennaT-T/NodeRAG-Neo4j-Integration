@@ -1,0 +1,63 @@
+Marwa Abdel Rahman
+Talend ETL Developer
+marwa.abdelrahman@email.com |+20 100 123 4567 |/githubgithub.com/marwa-abdel-rahman |/linkedin
+linkedin.com/in/marwa-abdel-rahman |marwaabdelrahman.com
+Education
+University of Mumbai
+Bachelor of Engineering (BE) Jan 2012 – Jan 2016, Mumbai, India
+St. Francis School
+High School Diploma (CBSE Technology) Graduated 2012, Kochi, India
+Experience
+Talend ETL Developer On-Site
+Tata Consultancy Services Feb 2016 – Jan 2018, Mumbai, India
+•Designed and developed end-to-end ETL processes from various source systems to Staging area and Data Warehouse
+using TALEND Big Data Platform.
+•Prepared ETL mapping documents for every mapping and Data Migration documents for seamless project transfer
+across development, testing, and production environments.
+•Performed Unit and System testing to validate data loads in the target; troubleshot long-running jobs and fixed
+identified issues.
+•Expertise in creating mappings in TALEND using Big Data supporting components (e.g., tJDBCConfiguration, tJD-
+BCInput, tHDFSConfiguration, tS3configuration, tCacheOut, tCacheIn, tSqlRow) and standard components (e.g.,
+tFileInputDelimited, tFileOutputDelimited, tMap, tJoin, tReplicate, tParallelize, tConvertType, tAggregate, tSortRow,
+tFlowMeter, tLogCatcher, tRowGenerator, tJava, tJavarow, tAggregateRow, tFilter).
+•Developed and enhanced ETL jobs, components, and Joblets following programming and naming standards; utilized
+tRunJob for executing child jobs from a parent job and passing parameters.
+•Created and deployed physical objects including custom tables, custom views, stored procedures, and indexes to
+SQL Server for Staging and Data-Warehouse environments. Wrote SQL Queries and used Joins to access data from
+MySQL.
+•Managed Source to Target mapping documents for Fact and Dimension tables; demonstrated broad design, develop-
+ment, and testing experience with Talend Integration Suite, including performance tuning of mappings.
+•Extensively used tMap component for lookup & Joiner Functions, writing expressions as per business needs, and
+handling insert/update strategies using tSQLRow.
+•Created Implicit, local, and global Context variables in jobs to facilitate running Talend jobs against different envi-
+ronments.
+•Worked on Talend Administration Console (TAC) for scheduling jobs and adding users; experienced in building
+Talend jobs both within Talend Studio and on the TAC server.
+•Developed mappings for loading Fact and Dimension tables, implementing SCD Type 1 and SCD Type 2 dimensions,
+and Incremental loading with thorough unit testing.
+•Developed a Framework Integrated Job to schedule multiple jobs concurrently, update last successful run times, track
+success status, send mail for failed jobs, and maintain counts in SQL Database.
+•Utilized tParallelize component and multi-thread execution option to run subjobs in parallel, significantly increasing
+job performance.
+•Created Talend jobs and utilized FTP components (tFileList, tS3Put, tFTPut, tFileExist, tFTPConnection) for file
+transfers between network folders and to FTP servers.
+•Extracted data from flat files/databases, applied business logic, and loaded processed data into staging databases as
+well as flat files.
+•Successfully loaded data into diverse targets from various source systems, including SQL Database, DB2, Flatfiles,
+and XML files, into staging and subsequent target databases.
+•Demonstrated excellent working experience in Agile methodologies.
+•Proficient in gathering and understanding client requirements, translating business needs into precise technical re-
+quirements.
+•Possesses excellent oral/written communication skills and the ability to effectively collaborate with onsite and remote
+teams; a good team player with strong problem-solving ability and time management skills.
+
+Projects
+Certificates
+Skills
+ETL & Data Tools: Talend Big Data - Informatica PowerCenter - Microsoft SQL Server - SQL Platform 6.2.1
+Management Studio Workbench - Talend Administration Console (TAC) - Microsoft Visual Studio
+Cloud Big Data: AWS Services - Redshift - Athena - S3 - HDFS
+Databases DW: SQL - Data Warehouse Concepts (Star Schema, Facts, Dimensions) - Data Modeling
+(Microsoft Access) - DB2 - MySQL
+Methodologies: Data Integration - ETL Methodologies - Agile Methodologies
+Extracurricular Activities

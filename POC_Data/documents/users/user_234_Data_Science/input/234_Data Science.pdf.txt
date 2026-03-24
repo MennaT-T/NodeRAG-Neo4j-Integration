@@ -1,0 +1,91 @@
+Abdelrahman Hassan
+Data Science Consultant
+abdelrahman.hassan@email.com |+20 101 234 5678 |/githubgithub.com/abdelrahman-hassan |/linkedin
+linkedin.com/in/abdelrahman-hassan |abdelrahmanhassan.com
+Education
+Great Lakes Institute of Management & Illinois Institute of Technology
+PGDM Business Analytics January 2017 - January 2018
+New Horizon College of Engineering, Visvesvaraya Technological University
+Bachelor of Engineering Electronics and Communication January 2013, Bengaluru, Karnataka, India
+Experience
+Data Science Consultant Full-time
+Deloitte USI February 2018 - March 2020
+•Provided advanced analytics and data science consulting across various industries, focusing on business intelligence,
+data modeling, and predictive solutions.
+•Led project teams and contributed to end-to-end data analysis, model development, and insight presentation for
+client-specific challenges.
+Senior Developer Full-time
+Accenture Solutions Pvt. Ltd., India October 2014 - April 2016
+•Specialized in SAP analytics tool development (In Process Analytics - IPA), data modeling, and Key Performance
+Indicator (KPI) creation.
+•Spearheaded various deployments and introduced SAP Predictive Analytics to optimize development time and en-
+hance functionality for KPIs.
+Database Developer Full-time
+Accenture Solutions Pvt. Ltd., India January 2013 - September 2014
+•Responsible for database development, maintenance, and performance tuning for the Accenture Testing Accelerator
+for SAP (ATAS) tool.
+•Managed database objects, data flows, and actively supported Quality Assurance (QA) and User Acceptance Testing
+(UAT) activities.
+Projects
+Handwriting Recognition February 2018 - April 2018
+Deloitte USI Cross Industry
+•Developed sentence correction functionality for a system converting handwritten images to digital text through object
+detection and sentence creation.
+•Gathered extensive data to capture English words and trained LSTM models for accurate word recognition.
+•Technical Environment: Python
+SWIFT (Financial Services BI Development) May 2018 - December 2018
+Deloitte USI Finance
+•Developed an analytics infrastructure on SAP S/4 to provide users with financial reports and expense forecasting
+capabilities.
+•Led the offshore team, designed and developed data models for reporting, created ETL for data flow, and validated
+reports.
+•Technical Environment: SAP HANA, Tableau, SAP AO
+Clinical Healthcare System (Product Development) January 2019 - February 2019
+Deloitte USI Healthcare Analytics
+•Designed and implemented an analytics infrastructure on Argus to enable faster querying and advanced analytics.
+•Involved from design to deployment, performed extensive data restructuring, and built models for deriving key
+insights.
+
+•Technical Environment: Data Modelling, SAP HANA, Tableau, NLP
+Consumption Based Planning for Flowers Foods March 2019 - October 2019
+Deloitte USI FMCG
+•Set up CRM and CBP modules, executed key data decomposition activities, and established the foundation for future
+year forecasts.
+•Developed various analytical models and implemented significant performance improvements.
+•Technical Environment: Data Modelling, SAP HANA, BOBJ, Time Series Forecasting
+Customer Segmentation and RFM Analysis (Internal Initiative) November 2019 - January 2020
+Deloitte USI FMCG
+•Established a HANA-Python interface and performed advanced analytics in Python, segmenting customer data into
+five core groups using K-means clustering.
+•Conducted RFM analysis and developed an algorithm to automatically categorize new customers into defined seg-
+ments.
+•Technical Environment: Anaconda3, Python3.6, HANA SPS12
+Telecom Invoice State Detection (Internal Initiative) February 2020 - February 2020
+Deloitte USI Telecom
+•Developed a decision tree model to classify open and closed invoices, significantly reducing manual verification
+effort by 60%.
+•Technical Environment: R, SAP PAL, SAP HANA SPS12
+In Process Analytics for SAP October 2014 - April 2016
+Accenture Solutions Pvt. Ltd., India Analytics - Cross Industry
+•Developed SAP analytics tool (IPA) by designing database objects and data models to deliver operational insights to
+clients.
+•Developed various Finance-related KPIs using complex SQL scripts, created HANA database procedures, and took
+ownership of dashboard functionality.
+•Introduced SAP Predictive Analytics to reduce development time and prepared production planning reports.
+•Technical Environment: R, SAP HANA, T-SQL
+Accenture Testing Accelerator for SAP (ATAS) January 2013 - September 2014
+Accenture Solutions Pvt. Ltd., India Cross Industry
+•Managed all development activities and deployments for the ATAS tool, ensuring robust performance and function-
+ality.
+•Analyzed business requirements, designed data flow diagrams and entity-relationship diagrams (UML), and nor-
+malized database tables.
+•Created/updated database objects (tables, views, stored procedures, functions, packages) and performed SQL per-
+formance tuning.
+•Technical Environment: SQL Server 2008/2014, Visual Studio 2010, Windows Server, Performance Monitor, SQL
+Server Profiler, C#, PL-SQL, T-SQL
+Skills
+Programming Languages: Python - R - C#
+Databases/Tools: SAP HANA - MS SQL Server - Tableau - SAP Lumira - SAP AO - BOBJ - Visual Studio
+Data Science: Machine Learning - Deep Learning - NLP - Data Modelling - Linear Programming - Time
+Series Forecasting - K-means - RFM Analysis
+Analytics Domains: Advanced Analytics - SCM Analytics - Retail Analytics - Social Media Analytics

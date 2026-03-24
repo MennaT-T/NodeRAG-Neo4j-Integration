@@ -1,0 +1,48 @@
+Ibrahim Ismail
+Python RESTful API Developer
+ibrahim.ismail@email.com |+20 100 123 4567 |/githubgithub.com/ibrahim-ismail |/linkedinlinkedin.com/in/ibrahim-ismail
+Summary
+Experienced developer with hands-on experience in the production and maintenance of projects using Agile and SDLC
+methodologies. Responsible for the full development cycle, from requirement gathering and customer interaction to solu-
+tion design, coding, testing, and deployment. Strong debugging and testing skills in Python and AS/400 environments.
+Proven ability to work effectively as an individual and in a team.
+Education
+Pune University Pune, Maharashtra
+M.Sc. Computer Science
+Pune University Pune, Maharashtra
+B.Sc. Computer Science
+Experience
+Python Developer Full-Time
+KPIT Technologies July 2011 - Present
+•Developed and supported Python-based APIs with a focus on Python-MongoDB/MySQL integration for over 2
+years.
+•Served as a Senior AS400 and Streamserve developer for Movex/M3 ERP projects for 4 years.
+•Functioned as an M3 Java and Streamserve developer within the Movex/M3 ERP ecosystem for 1 year.
+•Managed the full project lifecycle including requirement gathering, customer interaction, estimation, solution design,
+coding, unit testing, and deployment.
+•Acted as a Change Controller, managing the promotion of code changes from development to UAT and production
+environments using Pivotal Cloud Foundry (PWS).
+Certificates
+Internal Python Training
+Internal Python Web Crawling & Web Scraping Training
+Internal Python for Data Science Training
+Internal MongoDB, MySQL, & PostgreSQL Training
+Internal DJango, Angular 6, HTML, & CSS Training
+Internal Core Java Training
+IBM I series AS/400 Training (Maples Institute, Pune)
+Internal MOVEX ERP (AS400/RPG/RPGLE) Training
+Internal M3 ERP (Java) Training
+Internal Streamserve & M3 Enterprise Collaborator (MEC) Training
+Skills
+Languages: Python, Java, RPG/400, CL/400, ILE RPG, ILE CL, SQL/400
+Databases: MongoDB, MySQL, PostgreSQL, DB2/400
+Frameworks & Libraries: Flask, Django, Numpy, Angular 6, RESTful APIs
+Technologies & Tools: AS/400, Git, Pivotal Cloud Foundry (PWS), Streamserve, M3 Enterprise Collaborator
+(MEC), Web Scraping
+ERP Systems: Movex/M3 ERP
+Methodologies: Agile, Software Development Life Cycle (SDLC)
+
+Languages
+Arabic : Native
+English : Professional Proficiency
+German : A1 Level (Goethe-Institute)

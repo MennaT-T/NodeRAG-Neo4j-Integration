@@ -1,0 +1,76 @@
+Ahmed Nasser
+Hadoop Developer
+ahmed.nasser@email.com |+20 100 123 4567 |/githubgithub.com/ahmed-nasser |/linkedinlinkedin.com/in/ahmed-nasser |
+ahmednasser.com
+Education
+Pune University
+M.C.A. Pune, India
+Experience
+Hadoop Developer
+PRGX India Private Limited Pune, India
+Projects
+Big Data Analytics for Banking Sector
+PRGX India Private Limited Pune, India •Team Size: 10+
+•Environment: Hive, Spark, Sqoop, Scala and Flume.
+•Project Description: The bank wanted to help its customers to avail different products of the bank through analyzing
+their expenditure behavior. The customers spending ranges from online shopping, medical expenses in hospitals,
+cash transactions, and debit card usage etc. The behavior allows the bank to create an analytical report and based
+on which the bank used to display the product offers on the customer portal which was built using Java. The portal
+allows the customers to login and see their transactions which they make on a day to day basis. The analytics also
+help the customers plan their budgets through the budget watch and my financial forecast applications embedded
+into the portal. The portal used Hadoop framework to analyze the data as per the rules and regulations placed by
+the regulators from the respective countries. The offers and the interest rates also complied with the regulations and
+all these processing was done using the Hadoop framework as big data analytics system.
+•Role & Responsibilities:
+•• Import data from legacy system to Hadoop using Sqoop, Flume.
+•• Implement the business logic to analyze the data.
+•• Pre-process data using Spark.
+•• Create Hive script and loading data into Hive.
+•• Sourcing various attributes to the data processing logic to retrieve the correct results.
+Web Application Data Extraction and Processing
+PRGX India Private Limited Pune, India •Team Size: 11+
+•Environment: Hadoop, HDFS, Hive, Sqoop, MySQL, Map Reduce.
+•Project Description: The purpose of this project is to store terabytes of information from the web application and
+extract meaningful information out of it. The solution was based on the open source software Hadoop. The data
+will be stored in Hadoop file system and processed using Map/Reduce jobs. Which in turn includes getting the
+raw HTML data from the micro websites, process the HTML to obtain product and user information, extract various
+reports out of the visitor tracking information and export the information for further processing.
+•Role & Responsibilities:
+•• Move all crawl data flat files generated from various micro sites to HDFS for further processing.
+•• Sqoop implementation for interaction with database.
+•• Write Map Reduce scripts to process the data file.
+•• Create Hive tables to store the processed data in tabular formats.
+•• Reports creation from Hive data.
+Development Data Repository for Pfizer Inc.
+PRGX India Private Limited Pune, India •Team Size: 15+
+•Environment: Informatica 9.5, Oracle 11g, UNIX.
+
+•Project Description: Pfizer Inc. is an American global pharmaceutical corporation headquartered in New York City.
+The main objective of the project is to build a Development Data Repository (DDR) for Pfizer Inc. Because all the
+downstream application are like Etrack, TSP database, RTS, SADMS, GFS, GDO having their own SQL request on
+the OLTP system directly due to which the performance of OLTP system goes slows down. For this we have created
+a Development Data Repository to replace the entire SQL request directly on the OLTP system. DDR process extracts
+all clinical, pre-clinical, study, product, subject, sites related information from the upstream applications like EPECS,
+CDSS, RCM, PRC, E-CLINICAL, EDH and after applying some business logic put it into DDR core tables. From
+these snapshot and dimensional layer are created which are used for reporting application.
+•Role & Responsibilities:
+•• To understand & analyze the requirement documents and resolve the queries.
+•• To design Informatica mappings by using various basic transformations like Filter, Router, Source qualifier, Lookup
+etc. and advance transformations like Aggregators, Joiner, Sorters and so on.
+•• Perform cross Unit and Integration testing for mappings developed within the team. Reporting bugs and bug
+fixing.
+•• Create workflow/batches and set the session dependencies.
+•• Implemented Change Data Capture using mapping parameters, SCD and SK generation.
+•• Developed Mapplet, reusable transformations to populate the data into data warehouse.
+•• Created Sessions & Worklets using workflow Manager to load the data into the Target Database.
+•• Involved in Unit Case Testing (UTC).
+•• Performing Unit Testing and UAT for SCD Type1/Type2, fact load and CDC implementation.
+Certificates
+Skills
+Big Data Ecosystems: Hadoop - HDFS - HBase - Map Reduce - Sqoop - Hive - Pig - Spark-Core - Flume
+Programming Languages: Scala - Core-Java - SQL - PLSQL - Shell Scripting
+ETL Tools: Informatica Power Center 8.x/9.6 - Talend 5.6
+Development Tools: Eclipse - Intellij Idea
+Platforms: Windows Family - Linux /UNIX - Cloudera
+Databases: MySQL - Oracle 10/11g
+Extracurricular Activities

@@ -1,0 +1,56 @@
+Aya Zaki
+Full Stack Java Developer
+aya.zaki@email.com |+20 101 234 5678 |/githubgithub.com/aya-zaki |/linkedinlinkedin.com/in/aya-zaki |ayazaki.com
+Education
+Pune University January 2018
+M.C.A (Master of Computer Applications) Pune, India
+Amravati University January 2015
+B.C.A (Bachelor of Computer Applications) Amravati, India
+Amravati University January 2012
+Higher Secondary Certificate (H.S.C) Amravati, India
+Amravati University January 2010
+Secondary School Certificate (S.S.C) Amravati, India
+Experience
+Java Developer Full-time
+Salcluster Technologies LLP . Oct 2018 - Present
+•Worked as a Java Developer, contributing to the development of web-based applications.
+•Developed 3 projects leveraging Java Servlet, JSP , Ajax, and various web technologies.
+•Utilized Core Java, Servlet, JSP , HTML5, CSS3, Bootstrap, JavaScript, JQuery, and Ajax.
+Software Engineer Full-time
+OmegaSoft Technologies Pvt. Ltd. May 2018 - Sep 2018
+•Developed project modules including Login, Registration, Role Assignment, and Payments.
+•Implemented solutions using Java Spring Hibernate, AngularJs, Ajax, KendoUI, and Bootstrap.
+•Applied MVC Architecture and Service-based Programming principles in development.
+Java Developer Intern Internship
+Tech Solutions Inc. (for Employment Times project) Jan 2018 - Apr 2018
+•Developed the "Employment Times" website, a client’s project for posting newspapers across India, using Java,
+Spring, Hibernate, AngularJs, Ajax, and MySQL.
+•Implemented 12 modules, including Admin Panel, E-paper Posting, Subscriptions, and a robust Payment module
+supporting debit/credit cards and E-Wallet transactions.
+•Built a lightweight website utilizing MVC and Service-based Architecture, including features for advertisement post-
+ing and direct social media sharing.
+Projects
+GST And Sales Billing Softwares 2017
+•Developed a web application for GST Billing, invoice generation, and printing.
+•Utilized Java (Servlet and JSP), JavaScript, Jquery, Ajax, and MySQL for the back-end.
+•Implemented five master pages (customer, item, UOM, setup, reason) and four common pages (sales order, payments,
+sales return, invoice).
+Dinman News Website 2017
+•Created an online news website for displaying video and text news.
+•Technologies used include Java (Servlet and JSP), JavaScript, Jquery, Ajax, and MySQL.
+Agri Management Website 2017
+•Designed a web application for purchasing and selling vegetables across India.
+•Developed using Java (Servlet and JSP), JavaScript, Jquery, Ajax, and MySQL.
+
+Certificates
+Java Developer Certificate - Unanth Technical Institute, 2018
+Java Certificate - SoloLearn, 2018
+Command Line Crash Course Certificate - Udemy, 2018
+Skills
+Programming Languages: Java (Servlet, JSP , Spring Boot), Core Java
+Web Technologies: HTML5, CSS3, Bootstrap, JavaScript, JQuery, Ajax, AngularJs, KendoUI
+Frameworks & Libraries: Spring, Hibernate
+Databases: MySQL
+IDEs & Tools: Eclipse, Spring Tool Suite, NetBeans, Sublime Text, Atom
+Operating Systems: Windows (XP , 7, 8, 10)
+Architecture: MVC Architecture, Service-based Programming

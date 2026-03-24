@@ -1,0 +1,75 @@
+Abdelrahman Ismail
+Cloud Operations Architect (DevOps)
+abdelrahman.ismail@email.com|+20 100 123 4567|/githubgithub.com/abdelrahman-ismail|/linkedin
+linkedin.com/in/abdelrahman-ismail|abdelrahmanismail.com
+Education
+Symbiosis Institute
+Post Graduate Diploma, Information Technology Jan 2013, Pune, Maharashtra, India
+Pune University
+Bachelor of Engineering, Electronics and Telecommunications Jan 2007, Pune, Maharashtra, India
+Experience
+Cloud Operations Architect (DevOps)DevOps Engineer
+Egy-Tech Solutions Jan 2020 - Present, Cairo, Egypt
+•Managed Tibco Spotfire enterprise & Cloud Product support, ensuring high availability and performance.
+•Recruited and built a team of 15 members, establishing a robust DevOps operations unit.
+•Simultaneously managed 4 distinct cloud projects/products, integrating new team members effectively.
+•Coordinated production deployments and hot-fixes, minimizing downtime and ensuring smooth operations.
+•Arranged and led workshops on new AWS services for the entire team, fostering continuous learning.
+•Developed shell scripts to automate AWS tasks, including shutting down running instances and releasing free Elastic
+IPs (EIPs).
+•Implemented Lambda functions to trigger critical automation scripts, enhancing operational efficiency.
+System Administrator/Automation EngineerAdministration, Automation & Monitoring
+Synechron Technologies Limited Jan 2017 - Dec 2019, Giza, Egypt
+•Managed Linux media server farms and provided application support, ensuring system stability.
+•Performed patching on Linux physical and Xen boxes, maintaining system security and compliance.
+•Created Satellite channels on Red Hat Satellite server for centralized patch management and provisioning.
+•Developed shell scripts for automation and provided MySQL database support for various applications.
+•Troubleshot customized applications, resolving complex issues and improving system reliability.
+System Administrator/DeveloperDevelopment, Automation & Monitoring
+Tsys Limited Jan 2015 - Dec 2016, Alexandria, Egypt
+•Provided access management for users on RHDS, CVS, and dotProject servers.
+•Managed user access on development/production VDI servers, ensuring secure environments.
+•Administered MySQL databases and developed shell scripts to automate routine tasks.
+•Conducted requirements analysis and environment planning for new projects, including access configurations.
+•Implemented MySQL replication across Linux servers, enhancing data redundancy and availability.
+•Fine-tuned existing applications for optimal performance and efficiency.
+•Tested and debugged scripts to ensure error-free automation processes.
+Senior System EngineerDevelopment, Automation & Monitoring
+Patni Computer Systems Limited Nov 2012 - Dec 2014, Mansoura, Egypt
+•Project: CPI (Client: Genworth Financial)
+•Provided L1 engineer support, monitoring P8 Filenet applications and handling user tickets.
+•Administered 10 Linux Proxy servers and MySQL servers, ensuring robust infrastructure.
+•Implemented MySQL replication and monitored logs for user activity and data downloads.
+•Prepared complex SQL queries for client users and managed Oracle databases.
+•Tested and deployed insert, select, update queries to production, addressing bugs raised by users.
+•Ensured functionality of customer applications (eProcess, Trexo) and customized Filenet instances.
+•Developed shell scripts, including one for deleting logs older than five days, successfully deployed to production.
+
+Projects
+Cloud Operations & Automation ProjectsJan 2020 - Present
+Inferred from Egy-Tech Solutions role
+•Led 4 simultaneous cloud product/projects, focusing on Tibco Spotfire enterprise and cloud support.
+•Implemented automated solutions for AWS resource management, including instance shutdown and EIP release.
+•Developed Lambda functions to orchestrate critical automation scripts, improving operational efficiency.
+CPI Maintenance Project (Genworth Financial Client)Nov 2012 - Dec 2014
+Patni Computer Systems Limited
+•As Senior System Engineer, contributed to the maintenance and enhancement of Genworth Imaging Solutions appli-
+cations.
+•Managed processing of scanned insurance documents, storing information in Oracle Database and images in P8
+Filenet.
+•Administered Linux Proxy servers and MySQL servers, implemented MySQL replication, and prepared SQL queries.
+•Developed and deployed shell scripts for routine tasks, including automated log deletion from production servers.
+Skills
+Cloud Platforms:AWS, Azure, EC2, RDS, CloudFormation, Lambda, DynamoDB, CloudWatch,
+Auto-scaling, Elastic Beanstalk, Appdynamics
+Scripting & Automation:Shell Scripting (8 years), Python (6 months), Automation (6 years)
+Operating Systems:Linux/Unix, IBM AIX, Windows, Linux-Xen Servers
+Databases:MySQL, Oracle, SQL
+DevOps Tools:Puppet, Red Hat Satellite Server, RHDS, CVS, dotProject servers
+Web Technologies:HTML
+Other:Solution Architecture (< 1 year), P8 Filenet, B1-VISA (USA), Onsite Visits (Sweden & US)
+Extracurricular Activities
+Team Lead & TrainerJan 2020 - Present
+Egy-Tech Solutions
+•Recruited and onboarded an entire team of 15 members, building the foundational DevOps operations unit.
+•Organized and conducted workshops on new AWS services for the team, enhancing collective skill sets.

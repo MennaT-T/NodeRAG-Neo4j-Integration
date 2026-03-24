@@ -1,0 +1,67 @@
+Sara Hassan
+Web and Graphics Designer
+sara.hassan@email.com |+20 101 234 5678 |/githubgithub.com/sara-hassan |/linkedinlinkedin.com/in/sara-hassan |
+sarahassan.com
+Education
+Nagpur University
+Bachelor of Engineering in Information TechnologySeptember 2015, Nagpur, Maharashtra, India
+Experience
+Web and Graphics Designer Full-time
+Virtuous Media Point Sep 2017 - Aug 2019
+•Applied expertise in HTML5, CSS3, JavaScript, jQuery, Corel Draw, Photoshop, and Illustrator to create engaging
+web and graphic designs.
+•Collaborated with clients to understand requirements and deliver visually appealing and functional web solutions.
+Web Designing and Development Intern / Web Designer Internship / Full-time
+e-sense IT Solution Pvt. Ltd. Sep 2015 - Aug 2017
+•Designed website solutions by studying information needs, conferring with users, and studying systems flow, data
+usage, and work processes.
+•Understood process requirements and provided use cases for business, functional & technical requirements.
+•Interacted with users for requirement gathering, prepared functional specifications and low-level design documents.
+•Participated in the Software Development Life cycle (SDLC) and Agile methodology from requirement analysis.
+•Performed detailed design of modules along with their implementation, and documentation of integrated software
+modules developed by other team members.
+•Developed various modules as per customer requirement and identified and fixed numerous bugs related to code,
+database connectivity, and UI defects.
+•Analyzed and modified existing codes to incorporate changes in application/user requirements, and wrote new code
+as required.
+•Coded, implemented, and integrated complex programs using technologies such as HTML5, CSS3, JavaScript, jQuery,
+and Bootstrap.
+•Demonstrated strong command of Graphics designing with effective ideas.
+Projects
+Web Design Portfolio Projects 2018 - 2019
+www.nitka.com, Nagpur united corporation, Mintmetrix.com, Tagline videos, Smartbadge •Developed and maintained administrative panels for various web projects, including www.nitka.com, Nagpur united
+corporation, Mintmetrix.com, Tagline videos, and Smartbadge.
+•Utilized HTML5, CSS3, Bootstrap, JavaScript, and jQuery for front-end development, with Sublime Text as the
+primary editor.
+Client Website Projects 2017 - 2018
+www.shreekiaspack.co.in, www.3staragroproducts.com, www.luckystationery.co.in •Designed and developed responsive websites for various clients using HTML5, CSS3, Bootstrap, and JavaScript, with
+Notepad++ as the editor.
+•Ensured cross-browser compatibility and user-friendly interfaces for all web projects.
+Graphic Design Portfolio 2017 - 2019
+•Designed a variety of graphic assets including Logos, Brochures, Advertising Banners, Visiting Cards, Pamphlets,
+and Hoardings.
+•Applied strong graphic design principles and creative ideas to meet diverse visual communication needs.
+WEB BASED DISEASE DIAGNOSIS EXPERT SYSTEM (B.E. Final Year Project) 2014 - 2015
+•Developed a web-based expert system providing online consultation for various diseases.
+•The system offered better suggestions for health problems, enhancing accessibility to medical advice.
+SHOPPING MANAGEMENT SYSTEM (Mini Project) 2013 - 2014
+•Developed a comprehensive Shopping Management System using C++.
+•Implemented functionalities for managing product inventory, sales, and customer transactions.
+
+Skills
+Programming Languages: C (Basic) - JAVA (Basic)
+Web Technologies: HTML5 - CSS3 - Bootstrap - JavaScript - jQuery
+Graphics Design Tools: Corel Draw - Adobe Photoshop - Adobe Illustrator
+Databases: MySQL 5.0
+IDEs & Tools: Sublime Text - Notepad
+Operating Systems: Windows XP - Windows 7
+Extracurricular Activities
+Co-ordinator 2015
+FACE-IT
+•Coordinated a project competition as part of FACE-IT, demonstrating leadership and organizational skills.
+Presenter 2015
+Priyadarshini Indira Gandhi College of Engineering, Nagpur
+•Presented in the Project Competition at Innovesta 15.
+Paper Presenter 2015
+S.R.M.C.E., Nagpur
+•Presented a paper at the National Level Paper Presentation in TECH-WAVE 2015.

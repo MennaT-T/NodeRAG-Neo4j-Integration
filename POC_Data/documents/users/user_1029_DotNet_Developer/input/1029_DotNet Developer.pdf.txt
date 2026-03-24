@@ -1,0 +1,85 @@
+Mostafa Khalil
+Dot Net Developer
+mostafa.khalil@email.com |+20 123 456 7890 |/githubgithub.com/mostafa-khalil |/linkedinlinkedin.com/in/mostafa-khalil |
+mostafakhalil.com
+Education
+JNTU CGPA: N/A
+B.Tech January 2010, Kakinada, Andhra Pradesh
+Experience
+Dot Net Developer Full-time
+The Tie Bar January 2017 - Till Date
+•Design and coding in a .NET server-side environment, specifically utilising the Microsoft MVC framework and client
+side environment using Knockout JS.
+•Consuming Web API and WCF Rest full services.
+•Designed and coded application components in an agile environment utilizing a test driven development approach.
+•Created and maintained project tasks and schedules.
+•Provided programming estimates, identified potential problems and recommended alternative solutions.
+•Worked in close cooperation with project managers and other functional team members to form a team effort in
+development.
+•Utilized pair programming approach to ensure high quality code.
+Experience
+Dot Net Developer Full-time
+Hamsa Hitech Pvt. Ltd Date not provided
+•Design and coding in a .NET server-side environment, specifically utilising the Asp.Net and C.Net.
+•Design and implement systems that use relational databases, specifically SQL 2008.
+Projects
+THE TIEBAR Date not provided
+•Environment: Visual Studio 2015, MVC 5.0, C#, JavaScript, JSON, LINQ, HTML 5
+•Database: SQL Server 2015
+•Role: Developer
+•Description: The Tie Bar is US based online shopping website; it is the one-stop destination for luxury menswear
+with premium dress shirts, ties, bow ties and more.
+Projects
+Leave Management System Date not provided
+•Environment: Visual Studio 2010, ASP .Net, C.Net, JavaScript, JQuery
+•Database: SQL Server 2008
+•Role: Developer
+•Description: A Leave Management System is a web application having two module one is front end and second is
+admin module. Admin user can manage the site content in this application. The main functionality of this web
+application is used for maintaining the employee leave policy in a company
+Projects
+Around Pune (CMS) Date not provided
+•Environment: Visual Studio 2010, ASP .Net, C.Net, JavaScript, JQuery
+•Database: SQL Server 2008
+•Role: Developer
+•Description: Around Pune is a web application. In that there are two modules one is admin module and another
+is client or front end. Admin module controls the site date or its cms (content management system) project. The
+purpose of this site is to show or provide the details of all the spots and tourists places around the Pune.
+
+Projects
+Country Side Date not provided
+•Environment: Visual Studio 2008, ASP .Net, C.Net, JavaScript, JQuery
+•Database: SQL Server 2008
+•Role: Developer
+•Description: This is cms (content management system) website controlling by admin user. In that, there is one admin
+module to maintain website content. This site is used to provide information about tourist places, and provide offers,
+Different packages for trips.
+Projects
+A G JOHNSON Date not provided
+•Environment: Visual Studio 2010, ASP .Net, C.Net, JavaScript, JQuery
+•Database: SQL Server 2008
+•Role: Developer
+•Description: A G JOHNSON is a global employment website. The main purpose of this application is to recruit
+employees for their clients in different countries like Switzerland, Norway and Sweden and it provide services like
+Organisational Development, Management and Leadership Support and Development, Legal Support
+Projects
+CRM for Company Date not provided
+•Environment: Visual Studio 2008, ASP .Net 3.0 using C.Net, JavaScript, JQuery
+•Database: SQL Server 2008
+•Role: Developer
+•Description: Customer relationship management System is a web application. Which is maintaining the relation with
+company? We can view the Project List, Client List, Notification List, Appointment List, Conversation List, Client
+Person List and Company Person.
+Certificates
+None Provided
+Skills
+Technologies: ASP .NET - MVC 3.0/4.0/5.0 - Unit Testing - Entity Framework 6.0
+Languages: C#.NET - JS Library - JavaScript - JQuery - Angular1.5 - Typescript
+Tools: Visual Studio 2008/2010/2012/2015 - Visual Studio Code (IDE) - .NET Framework 2.0, 3.5, 4.0, 4.5
+Databases: SQL Server 2005, 2008, 2014, 2015
+Source control tools: Tortoise SVN - Git
+.NET: Exprience - 34 months
+ASP: Exprience - 34 months
+ASP .NET: Exprience - 34 months
+C: Exprience - 34 months
+JA V ASCRIPT: Exprience - 34 months

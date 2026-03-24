@@ -1,0 +1,49 @@
+Rania Khalil
+Python Developer
+rania.khalil@email.com |+20 101 234 5678 |/githubgithub.com/rania-khalil |/linkedinlinkedin.com/in/rania-khalil
+Summary
+Experienced Python Developer specializing in computer vision for the banking domain. Proficient in designing and
+developing algorithms using OpenCV , PIL, and Numpy, with strong skills in unit testing, debugging, and version control
+using Git.
+Education
+Savitribai Phule Pune University Pune, India
+Bachelor of Engineering, Computer Science June 2018
+Experience
+Python Developer Full-Time
+Atos Syntel, Cairo, Egypt July 2018 - Present
+•Designed and developed computer vision based algorithms for image preprocessing using OpenCV , PIL, and Numpy
+for a US-based client in the banking domain.
+•Performed unit testing and debugging of code, and maintained code versions using Git.
+Projects
+Smart Ambulance Poster Presentation 2017
+•Developed and presented a poster on the concept of a ’Smart Ambulance’ system, outlining technological integrations
+for improved emergency response.
+•Awarded first place in a college-level competition for innovation and presentation clarity.
+Certificates
+ESD Program, Zensar Technologies - 2017
+Employability Training, Barclays, Global Talent Track, and NASSCOM Foundation - 2015
+Workshop on Medical IOT (4 days), IEEE Standards Association - 2017
+Workshop on Introduction to Arduino (2 days) - 2016
+Workshop on Robotics for Juniors (3 days), Computer Society of India - 2016
+Awards & Honors
+First Rank for Poster Presentation on Smart Ambulance, College-level Competition - 2017
+Project idea selected for final prototyping round, KPIT-Sparkle - 2018
+Secured sponsorship of EGP 5,000 from Platinum Auto for college events - 2017
+Participant, Avishkar University-Level Research Competition - 2017
+Project idea submitted, Accenture Innovation Challenge - 2018
+Skills
+Programming: Python
+Frameworks & Libraries: Django, OpenCV , PIL, Numpy
+Web & API: HTML5, REST API
+Databases: MySQL
+Tools & Methodologies: Git, Version Control, Unit Testing, Debugging
+
+Extracurricular Activities
+Treasurer, IEEE Student Branch 2017 - 2018
+JSCOE, Pune
+•Managed the financial accounts and budgeting for the student branch’s activities and events.
+•Organized an IEEE workshop on ’Excellence in English and Public Speaking’ in 2017.
+Team Leader, College Events 2016 - 2017
+JSCOE, Pune
+•Led teams in organizing and executing various technical and cultural events at the university.
+•Participated in various inter-college technical competitions.

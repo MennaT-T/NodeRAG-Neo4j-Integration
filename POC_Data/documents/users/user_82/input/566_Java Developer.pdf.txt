@@ -1,0 +1,51 @@
+Eman Ismail
+Java Developer
+eman.ismail@email.com|+20 101 234 5678|/githubgithub.com/eman-ismail|/linkedinlinkedin.com/in/eman-ismail|
+emanismail.com
+Education
+American University in Cairo
+Master of Engineering, Information Technology Jan 2013, Cairo, Egypt
+Ain Shams University
+Bachelor of Engineering, Information Technology Jan 2005, Cairo, Egypt
+El-Orouba Secondary School
+Higher Secondary Certificate Jan 2001, Alexandria, Egypt
+Nasr City High School
+Secondary School Certificate (SSC) Jan 1999, Cairo, Egypt
+Experience
+Java Developer Full-time - On-Site
+NileSoft Innovations Jan 2018 - Present
+•Developed and maintained Java-based applications, contributing to the full software development lifecycle.
+•Collaborated with cross-functional teams to deliver high-quality software solutions and enhancements.
+Java Developer Full-time - On-Site
+Egy-Tech Solutions Jan 2016 - Dec 2017
+•Generated Management Information System (MIS) reports for key clients like Tata Sky and Tata Power.
+•Participated in the design and implementation of enterprise Java applications.
+Projects
+Location Detector of Computing and Mobile DevicesAndroid Project
+•Developed an Android application to detect and track the location of computing and mobile devices.
+•Utilized Android SDK and location services for accurate device positioning.
+Data Deduplication ProjectJava Project
+•Implemented a data deduplication system in Java to reduce redundant data and optimize memory usage.
+•Designed a mechanism to store unique data copies and access identical data blocks via pointers, enhancing storage
+efficiency.
+Certificates
+Android - Mobile App Development - NIIT, 2015-2016
+Technologies in Java (Core Java, Advance Java, JSF, Hibernate, Spring) - NIIT, 2015-2016
+Publications
+A secure cipher index over encrypted character data in database., Presented at a National Conference at Cairo
+University Faculty of Engineering, Giza, Egypt, April 2011
+Skills
+Programming Languages:Java - C - C++- Android
+Frameworks & Technologies:Spring - Hibernate - JSF - Core Java - Advance Java
+Databases:SQL - Oracle - MS Access
+Concepts/Tools:Object-Oriented Programming (OOP) - Data Deduplication - Android SDK - PPS - AD - IAS
+
+Extracurricular Activities
+Technical Instructor / Lecturer2013 - 2015 (Approx.)
+Ain Shams University, Faculty of Computer and Information Sciences Cairo, Egypt
+•Taught core computer science and programming subjects to university students, including C, Core Java, and Object-
+Oriented Programming (OOT/C++).
+•Instructed on advanced topics such as Database Management, Programming and Problem Solving (PPS), Advanced
+Database (AD), Information Assurance and Security (IAS), and Android Development.
+•Developed and delivered engaging lesson plans and practical exercises to enhance student learning and understand-
+ing.

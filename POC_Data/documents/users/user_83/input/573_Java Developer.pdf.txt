@@ -1,0 +1,54 @@
+Hossam Zaki
+Full Stack Java Developer
+hossam.zaki@email.com |+20 100 123 4567 |/githubgithub.com/hossam-zaki |/linkedinlinkedin.com/in/hossam-zaki |
+hossamzaki.com
+Education
+M.C.A January 2018
+Pune University Pune, Maharashtra, India
+B.C.A January 2015
+Amravati University Amravati, Maharashtra, India
+H.S.C January 2012
+Amravati University Amravati, Maharashtra, India
+S.S.C January 2010
+Amravati University Amravati, Maharashtra, India
+Experience
+Full Stack Java Developer On-Site
+Salcluster Technologies LLP July 2018 - June 2020
+•Developed 3 projects leveraging Java Servlet, JSP , Ajax, and various web technologies.
+•Utilized Core Java, Servlet and JSP , HTML5, CSS3, Bootstrap, Javascript, Jquery, and Ajax for robust application
+development.
+Software Developer On-Site
+OmegaSoft Technologies Pvt. Ltd. January 2021 - May 2021
+•Developed project modules using Java Spring, Hibernate, AngularJs, Ajax, KendoUI, and Bootstrap.
+•Applied MVC Architecture and Service based Programming for modules including Login, Registration, Role Assign-
+ment, and Payments.
+Projects
+GST And Sales Billing Softwares Duration: 1.5 Months
+•Developed a web application using Java (Servlet and JSP), JavaScript, Jquery, Ajax, and MySQL for billing purposes.
+•Implemented GST Billing, invoice generation, and printing functionalities for a client’s website.
+•Designed five master pages (customer, item, uom, setup, reason) and four common pages (sales order, payments,
+sales return, invoice).
+Dinman News website Duration: 1 Month
+•Created a website project utilizing Java (Servlet and JSP), JavaScript, Jquery, Ajax, and MySQL.
+•Enabled online display of video and text news for a client’s website.
+Agri Management Website Duration: 1.5 Months
+•Designed a website project using Java (Servlet and JSP), JavaScript, Jquery, Ajax, and MySQL.
+•Facilitated the purchasing and selling of vegetables across India through the platform.
+Employment Times (Internship Project) Duration: 4 Months
+•Built a client’s website for posting newspapers all over India, utilizing Java, Spring, Hibernate, AngularJs, Ajax, and
+MySQL.
+•Integrated 12 modules including an Admin Panel, E-paper Posting, and Subscriptions.
+•Engineered a lightweight website using MVC and Service based Architecture, supporting advertisement posting and
+direct social media sharing.
+•Implemented a comprehensive Payment module allowing online transactions via debit/credit cards and E-Wallets.
+
+Certificates
+Java Developer Certificate - Unanth Technical Institute
+Java Certificate - SoloLearn
+Command line crash Course certificate - Udemy
+Skills
+Programming Languages: Java (Servlet, JSP , Spring Boot)
+Web Technology: HTML5, CSS3, Bootstrap, JavaScript, JQuery, Ajax, AngularJs
+Database: MySQL
+IDE and Tools: Eclipse, Spring Tool Suite, NetBeans, Sublime Text, Atom
+Operating System: Windows XP , 7, 8, 10

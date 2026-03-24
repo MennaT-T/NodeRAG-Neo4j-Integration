@@ -1,0 +1,41 @@
+Samira Gamal
+Python Developer
+samira.gamal@email.com |+20 123 456 7890 |/githubgithub.com/samira-gamal |/linkedinlinkedin.com/in/samira-gamal |
+samiragamal.com
+Education
+BE
+Dr.BAMU, Aurangabad
+Experience
+Python Developer Full-time
+Arsys Inovics Pvt Ltd Date - Date
+•Participated in entire lifecycle of the projects including Design, Development, and Deployment, Testing and Imple-
+mentation and support.
+•Developed views and templates with Python and Django’s view controller and templating language to created user-
+friendly website interface.
+•Implemented navigation rules for the application and page outcomes, written controllers using annotations.
+•Created this project using Django, Django REST API, MYSQL, PyMYSQL, Python, HTML5, CSS3.
+•Created CRUD methods (get, post, put, delete) to make requests to the API server and tested Restful API using
+Postman.
+•Created Unit test cases for unit testing.
+•Worked with JSON based REST Web services
+•Wrote Python routines to log into the websites and fetch data for selected options.
+•Used Python modules such as requests, urllib for web crawling.
+•Added the navigations and paginations and filtering columns and adding and removing the desired columns for
+view.
+•Created a Git repository and added the project to GitHub.
+•Utilized Agile process and JIRA issue management to track sprint cycles.
+•Worked in an agile development environment.
+•Working as back end as well as front end developer
+•working on rest and restfull api’s.
+•Design and develop a project in Agile scrum.
+•Git hub for code deployment
+•Working on MVT .
+Skills
+Languages: Python
+Python Frameworks: Django - DRF
+Databases: MySQL - Oracle - Sqlite - MongoDB
+Web Technologies: CSS - HTML - RESTful Web Services - REST
+Methodologies: Agile - Scrum
+Version Control: Github
+Project Management: Jira
+Operating Systems: Window - Unix

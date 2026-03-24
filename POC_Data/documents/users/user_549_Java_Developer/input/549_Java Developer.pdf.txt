@@ -1,0 +1,44 @@
+Maryam Khalil
+Java Developer
+maryam.khalil@email.com |+20 101 234 5678 |/githubgithub.com/maryam-khalil |/linkedinlinkedin.com/in/maryam-khalil |
+maryamkhalil.com
+Education
+RTMNU University - Jhulelal Institute of Technology
+B.E Computer Science and Engineering January 2013 - January 2017, Nagpur, India
+Maharashtra State Board - Dayanand Arya Kanya Junior College
+HSC January 2011 - January 2013, Nagpur, India
+Maharashtra State Board
+SSC January 2010 - January 2011, Nagpur, India
+Experience
+Java Developer Full-time - On-site
+Inouvelle Egypt Solutions December 2017 - Present, Cairo, Egypt
+•Developed and maintained enterprise-level applications using Java, J2EE, Spring, and Hibernate frameworks.
+•Contributed to full-stack development, including front-end (Angular) and back-end logic, ensuring robust and scal-
+able solutions.
+•Performed manual testing to ensure software quality, functionality, and adherence to requirements.
+•Utilized PostgreSQL and MySQL for efficient database management, integration, and optimization.
+•Worked proficiently in Windows and Linux operating environments for development and deployment processes.
+Projects
+Stock Management System December 2017 - Present
+Role: Java Developer •Developed a comprehensive Stock Management System for the medicinal market, tracking medicines, ailments,
+surgical equipment, wholesalers, retailers, employees, and customers.
+•Implemented features for inventory control, ordering, storing, and tracking company assets using Angular (Fron-
+tend), JAVA - J2EE, Spring, Hibernate Framework (Backend), and PostgreSQL Database.
+Printing Press Management System December 2017 - Present
+Role: Java Developer, Manual Testing •Designed and implemented a web-based Printing Press Management System for an established printing press, en-
+hancing organizational growth, efficiency, and profitability through tailored solutions.
+•Responsible for both development and quality assurance, utilizing Angular (Frontend), JAVA - J2EE, Spring, Hiber-
+nate Framework (Backend), and PostgreSQL Database.
+Certificates
+J2EE - 17 months experience (Project Acquired)
+C++ - 6 months experience (Project Acquired)
+Databases (MySQL, PostgreSQL) - 6 months experience (Project Acquired)
+Functional Testing - 6 months experience (Project Acquired)
+Linux - 6 months experience (Project Acquired)
+Skills
+Programming Languages: C - C++ - Java - Angular
+Frameworks & Libraries: J2EE - Spring - Hibernate
+Databases: MySQL - PostgreSQL
+Testing: Functional Testing - Manual Testing
+Operating Systems: Windows - Linux
+Tools & Software: MS-Office

@@ -1,0 +1,60 @@
+Ahmed Ibrahim
+Web and Graphics Designer
+ahmed.ibrahim@email.com|+20 100 123 4567|/githubgithub.com/ahmed-ibrahim|/linkedinlinkedin.com/in/ahmed-ibrahim
+|ahmedibrahim.com
+Education
+Nagpur University
+Bachelor of Engineering in Information Technology September 2015, Nagpur, Maharashtra, India
+Experience
+Web and Graphics Designer On-Site
+Virtuous Media Point October 2015 - October 2017
+•Developed engaging web interfaces and graphic designs for various client projects.
+•Utilized a range of design and web technologies including HTML5, CSS3, JavaScript, jQuery, Bootstrap, Corel Draw,
+Photoshop, and Illustrator.
+•Collaborated with clients to understand requirements and deliver visually appealing and functional digital assets.
+Web Designing and Development InternOn-Site
+e-sense IT Solution pvt.ltd June 2014 - May 2015
+•Designed website solutions by studying information needs, conferring with users, and analyzing systems flow, data
+usage, and work processes.
+•Understood process requirements and provided use cases for business, functional, and technical requirements.
+•Interacted with users for requirement gathering; prepared functional specifications and low-level design documents.
+•Participated in the Software Development Life Cycle (SDLC) and Agile methodology from requirement analysis.
+•Performed detailed design of modules along with their implementation and documentation; integrated software
+modules developed by other team members.
+•Developed various modules as per customer requirements and identified and fixed numerous bugs related to code,
+database connectivity, UI defects, and so on.
+•Analyzed and modified existing codes to incorporate a number of changes in application/user requirements; wrote
+new codes as required.
+•Coded, implemented, and integrated complex programs using technologies such as HTML5, CSS3, JavaScript, jQuery,
+and Bootstrap.
+•Demonstrated strong command of Graphics designing with effective ideas.
+Projects
+Web Design & Development ProjectsVarious
+•Designed and developed multiple websites including www.nitka.com, Nagpur United Corporation (admin panel),
+Mintmetrix.com, Tagline Videos (admin panel), and Smartbadge (admin panel).
+•Utilized HTML5, CSS3, Bootstrap, JavaScript, jQuery for front-end development, primarily using Sublime Text.
+•Developed websites such as www.shreekiaspack.co.in, www.3staragroproducts.com, and www.luckystationery.co.in
+using HTML5, CSS3, Bootstrap, and JavaScript, with Notepad++ as the editor.
+•Executed various graphic design projects, including logos, brochures, advertising banners, visiting cards, pamphlets,
+and hoardings.
+WEB BASED DISEASE DIAGNOSIS EXPERT SYSTEM (B.E. Final Year Project)1 Year Duration
+•Developed a web-based system providing online consultation for particular diseases, offering better suggestions for
+various health problems.
+SHOPPING MANAGEMENT SYSTEM (Mini Project Development)
+•Designed and implemented a Shopping Management System using C++.
+
+Awards & Honors
+Presented in Project Competition in Innovesta 15 - Priyadarshini Indira Gandhi College of Engineering, Nagpur, 2015
+Presented in National Level Paper Presentation in TECH-WAVE 2015 - S.R.M.C.E., Nagpur, 2015
+Skills
+Programming Languages:C (Basic) - JAVA (Basic)
+Web Technologies:HTML5 - CSS3 - Bootstrap - JavaScript - jQuery
+Graphics Tools:Corel Draw - Adobe Photoshop - Adobe Illustrator
+Databases:MySQL 5.0
+IDEs & Tools:Sublime Text - Notepad - Notepad++
+Operating Systems:Windows XP - Windows 7
+Extracurricular Activities
+Co-ordinatorDuring University (2014-2015)
+FACE-IT
+•Coordinated and managed project competitions, ensuring smooth execution and participant engagement.
+•Gained valuable experience in event organization and leadership within a university setting.

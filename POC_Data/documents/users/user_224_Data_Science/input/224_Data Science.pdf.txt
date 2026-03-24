@@ -1,0 +1,94 @@
+Khaled Ahmed
+Data Science Consultant
+khaled.ahmed@email.com |+20 100 123 4567 |/githubgithub.com/khaled-ahmed |/linkedinlinkedin.com/in/khaled-ahmed |
+khaledahmed.com
+Education
+Great Lakes Institute of Management & Illinois Institute of Technology
+PGDM Business Analytics January 2017 – January 2018, Chennai, India / Chicago, IL, USA
+New Horizon College of Engineering, Bangalore
+Bachelor of Engineering Electronics and Communication Graduated January 2013, Bengaluru, Karnataka, India
+Experience
+Data Science Consultant Full-time
+Deloitte USI Feb 2018 – Feb 2020, Cairo, Egypt
+•Analyzed historic deals and came up with insights to optimize future deals.
+•Carried out end-to-end analysis on raw data and presented insights to clients.
+•Extracted data from client systems across geographies.
+•Understood and built reports in Tableau; inferred meaningful insights to optimize prices and find out process block-
+ades.
+•Technical Environment: R, Tableau.
+Senior Developer Full-time
+Accenture Solutions Pvt. Ltd., India Jul 2016 – Jan 2018, Cairo, Egypt
+•Developed SAP analytics tool (In Process Analytics - IPA) to provide operational insights to clients.
+•Involved in information gathering phase; designed and implemented SAP HANA data modeling using Attribute
+View, Analytic View, and Calculation View.
+•Developed various Finance related KPIs individually using complex SQL scripts in Calculation views.
+•Created procedures in HANA Database and took ownership of Dashboard functionality development.
+•Spearheaded various deployments and introduced SAP Predictive Analytics to reduce development time and reuse
+functionalities for KPIs.
+•Prepared production planning reports and involved in building data processing algorithms to be executed in R server
+for cluster analysis.
+•Technical Environment: R, SAP HANA, T-SQL.
+Database Developer Full-time
+Accenture Solutions Pvt. Ltd., India Oct 2014 – Jun 2016, Cairo, Egypt
+•Managed all development activities for the Accenture Testing Accelerator for SAP (ATAS) tool and completed various
+product deployments.
+•Actively involved in maintenance of production & quality database servers.
+•Analyzed business requirements, understood scope, clarified requirements with business, and transformed require-
+ments to generate attribute mapping documents.
+•Created/Updated database objects like tables, views, stored procedures, functions, and packages.
+•Monitored SQL Server Error Logs and Application Logs through SQL Server Agent.
+•Prepared Data Flow Diagrams and Entity Relationship Diagrams using UML.
+•Responsible for designing, developing, and normalization of database tables; experienced in performance tuning
+using SQL profiler.
+•Involved in QA, UAT, knowledge transfer, and support activities.
+•Technical Environment: SQL Server 2008/2014, Visual Studio 2010, Windows Server, Performance Monitor, SQL
+Server Profiler, C#, PL-SQL, T-SQL.
+
+Projects
+Handwriting recognition 3 Months
+•The project involved taking handwritten images and converting them to digital text images by object detection and
+sentence creation.
+•Developed sentence correction functionality.
+•Key Responsibilities: Gathered data large enough to capture all English words; Trained LSTM models on words.
+•Technical Environment: Python.
+SWIFT Analytics Infrastructure 8 Months
+•Developed an analytics infrastructure on top of SAP S/4, enabling users to view financial reports for respective
+departments.
+•Reporting also included forecasting expenses.
+•Led the offshore team; designed & developed data models for reporting; developed ETL for data flow; validated
+various reports.
+•Technical Environment: SAP HANA, Tableau, SAP AO.
+Clinical Healthcare System Analytics 2 Months
+•Developed an analytics infrastructure on top of Argus, allowing users to query faster and providing advanced
+analytics capabilities.
+•Involved from design to deploy phase, performed extensive data restructuring, and built models for insights.
+•Key Responsibilities: Designed & developed data models for reporting; developed and deployed analytical models;
+validated various reports.
+•Technical Environment: Data Modelling, SAP HANA, Tableau, NLP .
+Consumption Based Planning for Flowers Foods 8 Months
+•Set up CRM and CBP modules, and involved in key data decomposition activities.
+•Established the base for future year forecast; developed various models and carried out key performance improve-
+ments.
+•Key Responsibilities: Designed & developed HANA models for decomposition; developed data flow for forecast;
+developed various views for reporting of Customer/Sales/Funds; validated various reports in BOBJ.
+•Technical Environment: Data Modelling, SAP HANA, BOBJ, Time Series Forecasting.
+Customer Segmentation and RFM Analysis 3 Months
+•Internal initiative involving setting up of HANA-Python interface and advanced analytics on Python.
+•Successfully segmented data into five core segments using K-means and carried out RFM analysis in Python.
+•Developed an algorithm to categorize any new customer under the defined buckets.
+•Technical Environment: Anaconda3, Python3.6, HANA SPS12.
+Telecom Invoice State Detection 1 Month
+•Internal initiative to reduce manual effort in verifying closed and open invoices.
+•Developed a decision tree to classify open/closed invoices, enabling effort reduction by 60%.
+•Technical Environment: R, SAP PAL, SAP HANA SPS12.
+
+Certificates
+Skills
+Programming & Tools: Python, R, C#, SAP HANA, MS SQL, Tableau, SAP Lumira, SAP AO, BOBJ,
+Anaconda3, Visual Studio
+Databases & Data Warehousing: SAP HANA SQL, SAP HANA PAL, T-SQL, PL-SQL, SQL Server
+(2008/2014), Data Modelling, ETL, Database Normalization
+Analytics & Machine Learning: Advance Analytics, SCM Analytics, Retail Analytics, Social Media
+Analytics, NLP , Deep Learning, Machine Learning, Linear Programming, Time Series Forecasting, K-means,
+RFM Analysis, Decision Trees, Predictive Analytics, Object Detection, LSTM Models
+OS & Other: Windows Server, Performance Monitor, SQL Server Profiler, UML

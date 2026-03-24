@@ -1,0 +1,58 @@
+Mahmoud Abdel Aziz
+SAP HANA Developer
+mahmoud.abdelaziz@email.com |+20 123 456 7890 |/githubgithub.com/mahmoud-abdel-aziz |/linkedin
+linkedin.com/in/mahmoud-abdel-aziz |mahmoudabdelaziz.com
+Education
+Nagpur University CGPA: N/A
+BE Computer Science July 2008 - February 2012, Nagpur, Maharashtra
+Experience
+SAP HANA Developer Full-time
+Schlumberger February 2017 - Present
+•Working on Suit on HANA and Native HANA Systems.
+•Working on end to end implementation for Release 2.3 and 2.4.
+•Developing HANA Information Models Calculation Views, Table Functions, Procedures.
+•Actively involved in cutover activities, Dry Runs Production Go live and Post Production Go Live and resolving
+issues.
+•Worked on HANA functionalities like Currency Conversions and analyzing the Planviz for performance related
+issues etc.
+•Worked on to bring the Tables in SAP HANA Landing zone using SDA.
+•Working on to resolve the performance issues in HANA views by applying filter, joins etc.
+•Interacting with the Business and functional team members, based on the discussion Creating Design Documents,
+Technical Specification and Test Documents.
+•Successfully implemented the Release 2.2 and 2.3 for US, Ecuador and Canada.
+•Successfully completed the Self-service project for Finance Domain and created Reports in Analysis of office.
+•Working on to create the Power BI Reports.
+•Working on to resolve production defects and Incidents by using HPALM and Remedy Tools.
+•Working on to resolve the issues in an existing HANA Views.
+•Working on to promote the Objects in different environment by using Charm/Solmon.
+•Working on to enhance the performance of the HANA views by using PLANVIZ.
+SAP HANA Developer Full-time
+Fujitsu Consulting India N/A
+•HANA Data Model Development and Modification of Existing Models.
+•Providing estimation to create the data model based on business Request.
+•Creating Views- Attribute, Analytical and Calculation Views base on business requirement
+•Creation of Design document and Technical design document.
+•Brought the data into HANA Landing zone using SLT and SDA.
+•Handled complex performance issues.
+•Worked SAP Landscape transformation for data replication from source DB to HANA DB
+•Solved SIT tickets on HANA Information Model.
+•Developing HANA Information Models Calculation Views, Table Functions, Procedures.
+•Modifying existing models to include tables, columns etc. necessary to complete the requirement.
+•Configuring business objects to fetch data from HANA.
+•Editing, Modifying exiting reports to fetch data from HANA as per the requirement.
+SAP BO Developer Full-time
+Fujitsu Consulting India July 2013 - June 2014
+•Providing estimation to create the Universe and Webi Reports based on business request.
+•Worked on creating the Universes on top of SAP HANA and BW Resources.
+•Worked on creating the Complex Reports in webi.
+•Worked on providing the Row level and Folder level security.
+•Worked on Scheduling the Reports.
+
+Projects
+Certificates
+Skills
+SAP HANA: SAP HANA SPS12, HANA Information Models, Calculation Views, Table Functions,
+Procedures, SDA, SLT
+SAP BO: SAP BO, WEBI
+Tools: SAP ECC 6.0, SQL, Remedy, SharePoint, SAP Logon, Power BI
+Extracurricular Activities

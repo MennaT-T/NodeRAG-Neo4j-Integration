@@ -1,0 +1,62 @@
+Yasmin Nasser
+Blockchain Engineer
+yasmin.nasser@email.com |+20 122 345 6789 |/githubgithub.com/yasmin-nasser |/linkedinlinkedin.com/in/yasmin-nasser |
+yasminnasser.com
+Education
+Government Women’s High School Diploma
+Ranchi, Jharkhand
+Experience
+Blockchain Engineer Full-time
+Auxledger
+•Worked with on lots of product on blockchain.
+•Bitcoin: Build Wallet and explorer on Bitcoin
+•Ethereum: Build Wallet and explorer on ethereum blockchain.
+•Customize product on Ethereum: Inventory system (Build smart contract in solidity, deployed in java byte code and
+on ethereum as well and I have written API in java spring on that and then build front end and called all Api)
+•Audit Logger: I have audit logger for OTC exchange to keep all transaction record in blockchain.
+•DOC Safe on ethereum: I have build an ethereum application to keep Documents safe on blockchain and document
+in encrypted form on server.
+•And explore with Litecoin, Ripple & exchange (OTC P2P) Hyperledger Fabric
+Blockchain Developer Full-time
+Egy-Tech Solutions, Cairo
+•Worked with a USA team on blockchain on ethereum, I have designed product on ethereum blockchain.
+•Setup private ethereum and bitcoin blockchain.
+•Worked on loyalty program system and HER System on ethereum network.
+Software Developer Full-time
+Lavisa Infrastructure, Bangalore Sep 2015- Oct 2016
+•ERP System, CRM for Real Estate Company.
+Web Developer Full-time
+United Telecom Limited, Ranchi Nov 2013-Sep 2014
+•Company portal for employee management for Inside Company. Onsite employee, & in different-different district.
+And management of all kind of government service like adhar card, Birth certificate, pan card tracker etc.
+Web Developer Full-time
+Orange Egypt, Cairo
+•On demand product development from client side requirement.
+•Dynamic website: Content management system where I have designed front end with backend where content of
+website was manageable from admin panel.
+•News Portal: News portal where content was in Hindi language. I have used Html, Css, JavaScript, JDBC, MySQL
+data base.
+•Birthday Reminder: A small web application for birthday reminder, I have used HTMl, CSS, JavaScript, JDBC, MySQL
+DB.
+•Car parking System: A web application for Management of Car Parking System, I have used HTMl, CSS, JavaScript,
+JDBC, MySQL DB.
+
+Skills
+Languages: C - C++ - Java
+Operating Systems: Windows XP - 7 - Ubuntu
+RDBMS: Oracle (SQL) Database - My SQL - PostgreSQL
+Markup & Scripting: HTML - JavaScript & PHP - CSS - JQuery - Angular js
+Framework: Struts - Hibernate - spring - MVC
+Web Server: Tomcat - Glassfish
+Web Services: REST - SOAP
+Blockchain: Bitcoin - Ethereum - Ripple - Hyperledger Fabric
+Block-chain: Private setup of blockchain - Node building
+Smart Contract: Solidity Language
+Smart Contract Api: Java Spring
+Dapp Building: Node js - React js - Express js
+Extracurricular Activities
+Network Designer 4 months
+United Telecommunication Limited, Ranchi
+•Jharnet project
+•Networking Requirements: Elementary configuration of router and switch, IP and MAC addressing, Lease Line, OSI
+Layers, Routing protocols.

@@ -1,0 +1,92 @@
+Amal Rashid
+Lead Database Administrator
+amal.rashid@email.com |+20 101 234 5678 |/githubgithub.com/amal-rashid |/linkedinlinkedin.com/in/amal-rashid |
+amalrashid.com
+Summary
+Microsoft Certified Professional with 11 years of experience in database administration on MS SQL Server 2016/2014/2012/2008
+R2/ 2008. Proficient in managing complex database environments, performance tuning, and ensuring high availability.
+Proven ability to lead DBA teams, provide critical support, and drive system improvements. Experienced with Azure
+cloud services and various database technologies.
+Education
+Indira College, Pune University
+Masters of Science, Computer Science 2010, Pune, India
+Experience
+Lead Database Administrator Full-time
+Ensono June 2022 - Present, Cairo, Egypt
+•Continued comprehensive SQL Server database administration responsibilities following an employment transfer as
+part of a project acquisition from Wipro Technologies.
+•Managed and optimized complex database environments, ensuring peak performance, high availability, and robust
+security protocols.
+Lead Database Administrator Full-time
+Wipro Technologies June 2017 - May 2022, Giza, Egypt
+•Administered MS SQL Server 2016/2014/2012/2008 R2/2008, encompassing installation, configuration, upgrade,
+and maintenance.
+•Led and managed a team of 5 SQL DBAs from offshore in a multi-client environment, overseeing data center services.
+•Provided mentorship, guidance, and knowledge transfer to team members and trainees, fostering skill development.
+•Implemented and managed Always On Availability Groups, database mirroring, replication, clustering, and log
+shipping for high availability and disaster recovery.
+•Performed advanced performance tuning, troubleshooting, and conducted root cause analysis (RCA) for high severity
+incidents.
+•Managed incident, change, and problem management processes for the SQL Server Database team.
+•Participated in client meetings and conference calls with Service Delivery Managers and application teams to drive
+system improvements.
+•Engaged in quarterly Disaster Recovery (DR) activities and contributed to the creation of Service Improvement Plans
+(SIP).
+•Contributed to PCI scan report remediation by applying security hot fixes and service pack installations to address
+vulnerabilities.
+•Participated in the implementation of Holmes BOTS automation using the SQL Pack tool.
+•Provided essential on-call support during out-of-office hours and weekends to ensure continuous system operation.
+Senior Database Administrator Full-time
+Mphasis February 2015 - May 2017, Alexandria, Egypt
+•Administered MS SQL Server 2012/2008 R2/2008, overseeing installation, configuration, and daily operations.
+•Managed Always On Availability Groups, log shipping, database mirroring, and clustering solutions to ensure data
+redundancy and uptime.
+•Executed SQL Server patching activities to maintain system security, compliance, and stability.
+•Generated and analyzed daily reports on cluster failover, backups, Availability Group/Log Shipping/Mirroring
+status, and server disk space utilization.
+•Efficiently resolved service requests, incidents, and critical issues, minimizing downtime.
+•Participated in quarterly DR activities, ensuring database recoverability and business continuity objectives were met.
+
+•Collaborated with the Windows team during patching operations for AG/mirror/cluster failover/failback and com-
+prehensive database health checks.
+•Conducted extensive performance tuning to optimize database queries and enhance overall system responsiveness.
+Database Administrator Full-time
+Synechron Technologies Pvt. Ltd July 2012 - January 2015, Cairo, Egypt
+•Provided comprehensive support for SQL Server, Oracle 10g, and Netezza databases.
+•Performed MS SQL Server 2008 R2/2008 installation, upgrade, and administration tasks.
+•Conducted capacity planning for database growth across all SQL servers to ensure scalability.
+•Troubleshooted and resolved database alerts and issues promptly.
+•Implemented and maintained log shipping and database mirroring configurations for disaster recovery.
+•Completed in-depth training on Oracle 11g Architecture and SQL Server best practices.
+•Executed schema version changes from PE8 to EE11 as per established processes and project requirements.
+Junior Database Administrator Full-time
+Mastek Ltd July 2011 - June 2012, Giza, Egypt
+•Assisted with SQL Server 2008 R2/2008 installation, upgrade, and administration activities.
+•Performed routine database backup and restore operations to ensure data integrity and availability.
+•Conducted MS SQL Server audits to ensure compliance with security policies and best practices.
+•Supported database mirroring, replication, log shipping, and clustering environments.
+•Provided essential support for User Acceptance Testing (UAT) and Production (PROD) environments.
+•Reviewed deployment documents and executed application deployments across various environments.
+Projects
+Dairy ERP System Customization July 2010 - June 2011
+PP Software and Systems Ltd, Cairo, Egypt•Designed, coded, and tested customized Enterprise Resource Planning (ERP) system modules tailored for the dairy
+industry.
+•Developed and integrated Master Data Management and Procurement modules, adapting functionalities to specific
+client requirements.
+•Utilized Core Java for application development and PostgreSQL for robust database management and persistence.
+Certificates
+Microsoft Certified Professional
+Microsoft Azure certified
+Skills
+Operating Systems: MS Windows Server 2012 / 2008 / XP
+Databases: MS SQL Server 2016 / 2014 / 2012 / 2008 R2 / 2008, Oracle 10g / 11g, Netezza, PostgreSQL,
+Microsoft Azure SQL Database
+Tools & Software: MS LiteSpeed, Idera SQL Safe, SSMS, Upgrade Advisor, SQL Server Profiler, SCOM,
+Diagnostic Manager, Remedy, Jira, Infopacc, Tivoli TDP Backup Tool, SQL Pack, Holmes BOTS
+High Availability: Always On Availability Groups, Database Mirroring, Log Shipping, Replication,
+Clustering
+Database Management: Performance Tuning, Installation, Upgrade, Migration, Patching, Backup/Restore,
+Capacity Planning, Troubleshooting, Audits
+Cloud Platforms: Microsoft Azure (VM, Storage, Network, AD)
+Methodologies: Incident Management, Change Management, Problem Management, DR Activity, RCA, SIP
+Programming: Core Java

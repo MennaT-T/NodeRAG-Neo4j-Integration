@@ -1,0 +1,99 @@
+Mostafa Gamal
+Lead Database Administrator
+mostafa.gamal@email.com |+20 100 123 4567 |/githubgithub.com/mostafa-gamal |/linkedinlinkedin.com/in/mostafa-gamal |
+mostafagamal.com
+Summary
+Microsoft Certified Professional with 11 years of extensive experience in database administration, specializing in MS SQL
+Server versions 2016/2014/2012/2008 R2/2008. Proven expertise in managing complex database environments,
+implementing high availability solutions, and optimizing performance. Skilled in incident, change, and problem
+management within multi-client data center services. Possesses a solid understanding of Microsoft Azure services and
+related database technologies.
+Education
+Indira College, Pune University
+Masters of Science, Computer Science 2011, Pune, Maharashtra, India
+Experience
+Senior Database Administrator On-Site
+Ensono Aug 2023 - Present, Bangalore, India
+•Assumed responsibilities as Senior Database Administrator following an employment transfer as part of a project
+acquisition from Wipro.
+•Continuously provided expert database administration and support for critical systems.
+Lead Database Administrator On-Site
+Wipro Technologies Aug 2018 - Jul 2023, Bangalore, India
+•Provided 11 years of overall experience in database administration, specializing in MS SQL Server
+2016/2014/2012/2008 R2/2008.
+•Managed MS SQL Server installations, upgrades, configurations, and ongoing administration across various
+versions.
+•Maintained Microsoft Azure certified status with a strong understanding of Azure VM, Azure Storage, Azure
+Network, Azure AD, and Azure SQL database.
+•Spearheaded incident management, change management, and problem management for the SQL Server Database
+team.
+•Participated in crucial client meetings and conference calls with Service Delivery Managers and Application teams
+for system improvements.
+•Conducted quarterly Disaster Recovery (DR) activities and contributed to the creation of Service Improvement
+Plans (SIP).
+•Handled high severity issues, providing timely Root Cause Analysis (RCA) to prevent recurrence.
+•Worked extensively with high availability solutions including Always On Availability Groups, database mirroring,
+replication, clustering, and log shipping.
+•Provided essential on-call support during out-of-office hours and weekends to ensure continuous service
+availability.
+•Managed resources and shifts for a team of 5 SQL DBAs from offshore in a multi-client data center environment.
+•Provided Knowledge Transfer (KT) to team members, actively monitoring and guiding trainees.
+•Participated in PCI scan reports, performing installations of security hot fixes and service packs to remove SQL
+server vulnerabilities.
+•Involved in Holmes BOTS automation implementation for the SQL Pack tool.
+•Handled service requests, incidents, and critical issues, providing prompt DBA support during conference calls.
+•Executed performance tuning to optimize database efficiency and responsiveness.
+•Environment: SQL Server 2016/2014/2012/2008R2/2008, Windows Server 2012/2008R2/2008.
+Database Administrator On-Site
+Mphasis Aug 2016 - Jul 2018, Bangalore, India
+
+•Managed MS SQL Server 2012/2008 R2/2008 installation, configuration, and administration.
+•Worked on Always On Availability Groups, log shipping, database mirroring, and clustering solutions.
+•Performed regular SQL server patching activities to ensure system security and stability.
+•Generated daily reports including cluster failover, backup, AG/LS/Mirror status, and server disk space.
+•Handled service requests, incidents, and critical issues, ensuring prompt resolution.
+•Participated in quarterly Disaster Recovery (DR) activities, contributing to business continuity planning.
+•Provided DBA support for critical issues during conference calls.
+•Supported the Windows team during patching for AG/mirror/cluster failover/failback and database health checks.
+•Performed all health checks for market open servers and provided updates in market open calls.
+•Deeply involved in issue resolution and finding the root cause analysis of issues.
+•Performed performance tuning to enhance database operations.
+•Environment: SQL Server 2012/2008R2/2008, Windows Server 2008R2/2008.
+Database Administrator / Trainee On-Site
+Synechron Technologies Pvt. Ltd Aug 2013 - Jul 2016, Pune, India
+•Provided support tasks for SQL Server, Oracle, and Netezza databases.
+•Managed MS SQL Server 2008 R2/2008 installation, upgrade, and administration.
+•Conducted capacity planning for database growth across all SQL servers.
+•Troubleshot alerts and worked on log shipping and mirroring implementations.
+•Pursued in-depth training on Oracle 11g Architecture and SQL Server.
+•Carried out version changes for schemas from PE8 to EE11 as per defined processes.
+•Environment: SQL Server 2008R2/2008, Windows Server 2008R2/2008, Oracle 10g/RAC, Oracle 11g.
+Database Administrator On-Site
+Mastek Ltd Aug 2012 - Jul 2013, Mumbai, India
+•Managed SQL Server 2008 R2/2008 installation, upgrade, and administration.
+•Performed database backup/restore operations.
+•Carried out MS SQL Server audits.
+•Worked with database mirroring, replication, log shipping, and clustering.
+•Supported User Acceptance Testing (UAT) and Production environments.
+•Reviewed deployment documents and carried out deployments for different applications.
+•Environment: SQL Server 2008R2/2008, Windows Server 2008R2/2008.
+Software Developer / ERP Customizer On-Site
+PP Software and Systems Ltd Aug 2011 - Jul 2012, Pune, India
+•Designed, coded, and tested modules for a system providing Master Data Management and Procurement for the
+dairy industry.
+•Customized ERP system as per client requirements, ensuring functional specifications were met.
+•Environment: Core Java, PostgreSQL.
+Projects
+Certificates
+Microsoft Certified Professional (MCP) – Issued: Circa 2012
+Microsoft Azure Certified – Issued: Circa 2019
+Skills
+Operating Systems: MS Windows Server 2012 - 2008 - XP
+Databases: MS SQL Server 2016 - 2014 - 2012 - 2008 R2 - 2008, Oracle 10g - 11g, Netezza, PostgreSQL
+Cloud Platforms: Microsoft Azure (VM, Storage, Network, AD, SQL Database)
+Database Management: Always On Availability Group, Database Mirroring, Performance Tuning, Log
+Shipping, Installation, Upgrade, Migration, Patching, Replication, Clustering, Backup/Restore, Capacity
+Planning, Auditing, Incident Management, Change Management, Problem Management
+Tools & Software: MS LiteSpeed, Idera SQL Safe, SSMS, Upgrade Advisor, SQL Server Profiler, SCOM,
+Diagnostic Manager, Remedy, Jira, Infopacc, Tivoli TDP backup tool, SQL Pack
+Extracurricular Activities

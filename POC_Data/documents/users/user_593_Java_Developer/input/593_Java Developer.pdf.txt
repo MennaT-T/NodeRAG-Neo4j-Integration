@@ -1,0 +1,46 @@
+Sara Hassan
+Java Developer
+sara.hassan@email.com |+20 123 456 7890 |/githubgithub.com/sara-hassan |/linkedinlinkedin.com/in/sara-hassan |
+sarahassan.com
+Education
+Vidyalankar Institute of Technology
+B.E. Information Technology June 2016, Goregaon, India
+Thakur Polytechnic
+May 2013, Mumbai, India
+St. John’s Universal School
+May 2010, Mumbai, India
+Experience
+Java developer Full-time
+Tech Mahindra Date - Date
+•Team Size: 5
+•Environment: Java, Mysql, Shell script
+•Webserver: Jenkins
+•OR-Formatter is an application which takes the input file as Geneva Modified File GMF from Geneva server and
+reads the data to generate Bill backup and Bill Invoices for Client customers of BT. These invoices would be sent
+across to all the clients after billing.
+•Played the role of Java developer involved in applying change request to current modules.
+•Worked on requirement analysis and development for the user stories and also preformed dev unit testing for the
+user stories.
+•Handled E2E issues and fixing bugs.
+•Prepare required program level and user-level documentation.
+Java developer Full-time
+Tech Mahindra Date - Date
+•Team Size: 5
+•Environment: Java EJB, Mysql, Shell script.
+•Webserver: Weblogic12c Server, Jenkins.
+•STAA is an encapsulation middleware layer, acting as an interface between client’s operational support systems and
+Legacy systems. It transforms the legacy data into various formats such as TLV . Input is in form xml/http to STAA
+where validations are done and the response is sent to the back end systems where back end systems are CSS and
+COSMOSS Databases. The business methods deployed as EJBs on WebLogic Server shared across various market
+facing units of client.
+•Played the role of Java developer involved in creating services using Java/J2EE.
+•Worked on requirement analysis and development for the user stories and also preformed dev unit testing for the
+user stories.
+•Handled E2E issues and fixing bugs.
+•Worked in Migration from java 1.6 to java 1.8.
+Skills
+Computer Languages: Java/J2EE - Swift - HTML - Shell script
+Databases: MySQL
+Tools: SVN - Jenkins - Hudson - Weblogic12c
+Software: Android Studio - Eclipse - Oracle - Xcode
+Operating Systems: Win 10 - Mac (High Sierra)

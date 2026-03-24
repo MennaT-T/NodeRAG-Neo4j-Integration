@@ -1,0 +1,85 @@
+0in
+Yasmin Abdel Aziz
+Data Science Consultant
+yasmin.abdelaziz@email.com |+20 102 345 6789 |/githubgithub.com/yasmin-abdel-aziz |/linkedin
+linkedin.com/in/yasmin-abdel-aziz |portfolio
+Education
+PGDM Business Analytics
+Great Lakes Institute of Management & Illinois Institute of TechnologyJan 2017 - Jan 2018, Chennai, India / Chicago, IL, USA
+Bachelor of Engineering Electronics and Communication
+New Horizon College of Engineering, Visvesvaraya Technological University Jan 2013, Bengaluru, Karnataka, India
+Experience
+Data Science Consultant Full-time
+Deloitte Egypt March 2018 - March 2020
+•Provided data science and analytics consulting across various industries (Finance, Healthcare, FMCG, Telecom).
+•Led multiple projects involving advanced analytics, data modeling, ETL development, and reporting.
+•Utilized technologies such as R, Python, SAP HANA, Tableau for data extraction, analysis, and insight generation.
+Senior Developer, In Process Analytics for SAP Full-time
+Accenture Egypt June 2015 - Dec 2016
+•Developed SAP analytics tool (IPA) creating database objects and data models to provide operational insights to
+clients.
+•Implemented Finance-related KPIs and spearheaded various deployments, reducing development time with SAP
+Predictive analytics.
+•Key Responsibilities: Information gathering, SAP HANA data modeling (Attribute View, Analytic View, and Calcula-
+tion View), developed KPIs using complex SQL scripts in Calculation views, created procedures in HANA Database,
+developed Dashboard functionality, built data processing algorithms to be executed in R server for cluster analysis.
+•Technical Environment: R, SAP HANA, T-SQL.
+Database Developer, Accenture Testing Accelerator for SAP Full-time
+Accenture Egypt August 2013 - April 2015
+•Managed all development activities for the ATAS tool and overseen various product deployments.
+•Maintained production and quality database servers.
+•Key Responsibilities: Analyzing business requirements, understanding scope, gathering requirements and trans-
+forming them to generate attribute mapping documents, reviewing mapping specification documentation.
+•Created/updated database objects like tables, views, stored procedures, functions, and packages.
+•Monitored SQL Server Error Logs and Application Logs through SQL Server Agent.
+•Prepared Data Flow Diagrams and Entity Relationship Diagrams using UML.
+•Responsible for Designing, developing and Normalization of database tables and performance tuning using SQL
+profiler.
+•Involved in QA, UAT, knowledge transfer, and support activities.
+•Technical Environment: SQL Server 2008/2014, Visual Studio 2010, Windows Server, Performance Monitor, SQL
+Server Profiler, C#, PL-SQL, T-SQL.
+Projects
+Handwriting Recognition March 2018 - May 2018
+•Developed sentence correction functionality for converting handwritten images to digital text by object detection and
+sentence creation.
+•Gathered extensive data to capture all English words and trained LSTM models on words.
+•Technical Environment: Python.
+SWIFT (Financial Services - BI development) June 2018 - Jan 2019
+•Led offshore team in developing an analytics infrastructure on top of SAP S/4 to allow users to view financial reports
+and forecast expenses.
+•Designed & Developed data models for reporting, developed ETL for data flow, and validated various reports.
+•Technical Environment: SAP HANA, Tableau, SAP AO.
+Clinical Healthcare System Feb 2019 - March 2019
+•Involved from design to deploy phase, performing data restructuring and building models for insights to develop an
+analytics infrastructure on Argus for faster querying and advanced analytics capabilities.
+•Key Responsibilities: Design & Develop data models for reporting, developed and deployed analytical models, and
+validated various reports.
+•Technical Environment: Data Modelling, SAP HANA, Tableau, NLP .
+Consumption Based Planning for Flowers Foods April 2019 - Nov 2019
+•Set up CRM and CBP modules, involved in key data decomposition activities and setting up the base for future year
+forecasts.
+•Developed various models and carried out key performance improvements.
+•Key Responsibilities: Design & Develop HANA models for decomposition, developed data flow for forecast, devel-
+oped various views for reporting of Customer/Sales/Funds, and validated various reports in BOBJ.
+•Technical Environment: Data Modelling, SAP HANA, BOBJ, Time Series Forecasting.
+Customer Segmentation and RFM analysis (Internal Initiative) Dec 2019 - Feb 2020
+
+•Set up HANA-Python interface and performed advanced analytics on Python.
+•Successfully segmented data into five core segments using K-means and carried out RFM analysis.
+•Developed an algorithm to categorize any new customer under the defined buckets.
+•Technical Environment: Anaconda3, Python3.6, HANA SPS12.
+Telecom Invoice State Detection (Internal Initiative) March 2020
+•Developed a decision tree to classify open/closed invoices, reducing manual effort in verifying closed and open
+invoices by 60%.
+•Technical Environment: R, SAP PAL, SAP HANA SPS12.
+Skills
+Programming & Scripting: Python - R - C# - T-SQL - PL-SQL
+Databases & Warehousing: SAP HANA - MS SQL - SAP HANA SQL - SAP HANA PAL - SQL Server
+2008/2014 - HANA SPS12
+BI & Visualization: Tableau - SAP Lumira - SAP AO - BOBJ - Visual Studio 2010
+Data Science & ML: Linear Programming - Data Modelling - Advanced Analytics - SCM Analytics - Retail
+Analytics - Social Media Analytics - NLP - Deep Learning - Machine Learning - Time Series Forecasting -
+K-means - RFM Analysis - Decision Tree
+Tools & Platforms: Anaconda3 - Python3.6 - Windows Server - Performance Monitor - SQL Server Profiler
+Methodologies: ETL - QA - UAT - Data Flow Diagrams - Entity Relationship Diagrams (UML) -
+Performance Tuning - Production Planning

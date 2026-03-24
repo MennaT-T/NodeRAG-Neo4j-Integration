@@ -1,0 +1,78 @@
+Ibrahim Kamal
+PHP Web Developer
+ibrahim.kamal@email.com |+20 100 123 4567 |/githubgithub.com/ibrahim-kamal |/linkedinlinkedin.com/in/ibrahim-kamal |
+ibrahimkamal.com
+Education
+B.C.A Bachelor Computer Application
+Pune University Year N/A, Pune, Maharashtra, India
+H.S.C.
+Pune University Year N/A, Pune, Maharashtra, India
+S.S.C.
+Pune University Year N/A, Pune, Maharashtra, India
+Experience
+PHP Developer Full-time - On-site
+Exposys Pvt. Ltd August 2017 - Present
+Projects
+Pragat Bharat System (Dates N/A)
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX
+•Database Used: My SQL
+•Team Size: 1
+•Position: Software Developer
+•Synopsis: This project aim is specially design for people. It is used to collect information to different sectors.
+Go Ayur System (Dates N/A)
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX
+•Database Used: My SQL
+•Team Size: 2
+•Position: Software Developer
+•Synopsis: Go Ayurveda Panchakarma center is one of most traditionally well established, professional and innovative
+providers of Classical Ayurvedic Health services and Kerala Panchakarma therapies.
+Vitsanindia System (Dates N/A)
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX, JAVA SCRIPT
+•Database Used: My SQL
+•Team Size: 2
+•Position: Software Developer
+•Synopsis: Online Shopping through app. This app is user friendly because there is an option for change language.
+Users can find different categories of products as their choice.
+MahabaleshwarTours (Dates N/A)
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX, JAVA SCRIPT
+•Database Used: My SQL
+•Team Size: 1
+•Position: Software Developer
+•Synopsis: This system provides Online Registration, Tour Package Information, Ticket Booking, Online Payment and
+Searching Facility for Customers, and also generates different types of Reports.
+Cityspaceindia (Dates N/A)
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX, JAVA SCRIPT
+•Database Used: My SQL
+•Team Size: 1
+
+•Position: Software Developer
+•Synopsis: Service provider website offering different categories.
+Fruitsbuddy (Dates N/A)
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX, JAVA SCRIPT
+•Database Used: My SQL
+•Team Size: 1
+•Position: Software Developer
+•Synopsis: Fruitbuddy manages the details of fruits, Customers, Orders, Transactions, and Payments. It manages all
+the information about fruits, Stocks, and Payments. The project is totally built at the administrative end and thus
+only the administrator is guaranteed access. The purpose of the project is to build an application program to reduce
+the manual work for managing fruits, Customers, Stocks, and Orders.
+Totalcitee (Dates N/A)
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX, JAVA SCRIPT
+•Database Used: My SQL
+•Team Size: 1
+•Position: Software Developer
+•Synopsis: Real Estate web application created for helping to sell properties through a web-based user interface.
+Visitors on the website can view particular desired products using the search engine facility.
+Golchha (Dates N/A)
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX, JAVA SCRIPT
+•Database Used: My SQL
+•Team Size: 1
+•Position: Software Developer
+•Synopsis: Service provider website offering different categories.
+Skills
+Web Development: HTML5 - CSS3 - Bootstrap - PHP - AJAX - JQUERY - JavaScript
+Database: My SQL
+Development Tools: Notepad++ - Sublime Text2
+Framework: CodeIgniter
+Server: Apache Tomcat - XAMPP Control Panel
+Operating Systems: Windows

@@ -1,0 +1,47 @@
+Nour Mansour
+Blockchain Engineer
+nour.mansour@email.com |+20 123 456 7890 |/githubgithub.com/nour-mansour |/linkedinlinkedin.com/in/nour-mansour |
+nourmansour.com
+Education
+Malaviya National Institute Of Technology Jaipur
+M.Tech Computer Engineering January 2014, Jaipur, Rajasthan
+Shivaji University
+B.E. Computer Science And Engg January 2011, Kolhapur, Maharashtra
+Experience
+Blockchain Engineer Full-time
+XINFIN Orgnization Date - Date
+•Rolled out multiple blockchain based pilot projects on different use cases for various clients. Eg.Tradefinex (Supply
+chain Management), Land Registry (Govt of MH), inFactor (Invoice Factoring)
+•Build a secure and scalable hosted wallet based on ERC 20 standards for XINFIN Network.
+•Working on production level blockchain use cases.
+•Technology: Ethereum Blockchain, Solidity, Smart Contracts, DAPPs, Nodejs
+ORO Wealth Date - Date
+•Build various scalable web based products (B2B and B2C) based on MEAN stack technology and integrated with
+multiple finance applications/entities. eg. Integration KYC and MF Entities.
+•Technology: Node.js, Angular.js, MongoDB, Express
+YallaSpree Date - Date
+•Yallaspree is a largest digital shopping directory in U.A.E with over 22K stores.
+•Own the responsibility to develop and maintain following modules:
+•- Admin and Vendor interface - Database operations - Writing Webservices - Complete Notification system - Events
+and Offers Page
+•Technology: CakePHP (PHP Framework), JQuery, MySql
+RailTiffin.com Date - Date
+•RailTiffin.com is an e-commerce platform to serve food to railway passengers.
+•Worked on multiple roles like bug fixing, DB operations, Feature customisation and writing API endpoints.
+•Technology: OpenCart (Ecommerce Framework), JQuery, MySql
+Accolite Software India Private Limited Date - Date
+•Accolite is a global IT Services company headquartered in Dallas, USA with offices in India.
+•Worked on Birst Analytics Tool to develop, deploy and maintain reports
+
+Projects
+Certificates
+Skills
+Skills: Strong CS fundamentals and problem solving - Ethereum, Smart Contracts, Solidity skills - Golang,
+Node, Angular, React - Culturally fit for startup environment - MongoDB, PostGresql, MySql - Enthusiastic to
+learn new technologies - AWS, Docker, Microservices - Blockchain, Protocol, Consensus
+MONGODB: Exprience - 16 months
+CONTRACTS: Exprience - 12 months
+MYSQL: Exprience - 9 months
+AWS: Exprience - 6 months
+PROBLEM SOLVING: Exprience - 6 months
+Extracurricular Activities

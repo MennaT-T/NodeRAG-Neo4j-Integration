@@ -1,0 +1,76 @@
+Ibrahim Abdel Aziz
+Cloud Operations Architect (DevOps)
+ibrahim.abdelaziz@email.com |+20 100 123 4567 |/githubgithub.com/ibrahim-abdel-aziz |/linkedin
+linkedin.com/in/ibrahim-abdel-aziz |ibrahimabdelaziz.com
+Education
+Symbiosis Institute Post Graduate Diploma
+Information Technology January 2013, Pune, Maharashtra, India
+Pune University Bachelor of Engineering
+Electronics and Telecommunications January 2007, Pune, Maharashtra, India
+Experience
+Cloud Operations Architect (DevOps) Full-time - On-site
+Egy-Tech Solutions May 2013 – Present, Cairo, Egypt
+•Managed Tibco Spotfire enterprise and cloud product support across AWS and Azure cloud platforms, utilizing
+services like EC2, RDS, CloudFormation, Lambda, DynamoDB, CloudWatch, Auto-scaling, Elastic Beanstalk, and
+AppDynamics.
+•Successfully recruited and built an entire team of 15 members in India, concurrently leading and integrating them
+into 4 distinct projects/products.
+•Coordinated production deployments and hotfixes, and supported the Quality Assurance (QA) team by providing
+pre-production testing environments.
+•Arranged and conducted workshops on new AWS services to enhance the team’s technical proficiency and foster
+continuous learning.
+•Developed shell scripts for AWS automation, including the extraction and shutdown of running instances and the
+release of free Elastic IPs (EIPs).
+•Implemented AWS Lambda functions to trigger important operational scripts, enhancing system automation and
+responsiveness.
+Administrator, Automation & Monitoring Engineer Full-time - On-site
+Synechron Technologies Limited April 2011 – April 2013, Giza, Egypt
+•Managed Linux media server farms and provided application support for critical enterprise systems.
+•Executed patching for Linux physical and Xen virtual machines to ensure security and performance.
+•Configured and managed Satellite channels on Red Hat Satellite server for efficient software distribution and system
+management.
+•Automated routine administrative tasks using shell scripting and provided support for MySQL databases.
+•Troubleshooted and resolved issues for customized applications, ensuring continuous operation and user satisfac-
+tion.
+Developer, Automation & Monitoring Engineer Full-time - On-site
+Tsys Limited January 2009 – March 2011, Cairo, Egypt
+•Provided and managed user access to Red Hat Directory Server (RHDS), CVS, and dotProject servers.
+•Administered user access on development/production Virtual Desktop Infrastructure (VDI) servers.
+•Handled MySQL database administration, including implementing MySQL replication over Linux servers.
+•Developed and fine-tuned existing applications, and created shell scripts to automate various operational tasks.
+•Conducted thorough testing and debugging of scripts to ensure accuracy and error-free execution.
+Senior System Engineer (Project: CPI) Full-time - On-site
+Patni Computer Systems Limited February 2007 – January 2009, Alexandria, Egypt
+•Served as a Senior System Engineer for the CPI Maintenance Project, catering to enhancements of applications within
+Genworth Imaging Solutions.
+•Provided Level 1 (L1) support, monitored the P8 FileNet application, and managed user-raised tickets.
+•Administered 10 Linux Proxy servers and MySQL servers, including implementing MySQL replication.
+
+•Developed SQL queries for client users, managed Oracle databases, and deployed tested insert, select, and update
+queries to production.
+•Ensured optimal functionality of customer applications like eProcess, Trexo, and customized FileNet instances.
+•Wrote shell scripts to automate application tasks, including successfully deploying a script to delete logs older than
+five days on production servers.
+Projects
+AWS Cloud Automation Suite May 2013 – Present
+•Developed comprehensive shell scripts to automate AWS cloud operations, including identifying and shutting down
+idle instances and reclaiming unused Elastic IP addresses.
+•Implemented AWS Lambda functions for event-driven automation and triggering critical operational scripts.
+Tibco Spotfire Team & Product Management May 2013 – Present
+•Successfully recruited and built a 15-member team in India, leading 4 concurrent projects focused on Tibco Spotfire
+enterprise and cloud product support.
+•Managed deployment coordination, hotfixes, and facilitated pre-production environment setup for Quality Assur-
+ance.
+Linux System Automation & Database Management February 2007 – April 2013
+•Implemented shell scripting for efficient Linux administration, including patching Linux physical and Xen virtual
+machines.
+•Managed MySQL database replication across multiple servers and provided support for customized applications.
+Skills
+Cloud Platforms: AWS, Azure, AWS EC2, RDS, CloudFormation, Lambda, DynamoDB, CloudWatch,
+Auto-scaling, Elastic Beanstalk
+DevOps & Automation: Shell Scripting (96 months), Automation (72 months), Python (6 months), Puppet,
+AppDynamics, Git
+Databases: MySQL, Oracle, SQL
+Operating Systems: Linux/Unix, IBM AIX, Windows
+Tools & Technologies: Tibco Spotfire, P8 FileNet, Red Hat Satellite Server, RHDS, CVS, VDI, HTML
+Methodologies: DevOps, Solution Architecture

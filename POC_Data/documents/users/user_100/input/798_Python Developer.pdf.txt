@@ -1,0 +1,47 @@
+Mostafa Gamal
+Python Developer
+mostafa.gamal@email.com |+20 100 123 4567 |/githubgithub.com/mostafa-gamal |/linkedinlinkedin.com/in/mostafa-gamal
+Education
+Savitribai Phule Pune University Pune, India
+Bachelor of Engineering, Computer June 2018
+Maharashtra State Board
+HSC June 2014
+Maharashtra State Board
+SSC June 2012
+Experience
+Python Developer Full-time
+Atos Syntel Jan 2019 - Present
+•Worked as a developer in the field of computer vision for a US based client in the banking domain.
+•Designed and developed computer vision based algorithms for image preprocessing using OpenCV , PIL, and Numpy.
+•Performed unit testing and debugging of code, maintaining versions using Git.
+Projects
+Smart Ambulance Poster Presentation 2017
+•Developed a project concept for a smart ambulance system, presented via a poster.
+•Secured 1st Rank in a college-level poster presentation competition for the project.
+Certificates
+ESD Program by Zensar Technologies, Pune - 2017
+Employability Training by Barclays, Global Talent Track, and NASSCOM Foundation - 2015
+Workshop: ’Medical IOT’ by IEEE Standard’s Association - 2017
+Workshop: ’Introduction to Arduino’ - 2016
+Workshop: ’Robotics for Juniors’ by Computer Society of India - 2016
+Awards & Honors
+Finalist, Project Prototyping Round - KPIT-Sparkle, 2018
+1st Rank, Poster Presentation (Smart Ambulance) - College Level Competition, 2017
+Participant - Avishkar 2017, Savitribai Phule Pune University
+Sponsorship Acquisition (INR 15,000) from Platinum Auto - 2017
+Submitted Project Idea - Accenture Innovation, 2018
+Skills
+Programming & Frameworks: Python, Django
+Libraries & Tools: OpenCV , PIL, Numpy, Git
+Web & Database: HTML5, REST API, MySQL
+
+Extracurricular Activities
+Treasurer 2017 - 2018
+IEEE Student Branch, JSCOE, Pune
+•Managed financial records and budget for the student branch.
+Team Leader 2016 - 2017
+College Technical & Cultural Events
+•Led teams in the organization and execution of various college events.
+Workshop Organizer 2017
+IEEE Student Branch, JSCOE, Pune
+•Organized an IEEE workshop on ’Excellence in English and Public Speaking’.

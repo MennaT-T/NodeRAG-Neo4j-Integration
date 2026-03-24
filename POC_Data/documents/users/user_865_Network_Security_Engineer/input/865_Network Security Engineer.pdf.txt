@@ -1,0 +1,50 @@
+Abdelrahman Said
+Network and Security Engineer
+abdelrahman.said@email.com |+20 100 123 4567 |/githubgithub.com/abdelrahman-said |/linkedin
+linkedin.com/in/abdelrahman-said |abdelrahmansaid.com
+Education
+A.I.S.S.M.S College of Engineering, University of Pune
+Bachelor of Engineering (BE) Electronics September 2006 - August 2011, Pune, Maharashtra, India
+Sinhgad College, University Of Pune
+Higher Secondary Certificate Science July 2004 - February 2006, Pune, Maharashtra, India
+M.E.S Boys High School
+Secondary School Certificate (SSC) Science June 2003 - March 2004, Pune, Maharashtra, India
+Experience
+Network and Security Engineer Full-time
+Capita January 2015 - August 2017, Cairo, Egypt
+•Worked on client shared network and security infrastructure.
+•Planned, implemented, and troubleshot customer network requests.
+•Monitored Datacenter infrastructure 24/7 to ensure optimal performance.
+•Provided on-call weekend support for out-of-office issues.
+Network Engineer Full-time
+Capgemini India Pvt. Ltd January 2013 - December 2014, Pune, India
+•Part of the UK India Network Operations Center (NOC).
+•Worked on client-dedicated infrastructure, ensuring high availability.
+•Conducted client infrastructure handover sessions to streamline onboarding processes.
+•Acted as a mentor for junior engineers, guiding them in technical tasks.
+•Attended weekly Change Advisory Board (CAB) calls to represent critical changes.
+Jr. Network Engineer Full-time
+Sungard Availability Services January 2012 - December 2012, Pune, India
+•Planned, troubleshot, and implemented client network requests.
+•Involved in Disaster Recovery (DR) test planning and implementation.
+•Set up L3VPN’s for customers, ensuring secure connectivity.
+Network Support Full-time
+SunGard Software Solutions August 2011 - December 2011, Pune, India
+•Maintained comprehensive client documentation.
+•Contributed to datacenter remediation projects.
+•Managed DNS records, ensuring accurate and up-to-date entries.
+Projects
+Internet Bandwidth Management & Decommissioning Project January 2012 - December 2012
+Sungard Availability Services•Contributed to project work involving internet bandwidth upgrade and downgrade initiatives for clients.
+•Executed network decommissioning tasks as part of larger infrastructure projects.
+
+Certificates
+Skills
+Network Security: Implementing & troubleshooting security solutions, multi-vendor firewalls (Cisco ASA,
+Checkpoint (up to R.80), Juniper/Netscreen, Fortinet, FWSM), hardware & network security technologies,
+Firewall IOS upgrade projects, VPN, Bluecoat Proxy
+Networking: Cisco Routers (1800, 1900, 2500, 2600, 2800, 3600, Nexus - 5k, 7k), Cisco Switches (2960, 3750,
+Catalyst, 4500, 3600), Cisco Routing & Switching, LAN
+Load Balancing: F5 load balancers (configuration, SSL certificate updates, iRule, F5 upgrades)
+Monitoring Tools: Zenoss, Solarwinds, Cisco Prime, ITIL process, DNS Management
+Core Competencies: Analytical thinking, Problem-solving, Data center environments (multi-client)

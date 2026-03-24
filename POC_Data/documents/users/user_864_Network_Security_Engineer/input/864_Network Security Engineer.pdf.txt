@@ -1,0 +1,76 @@
+Ahmed Ali
+Sr. Network Engineer
+ahmed.ali@email.com |+20 101 234 5678 |/githubgithub.com/ahmed-ali |/linkedinlinkedin.com/in/ahmed-ali |ahmedali.com
+Education
+AISECT University CGPA: N/A
+M.Sc. in Distance Education 2015 – 2017, Cairo, Egypt
+Jiwaji University CGPA: N/A
+B.Com. 2009 – 2012, Gwalior, India
+Experience
+Sr. Network Engineer On-Site
+Cloudatix Network Pvt. Ltd Jan 2017 – Present
+•Led implementation and maintenance of network backup schedules, including critical Cisco router configuration
+management.
+•Administered Windows Servers (2008 R2, 2012 R2, 2016) for core services: Active Directory, FTP , DNS, DHCP , and
+TFTP .
+•Provided expert LAN/WAN infrastructure troubleshooting, coordinating with network administrators for device
+configurations.
+•Conducted regular health checks on File and Application Servers to ensure security and optimal disk space utiliza-
+tion.
+•Managed Windows 7 & 10 networks, overseeing printer installations, configurations, and shared drive access rights.
+•Managed user and group accounts, enforcing organizational access policies and permissions.
+IT Executive On-Site
+Asha MMPC Jul 2015 – Dec 2016
+•Managed network backup schedules and ensured secure upgrades of Cisco router configurations.
+•Administered Windows Servers (2008 R2, 2012 R2, 2016) for Active Directory, FTP , DNS, DHCP , and TFTP .
+•Troubleshot LAN & WAN infrastructure issues, coordinating with network teams for device settings.
+•Maintained server health, focusing on security and disk space management for File and Application Servers.
+•Oversaw Windows 7 & 10 network operations, including printer setup and shared drive access.
+•Implemented user and group management policies according to organizational requirements.
+Network Engineer / Network Support Engineer On-Site
+Interface Techno System Apr 2012 – Jun 2015
+•Network Engineer (The Scindia School): Administered Windows Servers (2000/2003, 2008 R2, 2012 R2), AD, FTP ,
+DNS, DHCP , TFTP , and Linux OS. Resolved complex LAN issues and configured networking devices.
+•Network Support Engineer (M/s Teva API India Pvt Ltd): Managed Check Point Endpoint Security MI Console and
+CA Unicenter Service Desk Manager. Managed over 350 desktops/laptops, including backups via Symantec Backup
+Exec 12D and file restoration.
+•Implemented backup schedules, upgraded Cisco router configurations, and performed system health checks.
+•Provided Level 2 support, handling desktop escalations and preparing MIS, vendor, and inventory reports.
+•Managed Windows 7 Professional and XP networks, overseeing Microsoft Outlook and network printer installations.
+System Engineer On-Site
+Nava Bharat Press (P) Ltd Mar 2010 – Mar 2012
+•Managed server infrastructure and ensured robust backup processes.
+•Provided helpdesk support, monitored Service Level Agreements (SLAs), and managed incident resolution.
+•Facilitated client meetings and performed system and hardware troubleshooting.
+
+Projects
+Routers, Switches and Server Configuration with Group Policies 2017 – 2018
+Client: Railwire/Railtel Corporation of India Ltd., Mumbai•Orchestrated cabling, installation, commissioning, and handover processes for WiFi AP configuration in Maharashtra
+State railway stations.
+•Developed and executed plans for integrating WiFi environments into station infrastructure.
+Routers, Switches and Server Configuration with Group Policies 2015 – 2016
+Client: Asha MMPC, Bali, Pali, Rajasthan•Configured DPMCU, Milknet Server, EMS Server, and QMS Server infrastructure.
+•Implemented robust backup schedules and managed Cisco router configuration upgrades.
+Routers, Switches and Server Configuration with Group Policies 2014 – 2015
+Client: The Scindia School, Fort, Gwalior (MP)•Configured and implemented network and server infrastructure, including Windows Servers (2000/2003, 2008 R2,
+2012 R2), AD, FTP , DNS, DHCP , TFTP , and Linux OS.
+•Provided advanced troubleshooting for complex LAN environments.
+Network Implementation and Configuration 2012 – 2013
+Client: M/s Teva API India Pvt Ltd, Bhind (MP)•Implemented and configured network infrastructure, including Check Point Endpoint Security MI Management
+Console for laptop users.
+•Managed over 350 Desktops and Laptops, overseeing full and differential backups with Symantec Backup Exec 12D
+and file restoration.
+Certificates
+Manual and Computerized Accounting with Tally ERP9 - Tally Academy, 2019
+Skills
+Operating Systems: Windows - Linux - Ubuntu - RHEL 6
+Network Technologies: Cisco Routing & Switching - InterVLAN Routing - Dynamic Protocols (RIPv2,
+RIPng, OSPF, EIGRP) - Static Routing - ACL - VTP - VLAN - EtherChannel - HSRP - STP - IPv6 - LAN
+Troubleshooting - Structured Network Cabling - Cisco Firewall - Fortinet Firewall
+Networking Devices: Cisco Routers (1800s, 1900s, 2600s, 2900s, 3600s, 3800s, 7200s) - Cisco Switches
+(Catalyst 2900s, 3700s, 4850s) - HP ProLiant Servers - Dell Servers - Lenovo Servers - Fortinet Firewalls -
+Modems
+Server Technologies: Active Directory (AD) - RODC - FTP - Print Server - SCCM - WDS - DHCP - Group
+Policies - DNS Server - RIS Server - User & Computer Policies
+Backup Technologies: Server 2016 backup tools - Symantec Backup EXEC 12D
+Virtualization: VMWare ESXi - VMware Workstation - Oracle VirtualBox - GNS3 Network Simulator

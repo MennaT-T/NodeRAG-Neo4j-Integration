@@ -1,0 +1,83 @@
+Aya Rashid
+Cloud Operations Architect
+aya.rashid@email.com |+20 100 123 4567 |/githubgithub.com/aya-rashid |/linkedinlinkedin.com/in/aya-rashid |
+ayarashid.com
+Education
+Symbiosis Institute of Computer Studies & Research
+Post Graduate Diploma Information Technology Jan 2013, Pune, India
+Savitribai Phule Pune University
+Bachelor of Engineering Electronics and Telecommunications Jan 2007, Pune, India
+Experience
+Cloud Operations Architect (DevOps)
+Egy-Tech Cloud Solutions Apr 2015 - Present, Cairo, Egypt
+•Managed Tibco Spotfire enterprise & Cloud Product support, ensuring high availability and performance.
+•Recruited and built a team of 15 members, establishing a robust operational presence in India.
+•Simultaneously worked on 4 different projects/products, effectively allocating resources and integrating new team
+members.
+•Coordinated production deployments and hot-fixes, ensuring seamless releases and minimal downtime.
+•Led the team in handling 4 critical projects, guiding technical execution and strategic planning.
+•Organized workshops on new AWS services to upskill the entire team, fostering continuous learning.
+•Developed shell scripts to extract and automate the shutdown of AWS running instances, optimizing resource uti-
+lization.
+•Created shell scripts to identify and release free Elastic IP addresses, reducing unnecessary costs.
+•Implemented Lambda functions to trigger important automation scripts, enhancing operational efficiency.
+•Platforms: AWS Cloud, Azure Cloud. Services: AWS EC2, RDS, CloudFormation Template, Lambda, DynamoDB,
+CloudWatch, Auto-scaling, Elastic Beanstalk, Appdynamics.
+Administrator, Automation & Monitoring Specialist
+Synechron Technologies Limited Apr 2012 - Mar 2015, Alexandria, Egypt
+•Managed Linux media server farms and provided comprehensive application support.
+•Performed patching for Linux physical and Xen boxes, maintaining system security and stability.
+•Created Satellite channels on Red Hat Satellite server for efficient patch and package management.
+•Implemented automation solutions via shell scripting and provided MySQL database support.
+•Troubleshooted and resolved issues for customized applications, ensuring continuous operation.
+•Platforms: Linux/Unix, Linux-Xen Servers. Software: Puppet, Redhat Satellite server, MySQL database, shell script-
+ing.
+Developer, Automation & Monitoring Specialist
+Tsys Limited Apr 2009 - Mar 2012, Cairo, Egypt
+•Provided access to users on RHDS, CVS, and dot project servers, managing user permissions.
+•Managed user access on dev/prod VDI servers, ensuring secure and controlled environments.
+•Handled MySQL database operations and developed shell scripts to automate routine tasks.
+•Understood project requirements and meticulously planned environment setup and access protocols.
+•Implemented MySQL replication across Linux servers to ensure data redundancy and high availability.
+•Fine-tuned existing applications for improved performance and efficiency.
+•Tested and debugged scripts for any errors, ensuring robust and reliable automation.
+•Platforms: Linux/Unix, Windows. Software: MySQL database, shell scripting.
+Senior System Engineer Client: Genworth Financial
+Patni Computer Systems Limited Jan 2007 - Mar 2009, Pune, India
+•Project: CPI (Maintenance project for Genworth Imaging Solutions)
+
+•Provided L1 engineers with support, troubleshooting and resolving complex system issues.
+•Monitored P8 Filenet application, ensuring optimal performance and uptime.
+•Managed and resolved user-raised tickets, maintaining high service levels.
+•Administered 10 Linux Proxy servers and MySQL servers, including implementing MySQL replication.
+•Prepared complex SQL queries for client users and handled Oracle database operations.
+•Tested insert, select, and update queries over servers before deployment to production.
+•Managed bugs raised by users, providing timely resolutions and updates.
+•Implemented MySQL replication over Linux servers and performed database backups using mysqldump.
+•Ensured functionality of customer applications (eProcess, Trexo) and customized Filenet instances.
+•Wrote shell scripts to automate various applications, including one to delete logs older than five days, successfully
+deployed to production.
+•Platforms: P8 Filenet, Linux/Unix, IBM AIX. Software: HTML, shell scripting.
+Projects
+CPI (Genworth Imaging Solutions Maintenance) Jan 2007 - Mar 2009
+Client: Genworth Financial•Maintained and enhanced applications for Genworth Imaging Solutions, processing scanned insurance documents.
+•Managed data storage in Oracle Database and images in P8 Filenet, ensuring data integrity and accessibility.
+•Developed and managed applications to generate reports for providers, facilitating efficient communication.
+•Involved extensive administration, database management (MySQL/Oracle/SQL), and application support.
+Automation Scripting Initiatives 2007 - Present
+•Developed numerous shell scripts and AWS Lambda functions to automate critical operational tasks across various
+platforms.
+•Implemented scripts for automating AWS instance shutdown and releasing free Elastic IP addresses, leading to
+significant cost savings.
+•Created scripts for automated log deletion (older than five days), successfully deployed to production environments.
+•Focused on enhancing system administration efficiency, reliability, and security through targeted automation.
+Skills
+Cloud Platforms: AWS, Azure
+DevOps Tools: Puppet, Redhat Satellite Server, AppDynamics, AWS CloudFormation, AWS Lambda,
+Auto-scaling, Elastic Beanstalk
+Scripting & Programming: Shell Scripting (96 months), Python (6 months), SQL, HTML
+Databases: MySQL, Oracle, DynamoDB
+Operating Systems: Linux/Unix, IBM AIX, Windows
+Other Technologies: P8 Filenet, Tibco Spotfire, RHDS, CVS, VDI, Appdynamics
+Methodologies: Automation (72 months), Solution Architecture, System Administration, Production
+Support, Team Leadership, Recruitment

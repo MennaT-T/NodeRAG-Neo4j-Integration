@@ -1,0 +1,67 @@
+Sayed Ahmed
+Web Designer and Developer
+sayed.ahmed@email.com |+20 101 234 5678 |/githubgithub.com/sayed-ahmed |/linkedinlinkedin.com/in/sayed-ahmed |
+sayedahmed.com
+Education
+B.C.A Bachelor Computer Application 2017
+Pune University Pune, Maharashtra
+H.S.C. 2015
+Pune University Pune, Maharashtra
+S.S.C. 2013
+Pune University Pune, Maharashtra
+Experience
+php Developer Full-time - On-Site
+Exposys Pvt. Ltd. August 2017 - Present
+•Developed and maintained dynamic web applications using PHP , HTML, CSS, JavaScript, and MySQL.
+•Contributed to the full development lifecycle of diverse projects, from concept to deployment.
+•Implemented user-friendly interfaces and robust backend functionalities to meet project specifications.
+•Utilized frameworks like CodeIgniter to build scalable and maintainable web solutions.
+•Collaborated with team members to ensure timely delivery and high-quality software.
+Projects
+Pragat Bharat System
+Software Developer - Team size: 1
+•Developed a system to collect information for different sectors, specifically designed for people-centric data collec-
+tion.
+•Technologies Used: HTML, CSS, Bootstrap, PHP , JQuery, Ajax, MySQL.
+Go Ayur System
+Software Developer - Team size: 2
+•Contributed to the development of a system for Go Ayurveda Panchakarma center, a provider of Classical Ayurvedic
+Health services and Kerala Panchakarma therapies.
+•Technologies Used: HTML, CSS, Bootstrap, PHP , JQuery, Ajax, MySQL.
+Vitsanindia System
+Software Developer - Team size: 2
+•Developed an online shopping application with a user-friendly interface, including a language change option for
+diverse users.
+•Enabled users to find products across different categories based on their preferences.
+•Technologies Used: HTML, CSS, Bootstrap, PHP , JQuery, Ajax, JavaScript, MySQL.
+MahabaleshwarTours
+Software Developer - Team size: 1
+•Created a tour management system providing online registration, package information, ticket booking, and online
+payment facilities.
+•Included searching functionality for customers and generation of various reports.
+•Technologies Used: HTML, CSS, Bootstrap, PHP , JQuery, Ajax, JavaScript, MySQL.
+Cityspaceindia
+Software Developer - Team size: 1
+•Developed a service provider website offering different categories of services.
+•Technologies Used: HTML, CSS, Bootstrap, PHP , JQuery, Ajax, JavaScript, MySQL.
+
+Fruitsbuddy
+Software Developer - Team size: 1
+•Designed and implemented a system to manage details of fruits, customers, orders, transactions, and payments.
+•Streamlined administrative tasks by providing a robust platform for managing stock and customer information.
+•Technologies Used: HTML, CSS, Bootstrap, PHP , JQuery, Ajax, JavaScript, MySQL.
+Totalcitee
+Software Developer - Team size: 1
+•Developed a real estate web application to facilitate property sales through a web-based user interface.
+•Integrated a search engine facility to allow visitors to view desired properties efficiently.
+•Technologies Used: HTML, CSS, Bootstrap, PHP , JQuery, Ajax, JavaScript, MySQL.
+Golchha
+Software Developer - Team size: 1
+•Created a service provider website offering various categories of services.
+•Technologies Used: HTML, CSS, Bootstrap, PHP , JQuery, Ajax, JavaScript, MySQL.
+Skills
+Web Development: HTML5 - CSS3 - Bootstrap - PHP - Ajax - jQuery - JavaScript - CodeIgniter
+Database: MySQL
+Development Tools: Notepad++ - Sublime Text2
+Server: Apache Tomcat - Xampp Control Panel
+Operating Systems: Windows

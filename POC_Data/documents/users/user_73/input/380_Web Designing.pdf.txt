@@ -1,0 +1,63 @@
+Huda Mansour
+Web and Graphics Designer
+huda.mansour@email.com |+20 102 345 6789 |/githubgithub.com/huda-mansour |/linkedinlinkedin.com/in/huda-mansour |
+hudamansour.com
+Education
+Nagpur University
+Bachelor of Engineering in Information Technology September 2015, Nagpur, India
+State Board of Secondary Education
+Higher Secondary Certificate (HSC) May 2011, Maharashtra, India
+Maharashtra State Board of Secondary Education
+Secondary School Certificate (SSC) June 2009, Maharashtra, India
+Experience
+Web and Graphics Designer
+Virtuous Media Point Jan 2017 - Dec 2018, Pune, India
+•Designed and developed responsive websites using HTML5, CSS3, Bootstrap, JavaScript, and jQuery.
+•Created compelling graphic designs for logos, brochures, and advertising materials using Corel Draw and Adobe
+Photoshop.
+Web Designing and Development Intern
+e-sense IT Solution pvt. ltd. Jan 2014 - Dec 2014, Nagpur, India
+•Designed website solutions by studying information needs, conferring with users, and analyzing systems flow, data
+usage, and work processes.
+•Understood process requirements and provided use cases for business, functional & technical requirements.
+•Interacted with users for requirement gathering; prepared functional specifications and low-level design documents.
+•Participated in the Software Development Life Cycle (SDLC) and Agile methodology from requirement analysis.
+•Performed detailed design of modules, implementation, and documentation; integrated software modules developed
+by other team members.
+•Developed various modules as per customer requirements and identified/fixed numerous bugs related to code,
+database connectivity, and UI defects.
+•Analyzed and modified existing codes to incorporate changes in application/user requirements; wrote new codes as
+required.
+•Coded, implemented, and integrated complex programs using HTML5, CSS3, JavaScript, jQuery, and Bootstrap.
+•Demonstrated strong command of graphic design with effective conceptual ideas.
+Projects
+Commercial Web Development Projects
+•Developed client websites including www.nitka.com, Nagpur United Corporation (admin), Mintmetrix.com, Tagline
+Videos (admin), and Smartbadge (admin).
+•Utilized HTML5, CSS3, Bootstrap, JavaScript, and jQuery with Sublime Text for development.
+Additional Web Development Projects
+•Contributed to websites such as www.shreekiaspack.co.in, www.3staragroproducts.com, and www.luckystationery.co.in.
+•Applied HTML5, CSS3, Bootstrap, and JavaScript; developed using Notepad++.
+Graphic Design Portfolio
+•Designed various logos, brochures, advertising banners, visiting cards, pamphlets, and hoardings for clients.
+WEB BASED DISEASE DIAGNOSIS EXPERT SYSTEM September 2014 - September 2015
+Major Project (B.E. Final Year)•Developed a web-based system providing online consultation for diseases, offering improved suggestions for health
+problems.
+SHOPPING MANAGEMENT SYSTEM January 2013 - May 2013
+Mini Project Development•Developed a comprehensive Shopping Management System using C++.
+
+Publications
+National Level Paper Presentation - TECH-WAVE 2015, S.R.M.C.E., Nagpur, India
+Awards & Honors
+Project Competition Participant - Innovesta 2015, Priyadarshini Indira Gandhi College of Engineering, Nagpur, India
+Skills
+Programming Languages: C (Basic) - Java (Basic)
+Web Technologies: HTML5 - CSS3 - Bootstrap - JavaScript - jQuery
+Databases: MySQL 5.0
+IDE & Tools: Sublime Text - Notepad
+Operating Systems: Windows XP - Windows 7
+Graphic Design: Corel Draw - Adobe Photoshop - Adobe Illustrator
+Extracurricular Activities
+Co-ordinator, Project Competition 2013 - 2014
+FACE-IT, Nagpur University
+•Organized and managed project competitions within the university.

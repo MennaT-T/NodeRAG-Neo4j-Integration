@@ -1,0 +1,78 @@
+Mahmoud Said
+Web Designer Developer
+mahmoud.said@email.com |+20 101 234 5678 |/githubgithub.com/mahmoud-said |/linkedinlinkedin.com/in/mahmoud-said
+|mahmoudsaid.com
+Education
+Pune University
+Bachelor of Computer Applications (BCA) 2014 - 2017, Pune, Maharashtra, India
+Pune University
+Higher Secondary Certificate (HSC) 2012 - 2014, Pune, Maharashtra, India
+Pune University
+Secondary School Certificate (SSC) 2010 - 2012, Pune, Maharashtra, India
+Experience
+PHP Developer Full-time - On-Site
+Exposys Pvt. Ltd. August 2017 - Present, Pune, Maharashtra, India
+•Developed and maintained web applications using PHP , JavaScript, and related web technologies.
+•Contributed to the full software development lifecycle, from requirement gathering to deployment and maintenance.
+Projects
+Pragat Bharat System
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX.
+•Database Used: MySQL.
+•Team size: 1
+•Position: Software Developer
+•Synopsis: Aims to collect information from different sectors for the people.
+Go Ayur System
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX.
+•Database Used: MySQL.
+•Team size: 2
+•Position: Software Developer
+•Synopsis: Developed for Go Ayurveda Panchakarma center, providing traditional Ayurvedic Health services and
+Kerala Panchakarma therapies.
+Vitsanindia System
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX, JAVA SCRIPT.
+•Database Used: MySQL.
+•Team size: 2
+•Position: Software Developer
+•Synopsis: Online shopping application featuring user-friendly interface with language change options and catego-
+rized product search.
+MahabaleshwarTours
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX, JAVA SCRIPT.
+•Database Used: MySQL.
+•Team size: 1
+•Position: Software Developer
+•Synopsis: Provides online registration, tour package information, ticket booking, online payment, and searching
+facility for customers, including report generation.
+Cityspaceindia
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX, JAVA SCRIPT.
+
+•Database Used: MySQL.
+•Team size: 1
+•Position: Software Developer
+•Synopsis: A service provider website offering different categories of services.
+Fruitsbuddy
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX, JAVA SCRIPT.
+•Database Used: MySQL.
+•Team size: 1
+•Position: Software Developer
+•Synopsis: Manages details of fruits, customers, orders, transactions, and payments. Administrator-only access to
+reduce manual work for stock and order management.
+Totalcitee
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX, JAVA SCRIPT.
+•Database Used: MySQL.
+•Team size: 1
+•Position: Software Developer
+•Synopsis: Real Estate web application enabling property sales through a web-based user interface, with search engine
+facilities for visitors.
+Golchha
+•Technologies Used: HTML, CSS, BOOTSTRAP , PHP , JQUERY, AJAX, JAVA SCRIPT.
+•Database Used: MySQL.
+•Team size: 1
+•Position: Software Developer
+•Synopsis: A service provider website offering different categories of services.
+Skills
+Web Development: HTML5 - CSS3 - Bootstrap - PHP - Ajax - jQuery - JavaScript
+Database: MySQL
+Development Tools: Notepad++ - Sublime Text2
+Framework: Codeigniter
+Server: Apache Tomcat - XAMPP Control Panel
+Operating Systems: Windows

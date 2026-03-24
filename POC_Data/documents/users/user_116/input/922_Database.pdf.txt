@@ -1,0 +1,72 @@
+Ali Khalil
+Database Administrator
+ali.khalil@email.com |+20 100 123 4567 |/githubgithub.com/ali-khalil |/linkedinlinkedin.com/in/ali-khalil |alikhalil.com
+Education
+PDACOE, Gulbarga, Autonomous Institution
+B. Tech Computer Science Gulbarga, Karnataka, India
+Experience
+Database Administrator III Full-time
+BNY Mellon International Operations (Egypt) Jan 2020 - Present
+•Installed and configured database servers using slipstream, setting up all maintenance jobs as per standard policy
+on standalone and cluster environments with latest service packs.
+•Installed SSRS, uploaded .rdls, and assigned correct data sources to reports, granting necessary access to users &
+developers on reporting website; gained awareness of SSIS package design.
+•Created and managed logins and users for database applications, assigning permissions as per requests, and resolv-
+ing user login issues.
+•Migrated all SQL Server 2005/2008 servers to higher versions, ensuring seamless transition and minimal downtime.
+•Set up database refresh jobs on QA, DEV , and UAT environments, efficiently fixing orphaned users.
+•Troubleshot complex performance-related issues, optimizing database operations for enhanced efficiency.
+•Contributed to multiple projects, collaborating with developers to provide essential support for testing in QA, UAT
+& DEV environments.
+•Led Disaster Recovery (DR) tests for the database team, ensuring robust recovery plans and system resilience.
+•Participated in database purge and archive activities, maintaining data integrity and storage efficiency.
+•Developed and implemented automation scripts for various database administration tasks, improving operational
+efficiency.
+•Automated DR tasks including starting agent jobs on multiple servers and restoring databases for log-shipped envi-
+ronments without manual intervention post-DR.
+•Provided comprehensive support to vendor databases, managed vendor calls, and timely escalated issues to ensure
+quick resolution.
+•Installed and configured smsql on Windows Server, scheduled jobs for creation and deletion of clones on SQL Server,
+and maintained backups.
+•Installed and configured MongoDB server, creating databases and collections as per project requirements.
+•Created new users and granted access using MongoDB Ops Manager, ensuring secure database access.
+•Monitored MongoDB database servers effectively using Ops Manager to ensure optimal performance and health.
+•Managed and maintained multiple instances of Oracle & Sybase Databases on Linux and Windows servers.
+•Monitored daily jobs, including backups, refreshes, and maintenance tasks for various database systems.
+Database Administrator Full-time
+HP Egypt (on payroll of Softenger Solutions) May 2017 - Dec 2019
+•Installed SQL Server on standalone and Windows cluster environments with latest service packs, including slipstream
+installations.
+•Installed and configured reporting services (SSRS) for business intelligence solutions.
+•Created logins and users, assigning appropriate permissions as per access requests, maintaining security.
+•Conducted security audits for all logins, including active management of unused and orphaned user logins.
+•Created & maintained daily and weekly jobs/maintenance plans, encompassing backup, index rebuild/reorganization,
+update statistics, and database consistency checks.
+•Established and maintained linked servers, ensuring reliable connectivity between diverse server environments.
+•Proactively monitored disk space and managed storage efficiently using data and log file shrinking techniques.
+•Monitored blocking, deadlocks, open transactions, and slow-running queries during performance issues, providing
+critical insights to developers.
+•Configured alerts for deadlock and blocking scenarios to proactively maintain and improve database performance.
+
+•Implemented and troubleshot high availability technologies such as Log Shipping, AlwaysOn, and Mirroring, with
+knowledge of Replication.
+•Successfully completed database migrations from one server to another, ensuring data integrity and system stability.
+•Performed Disaster Recovery (DR) drills (Online/Offline) on a quarterly basis to validate recovery procedures.
+•Utilized PowerShell scripting to monitor and restart SQL services, and to set up email alerts for service status.
+•Maintained TNS entries for Oracle client configurations as per client requirements, ensuring connectivity.
+•Interacted with customers to gather requirements and provided timely updates on the status of handling issues and
+service requests.
+•Managed proper escalation and notification matrix for all support levels, ensuring effective issue resolution.
+Projects
+Certificates
+Skills
+Operating Systems: Microsoft Window Server 2003 - 2012
+Database Technologies: SQL Server - Sybase ASE Server - Oracle - MongoDB
+Monitoring & Ticketing: HP Service Manager 7.0/9.0 - SolarWinds DPA - JIRA - MongoDB Ops Manager
+Web Server: IIS 7.0
+Database Tools: SSMS - DBArtisan - Studio 3T - SnapShot Manager for SQL Server
+High Availability: Log Shipping - AlwaysOn - Mirroring - Replication
+Scripting: PowerShell
+Key DBA Skills: Installation - Configuration - Performance Tuning - Migration - Backup & Recovery - DR
+Drills - Security Audit - User Management - Query Optimization
+Extracurricular Activities

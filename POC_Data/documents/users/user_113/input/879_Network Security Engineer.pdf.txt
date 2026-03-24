@@ -1,0 +1,97 @@
+Karim Ahmed
+Sr. Network Engineer
+karim.ahmed@email.com |+20 101 234 5678 |/githubgithub.com/karim-ahmed |/linkedinlinkedin.com/in/karim-ahmed |
+karimahmed.com
+Education
+M.Sc. Network Administration AISECT University, Bhopal, India
+Distance Education 2013 – 2015
+B.Com. Jiwaji University, Gwalior, India
+2010 – 2013
+Experience
+Sr. Network Engineer On-Site
+Cloudatix Network Pvt. Ltd. Jan 2022 – Present
+•Led configuration of Routers, Switches, and Servers with Group Policies for client projects.
+•Managed WiFi Access Point configurations for railway stations, including cabling, installation, commissioning, and
+handover.
+•Implemented and maintained backup schedules; upgraded and backed up Cisco router configuration files.
+•Administered Windows Servers (2008 R2, 2012 R2, 2016) for Active Directory, FTP , DNS, DHCP , TFTP services.
+•Troubleshot LAN & WAN infrastructure; configured Cisco Routers and Switches, coordinating with system admin-
+istrators.
+•Conducted regular health checks on File Servers & Application Servers for security compliance and disk space
+management.
+•Managed Windows 7 & 10 based networks; installed and configured Network Printers.
+•Managed user and group accounts, assigning proper rights on shared drives as per organizational requirements.
+IT Executive On-Site
+Asha MMPC Jan 2020 – Dec 2021
+•Configured DPMCU, Milknet, EMS, and QMS Servers for client projects in rural settings.
+•Implemented and maintained backup schedules; upgraded and backed up Cisco router configuration files.
+•Administered Windows Servers (2008 R2, 2012 R2, 2016) for Active Directory, FTP , DNS, DHCP , TFTP services.
+•Troubleshot LAN & WAN infrastructure; configured Cisco Routers and Switches.
+•Conducted regular health checks on File Servers & Application Servers for security and disk space management.
+•Managed Windows 7 & 10 based networks; installed and configured Network Printers.
+•Managed user and group accounts, assigning proper rights on shared drives.
+Network Engineer On-Site
+Interface Techno System Jan 2018 – Dec 2019
+•Led configuration and implementation of comprehensive network infrastructure for clients (e.g., The Scindia School).
+•Implemented and maintained backup schedules; upgraded and backed up Cisco router configuration files.
+•Administered Windows Servers (2000/2003, 2008 R2, 2012 R2) for Active Directory, FTP , DNS, DHCP , TFTP , and
+managed Linux OS.
+•Troubleshot complex LAN infrastructure; configured Cisco Routers and Switches.
+•Conducted regular health checks on File Servers & Application Servers for security compliance and disk space.
+•Managed Windows 7 Professional based networks; installed and configured Network Printers and server-side soft-
+ware/utilities.
+•Managed user accounts and assigned proper rights on shared drives.
+Network Support Engineer On-Site
+Interface Techno System Jan 2016 – Dec 2017
+•Supported network implementation and configuration projects for diverse clients (e.g., M/s Teva API India Pvt Ltd).
+•Implemented and maintained backup schedules, including differential and full backups using Symantec Backup Exec
+12D; restored corrupted/deleted files.
+
+•Upgraded and backed up Cisco router configuration files.
+•Administered Windows Servers (2000/2003, 2008 R2, 2012 R2) for Active Directory, FTP , DNS, DHCP , TFTP , and
+managed Linux OS.
+•Troubleshot complex LAN infrastructure; configured Cisco Routers and Switches.
+•Configured, maintained, and managed Check Point Endpoint Security MI Management Console for laptop users.
+•Conducted regular health checks on File Servers & Application Servers; logged and monitored calls using CA Uni-
+center Service Desk Manager.
+•Managed Windows XP Professional based networks; installed, configured, and troubleshot Microsoft Outlook.
+•Installed and configured Network Printers and server-side software/utilities.
+•Managed user accounts, assigned rights on shared drives, and issued E-Tokens for laptop users.
+•Managed over 350 Desktops and Laptops, handling escalations of desktop calls from remote locations.
+•Generated monthly/weekly reports for servers, MIS, vendor & inventory management reports.
+System Engineer On-Site
+Nava Bharat Press (P) Ltd Jan 2014 – Dec 2015
+•Managed servers and implemented comprehensive backup strategies to ensure data integrity.
+•Provided helpdesk support, monitored SLA compliance, and managed incidents to minimize downtime.
+•Hosted client meetings at scheduled intervals to discuss system performance and requirements.
+•Performed system management and troubleshooting, including hardware diagnostics and repair.
+Projects
+Routers, Switches and Server Configuration with Group Policies Client: Railwire/Railtel Corporation of India Ltd.
+Type: WiFi AP Configuration for Railway Stations Mumbai, India•Spearheaded configuration of WiFi APs for railway stations in Maharashtra, encompassing planning, cabling, instal-
+lation, commissioning, and handover.
+Routers, Switches and Server Configuration with Group Policies Client: Asha MMPC
+Type: Configuration of DPMCU, Milknet, EMS, QMS Servers Bali, Pali, Rajasthan, India•Executed server configurations for DPMCU, Milknet, EMS, and QMS systems, ensuring robust and reliable opera-
+tions.
+Routers, Switches and Server Configuration with Group Policies Client: The Scindia School
+Type: Network Configuration and Implementation Fort, Gwalior (MP), India•Implemented and configured network infrastructure, including routers, switches, and servers, for the educational
+institution.
+Network Implementation and Configuration Client: M/s Teva API India Pvt Ltd
+Type: Network Implementation and Configuration Bhind (MP), India•Managed comprehensive network implementation and configuration projects, ensuring seamless network operations
+and connectivity.
+Certificates
+Tally ERP9 Certification (Manual and Computerized Accounting) – Tally Academy, 2013
+Skills
+Operating Systems: Windows (7, 10, XP), Linux, Ubuntu, RHEL 6, Windows Server (2000, 2003, 2008 R2,
+2012 R2, 2016)
+Networking Technologies: Cisco Routing & Switching, InterVLAN Routing, RIPv2, RIPng, OSPF, EIGRP ,
+Static Routing, ACL, VTP , VLAN, EtherChannel, HSRP , STP , IPv6, LAN/WAN Troubleshooting, Structured
+Cabling, Cisco Firewall, Fortinet Firewall, DHCP , DNS, FTP
+Server Technologies: Active Directory (AD, RODC), Print Server, SCCM, WDS, DHCP , Group Policies, DNS
+Server, RIS Server, TFTP , User/Computer Policies
+Virtualization & Backup: VMWare ESXi, VMware Workstation, Oracle VirtualBox, GNS3, Symantec Backup
+EXEC 12D, Server 2016 Backup Tools
+Networking Devices: Cisco Routers (1800s-7200s), Cisco Switches (2900s, 3700s, 4850s), HP ProLiant Servers,
+Dell/Lenovo Servers, Fortinet Firewall, Modem
+Management & Tools: Helpdesk, SLA Monitoring, Incident Management, CA Unicenter Service Desk
+Manager, Check Point Endpoint Security MI Management Console, Microsoft Outlook, Tally ERP9, MIS
+Reporting, Vendor/Inventory Management, Hardware Troubleshooting

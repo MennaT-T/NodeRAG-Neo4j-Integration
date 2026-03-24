@@ -1,0 +1,71 @@
+Tarek Ahmed
+SAP BO/BODS Developer/Administrator
+tarek.ahmed@email.com |+20 122 345 6789 |/githubgithub.com/tarek-ahmed |/linkedinlinkedin.com/in/tarek-ahmed |
+tarekahmed.com
+Education
+Mumbai University
+Bachelor of Engineering August 2008 - July 2012, Navi Mumbai Panvel, Maharashtra
+Experience
+SAP BO/BODS Developer/Administrator
+Tata Consultancy Services Limited
+•Client: Royal Bank of Canada
+•Developed BODS jobs and created/modified packages during migration from Sybase to Oracle Database.
+•Taking up regular performance enhancement activities by co-coordinating with other teams like database team,
+Server Team, Data Center team to identify bottlenecks in the running of jobs.
+•Developed BODS jobs to fetch data from SAP R3 using various data transfer modes.
+•Implemented Central repositories to move jobs seamlessly in multi-developer environment
+SAP BP/BODS Developer/Administrator
+Tata Consultancy Services Limited
+•Installed and configured all the five environments of BO 4.0 and BODS 4.0/4.2 (DEV/QA/PROD/Standby/DR) with
+Apache and Tomcat as web and app servers on windows
+•Loading data received from various source systems like TCS BaNCS, SAP R3, LOS, Credence and flat files using
+SCD1 and SCD2 to Data Warehouse to generate consolidated reports.
+•Developed BODS jobs to fetch data from SAP R3 using various data transfer modes.
+•Implemented Central repositories to move jobs seamlessly in multi-developer environment.
+•Configuration and creation of BODS repositories using Repository Manager and Sever Manager
+•Used Formats and Transforms including Flat File formats, Query, Table Comparison, History Preserving, Validation
+Transform, Key Generation and Map Operation
+•Deployed BODS in Active-Active mode using server groups to improve performance and availability of the system
+•Using BO Java SDK to build custom java programs to automate various administration tasks and fetching metadata
+about BO system.
+•Implemented BO Mobile and used wdeploy to separate static and dynamic contents into web server and web appli-
+cation.
+•Developed audit reports in web Intelligence using audit universe to gather information about the usage of various
+reports in the BO system.
+•Implemented and deployed features like Trusted authentication,Vintela sso to make application easy to use for end
+users.
+•Daily administrator tasks involved migration of resources from one environment to another, publication creation
+and monitoring, troubleshooting any issues with the application and monitoring the application through the tools
+available to ensure that the application is up and available round the clock.
+•Have been involved in testing of backup systems in Standby and DR to make sure that application continue to service
+business users in case the primary systems are down.
+SAP BO/BODS Developer/Administrator
+Tata Consultancy Services Limited
+•Client: Tata Capital Financial Services Limited
+•Installed and configured all the five environments of BO 4.0 and BODS 4.0/4.2
+•(DEV/QA/PROD/Standby/DR) with Apache and Tomcat as web and app servers on windows.
+•Loading data received from various source systems like TCS BaNCS, SAP R3, LOS, Credence and flat files using
+SCD1 and SCD2 to Data Warehouse to generate consolidated reports.
+•Configuration and creation of BODS repositories using Repository Manager and Sever Manager.
+
+•Used Formats and Transforms including Flat File formats, Query, Table Comparison, History
+•Preserving, Validation Transform, Key Generation and Map Operation.
+•Deployed BODS in Active-Active mode using server groups to improve performance and availability of the system.
+•Using BO Java SDK to build custom java programs to automate various administration tasks and fetching metadata
+about BO system.
+•Implemented BO Mobile and used wdeploy to separate static and dynamic contents into web server and web appli-
+cation.
+•Developed audit reports in web Intelligence using audit universe to gather information about the usage of various
+reports in the BO system.
+•Implemented and deployed features like Trusted authentication, Vintela sso to make application easy to use for end
+users.
+•Daily administrator tasks involved migration of resources from one environment to another,publication creation
+and monitoring, troubleshooting any issues with the application and monitoring the application through the tools
+available to ensure that the application is up and available round the clock.
+•Have been involved in testing of backup systems in Standby and DR to make sure that application continue to service
+business users in case the primary systems are down.
+Skills
+ETL: SAP BODS
+Data Warehousing: SAP BO
+Databases: SQL/PL SQL - Oracle 11g - Sybase
+Programming: Basic Core Java - Basic Python

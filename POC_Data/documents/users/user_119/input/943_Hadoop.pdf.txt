@@ -1,0 +1,57 @@
+Abdelrahman Ahmed
+Hadoop Developer
+abdelrahman.ahmed@email.com |+20 101 234 5678 |/githubgithub.com/abdelrahman-ahmed |/linkedin
+linkedin.com/in/abdelrahman-ahmed |abdelrahmanahmed.com
+Experience
+Hadoop Developer Full-time
+Egy-Tech Solutions May 2020 – Present, Cairo, Egypt
+•Project Description: The banking information had stored the data in different data warehouse systems for each
+department but it became difficult for the organization to manage the data and to perform some analytics on the past
+data, so it combined them into a single global repository in Hadoop for analysis.
+•Analyzed the banking rates data set and created specification documents.
+•Provided effort estimation for various project tasks.
+•Developed Spark Scala and Spark SQL programs using Eclipse IDE in Windows/Linux environments.
+•Created KPI’s test scenarios, test cases, and test result documents.
+•Tested Scala programs in Linux Spark Standalone mode and set up multi-cluster on AWS to deploy Spark Scala
+programs.
+•Provided solutions using the Hadoop ecosystem including HDFS, MapReduce, Pig, Hive, HBase, and Zookeeper.
+•Implemented solutions using large-scale server-side systems with distributed processing algorithms.
+•Created reports for the BI team by using Sqoop to export data into HDFS and Hive.
+•Supported and assisted in troubleshooting and optimization of MapReduce jobs and Pig Latin scripts.
+•Demonstrated a deep understanding of Hadoop design principles, cluster connectivity, security, and factors affecting
+system performance.
+•Worked on importing and exporting data from different databases like Oracle and Teradata into HDFS and Hive
+using Sqoop, TPT, and Connect Direct.
+•Imported and exported data from RDBMS to HDFS/HBASE.
+•Wrote client-side scripts to temporarily store data in HDFS before loading into Hive tables.
+•Developed Sqoop scripts to facilitate interaction between Pig and MySQL Database.
+•Involved in developing Hive Reports and partitioning Hive tables.
+•Created and maintained technical documentation for launching Hadoop Clusters and for executing Hive queries and
+Pig scripts.
+•Ran Hadoop jobs for processing millions of records of text data.
+Hadoop Developer Full-time
+Vodafone Egypt January 2018 – April 2020, Giza, Egypt
+•Project Description: Identified customers likely to churn and created a 360-degree customer view from various
+heterogeneous data sources. Data was brought into a data lake (HDFS) and analyzed using Hadoop tools like Pig
+and Hive.
+•Installed and configured Apache Hadoop tools (Hive, Pig, HBase, Sqoop) for application development and unit
+testing.
+•Wrote MapReduce jobs to discover trends in user data usage.
+•Involved in database connection using Sqoop.
+•Created Hive tables, loaded data, and wrote Hive queries using HiveQL.
+•Involved in partitioning and joining Hive tables for query optimization.
+•Experienced in SQL DB Migration to HDFS.
+•Utilized NoSQL (HBase) for faster performance, maintaining de-normalized data for OLTP .
+•Collected data from distributed sources into Avro models, applied transformations, standardized, and loaded into
+HBase for further processing.
+•Experienced in defining job flows and used Oozie to orchestrate workflows.
+•Implemented Fair schedulers on the Job Tracker to share cluster resources for MapReduce jobs.
+•Exported analyzed data to relational databases using Hive for visualization and BI report generation.
+
+Skills
+Big Data Technologies: Hadoop, HDFS, MapReduce, Pig, Hive, Sqoop, Flume, Oozie, HBase, Spark,
+Cloudera, Storm, Zookeeper
+Programming Languages: Java, Scala, Python, Shell Scripting, SQL, PL/SQL
+Databases: NoSQL, Oracle 10g, MySQL, Teradata, RDBMS
+Tools & Platforms: Linux, AWS, Eclipse IDE, Tomcat, Putty, SVN, GitHub, IBM WebSphere v8.5, SQL*PLUS,
+Connect Direct, TPT

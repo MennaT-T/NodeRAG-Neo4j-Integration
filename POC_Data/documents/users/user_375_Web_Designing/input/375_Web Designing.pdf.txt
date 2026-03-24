@@ -1,0 +1,68 @@
+Nagwa Ibrahim
+Web and Graphics Designer
+nagwa.ibrahim@email.com |+20 100 123 4567 |/githubgithub.com/nagwa-ibrahim |/linkedinlinkedin.com/in/nagwa-ibrahim
+|nagwaibrahim.com
+Education
+Cairo University CGPA: N/A
+Bachelor of Engineering in Information Technology September 2015, Giza, Egypt
+Egyptian Ministry of Education
+Higher Secondary Certificate (HSC) May 2011, Cairo, Egypt
+Egyptian Ministry of Education
+Secondary School Certificate (SSC) June 2009, Cairo, Egypt
+Experience
+Web and Graphics Designer Full-time
+Virtuous Media Point Sep 2015 – Aug 2017
+•Designed and developed engaging websites using HTML5, CSS3, Bootstrap, JavaScript, and jQuery.
+•Created various graphic assets including logos, brochures, advertising banners, visiting cards, pamphlets, and hoard-
+ings using Corel Draw, Adobe Photoshop, and Adobe Illustrator.
+•Utilized strong command of graphic design principles to deliver effective and visually appealing solutions.
+Web Designing and Development Intern Internship
+e-sense IT Solutions Pvt. Ltd. Jan 2014 – Aug 2015
+•Designed website solutions by studying information needs, conferring with users, and studying systems flow, data
+usage, and work processes.
+•Understood process requirements and provided use cases for business, functional & technical requirements.
+•Interacted with users for requirement gathering; prepared functional specifications and low-level design documents.
+•Participated in the Software Development Life Cycle (SDLC) and Agile methodology from requirement analysis.
+•Performed detailed design of modules along with their implementation, and documentation of integrated software
+modules developed by other team members.
+•Developed various modules as per customer requirement; identified and fixed numerous bugs related to code,
+database connectivity, and UI defects.
+•Analyzed and modified existing codes to incorporate changes in application/user requirements; wrote new codes as
+required.
+•Coded, implemented, and integrated complex programs using technologies such as HTML5, CSS3, JavaScript, jQuery,
+and Bootstrap.
+Projects
+Web Development Portfolio During Education
+•Developed various websites including www.nitka.com, Nagpur United Corporation (admin), Mintmetrix.com, Tagline
+Videos (admin), Smartbadge (admin).
+•Created websites such as www.shreekiaspack.co.in, www.3staragroproducts.com, and www.luckystationery.co.in.
+•Utilized technologies including HTML5, CSS3, Bootstrap, JavaScript, and jQuery, with Sublime Text and Notepad ++
+as text editors.
+Graphic Design Portfolio During Education
+•Designed a wide range of graphic materials including Logos, Brochures, Advertising Banners, Visiting Cards, Pam-
+phlets, and Hoardings.
+•Demonstrated strong creative and technical skills in conceptualizing and executing visual designs for diverse client
+needs.
+WEB BASED DISEASE DIAGNOSIS EXPERT SYSTEM (B.E. Final Year Project) 1 Year
+•Developed a web-based system providing online doctor consultations and health suggestions for various diseases.
+•Aimed to offer better suggestions for health problems, leveraging web technologies for a user-friendly interface.
+SHOPPING MANAGEMENT SYSTEM (Mini Project)
+•Developed a Shopping Management System using C ++.
+
+Skills
+Programming Languages: C (Basic) - JAVA (Basic) - C ++
+Web Technologies: HTML5 - CSS3 - Bootstrap - JavaScript - jQuery
+Graphic Design: Corel Draw - Adobe Photoshop - Adobe Illustrator
+Databases: MySQL 5.0
+IDE & Tools: Sublime Text - Notepad ++
+Operating Systems: Windows XP - Windows 7
+Extracurricular Activities
+Co-ordinator 2015
+FACE-IT, Cairo University
+•Co-ordinated a project competition, managing participants and event logistics.
+Project Presenter 2015
+Faculty of Engineering, Ain Shams University, Cairo, Egypt
+•Presented a project in "Innovesta ’15" competition, demonstrating innovative solutions and technical skills.
+Paper Presenter 2015
+Future University in Egypt, New Cairo, Egypt
+•Delivered a national-level paper presentation at "Tech-Wave 2015", sharing insights and research findings.

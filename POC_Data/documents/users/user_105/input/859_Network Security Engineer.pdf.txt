@@ -1,0 +1,106 @@
+Noha Zaki
+Senior Network Engineer
+noha.zaki@email.com |+20 101 234 5678 |/githubgithub.com/noha-zaki |/linkedinlinkedin.com/in/noha-zaki |nohazaki.com
+Education
+M.Sc. (Master of Science), Distance Education 2012 – 2014
+AISECT University Gwalior, India
+B.Com. (Bachelor of Commerce) 2009 – 2012
+Jiwaji University Gwalior, India
+Experience
+Sr. Network Engineer Full-time - On-Site
+Cloudatix Network Pvt. Ltd. Jan 2021 – Present
+•Led Routers, Switches, and Server Configuration with Group Policies for Railwire/Railtel Corporation of India Ltd.,
+Mumbai.
+•Managed earthing and trenching for network equipment installation.
+•Developed and executed plans for Wi-Fi environment preparation at railway stations, including cabling, installation,
+commissioning, and handover.
+•Implemented and maintained comprehensive backup schedules for critical network data.
+•Upgraded and backed up Cisco router configuration files to ensure network resilience.
+•Installed, configured, and administered Windows Servers 2008 R2, 2012 R2, 2016 for Active Directory, FTP , DNS,
+DHCP , and TFTP services.
+•Troubleshooted complex LAN & WAN infrastructure issues, ensuring network stability and performance.
+•Configured Cisco Routers and Switches, coordinating closely with system/network administrators during imple-
+mentation phases.
+•Conducted regular health checks of File Servers & Application Servers to identify and mitigate security violations
+and disk space issues.
+•Maintained and managed Windows 7 & 10 based network environments.
+•Installed and configured network printers, providing essential printing services.
+•Assigned proper rights on shared drives, ensuring data security and access control.
+•Managed user and group accounts, assigning appropriate rights based on organizational requirements.
+IT Executive Full-time - On-Site
+Asha MMPC Jun 2019 – Dec 2020
+•Managed Routers, Switches, and Server Configuration with Group Policies for Asha MMPC, Bali, Pali, Rajasthan.
+•Configured DPMCU, Milknet Server, EMS Server, and QMS Server to support operational needs.
+•Implemented and maintained backup schedules for critical data and systems.
+•Upgraded and backed up Cisco router configuration files.
+•Installed, configured, and administered Windows Servers 2008 R2, 2012 R2, 2016 for Active Directory, FTP , DNS,
+DHCP , and TFTP .
+•Troubleshooted LAN & WAN infrastructure issues.
+•Configured networking devices (Cisco Router, switches) in coordination with system/network administrator during
+implementation.
+•Performed regular health checks of File Servers & Application Servers for security violations and disk space.
+•Maintained and managed Windows 7 & 10 based network environments.
+•Installed and configured network printers.
+•Assigned proper rights on shared drives and managed user/group accounts.
+Network Engineer Full-time - On-Site
+Interface Techno System Jan 2017 – May 2019
+•Executed Routers, Switches, and Server Configuration with Group Policies for The Scindia School, Fort, Gwalior
+(MP).
+
+•Implemented and maintained backup schedules.
+•Upgraded and backed up Cisco router configuration files.
+•Installed, configured, and administered Windows Servers 2000/2003, 2008 R2, 2012 R2 for Active Directory, FTP ,
+DNS, DHCP , TFTP , and Linux OS.
+•Troubleshooted complex LAN infrastructure.
+•Configured networking devices (Cisco Router, switches), coordinating with system/Network administrators during
+implementation.
+•Conducted regular health checks of File Servers & Application Servers for security violations and disk space.
+•Maintained and managed Windows 7 Professional based networks.
+•Installed and configured network printers and server-side software & utilities.
+•Assigned proper rights on shared drives and managed user accounts.
+Network Support Engineer Full-time - On-Site
+Interface Techno System Jan 2015 – Dec 2016
+•Implemented and configured networks for M/s Teva API India Pvt Ltd, Bhind (MP).
+•Implemented and maintained backup schedules.
+•Upgraded and backed up Cisco router configuration files.
+•Installed, configured, and administered Windows Servers 2000/2003, 2008 R2, 2012 R2 for Active Directory, FTP ,
+DNS, DHCP , TFTP , and Linux OS.
+•Troubleshooted complex LAN infrastructure.
+•Configured networking devices (Cisco Router, switches), coordinating with system/Network administrators.
+•Configured, maintained, and managed Check Point Endpoint Security MI Management Console for laptop users.
+•Performed regular health checks of File Servers & Application Servers for security violations and disk space.
+•Logged and monitored calls using CA Unicenter Service Desk Manager.
+•Maintained and managed Windows XP Professional based networks.
+•Installed, configured, and troubleshooted Microsoft Outlook.
+•Installed and configured network printers and server-side software & utilities.
+•Assigned proper rights on shared drives and managed user accounts.
+•Issued E-Tokens for laptop users.
+•Managed over 350 desktops and laptops.
+•Performed differential and full backups of servers using Symantec Backup Exec 12D.
+•Restored corrupted or accidentally deleted files.
+•Handled escalations of desktop calls from remote locations.
+•Generated monthly/weekly reports for servers.
+•Prepared MIS, vendor, and inventory management reports.
+System Engineer Full-time - On-Site
+Nava Bharat Press (P) Ltd Sep 2013 – Dec 2014
+•Managed servers, ensuring optimal performance and uptime.
+•Managed backups, ensuring data integrity and availability.
+•Provided helpdesk support, monitored SLAs, and managed incidents.
+•Hosted client meetings at scheduled intervals to discuss system status and requirements.
+•Managed and troubleshooted systems to resolve issues efficiently.
+•Troubleshooted hardware problems, minimizing downtime.
+Certificates
+Tally ERP9 Certification (Manual & Computerized Accounting) – Tally Academy, 2013
+
+Skills
+Operating Systems: Windows – Linux – Ubuntu – RHEL 6
+Networking Technologies: Cisco Routing & Switching – InterVLAN Routing – RIPv2 – RIPng – OSPF –
+EIGRP – Static Routing – ACL – VTP – VLAN – EtherChannel – HSRP – STP – IPv6 – LAN Troubleshooting –
+Structured Network Cabling – Cisco Firewall – Fortinet Firewall
+Networking Devices: Cisco Routers (1800s, 1900s, 2600s, 2900s, 3600s, 3800s, 7200s) – Cisco Switches
+(Catalyst 2900s, 3700s, 4850s) – HP ProLiant Servers – Dell Servers – Lenovo Servers – Fortinet Firewall –
+Modem
+Server Technologies: Active Directory (AD, RODC) – FTP – Print Server – SCCM – WDS – DHCP – Group
+Policies – DNS Server – RIS Server
+Backup Technologies: Windows Server 2016 backup tools – Symantec Backup EXEC 12D
+Virtualization: VMware ESXi – VMware Workstation – Oracle VirtualBox – GNS3 Network Simulator

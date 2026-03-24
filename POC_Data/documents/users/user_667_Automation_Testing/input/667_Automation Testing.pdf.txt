@@ -1,0 +1,92 @@
+Ashraf Hassan
+QA Automation Lead
+ashraf.hassan@email.com |+20 122 345 6789 |/githubgithub.com/ashraf-hassan |/linkedinlinkedin.com/in/ashraf-hassan |
+ashrafhassan.com
+Education
+Mumbai University
+Bachelor of Science, Computer Science Mumbai, Maharashtra
+Experience
+QA Automation Lead
+Leading Industrial Automation
+•Test Rockwell Automation embedded systems such as Logix Designer, Factory Talk, RSLinx Classic, Control Flash,
+Compare Tool, I/O modules and Profiles.
+•Coordinate with Onsite and Offshore QA leads to design and develop test strategy and test plan.
+•Document test plan and test cases base on product Requirement Document and functional specification. Discussed
+and explained the requirement to QA team.
+•Work in Scrum base Agile Methodology and Test Driven development environment with frequent changing require-
+ments and lots of challenges.
+•Document and Published Program Increment Objectives, Program Increment planning report, Feature Epics, Backlog
+and Stories.
+•Conduct and Participated in Program Increment Planning, Backlog Grooming, Sprint Planning, Daily Stand Ups,
+Sprint Review and Retrospective.
+•Perform Automation testing tasks such as Design, Create, Maintain, Execute and peer review test scripts using Test
+Automation Framework(TAF)
+•Develop and Execute System integration and GUI integration test using C++.
+•Interact with Business Analysts and Software Developers for bug review and participated in QA meetings.
+•Work closely with development and engineering department to ensure proper resolution of bugs.
+•Proactively came up with innovative methods to improve software quality, test coverage, efficiency and regression
+coverage.
+•Created and Maintained testing documents such as High Level Requirement, Test strategy report, Test plan, Test
+cases, Test execution results, Bug report, Quality Metrics, Traceability Matrix and Testing Summary Reports.
+QA Automation Lead
+GE-Healthcare
+•Validated GE CT scanners based on FDA compliances and regulations.
+•Interacted with Clinical experts, Business Analysts and Development architect for creation of test strategy and test
+plan.
+•Coordinated with the Offshore QA and Onsite QA team to work on design and develop of test strategies and
+requirement traceability matrix.
+•Designed, Created and executed manual test cases base on product requirement documents.
+•Increased productivity by initiating use of automation tools like DICOM and QTP .
+•Trained and guided GE team on automation test creation and execution using QTP .
+•Performed testing types such as functional, integration, performance and regression and Provide test reports to
+management.
+•Involved in release support, test bed creation & testing throughout release process.
+QA Automation Lead
+Patni-GE-Healthcare PACS
+•Validated GE PACS application and tested web application defined for Administration, Authentication and Archiving
+of DICOM images.
+
+•Involved in the creation of Automation framework by using Hybrid and BPT approach.
+•Responsible for creation of Test Bed and Golden Data using DCMTK.
+•Prepared the Test Scenarios, Test plan, Test cases and Automation Scripts for Integration, System and End-to-End
+testing on all applications.
+•Designed and developed User defined and Generic functions with well-versed VB scripting.
+•Descriptive programming in scripting dynamic objects and reusable actions in defining scenario flows in UFT/QTP .
+•Reviewed the QTP Scripts developed by the team members.
+•Supported the QA/SIT and Regression testing team for environmental issues and Interact with other downstream
+environment system team for the clarifications.
+QA Automation Lead
+HDFC Bank Limited
+•Reviewed Business requirements, design documents and prepared test cases for assigned project releases.
+•Performed testing types such as API, functional, integration, System, performance, regression, security and network.
+Provide test reports to management.
+•Involved in integration testing for release of new functionality.
+•Testing critical bug’s fixes and co-ordinate with developer in fixing these critical bugs.
+•Involved in backend database testing in oracle and Microsoft SQL.
+•Involved in release support, test bed setup & testing throughout release process.
+•Automation of test flow’s using automated tools QTP 10.
+QA Automation Lead
+Vistaar Systems Limited
+•Referred Business requirements documents, Use case documents and Design documents provided by client and
+developer for creation of Manual and Automation test cases.
+•Involved in Analysis, Design, Creation, Execution and Debugging of automation scripts using automation tools like
+Rational Robot, QTP and Shell scripting.
+•Testing critical bug’s fixes and co-ordinate with developer in fixing these critical bugs.
+•Involved in Installation of build, Maintaining test bed, Smoke and Sanitary testing, Regression testing, Performance
+testing and Database testing using Rational Robot, QTP and Shell scripting.
+Skills
+Agile Methodology: Scrum, Kanban, Extreme Programming(XP), Test-driven development (TDD) and
+Feature Driven development(FDD)
+Domain: Industrial Automation, Retail, Banking, Insurance, Health care
+Automation Framework: Modular, Data driven, BPT, Hybrid
+Test automation tool: HP UFT, TAF, Load Runner, Selenium, Rational Robot, DCMTK, sikuli
+Languages: VB Script, C++, Python, Shell Script
+Bug Tracking Tool: Bugzilla, Jira, HP Quality Control, AP Test, Clear Quest
+Version management: Clear case, Win CVS, SVN
+Database: Oracle, SQL server, MySQL
+Network Protocols: TCP/IP , HTTP , HTTPS, VPN, FTP , LDAP
+Healthcare: DICOM, PACS, HL7, Image Archiving, Image reconstruction
+Rockwell Automation: Logix Designer, Factory Talk, RSLinx Classic, Control Flash, Compare Tool, I/O
+modules and Profiles
+Programming Languages: C++, PYTHON, SQL
+Testing Tools: UFT, SELENIUM

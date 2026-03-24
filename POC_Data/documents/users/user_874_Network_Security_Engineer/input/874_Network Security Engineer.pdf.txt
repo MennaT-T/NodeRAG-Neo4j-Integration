@@ -1,0 +1,91 @@
+Hassan Abdel Rahman
+Sr. Network Engineer
+hassan.abdelrahman@email.com |+20 101 234 5678 |/githubgithub.com/hassan-abdel-rahman |/linkedin
+linkedin.com/in/hassan-abdel-rahman |hassanabdelrahman.com
+Education
+AISECT University
+MSc Distance Education Cairo, Egypt
+Jiwaji University
+B. Com Gwalior, India
+Experience
+Sr. Network Engineer
+Cloudatix Network Egypt Cairo, Egypt
+•Planned and executed earthing, trenching, cabling, installation, and commissioning for WiFi environments.
+•Managed and maintained backup schedules; performed upgrades and backups of Cisco router configurations.
+•Installed, Configured, and Administered Windows Servers (2008 R2, 2012 R2, 2016), Active Directory, FTP , DNS,
+DHCP , and TFTP .
+•Troubleshot LAN & WAN infrastructure and coordinated network device settings (Cisco Routers, Switches) with
+system administrators.
+•Conducted regular health checks of File Servers & Application Servers for security violations and disk space.
+•Maintained and managed Windows 7 & 10 based networks, including installing and configuring network printers.
+•Assigned proper rights on shared drives and managed users & groups according to organizational requirements.
+IT Executive
+Egyptian Milk & Dairy Products Co. Giza, Egypt
+•Implemented and maintained backup schedules, including upgrading and backing up Cisco router configuration
+files.
+•Installed, configured, and administered Windows Servers (2008 R2, 2012 R2, 2016), Active Directory, FTP , DNS,
+DHCP , and TFTP .
+•Troubleshot LAN & WAN infrastructure and coordinated network device settings with system/network administra-
+tors.
+•Performed regular health checks on File Servers & Application Servers for security violations and disk space.
+•Maintained and managed Windows 7 & 10 based networks, including installing and configuring network printers.
+•Assigned proper rights on shared drives and managed users & groups according to organization requirements.
+Network Engineer / Network Support Engineer
+Interface Tech Solutions Alexandria, Egypt
+•Implemented and maintained backup schedules; upgraded and backed up Cisco router configuration files.
+•Installed, Configured, and Administered Windows Servers (2000/2003, 2008 R2, 2012 R2), Active Directory, FTP ,
+DNS, DHCP , TFTP , and Linux OS.
+•Troubleshot complex LAN infrastructure and coordinated network device settings with system/network administra-
+tors.
+•Configured, Maintained, and managed Check Point Endpoint Security MI Management Console for laptop users.
+•Logged and monitored calls using CA Unicenter Service Desk Manager.
+•Managed and maintained Windows 7 and Windows XP professional based networks.
+•Installed and configured Network Printers, server-side software, and utilities.
+•Managed user accounts and assigned proper rights on shared drives.
+•Issued E-Tokens for laptop users and managed over 350 Desktops and Laptops.
+•Performed differential and full backups of servers using Symantec Backup EXEC 12D and restored corrupted/deleted
+files.
+•Handled escalations of desktop calls from remote locations and generated monthly/weekly server reports.
+
+•Prepared MIS, vendor, and inventory management reports.
+System Engineer
+Al-Ahram Printing Press Giza, Egypt
+•Managed servers, backups, helpdesk operations, SLA monitoring, and incident management.
+•Hosted client meetings at scheduled intervals.
+•Provided system management and troubleshooting, including hardware troubleshooting.
+Projects
+Routers, Switches and Server Configuration with Group Policies (Egyptian National Railways)
+Executed at Cloudatix Network Egypt•Configured WiFi Access Points for railway stations across Maharashtra State, including cabling and equipment in-
+stallation.
+•Managed comprehensive configuration of routers, switches, and servers, applying group policies to ensure network
+security and efficiency.
+•Ensured smooth commissioning and handover of network infrastructure projects.
+DPMCU, Milknet, EMS, QMS Server Configuration (Egyptian Milk & Dairy Products Co.)
+Executed at Egyptian Milk & Dairy Products Co.•Configured and implemented DPMCU, Milknet Server, EMS Server, and QMS Server solutions to support dairy
+operations.
+•Ensured optimal performance and stability of critical server infrastructure for production and quality management.
+Network Implementation and Configuration (El-Alsson School)
+Executed at Interface Tech Solutions, Alexandria, Egypt•Led the configuration and implementation of network infrastructure including routers, switches, and servers for the
+school.
+•Applied group policies to enhance network security and streamline user management within the educational envi-
+ronment.
+Network Implementation and Configuration (Pharco Pharmaceuticals)
+Executed at Interface Tech Solutions, Alexandria, Egypt•Managed the implementation and configuration of a robust network infrastructure tailored for a pharmaceutical
+company.
+•Deployed and maintained Check Point Endpoint Security MI Management Console and utilized CA Unicenter Ser-
+vice Desk Manager for monitoring.
+•Responsible for managing over 350 desktops and laptops, ensuring system functionality and security.
+Certificates
+Tally Certification - Tally Academy
+Skills
+Operating Systems: Windows - Linux - Ubuntu - RHEL 6 networks
+Network Technologies: Cisco Routing and Switching - InterVLAN Routing - RIPv2 - RIPng - OSPF - EIGRP
+- Static Routing - ACL - VTP - VLAN - EhterChannel - HSRP - STP - IPv6 - LAN Troubleshooting - Structured
+Network Cabling - Cisco Firewall - Fortinet Firewall
+Networking Devices: Cisco Routers (1800s, 1900s, 2600s, 2900s, 3600s, 3800s, 7200s) - Cisco Switches
+(Catalyst 2900s, 3700s, 4850s) - HP ProLiant Servers - Dell Server - Lenovo Servers - Fortinet Firewall - Modem
+Server Technologies: Active Directory (AD) - RODC - FTP - Print Server - SCCM - WDS - DHCP - Group
+Policies - DNS Server - RIS Server - User Policies - Computer Policies
+Backup Technologies: Server 2016 backup tools - Symantec Backup EXEC 12D
+Virtualization: VMWare ESXi - VMware Workstation - Oracle VirtualBox - GNS3 Network Simulator
+Other Skills: Manual and Computerized Accounting - Tally ERP9
