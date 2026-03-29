@@ -33,7 +33,7 @@ from NodeRAG import NodeConfig, NodeSearch
 # Which mode to run:
 #   True  → NodeRAG with QA enabled   → results saved to "QA Answer / QA Tokens / QA Time"
 #   False → NodeRAG with QA disabled  → results saved to "NO_QA Answer / NO_QA Tokens / NO_QA Time"
-USE_QA: bool = True
+USE_QA: bool = False
 
 # Maximum number of rows to process in this run.
 # Set to None to process every unprocessed row in the dataset.
@@ -171,7 +171,7 @@ def query_noderag(
     for run in range(NUM_RUNS):
         t0 = time.time()
         try:
-            result  = engine.answer(question, job_context=job_description)
+            result  = engine.answer(question, job_context=job_description, use_qa=USE_QA)
             elapsed = time.time() - t0
             elapsed_times.append(elapsed)
 

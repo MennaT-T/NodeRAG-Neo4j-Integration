@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-03-24T21:32:10.061978",
+  "overall": {
+    "mode": "NO_QA",
+    "total_rows": 5,
+    "successful": 5,
+    "failed": 0,
+    "success_rate_pct": 100.0,
+    "total_elapsed_s": 133.14,
+    "latency_s": {
+      "avg": 26.159,
+      "min": 17.854,
+      "max": 28.498,
+      "median": 28.177,
+      "std_dev": 4.161
+    },
+    "tokens": {
+      "avg": 3204.0,
+      "total": 16020,
+      "min": 3020,
+      "max": 3264
+    },
+    "avg_answer_length_chars": 1802.0
+  },
+  "per_job_title": {
+    "DevOps Engineer": {
+      "total": 5,
+      "successful": 5,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 26.159,
+        "min": 17.854,
+        "max": 28.498,
+        "median": 28.177,
+        "std_dev": 4.161
+      },
+      "avg_tokens": 3204.0
+    }
+  },
+  "per_user": {
+    "user_36": {
+      "total": 5,
+      "successful": 5,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 26.159,
+        "min": 17.854,
+        "max": 28.498,
+        "median": 28.177,
+        "std_dev": 4.161
+      },
+      "avg_tokens": 3204.0
+    }
+  }
+}

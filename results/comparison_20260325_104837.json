@@ -1,0 +1,574 @@
+{
+  "generated_at": "2026-03-25T10:48:37.793145",
+  "rows_compared": 884,
+  "unique_users": 13,
+  "unique_jobs": 4,
+  "job_title_counts": {
+    "Backend Developer": 347,
+    "Software Engineer": 280,
+    "Machine Learning": 187,
+    "DevOps Engineer": 70
+  },
+  "overall": {
+    "mode_stats": {
+      "LLM": {
+        "answer_length_chars": {
+          "n": 884,
+          "avg": 2085.5,
+          "min": 989,
+          "max": 2956,
+          "median": 2097.5,
+          "std_dev": 289.91
+        },
+        "tokens": {
+          "n": 884,
+          "avg": 3294.09,
+          "min": 2222.0,
+          "max": 5043.0,
+          "median": 3319.5,
+          "std_dev": 475.17
+        },
+        "latency_s": {
+          "n": 884,
+          "avg": 32.09,
+          "min": 4.04,
+          "max": 116.9,
+          "median": 28.83,
+          "std_dev": 18.8
+        }
+      },
+      "QA": {
+        "answer_length_chars": {
+          "n": 884,
+          "avg": 1692.43,
+          "min": 194,
+          "max": 2078,
+          "median": 1689.0,
+          "std_dev": 142.5
+        },
+        "tokens": {
+          "n": 884,
+          "avg": 3357.35,
+          "min": 1882.0,
+          "max": 5359.0,
+          "median": 3315.0,
+          "std_dev": 862.57
+        },
+        "latency_s": {
+          "n": 884,
+          "avg": 33.12,
+          "min": 21.72,
+          "max": 52.48,
+          "median": 32.89,
+          "std_dev": 4.49
+        }
+      },
+      "NO_QA": {
+        "answer_length_chars": {
+          "n": 884,
+          "avg": 1683.41,
+          "min": 194,
+          "max": 2179,
+          "median": 1697.5,
+          "std_dev": 197.99
+        },
+        "tokens": {
+          "n": 884,
+          "avg": 3356.76,
+          "min": 1864.0,
+          "max": 5393.0,
+          "median": 3329.0,
+          "std_dev": 863.69
+        },
+        "latency_s": {
+          "n": 884,
+          "avg": 31.42,
+          "min": 17.85,
+          "max": 49.13,
+          "median": 29.88,
+          "std_dev": 4.36
+        }
+      }
+    },
+    "pair_similarity": {
+      "QA_vs_LLM": {
+        "unigram_jaccard": {
+          "n": 884,
+          "avg": 0.29,
+          "min": 0.02,
+          "max": 0.46,
+          "median": 0.28,
+          "std_dev": 0.05
+        },
+        "bigram_jaccard": {
+          "n": 884,
+          "avg": 0.09,
+          "min": 0.0,
+          "max": 0.2,
+          "median": 0.09,
+          "std_dev": 0.03
+        },
+        "unigram_overlap": {
+          "n": 884,
+          "avg": 0.42,
+          "min": 0.02,
+          "max": 0.6,
+          "median": 0.42,
+          "std_dev": 0.07
+        }
+      },
+      "NO_QA_vs_LLM": {
+        "unigram_jaccard": {
+          "n": 884,
+          "avg": 0.28,
+          "min": 0.0,
+          "max": 0.46,
+          "median": 0.29,
+          "std_dev": 0.06
+        },
+        "bigram_jaccard": {
+          "n": 884,
+          "avg": 0.09,
+          "min": 0.0,
+          "max": 0.22,
+          "median": 0.09,
+          "std_dev": 0.03
+        },
+        "unigram_overlap": {
+          "n": 884,
+          "avg": 0.41,
+          "min": 0.0,
+          "max": 0.62,
+          "median": 0.42,
+          "std_dev": 0.08
+        }
+      },
+      "QA_vs_NO_QA": {
+        "unigram_jaccard": {
+          "n": 884,
+          "avg": 0.38,
+          "min": 0.01,
+          "max": 0.87,
+          "median": 0.38,
+          "std_dev": 0.09
+        },
+        "bigram_jaccard": {
+          "n": 884,
+          "avg": 0.18,
+          "min": 0.0,
+          "max": 0.82,
+          "median": 0.17,
+          "std_dev": 0.08
+        },
+        "unigram_overlap": {
+          "n": 884,
+          "avg": 0.52,
+          "min": 0.01,
+          "max": 0.91,
+          "median": 0.53,
+          "std_dev": 0.1
+        }
+      }
+    }
+  },
+  "per_job_title": {
+    "Backend Developer": {
+      "n": 347,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 1977.9,
+          "avg_tokens": 3435.1
+        },
+        "QA": {
+          "avg_length_chars": 1642.2,
+          "avg_tokens": 3878.7
+        },
+        "NO_QA": {
+          "avg_length_chars": 1665.2,
+          "avg_tokens": 3885.7
+        }
+      },
+      "similarity": {
+        "QA_vs_LLM": {
+          "unigram_jaccard": 0.2919,
+          "bigram_jaccard": 0.0936,
+          "unigram_overlap": 0.4238
+        },
+        "NO_QA_vs_LLM": {
+          "unigram_jaccard": 0.2901,
+          "bigram_jaccard": 0.093,
+          "unigram_overlap": 0.4227
+        },
+        "QA_vs_NO_QA": {
+          "unigram_jaccard": 0.3882,
+          "bigram_jaccard": 0.1855,
+          "unigram_overlap": 0.5359
+        }
+      }
+    },
+    "DevOps Engineer": {
+      "n": 70,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 2195.4,
+          "avg_tokens": 3240.8
+        },
+        "QA": {
+          "avg_length_chars": 1789.9,
+          "avg_tokens": 3170.3
+        },
+        "NO_QA": {
+          "avg_length_chars": 1724.6,
+          "avg_tokens": 3158.0
+        }
+      },
+      "similarity": {
+        "QA_vs_LLM": {
+          "unigram_jaccard": 0.2837,
+          "bigram_jaccard": 0.0895,
+          "unigram_overlap": 0.4157
+        },
+        "NO_QA_vs_LLM": {
+          "unigram_jaccard": 0.2737,
+          "bigram_jaccard": 0.0849,
+          "unigram_overlap": 0.4024
+        },
+        "QA_vs_NO_QA": {
+          "unigram_jaccard": 0.3513,
+          "bigram_jaccard": 0.1429,
+          "unigram_overlap": 0.5029
+        }
+      }
+    },
+    "Machine Learning": {
+      "n": 187,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 2276.6,
+          "avg_tokens": 3665.0
+        },
+        "QA": {
+          "avg_length_chars": 1739.6,
+          "avg_tokens": 3825.2
+        },
+        "NO_QA": {
+          "avg_length_chars": 1688.1,
+          "avg_tokens": 3816.9
+        }
+      },
+      "similarity": {
+        "QA_vs_LLM": {
+          "unigram_jaccard": 0.2861,
+          "bigram_jaccard": 0.0907,
+          "unigram_overlap": 0.4118
+        },
+        "NO_QA_vs_LLM": {
+          "unigram_jaccard": 0.2834,
+          "bigram_jaccard": 0.0928,
+          "unigram_overlap": 0.4032
+        },
+        "QA_vs_NO_QA": {
+          "unigram_jaccard": 0.3596,
+          "bigram_jaccard": 0.1581,
+          "unigram_overlap": 0.5071
+        }
+      }
+    },
+    "Software Engineer": {
+      "n": 280,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 2063.8,
+          "avg_tokens": 2884.9
+        },
+        "QA": {
+          "avg_length_chars": 1698.8,
+          "avg_tokens": 2445.6
+        },
+        "NO_QA": {
+          "avg_length_chars": 1692.5,
+          "avg_tokens": 2443.7
+        }
+      },
+      "similarity": {
+        "QA_vs_LLM": {
+          "unigram_jaccard": 0.2774,
+          "bigram_jaccard": 0.0932,
+          "unigram_overlap": 0.4076
+        },
+        "NO_QA_vs_LLM": {
+          "unigram_jaccard": 0.2801,
+          "bigram_jaccard": 0.0946,
+          "unigram_overlap": 0.4105
+        },
+        "QA_vs_NO_QA": {
+          "unigram_jaccard": 0.3794,
+          "bigram_jaccard": 0.1873,
+          "unigram_overlap": 0.5279
+        }
+      }
+    }
+  },
+  "per_user": {
+    "user_36": {
+      "n": 70,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 2195.4,
+          "avg_tokens": 3240.8,
+          "avg_latency_s": 43.71
+        },
+        "QA": {
+          "avg_length_chars": 1789.9,
+          "avg_tokens": 3170.3,
+          "avg_latency_s": 28.3
+        },
+        "NO_QA": {
+          "avg_length_chars": 1724.6,
+          "avg_tokens": 3158.0,
+          "avg_latency_s": 30.12
+        }
+      }
+    },
+    "user_37": {
+      "n": 70,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 1915.6,
+          "avg_tokens": 3539.9,
+          "avg_latency_s": 26.67
+        },
+        "QA": {
+          "avg_length_chars": 1629.0,
+          "avg_tokens": 4240.8,
+          "avg_latency_s": 31.21
+        },
+        "NO_QA": {
+          "avg_length_chars": 1637.1,
+          "avg_tokens": 4246.1,
+          "avg_latency_s": 31.34
+        }
+      }
+    },
+    "user_38": {
+      "n": 70,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 1956.1,
+          "avg_tokens": 3414.5,
+          "avg_latency_s": 30.15
+        },
+        "QA": {
+          "avg_length_chars": 1641.6,
+          "avg_tokens": 3739.9,
+          "avg_latency_s": 30.75
+        },
+        "NO_QA": {
+          "avg_length_chars": 1661.1,
+          "avg_tokens": 3743.8,
+          "avg_latency_s": 30.82
+        }
+      }
+    },
+    "user_39": {
+      "n": 67,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 1987,
+          "avg_tokens": 2833.0,
+          "avg_latency_s": 32.86
+        },
+        "QA": {
+          "avg_length_chars": 1630.1,
+          "avg_tokens": 4048.1,
+          "avg_latency_s": 30.74
+        },
+        "NO_QA": {
+          "avg_length_chars": 1652.6,
+          "avg_tokens": 4061.8,
+          "avg_latency_s": 29.73
+        }
+      }
+    },
+    "user_40": {
+      "n": 70,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 2030.6,
+          "avg_tokens": 3824.5,
+          "avg_latency_s": 28.6
+        },
+        "QA": {
+          "avg_length_chars": 1648.8,
+          "avg_tokens": 3137.8,
+          "avg_latency_s": 30.56
+        },
+        "NO_QA": {
+          "avg_length_chars": 1718.6,
+          "avg_tokens": 3147.4,
+          "avg_latency_s": 28.74
+        }
+      }
+    },
+    "user_41": {
+      "n": 70,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 2000.6,
+          "avg_tokens": 3537.6,
+          "avg_latency_s": 30.95
+        },
+        "QA": {
+          "avg_length_chars": 1661.1,
+          "avg_tokens": 4234.0,
+          "avg_latency_s": 31.12
+        },
+        "NO_QA": {
+          "avg_length_chars": 1656.1,
+          "avg_tokens": 4237.0,
+          "avg_latency_s": 28.64
+        }
+      }
+    },
+    "user_42": {
+      "n": 70,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 2026.0,
+          "avg_tokens": 2619.3,
+          "avg_latency_s": 41.73
+        },
+        "QA": {
+          "avg_length_chars": 1692.7,
+          "avg_tokens": 2271.1,
+          "avg_latency_s": 34.33
+        },
+        "NO_QA": {
+          "avg_length_chars": 1683.7,
+          "avg_tokens": 2270.0,
+          "avg_latency_s": 28.53
+        }
+      }
+    },
+    "user_43": {
+      "n": 70,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 2058.8,
+          "avg_tokens": 3004.1,
+          "avg_latency_s": 40.98
+        },
+        "QA": {
+          "avg_length_chars": 1648.5,
+          "avg_tokens": 2300.2,
+          "avg_latency_s": 34.73
+        },
+        "NO_QA": {
+          "avg_length_chars": 1607.0,
+          "avg_tokens": 2293.4,
+          "avg_latency_s": 29.07
+        }
+      }
+    },
+    "user_44": {
+      "n": 70,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 2061.3,
+          "avg_tokens": 2967.5,
+          "avg_latency_s": 25.65
+        },
+        "QA": {
+          "avg_length_chars": 1717.9,
+          "avg_tokens": 2343.6,
+          "avg_latency_s": 35.73
+        },
+        "NO_QA": {
+          "avg_length_chars": 1757.9,
+          "avg_tokens": 2346.4,
+          "avg_latency_s": 29.41
+        }
+      }
+    },
+    "user_45": {
+      "n": 70,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 2109.0,
+          "avg_tokens": 2948.9,
+          "avg_latency_s": 30.96
+        },
+        "QA": {
+          "avg_length_chars": 1736.0,
+          "avg_tokens": 2867.5,
+          "avg_latency_s": 35.33
+        },
+        "NO_QA": {
+          "avg_length_chars": 1721.4,
+          "avg_tokens": 2864.9,
+          "avg_latency_s": 33.02
+        }
+      }
+    },
+    "user_60": {
+      "n": 70,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 2245.3,
+          "avg_tokens": 3683.1,
+          "avg_latency_s": 26.41
+        },
+        "QA": {
+          "avg_length_chars": 1731.2,
+          "avg_tokens": 4325.9,
+          "avg_latency_s": 35.93
+        },
+        "NO_QA": {
+          "avg_length_chars": 1647.8,
+          "avg_tokens": 4310.5,
+          "avg_latency_s": 35.96
+        }
+      }
+    },
+    "user_61": {
+      "n": 70,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 2328.3,
+          "avg_tokens": 3943.6,
+          "avg_latency_s": 23.62
+        },
+        "QA": {
+          "avg_length_chars": 1751.7,
+          "avg_tokens": 3599.6,
+          "avg_latency_s": 36.44
+        },
+        "NO_QA": {
+          "avg_length_chars": 1736.5,
+          "avg_tokens": 3598.8,
+          "avg_latency_s": 38.01
+        }
+      }
+    },
+    "user_62": {
+      "n": 47,
+      "modes": {
+        "LLM": {
+          "avg_length_chars": 2246.3,
+          "avg_tokens": 3223.2,
+          "avg_latency_s": 36.2
+        },
+        "QA": {
+          "avg_length_chars": 1734.1,
+          "avg_tokens": 3415.6,
+          "avg_latency_s": 36.33
+        },
+        "NO_QA": {
+          "avg_length_chars": 1676.1,
+          "avg_tokens": 3406.4,
+          "avg_latency_s": 36.72
+        }
+      }
+    }
+  }
+}

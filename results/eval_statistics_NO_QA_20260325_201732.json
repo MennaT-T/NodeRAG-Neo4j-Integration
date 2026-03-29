@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-03-25T20:17:32.827963",
+  "overall": {
+    "mode": "NO_QA",
+    "total_rows": 5,
+    "successful": 5,
+    "failed": 0,
+    "success_rate_pct": 100.0,
+    "total_elapsed_s": 169.78,
+    "latency_s": {
+      "avg": 33.523,
+      "min": 23.502,
+      "max": 36.571,
+      "median": 35.766,
+      "std_dev": 5.021
+    },
+    "tokens": {
+      "avg": 3475.0,
+      "total": 17375,
+      "min": 3071,
+      "max": 4001
+    },
+    "avg_answer_length_chars": 1670.6
+  },
+  "per_job_title": {
+    "JavaScript Developer": {
+      "total": 5,
+      "successful": 5,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 33.523,
+        "min": 23.502,
+        "max": 36.571,
+        "median": 35.766,
+        "std_dev": 5.021
+      },
+      "avg_tokens": 3475.0
+    }
+  },
+  "per_user": {
+    "user_67": {
+      "total": 1,
+      "successful": 1,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 23.502,
+        "min": 23.502,
+        "max": 23.502,
+        "median": 23.502,
+        "std_dev": 0.0
+      },
+      "avg_tokens": 3809.0
+    },
+    "user_73": {
+      "total": 4,
+      "successful": 4,
+      "success_rate_pct": 100.0,
+      "latency_s": {
+        "avg": 36.028,
+        "min": 35.63,
+        "max": 36.571,
+        "median": 35.955,
+        "std_dev": 0.366
+      },
+      "avg_tokens": 3391.5
+    }
+  }
+}

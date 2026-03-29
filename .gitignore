@@ -38,11 +38,11 @@ logs/
 # POC_Data/documents/cache/
 # POC_Data/documents/info/
 # POC_Data/documents/document_hash.json
-cache/
-*.pkl
-*.bin
-*.parquet
-*.jsonl
+# cache/
+# *.pkl
+# *.bin
+# *.parquet
+# *.jsonl
 
 # Large Binary Files
 *.zip

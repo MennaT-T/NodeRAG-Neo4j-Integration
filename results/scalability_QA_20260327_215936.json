@@ -1,0 +1,144 @@
+{
+  "generated_at": "2026-03-27T21:59:36.937554",
+  "config": {
+    "use_qa": true,
+    "concurrency_levels": [
+      5,
+      10,
+      20,
+      50,
+      73
+    ],
+    "num_rounds": 10,
+    "rows_per_user": 5,
+    "random_seed": 42,
+    "total_users": 73
+  },
+  "results": [
+    {
+      "concurrency": 5,
+      "num_rounds": 10,
+      "total_requests": 50,
+      "successful": 50,
+      "failed": 0,
+      "success_rate_pct": 100.0,
+      "throughput_req_s": 0.2673,
+      "total_wall_s": 187.05,
+      "latency_s": {
+        "avg": 18.155,
+        "median": 18.087,
+        "std": 0.577,
+        "min": 16.845,
+        "max": 19.692,
+        "p95": 19.056,
+        "p99": 19.692
+      },
+      "batch_wall_s": {
+        "avg": 18.7,
+        "median": 18.6,
+        "min": 17.92,
+        "max": 19.7
+      }
+    },
+    {
+      "concurrency": 10,
+      "num_rounds": 10,
+      "total_requests": 100,
+      "successful": 72,
+      "failed": 28,
+      "success_rate_pct": 72.0,
+      "throughput_req_s": 0.3751,
+      "total_wall_s": 191.94,
+      "latency_s": {
+        "avg": 18.458,
+        "median": 18.441,
+        "std": 0.646,
+        "min": 16.889,
+        "max": 19.97,
+        "p95": 19.654,
+        "p99": 19.97
+      },
+      "batch_wall_s": {
+        "avg": 19.19,
+        "median": 19.17,
+        "min": 18.52,
+        "max": 19.99
+      }
+    },
+    {
+      "concurrency": 20,
+      "num_rounds": 10,
+      "total_requests": 200,
+      "successful": 131,
+      "failed": 69,
+      "success_rate_pct": 65.5,
+      "throughput_req_s": 0.6431,
+      "total_wall_s": 203.69,
+      "latency_s": {
+        "avg": 18.77,
+        "median": 18.44,
+        "std": 1.556,
+        "min": 16.238,
+        "max": 23.742,
+        "p95": 21.72,
+        "p99": 23.594
+      },
+      "batch_wall_s": {
+        "avg": 20.37,
+        "median": 20.75,
+        "min": 13.97,
+        "max": 23.83
+      }
+    },
+    {
+      "concurrency": 50,
+      "num_rounds": 10,
+      "total_requests": 500,
+      "successful": 141,
+      "failed": 359,
+      "success_rate_pct": 28.2,
+      "throughput_req_s": 0.6948,
+      "total_wall_s": 202.95,
+      "latency_s": {
+        "avg": 18.439,
+        "median": 17.991,
+        "std": 1.426,
+        "min": 16.184,
+        "max": 25.645,
+        "p95": 21.163,
+        "p99": 22.074
+      },
+      "batch_wall_s": {
+        "avg": 20.29,
+        "median": 19.66,
+        "min": 17.71,
+        "max": 25.78
+      }
+    },
+    {
+      "concurrency": 73,
+      "num_rounds": 10,
+      "total_requests": 730,
+      "successful": 155,
+      "failed": 575,
+      "success_rate_pct": 21.23,
+      "throughput_req_s": 0.1428,
+      "total_wall_s": 1085.74,
+      "latency_s": {
+        "avg": 18.875,
+        "median": 18.419,
+        "std": 1.689,
+        "min": 15.999,
+        "max": 26.27,
+        "p95": 22.587,
+        "p99": 23.976
+      },
+      "batch_wall_s": {
+        "avg": 108.57,
+        "median": 19.85,
+        "min": 15.32,
+        "max": 903.98
+      }
+    }
+  ]
+}

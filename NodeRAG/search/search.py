@@ -126,7 +126,7 @@ class NodeSearch():
         return GraphConcat(G).concat(HNSW_graph)
         
     
-    def search(self,query:str):
+    def search(self,query:str,use_qa:bool=True):
         
         retrieval = Retrieval(self.config,self.id_to_text,self.accurate_id_to_text,self.id_to_type)
         
@@ -148,8 +148,8 @@ class NodeSearch():
         personlization = {ids:self.config.similarity_weight for ids in retrieval.HNSW_results}
         personlization.update({id:self.config.accuracy_weight for id in retrieval.accurate_results})
         
-        # Phase 2: Q&A semantic search (if Question HNSW index exists)
-        if self.question_hnsw is not None and len(self.question_id_map) > 0:
+        # Phase 2: Q&A semantic search (if Question HNSW index exists and use_qa enabled)
+        if use_qa and self.question_hnsw is not None and len(self.question_id_map) > 0:
             print(f"[DEBUG Q&A Search] Starting Q&A search with query_embedding shape: {query_embedding.shape}")
             qa_top_k = getattr(self.config, 'qa_top_k', 3)  # Get configurable top_k (default: 3)
             print(f"[DEBUG Q&A Search] Using top_k={qa_top_k} (configurable)")
@@ -236,7 +236,7 @@ class NodeSearch():
         return accurate_results
     
     
-    def answer(self,query:str,id_type:bool=True,job_context:str=None):
+    def answer(self,query:str,id_type:bool=True,job_context:str=None,use_qa:bool=True):
         """
         Generate answer for a query with optional job context
         
@@ -244,8 +244,9 @@ class NodeSearch():
             query: The question to answer
             id_type: Whether to use structured (True) or unstructured (False) prompt
             job_context: Optional job description/context for tailoring the answer
+            use_qa: Whether to use the QA pipeline (semantic Q&A search + history in prompt)
         """
-        retrieval = self.search(query)
+        retrieval = self.search(query,use_qa=use_qa)
         
         ans = Answer(query,retrieval)
         
@@ -266,7 +267,7 @@ class NodeSearch():
         
         # Format Q&A history from retrieval.qa_results for style consistency
         qa_history = ""
-        if hasattr(retrieval, 'qa_results') and retrieval.qa_results:
+        if use_qa and hasattr(retrieval, 'qa_results') and retrieval.qa_results:
             qa_history_parts = []
             for qa_pair in retrieval.qa_results[:3]:  # Use top 3 Q&A pairs for style reference
                 question = qa_pair.get('question', '')
@@ -293,7 +294,7 @@ class NodeSearch():
         
         return ans    
     
-    async def answer_async(self,query:str,id_type:bool=True,job_context:str=None):
+    async def answer_async(self,query:str,id_type:bool=True,job_context:str=None,use_qa:bool=True):
         """
         Generate answer for a query asynchronously with optional job context
         
@@ -301,8 +302,9 @@ class NodeSearch():
             query: The question to answer
             id_type: Whether to use structured (True) or unstructured (False) prompt
             job_context: Optional job description/context for tailoring the answer
+            use_qa: Whether to use the QA pipeline (semantic Q&A search + history in prompt)
         """
-        retrieval = self.search(query)
+        retrieval = self.search(query,use_qa=use_qa)
         
         ans = Answer(query,retrieval)
         
@@ -323,7 +325,7 @@ class NodeSearch():
 
         # Format Q&A history from retrieval.qa_results for style consistency
         qa_history = ""
-        if hasattr(retrieval, 'qa_results') and retrieval.qa_results:
+        if use_qa and hasattr(retrieval, 'qa_results') and retrieval.qa_results:
             qa_history_parts = []
             for qa_pair in retrieval.qa_results[:3]:  # Use top 3 Q&A pairs for style reference
                 question = qa_pair.get('question', '')
