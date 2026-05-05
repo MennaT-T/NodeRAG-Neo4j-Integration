@@ -236,12 +236,14 @@ class QA_Pipeline:
                     if question_nodes_data:
                         print(f'[QA Pipeline] Building HNSW index for {len(question_nodes_data)} questions...')  # Use print() so it persists
                         sys.stdout.flush()
-                        await self._build_question_hnsw_index(question_nodes_data)
+                        # Run blocking HNSW build in executor to isolate from asyncio event loop
+                        loop = asyncio.get_event_loop()
+                        await loop.run_in_executor(None, self._build_question_hnsw_index_sync, question_nodes_data)
                         print(f'[QA Pipeline] HNSW index built successfully')  # Use print() so it persists
                         sys.stdout.flush()
-            else:
-                print(f'[QA Pipeline] Skipping embedding generation (question_texts: {len(question_texts)}, embedding_client: {self.config.embedding_client is not None})')  # Use print() so it persists
-                sys.stdout.flush()
+                    else:
+                        print(f'[QA Pipeline] Skipping embedding generation (question_texts: {len(question_texts)}, embedding_client: {self.config.embedding_client is not None})')  # Use print() so it persists
+                        sys.stdout.flush()
             
             # Save updated graph (with Neo4j support)
             self.save_graph()
@@ -341,96 +343,68 @@ class QA_Pipeline:
         
         return all_embeddings
     
-    async def _build_question_hnsw_index(self, question_nodes_data: List[Dict]):
-        """Build separate HNSW index for Question nodes"""
+    def _build_question_hnsw_index_sync(self, question_nodes_data: List[Dict]):
+        """Pure-sync HNSW build — run via run_in_executor to isolate from asyncio."""
         if not question_nodes_data:
             return
-        
-        # Extract embeddings and hash_ids with validation
+
         embedding_list = []
         hash_ids = []
-        
         for node in question_nodes_data:
             embedding = node.get('embedding')
             if embedding is None:
-                print(f'[QA Pipeline] WARNING: Node {node.get("hash_id")} has no embedding, skipping')
                 continue
-            
-            # Convert to numpy array if needed
             if isinstance(embedding, (list, tuple)):
                 embedding = np.array(embedding, dtype=np.float32)
             elif isinstance(embedding, np.ndarray):
                 embedding = embedding.astype(np.float32)
             else:
-                print(f'[QA Pipeline] ERROR: Invalid embedding type for node {node.get("hash_id")}: {type(embedding)}')
-                print(f'[QA Pipeline] Embedding value: {embedding}')
                 continue
-            
-            # Validate embedding shape
             if embedding.ndim != 1:
-                print(f'[QA Pipeline] ERROR: Embedding for node {node.get("hash_id")} has wrong shape: {embedding.shape}')
                 continue
-            
             embedding_list.append(embedding)
             hash_ids.append(node['hash_id'])
-        
+
         if not embedding_list:
-            print('[QA Pipeline] ERROR: No valid embeddings found, cannot build HNSW index')
+            print('[QA Pipeline] ERROR: No valid embeddings for HNSW index')
             return
-        
-        # Convert to numpy array
-        embeddings = np.array(embedding_list, dtype=np.float32)
-        
+
+        embeddings = np.ascontiguousarray(np.array(embedding_list, dtype=np.float32))
+        labels = np.arange(len(hash_ids), dtype=np.int64)
+
         print(f'[QA Pipeline] Building HNSW index with {len(embeddings)} embeddings, shape: {embeddings.shape}')
         sys.stdout.flush()
-        
-        # Load existing index if it exists
-        if os.path.exists(self.question_hnsw_path):
-            # Load existing index
-            dim = self.config.dim  # Use config dimension for consistency
-            hnsw_index = hnswlib_noderag.Index(space='cosine', dim=dim)
-            hnsw_index.load_index(self.question_hnsw_path)
-            
-            # Load existing id_map
-            if os.path.exists(self.question_id_map_path):
-                id_map_data = self.storage_obj.load(self.question_id_map_path)
-                id_map = dict(zip(id_map_data['id'], id_map_data['node']))
-            else:
-                id_map = {}
-            
-            # Add new nodes
-            current_length = len(id_map)
-            new_id_list = []
-            for idx, hash_id in enumerate(hash_ids):
-                new_id = current_length + idx
-                id_map[new_id] = hash_id
-                new_id_list.append(new_id)
-            
-            # Resize and add items
-            hnsw_index.resize_index(len(id_map))
-            hnsw_index.add_items(embeddings, new_id_list)
-        else:
-            # Create new index
-            dim = self.config.dim  # Use config dimension for consistency
-            hnsw_index = hnswlib_noderag.Index(space='cosine', dim=dim)
-            hnsw_index.init_index(
-                max_elements=len(question_nodes_data),
-                ef_construction=self.config._ef,
-                M=self.config._m
-            )
-            
-            # Create id_map
-            id_map = {i: hash_ids[i] for i in range(len(hash_ids))}
-            
-            # Add embeddings
-            hnsw_index.add_items(embeddings, list(range(len(hash_ids))))
-        
-        # Save index and id_map
+
+        dim = self.config.dim
+        effective_m = min(self.config._m, max(2, len(hash_ids) - 1))
+        print(f'[QA Pipeline] init_index: dim={dim}, max_elements={len(hash_ids)}, ef={self.config._ef}, M={effective_m}')
+        sys.stdout.flush()
+
+        hnsw_index = hnswlib_noderag.Index(space='cosine', dim=dim)
+        hnsw_index.init_index(
+            max_elements=len(hash_ids),
+            ef_construction=self.config._ef,
+            M=effective_m
+        )
+        print('[QA Pipeline] init_index done'); sys.stdout.flush()
+
+        hnsw_index.add_items(embeddings, labels)
+        print('[QA Pipeline] add_items done'); sys.stdout.flush()
+
+        print(f'[QA Pipeline] Saving HNSW index to {self.question_hnsw_path}...')
+        sys.stdout.flush()
         hnsw_index.save_index(self.question_hnsw_path)
+        print('[QA Pipeline] save_index done'); sys.stdout.flush()
+
+        id_map = {i: hash_ids[i] for i in range(len(hash_ids))}
         self.storage_obj({'id': list(id_map.keys()), 'node': list(id_map.values())}).save_parquet(self.question_id_map_path)
-        
-        self.config.console.print(f'[green]Question HNSW index built and saved[/green]')
-    
+        print('[QA Pipeline] id_map saved'); sys.stdout.flush()
+
+    async def _build_question_hnsw_index(self, question_nodes_data: List[Dict]):
+        """Delegates to sync build via run_in_executor (see _build_question_hnsw_index_sync)."""
+        loop = asyncio.get_event_loop()
+        await loop.run_in_executor(None, self._build_question_hnsw_index_sync, question_nodes_data)
+
     def save_questions(self):
         """Save Question nodes to parquet file - saves ALL question nodes from graph"""
         questions = []

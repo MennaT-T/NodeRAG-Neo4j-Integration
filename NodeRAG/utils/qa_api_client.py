@@ -83,7 +83,7 @@ class QAAPIClient:
             headers['Authorization'] = f'Bearer {self.auth_token}'
         
         try:
-            response = requests.get(endpoint, headers=headers, timeout=30)
+            response = requests.get(endpoint, headers=headers, timeout=90)
             response.raise_for_status()
             qa_pairs = response.json()
             

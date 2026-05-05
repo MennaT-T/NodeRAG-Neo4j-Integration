@@ -103,8 +103,14 @@ class SummaryGeneration:
         context = [high_level_element.context for high_level_element in high_level_element_batch]
         embedding = await self.config.embedding_client(context)
         
+        if embedding == 'Error cached' or not isinstance(embedding, (list, tuple)):
+            self.config.tracker.update()
+            return
+        
         for i in range(len(high_level_element_batch)):
-            high_level_element_batch[i].store_embedding(embedding[i])
+            emb_i = embedding[i] if i < len(embedding) else None
+            if isinstance(emb_i, (list, tuple)) or hasattr(emb_i, '__len__') and not isinstance(emb_i, str):
+                high_level_element_batch[i].store_embedding(emb_i)
         self.config.tracker.update()
 
    
@@ -221,14 +227,17 @@ class SummaryGeneration:
                            'context':high_level_element.title,
                            'human_readable_id':high_level_element.human_readable_id})
             
-            embedding_list.append({'hash_id':high_level_element.hash_id,
-                                   'embedding':high_level_element.embedding})
+            if (high_level_element.embedding is not None
+                    and not isinstance(high_level_element.embedding, str)):
+                embedding_list.append({'hash_id':high_level_element.hash_id,
+                                       'embedding':high_level_element.embedding})
         G_high_level_elements = [node for node in self.G.nodes if self.G.nodes[node].get('type') == 'high_level_element']
         assert len(high_level_elements) == len(G_high_level_elements), f"The number of high level elements is not equal to the number of nodes in the graph. {len(high_level_elements)} != {len(G_high_level_elements)}"
         
         storage(high_level_elements).save_parquet(self.config.high_level_elements_path,append = os.path.exists(self.config.high_level_elements_path))
         storage(titles).save_parquet(self.config.high_level_elements_titles_path,append = os.path.exists(self.config.high_level_elements_titles_path))
-        storage(embedding_list).save_parquet(self.config.embedding,append = os.path.exists(self.config.embedding))
+        if embedding_list:
+            storage(embedding_list).save_parquet(self.config.embedding,append = os.path.exists(self.config.embedding))
         self.config.console.print('[bold green]High level elements stored[/bold green]')
             
     @info_timer(message='Summary Generation Pipeline')        

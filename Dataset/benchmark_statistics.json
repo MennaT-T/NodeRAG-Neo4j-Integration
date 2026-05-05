@@ -1,0 +1,70 @@
+{
+  "dataset_overview": {
+    "total_rows": 240,
+    "llm_completed": 240,
+    "noderag_completed": 240,
+    "both_completed": 240,
+    "unique_users": 10,
+    "unique_job_titles": 1,
+    "unique_questions": 8,
+    "unique_resumes": 10,
+    "unique_categories": 5
+  },
+  "llm_stats": {
+    "avg_tokens": 3000.616666666667,
+    "median_tokens": 2916.0,
+    "std_tokens": 465.8909525171936,
+    "min_tokens": 2350.0,
+    "max_tokens": 3758.0,
+    "avg_time_seconds": 25.301041666666666,
+    "median_time_seconds": 24.12,
+    "std_time_seconds": 12.938197645909435,
+    "min_time_seconds": 4.68,
+    "max_time_seconds": 72.9,
+    "avg_answer_length": 1740.5541666666666,
+    "median_answer_length": 1818.5
+  },
+  "noderag_stats": {
+    "avg_tokens": 3497.7083333333335,
+    "median_tokens": 3276.5,
+    "std_tokens": 694.6288662695722,
+    "min_tokens": 2640.0,
+    "max_tokens": 5654.0,
+    "avg_time_seconds": 22.5435,
+    "median_time_seconds": 22.259999999999998,
+    "std_time_seconds": 5.2046769521010825,
+    "min_time_seconds": 7.02,
+    "max_time_seconds": 36.69,
+    "avg_answer_length": 1551.6125,
+    "median_answer_length": 1581.0
+  },
+  "comparative": {
+    "avg_token_diff": 497.09166666666664,
+    "avg_time_diff": -2.757541666666667,
+    "token_diff_percent": 16.56631692374345,
+    "time_diff_percent": -10.898925439499363
+  },
+  "category_distribution": {
+    "education": 30,
+    "experience": 60,
+    "motivation": 60,
+    "soft_skills": 30,
+    "technical_skills": 60
+  },
+  "source_distribution": {
+    "csv": 120,
+    "benchmark": 120
+  },
+  "per_user_counts": {
+    "user_36": 24,
+    "user_37": 24,
+    "user_38": 24,
+    "user_39": 24,
+    "user_40": 24,
+    "user_41": 24,
+    "user_42": 24,
+    "user_43": 24,
+    "user_44": 24,
+    "user_45": 24
+  }
+}

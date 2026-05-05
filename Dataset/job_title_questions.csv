@@ -1,0 +1,106 @@
+Job Title,Question
+Backend Developer,"What backend languages and frameworks have you used, and which are you strongest in?"
+Backend Developer,Describe a backend system you built or improved—what were the main challenges and how did you solve them?
+Backend Developer,How do you design and document RESTful (or GraphQL) APIs for maintainability and scalability?
+Backend Developer,What is your approach to database schema design and optimizing queries for performance?
+Backend Developer,"How do you ensure backend reliability (testing, monitoring, error handling) in production?"
+Backend Developer,Why do you want to apply to this position?
+Backend Developer,Why are you interested in joining our company?
+Database Administrator,"What database platforms (e.g., PostgreSQL, MySQL, SQL Server) have you administered in production?"
+Database Administrator,"How do you design backup, restore, and disaster recovery plans, and how often do you test them?"
+Database Administrator,Describe a time you diagnosed and fixed a slow query or performance bottleneck—what steps did you take?
+Database Administrator,"What is your approach to securing databases (roles/permissions, encryption, auditing)?"
+Database Administrator,How do you handle capacity planning and scaling for growing data and traffic?
+Database Administrator,Why do you want to apply to this position?
+Database Administrator,Why are you interested in joining our company?
+DevOps Engineer,"Which CI/CD tools and workflows have you implemented, and what outcomes did they achieve?"
+DevOps Engineer,"How do you approach infrastructure as code (e.g., Terraform/CloudFormation) and environment consistency?"
+DevOps Engineer,Describe your experience with containerization and orchestration (Docker/Kubernetes) in production.
+DevOps Engineer,"How do you monitor systems and respond to incidents (alerting, on-call, postmortems)?"
+DevOps Engineer,"What practices do you use to improve deployment safety (canary releases, rollbacks, feature flags)?"
+DevOps Engineer,Why do you want to apply to this position?
+DevOps Engineer,Why are you interested in joining our company?
+Django Developer,"How many years have you worked with Django, and what types of products have you built with it?"
+Django Developer,Describe a Django project you contributed to—what was your role and what impact did your work have?
+Django Developer,How do you structure Django apps and manage settings for multiple environments (dev/staging/prod)?
+Django Developer,"What is your approach to performance tuning in Django (ORM optimization, caching, background jobs)?"
+Django Developer,"How do you ensure code quality in Django projects (tests, linting, code reviews)?"
+Django Developer,Why do you want to apply to this position?
+Django Developer,Why are you interested in joining our company?
+Flutter Developer,"What Flutter apps have you built, and what parts did you personally own end-to-end?"
+Flutter Developer,"How do you manage state in Flutter (e.g., Bloc, Provider, Riverpod), and why do you prefer that approach?"
+Flutter Developer,Describe a challenging UI/UX or animation you implemented in Flutter—how did you build it?
+Flutter Developer,"How do you handle app performance and debugging (profiling, memory, jank) in Flutter?"
+Flutter Developer,"What is your experience integrating Flutter apps with REST APIs, authentication, and local storage?"
+Flutter Developer,Why do you want to apply to this position?
+Flutter Developer,Why are you interested in joining our company?
+Full Stack Developer,"Which frontend and backend technologies are you most experienced with, and what have you built using them?"
+Full Stack Developer,"Describe a full-stack feature you delivered—how did you coordinate API design, UI, and deployment?"
+Full Stack Developer,"How do you ensure security across the stack (auth, authorization, input validation, OWASP risks)?"
+Full Stack Developer,What is your approach to testing (unit/integration/e2e) for both frontend and backend components?
+Full Stack Developer,"How do you optimize performance for a web application (frontend loading, backend latency, database)?"
+Full Stack Developer,Why do you want to apply to this position?
+Full Stack Developer,Why are you interested in joining our company?
+Java Developer,"What Java versions and frameworks (e.g., Spring Boot) have you used in production?"
+Java Developer,Describe a Java service you built or maintained—how did you ensure scalability and reliability?
+Java Developer,How do you handle concurrency and thread-safety in Java applications?
+Java Developer,"What is your approach to writing clean, testable Java code (design patterns, testing tools)?"
+Java Developer,Tell us about a time you improved performance in a Java application—what did you change and why?
+Java Developer,Why do you want to apply to this position?
+Java Developer,Why are you interested in joining our company?
+JavaScript Developer,"What JavaScript frameworks/libraries (e.g., React, Vue, Angular) have you worked with, and at what depth?"
+JavaScript Developer,"Describe a complex UI you built in JavaScript—how did you manage state, performance, and accessibility?"
+JavaScript Developer,"How do you organize and maintain a large JavaScript codebase (linting, formatting, modularization)?"
+JavaScript Developer,"What is your experience with API integration, authentication, and error handling on the client side?"
+JavaScript Developer,"How do you test JavaScript applications (unit, integration, e2e), and which tools have you used?"
+JavaScript Developer,Why do you want to apply to this position?
+JavaScript Developer,Why are you interested in joining our company?
+Machine Learning,"What is your experience in machine learning (projects, models, and the business problems you solved)?"
+Machine Learning,"Which ML frameworks and tools (e.g., scikit-learn, PyTorch, TensorFlow) are you most comfortable with?"
+Machine Learning,"How do you evaluate model performance and handle issues like overfitting, data leakage, or class imbalance?"
+Machine Learning,Describe a time you deployed an ML model to production—how did you monitor and iterate on it?
+Machine Learning,How do you approach data preprocessing and feature engineering for real-world datasets?
+Machine Learning,Why do you want to apply to this position?
+Machine Learning,Why are you interested in joining our company?
+Network Administrator,"What types of networks have you managed (size, topology), and what were your main responsibilities?"
+Network Administrator,How do you troubleshoot network connectivity issues—what tools and steps do you use?
+Network Administrator,"Describe your experience with firewalls, VLANs, routing, and switching in production environments."
+Network Administrator,"What is your approach to network security (access controls, monitoring, patching, incident response)?"
+Network Administrator,How do you document and maintain network configurations to support reliability and audits?
+Network Administrator,Why do you want to apply to this position?
+Network Administrator,Why are you interested in joining our company?
+Node js developer,"What Node.js frameworks (e.g., Express, NestJS) have you used, and what have you built with them?"
+Node js developer,"Describe a Node.js API or service you developed—how did you handle validation, errors, and logging?"
+Node js developer,"How do you manage asynchronous flows in Node.js (promises, async/await, queues), and avoid common pitfalls?"
+Node js developer,"What is your experience with databases in Node.js (ORMs, query builders, performance tuning)?"
+Node js developer,"How do you ensure a Node.js application is production-ready (tests, monitoring, security, deployments)?"
+Node js developer,Why do you want to apply to this position?
+Node js developer,Why are you interested in joining our company?
+PHP Developer,"What PHP frameworks (e.g., Laravel, Symfony) have you used, and what kinds of applications did you build?"
+PHP Developer,Describe a PHP project you worked on—what was the most challenging part and how did you address it?
+PHP Developer,"How do you structure PHP code for maintainability (architecture, SOLID principles, dependency management)?"
+PHP Developer,What is your experience with database design and query optimization in PHP applications?
+PHP Developer,"How do you handle security in PHP apps (validation, authentication, preventing SQL injection/XSS)?"
+PHP Developer,Why do you want to apply to this position?
+PHP Developer,Why are you interested in joining our company?
+Software Engineer,"Why are you interested in this Software Engineer role, and what do you hope to accomplish here?"
+Software Engineer,Describe a project you’re proud of—what was your contribution and what impact did it have?
+Software Engineer,How do you approach debugging and root-cause analysis when a production issue occurs?
+Software Engineer,"What practices do you follow to write maintainable code (testing, reviews, documentation)?"
+Software Engineer,How do you collaborate with product/design/QA stakeholders to deliver features effectively?
+Software Engineer,Why do you want to apply to this position?
+Software Engineer,Why are you interested in joining our company?
+Wordpress Developer,"What WordPress projects have you built (themes, plugins, custom blocks), and what was your role?"
+Wordpress Developer,"How do you approach performance optimization in WordPress (caching, images, queries, hosting)?"
+Wordpress Developer,Describe your experience with PHP and customizing WordPress beyond off-the-shelf plugins.
+Wordpress Developer,"How do you handle security and updates in WordPress sites (hardening, backups, plugin management)?"
+Wordpress Developer,"What is your experience integrating WordPress with third-party services (APIs, payments, CRM, analytics)?"
+Wordpress Developer,Why do you want to apply to this position?
+Wordpress Developer,Why are you interested in joining our company?
+iOS Developer,"What iOS apps have you built, and which features/components did you own end-to-end?"
+iOS Developer,"Which iOS technologies do you use most (Swift, SwiftUI, UIKit), and why?"
+iOS Developer,Describe a challenging bug or performance issue you solved in an iOS app—how did you debug it?
+iOS Developer,How do you structure iOS codebases (architecture patterns like MVVM/VIPER) for maintainability?
+iOS Developer,"What is your experience with testing and releasing iOS apps (unit/UI tests, App Store process, CI/CD)?"
+iOS Developer,Why do you want to apply to this position?
+iOS Developer,Why are you interested in joining our company?

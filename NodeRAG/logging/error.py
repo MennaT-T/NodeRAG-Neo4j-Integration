@@ -5,6 +5,59 @@ import os
 
 error_logger = setup_logger(__name__,os.path.join(os.getcwd(),'error.log'))
 
+
+def _is_llm_error(response: str) -> bool:
+    """
+    Determine whether a string response from the LLM represents an actual API error
+    rather than valid content that happens to contain words like 'error'.
+
+    Strategy:
+    1. If the response is valid JSON and does NOT have a top-level 'error' key,
+       treat it as a legitimate LLM output regardless of its content.
+    2. If it is valid JSON with a top-level 'error' key → definite API error.
+    3. For non-JSON strings, fall back to keyword heuristics but avoid
+       the catch-all "error" substring check that causes false positives on
+       resumes/job descriptions that legitimately discuss error handling.
+    """
+    stripped = response.strip()
+
+    # --- JSON path ---
+    if stripped.startswith(('{', '[')):
+        try:
+            parsed = json.loads(stripped)
+            # Valid JSON: only an error if the top-level object has an 'error' key
+            if isinstance(parsed, dict) and 'error' in parsed:
+                return True
+            return False          # Valid JSON output → not an error
+        except (json.JSONDecodeError, ValueError):
+            pass                  # Fall through to string heuristics
+
+    # --- String / non-JSON path ---
+    # Avoid the broad `"error" in text` match; use only unambiguous signals.
+    lower = response.lower()
+    definite_api_errors = (
+        "api key" in lower or
+        "api_key" in lower or
+        "authentication" in lower or
+        "unauthorized" in lower or
+        "forbidden" in lower or
+        "rate limit" in lower or
+        "quota exceeded" in lower or
+        "invalid_argument" in lower or
+        "permission denied" in lower or
+        "key expired" in lower or
+        "invalid api" in lower or
+        "billing" in lower
+    )
+    if definite_api_errors:
+        return True
+
+    # Very short responses are almost certainly errors (real output is always long)
+    if len(stripped) < 50:
+        return True
+
+    return False
+
 def error_handler(func): 
     @wraps(func)
     def wrapper(*args, **kwargs):
@@ -33,31 +86,17 @@ def cache_error(func):
             
         if isinstance(response, str):
             if kwargs.get('cache_path'):
-                # Check for any error indicators (not just "'error':")
-                is_error = (
-                    "'error':" in response.lower() or
-                    "error" in response.lower() or
-                    "exception" in response.lower() or
-                    "failed" in response.lower() or
-                    "authentication" in response.lower() or
-                    "rate limit" in response.lower() or
-                    "api key" in response.lower() or
-                    "unauthorized" in response.lower() or
-                    "forbidden" in response.lower() or
-                    len(response) < 100  # Very short responses are likely errors
-                )
+                is_error = _is_llm_error(response)
                 
                 if is_error:
-                    # ALWAYS log errors - make them visible
                     error_msg = f"LLM Error: {response}"
-                    print(f'\n[ERROR] {error_msg}\n')  # Print to console immediately
+                    print(f'\n[ERROR] {error_msg}\n')
                     error_logger.error(error_msg)
                     
-                    # Also log the full context
                     try:
                         input_data = args[1] if len(args) > 1 else kwargs.get('input', None)
                         if input_data:
-                            error_logger.error(f"Input data: {json.dumps(input_data, indent=2)[:500]}")  # First 500 chars
+                            error_logger.error(f"Input data: {json.dumps(input_data, indent=2)[:500]}")
                     except:
                         pass
                     
@@ -79,8 +118,8 @@ def cache_error(func):
                 if response == 'Error cached':
                     return response
                 else:
-                    # If error detected but not cached, still raise with the actual error message
-                    raise Exception(f'LLM Error: {response}')
+                    if is_error:
+                        raise Exception(f'LLM Error: {response}')
         return response
             
     return wrapper
@@ -91,31 +130,17 @@ def cache_error_async(func):
         response = await func(*args, **kwargs)
         if isinstance(response, str):
             if kwargs.get('cache_path'):
-                # Check for any error indicators (not just "'error':")
-                is_error = (
-                    "'error':" in response.lower() or
-                    "error" in response.lower() or
-                    "exception" in response.lower() or
-                    "failed" in response.lower() or
-                    "authentication" in response.lower() or
-                    "rate limit" in response.lower() or
-                    "api key" in response.lower() or
-                    "unauthorized" in response.lower() or
-                    "forbidden" in response.lower() or
-                    len(response) < 100  # Very short responses are likely errors
-                )
+                is_error = _is_llm_error(response)
                 
                 if is_error:
-                    # ALWAYS log errors - make them visible
                     error_msg = f"LLM Error: {response}"
-                    print(f'\n[ERROR] {error_msg}\n')  # Print to console immediately
+                    print(f'\n[ERROR] {error_msg}\n')
                     error_logger.error(error_msg)
                     
-                    # Also log the full context
                     try:
                         input_data = args[1] if len(args) > 1 else kwargs.get('input', None)
                         if input_data:
-                            error_logger.error(f"Input data: {json.dumps(input_data, indent=2)[:500]}")  # First 500 chars
+                            error_logger.error(f"Input data: {json.dumps(input_data, indent=2)[:500]}")
                     except:
                         pass
                 
@@ -137,7 +162,6 @@ def cache_error_async(func):
                     if response == 'Error cached':
                         return response
                     else:
-                        # If error detected but not cached, still raise with the actual error message
                         raise Exception(f'LLM Error: {response}')
         return response
             

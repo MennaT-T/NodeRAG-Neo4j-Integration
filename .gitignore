@@ -6,6 +6,14 @@ __pycache__/
 .Python
 *.pyc
 
+# Large dataset CSV files (exceed GitHub 100MB limit)
+Dataset/qa_dataset_20260204_011255.csv
+Dataset/qa_dataset_balanced_20260315_130715.csv
+Dataset/qa_dataset_balanced_clean_20260315_131829.csv
+Dataset/qa_dataset_completed_20260204_175205.csv
+Dataset/qa_dataset_completed_20260315_130219.csv
+Dataset/qa_dataset_testing_20260204_183215.csv
+
 # Virtual Environments
 venv/
 .venv/
@@ -122,3 +130,5 @@ NODERAG_BACKEND_INTEGRATION.md
 # Input/Output Data (optional - uncomment if you don't want to share data)
 # POC_Data/documents/input/
 # POC_Data/documents/input_backup/
+# Research paper folder (local only)
+Paper/

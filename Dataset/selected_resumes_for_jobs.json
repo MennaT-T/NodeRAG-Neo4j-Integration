@@ -1,0 +1,684 @@
+{
+  "Backend Developer": [
+    {
+      "resume_id": "1037",
+      "category": "DotNet Developer",
+      "filename": "1037_DotNet Developer.pdf",
+      "latex_length": 12006
+    },
+    {
+      "resume_id": "1030",
+      "category": "DotNet Developer",
+      "filename": "1030_DotNet Developer.pdf",
+      "latex_length": 10309
+    },
+    {
+      "resume_id": "1029",
+      "category": "DotNet Developer",
+      "filename": "1029_DotNet Developer.pdf",
+      "latex_length": 10083
+    },
+    {
+      "resume_id": "1043",
+      "category": "DotNet Developer",
+      "filename": "1043_DotNet Developer.pdf",
+      "latex_length": 9713
+    },
+    {
+      "resume_id": "786",
+      "category": "Python Developer",
+      "filename": "786_Python Developer.pdf",
+      "latex_length": 7704
+    },
+    {
+      "resume_id": "1036",
+      "category": "DotNet Developer",
+      "filename": "1036_DotNet Developer.pdf",
+      "latex_length": 7529
+    },
+    {
+      "resume_id": "767",
+      "category": "Python Developer",
+      "filename": "767_Python Developer.pdf",
+      "latex_length": 6862
+    },
+    {
+      "resume_id": "782",
+      "category": "Python Developer",
+      "filename": "782_Python Developer.pdf",
+      "latex_length": 6812
+    },
+    {
+      "resume_id": "797",
+      "category": "Python Developer",
+      "filename": "797_Python Developer.pdf",
+      "latex_length": 6725
+    },
+    {
+      "resume_id": "792",
+      "category": "Python Developer",
+      "filename": "792_Python Developer.pdf",
+      "latex_length": 6692
+    }
+  ],
+  "Database Administrator": [
+    {
+      "resume_id": "633",
+      "category": "SAP Developer",
+      "filename": "633_SAP Developer.pdf",
+      "latex_length": 13180
+    },
+    {
+      "resume_id": "934",
+      "category": "Database",
+      "filename": "934_Database.pdf",
+      "latex_length": 12158
+    },
+    {
+      "resume_id": "639",
+      "category": "SAP Developer",
+      "filename": "639_SAP Developer.pdf",
+      "latex_length": 11279
+    },
+    {
+      "resume_id": "927",
+      "category": "Database",
+      "filename": "927_Database.pdf",
+      "latex_length": 10653
+    },
+    {
+      "resume_id": "922",
+      "category": "Database",
+      "filename": "922_Database.pdf",
+      "latex_length": 10527
+    },
+    {
+      "resume_id": "911",
+      "category": "Database",
+      "filename": "911_Database.pdf",
+      "latex_length": 10289
+    },
+    {
+      "resume_id": "638",
+      "category": "SAP Developer",
+      "filename": "638_SAP Developer.pdf",
+      "latex_length": 10019
+    },
+    {
+      "resume_id": "912",
+      "category": "Database",
+      "filename": "912_Database.pdf",
+      "latex_length": 9755
+    },
+    {
+      "resume_id": "651",
+      "category": "SAP Developer",
+      "filename": "651_SAP Developer.pdf",
+      "latex_length": 8651
+    },
+    {
+      "resume_id": "640",
+      "category": "SAP Developer",
+      "filename": "640_SAP Developer.pdf",
+      "latex_length": 8442
+    }
+  ],
+  "DevOps Engineer": [
+    {
+      "resume_id": "879",
+      "category": "Network Security Engineer",
+      "filename": "879_Network Security Engineer.pdf",
+      "latex_length": 12548
+    },
+    {
+      "resume_id": "859",
+      "category": "Network Security Engineer",
+      "filename": "859_Network Security Engineer.pdf",
+      "latex_length": 12151
+    },
+    {
+      "resume_id": "825",
+      "category": "DevOps Engineer",
+      "filename": "825_DevOps Engineer.pdf",
+      "latex_length": 11534
+    },
+    {
+      "resume_id": "846",
+      "category": "DevOps Engineer",
+      "filename": "846_DevOps Engineer.pdf",
+      "latex_length": 10692
+    },
+    {
+      "resume_id": "849",
+      "category": "DevOps Engineer",
+      "filename": "849_DevOps Engineer.pdf",
+      "latex_length": 10639
+    },
+    {
+      "resume_id": "949",
+      "category": "Hadoop",
+      "filename": "949_Hadoop.pdf",
+      "latex_length": 10414
+    },
+    {
+      "resume_id": "998",
+      "category": "ETL Developer",
+      "filename": "998_ETL Developer.pdf",
+      "latex_length": 9939
+    },
+    {
+      "resume_id": "982",
+      "category": "Hadoop",
+      "filename": "982_Hadoop.pdf",
+      "latex_length": 9417
+    },
+    {
+      "resume_id": "943",
+      "category": "Hadoop",
+      "filename": "943_Hadoop.pdf",
+      "latex_length": 9316
+    },
+    {
+      "resume_id": "1008",
+      "category": "ETL Developer",
+      "filename": "1008_ETL Developer.pdf",
+      "latex_length": 9211
+    }
+  ],
+  "Django Developer": [
+    {
+      "resume_id": "786",
+      "category": "Python Developer",
+      "filename": "786_Python Developer.pdf",
+      "latex_length": 7704
+    },
+    {
+      "resume_id": "767",
+      "category": "Python Developer",
+      "filename": "767_Python Developer.pdf",
+      "latex_length": 6862
+    },
+    {
+      "resume_id": "782",
+      "category": "Python Developer",
+      "filename": "782_Python Developer.pdf",
+      "latex_length": 6812
+    },
+    {
+      "resume_id": "797",
+      "category": "Python Developer",
+      "filename": "797_Python Developer.pdf",
+      "latex_length": 6725
+    },
+    {
+      "resume_id": "792",
+      "category": "Python Developer",
+      "filename": "792_Python Developer.pdf",
+      "latex_length": 6692
+    },
+    {
+      "resume_id": "779",
+      "category": "Python Developer",
+      "filename": "779_Python Developer.pdf",
+      "latex_length": 6627
+    },
+    {
+      "resume_id": "798",
+      "category": "Python Developer",
+      "filename": "798_Python Developer.pdf",
+      "latex_length": 6545
+    },
+    {
+      "resume_id": "785",
+      "category": "Python Developer",
+      "filename": "785_Python Developer.pdf",
+      "latex_length": 6537
+    },
+    {
+      "resume_id": "780",
+      "category": "Python Developer",
+      "filename": "780_Python Developer.pdf",
+      "latex_length": 6362
+    },
+    {
+      "resume_id": "794",
+      "category": "Python Developer",
+      "filename": "794_Python Developer.pdf",
+      "latex_length": 6311
+    }
+  ],
+  "Full Stack Developer": [
+    {
+      "resume_id": "1037",
+      "category": "DotNet Developer",
+      "filename": "1037_DotNet Developer.pdf",
+      "latex_length": 12006
+    },
+    {
+      "resume_id": "1030",
+      "category": "DotNet Developer",
+      "filename": "1030_DotNet Developer.pdf",
+      "latex_length": 10309
+    },
+    {
+      "resume_id": "355",
+      "category": "Web Designing",
+      "filename": "355_Web Designing.pdf",
+      "latex_length": 9578
+    },
+    {
+      "resume_id": "375",
+      "category": "Web Designing",
+      "filename": "375_Web Designing.pdf",
+      "latex_length": 9461
+    },
+    {
+      "resume_id": "531",
+      "category": "Java Developer",
+      "filename": "531_Java Developer.pdf",
+      "latex_length": 8202
+    },
+    {
+      "resume_id": "545",
+      "category": "Java Developer",
+      "filename": "545_Java Developer.pdf",
+      "latex_length": 8090
+    },
+    {
+      "resume_id": "559",
+      "category": "Java Developer",
+      "filename": "559_Java Developer.pdf",
+      "latex_length": 8004
+    },
+    {
+      "resume_id": "786",
+      "category": "Python Developer",
+      "filename": "786_Python Developer.pdf",
+      "latex_length": 7704
+    },
+    {
+      "resume_id": "767",
+      "category": "Python Developer",
+      "filename": "767_Python Developer.pdf",
+      "latex_length": 6862
+    },
+    {
+      "resume_id": "782",
+      "category": "Python Developer",
+      "filename": "782_Python Developer.pdf",
+      "latex_length": 6812
+    }
+  ],
+  "Java Developer": [
+    {
+      "resume_id": "531",
+      "category": "Java Developer",
+      "filename": "531_Java Developer.pdf",
+      "latex_length": 8202
+    },
+    {
+      "resume_id": "545",
+      "category": "Java Developer",
+      "filename": "545_Java Developer.pdf",
+      "latex_length": 8090
+    },
+    {
+      "resume_id": "559",
+      "category": "Java Developer",
+      "filename": "559_Java Developer.pdf",
+      "latex_length": 8004
+    },
+    {
+      "resume_id": "573",
+      "category": "Java Developer",
+      "filename": "573_Java Developer.pdf",
+      "latex_length": 7836
+    },
+    {
+      "resume_id": "566",
+      "category": "Java Developer",
+      "filename": "566_Java Developer.pdf",
+      "latex_length": 7597
+    },
+    {
+      "resume_id": "565",
+      "category": "Java Developer",
+      "filename": "565_Java Developer.pdf",
+      "latex_length": 7543
+    },
+    {
+      "resume_id": "549",
+      "category": "Java Developer",
+      "filename": "549_Java Developer.pdf",
+      "latex_length": 7448
+    },
+    {
+      "resume_id": "551",
+      "category": "Java Developer",
+      "filename": "551_Java Developer.pdf",
+      "latex_length": 7401
+    },
+    {
+      "resume_id": "593",
+      "category": "Java Developer",
+      "filename": "593_Java Developer.pdf",
+      "latex_length": 7374
+    },
+    {
+      "resume_id": "536",
+      "category": "Java Developer",
+      "filename": "536_Java Developer.pdf",
+      "latex_length": 7127
+    }
+  ],
+  "JavaScript Developer": [
+    {
+      "resume_id": "355",
+      "category": "Web Designing",
+      "filename": "355_Web Designing.pdf",
+      "latex_length": 9578
+    },
+    {
+      "resume_id": "375",
+      "category": "Web Designing",
+      "filename": "375_Web Designing.pdf",
+      "latex_length": 9461
+    },
+    {
+      "resume_id": "372",
+      "category": "Web Designing",
+      "filename": "372_Web Designing.pdf",
+      "latex_length": 9430
+    },
+    {
+      "resume_id": "342",
+      "category": "Web Designing",
+      "filename": "342_Web Designing.pdf",
+      "latex_length": 9394
+    },
+    {
+      "resume_id": "345",
+      "category": "Web Designing",
+      "filename": "345_Web Designing.pdf",
+      "latex_length": 9002
+    },
+    {
+      "resume_id": "367",
+      "category": "Web Designing",
+      "filename": "367_Web Designing.pdf",
+      "latex_length": 8981
+    },
+    {
+      "resume_id": "360",
+      "category": "Web Designing",
+      "filename": "360_Web Designing.pdf",
+      "latex_length": 8889
+    },
+    {
+      "resume_id": "343",
+      "category": "Web Designing",
+      "filename": "343_Web Designing.pdf",
+      "latex_length": 8886
+    },
+    {
+      "resume_id": "385",
+      "category": "Web Designing",
+      "filename": "385_Web Designing.pdf",
+      "latex_length": 8805
+    },
+    {
+      "resume_id": "380",
+      "category": "Web Designing",
+      "filename": "380_Web Designing.pdf",
+      "latex_length": 8647
+    }
+  ],
+  "Machine Learning": [
+    {
+      "resume_id": "224",
+      "category": "Data Science",
+      "filename": "224_Data Science.pdf",
+      "latex_length": 11580
+    },
+    {
+      "resume_id": "204",
+      "category": "Data Science",
+      "filename": "204_Data Science.pdf",
+      "latex_length": 11413
+    },
+    {
+      "resume_id": "234",
+      "category": "Data Science",
+      "filename": "234_Data Science.pdf",
+      "latex_length": 11160
+    },
+    {
+      "resume_id": "231",
+      "category": "Data Science",
+      "filename": "231_Data Science.pdf",
+      "latex_length": 9622
+    },
+    {
+      "resume_id": "230",
+      "category": "Data Science",
+      "filename": "230_Data Science.pdf",
+      "latex_length": 8676
+    },
+    {
+      "resume_id": "786",
+      "category": "Python Developer",
+      "filename": "786_Python Developer.pdf",
+      "latex_length": 7704
+    },
+    {
+      "resume_id": "767",
+      "category": "Python Developer",
+      "filename": "767_Python Developer.pdf",
+      "latex_length": 6862
+    },
+    {
+      "resume_id": "782",
+      "category": "Python Developer",
+      "filename": "782_Python Developer.pdf",
+      "latex_length": 6812
+    },
+    {
+      "resume_id": "797",
+      "category": "Python Developer",
+      "filename": "797_Python Developer.pdf",
+      "latex_length": 6725
+    },
+    {
+      "resume_id": "792",
+      "category": "Python Developer",
+      "filename": "792_Python Developer.pdf",
+      "latex_length": 6692
+    }
+  ],
+  "Network Administrator": [
+    {
+      "resume_id": "879",
+      "category": "Network Security Engineer",
+      "filename": "879_Network Security Engineer.pdf",
+      "latex_length": 12548
+    },
+    {
+      "resume_id": "859",
+      "category": "Network Security Engineer",
+      "filename": "859_Network Security Engineer.pdf",
+      "latex_length": 12151
+    },
+    {
+      "resume_id": "869",
+      "category": "Network Security Engineer",
+      "filename": "869_Network Security Engineer.pdf",
+      "latex_length": 11605
+    },
+    {
+      "resume_id": "864",
+      "category": "Network Security Engineer",
+      "filename": "864_Network Security Engineer.pdf",
+      "latex_length": 10649
+    },
+    {
+      "resume_id": "874",
+      "category": "Network Security Engineer",
+      "filename": "874_Network Security Engineer.pdf",
+      "latex_length": 9719
+    },
+    {
+      "resume_id": "873",
+      "category": "Network Security Engineer",
+      "filename": "873_Network Security Engineer.pdf",
+      "latex_length": 9263
+    },
+    {
+      "resume_id": "858",
+      "category": "Network Security Engineer",
+      "filename": "858_Network Security Engineer.pdf",
+      "latex_length": 9228
+    },
+    {
+      "resume_id": "878",
+      "category": "Network Security Engineer",
+      "filename": "878_Network Security Engineer.pdf",
+      "latex_length": 9131
+    },
+    {
+      "resume_id": "863",
+      "category": "Network Security Engineer",
+      "filename": "863_Network Security Engineer.pdf",
+      "latex_length": 9074
+    },
+    {
+      "resume_id": "865",
+      "category": "Network Security Engineer",
+      "filename": "865_Network Security Engineer.pdf",
+      "latex_length": 8105
+    }
+  ],
+  "Software Engineer": [
+    {
+      "resume_id": "1037",
+      "category": "DotNet Developer",
+      "filename": "1037_DotNet Developer.pdf",
+      "latex_length": 12006
+    },
+    {
+      "resume_id": "667",
+      "category": "Automation Testing",
+      "filename": "667_Automation Testing.pdf",
+      "latex_length": 11538
+    },
+    {
+      "resume_id": "531",
+      "category": "Java Developer",
+      "filename": "531_Java Developer.pdf",
+      "latex_length": 8202
+    },
+    {
+      "resume_id": "545",
+      "category": "Java Developer",
+      "filename": "545_Java Developer.pdf",
+      "latex_length": 8090
+    },
+    {
+      "resume_id": "1097",
+      "category": "Testing",
+      "filename": "1097_Testing.pdf",
+      "latex_length": 8029
+    },
+    {
+      "resume_id": "1125",
+      "category": "Testing",
+      "filename": "1125_Testing.pdf",
+      "latex_length": 7925
+    },
+    {
+      "resume_id": "1074",
+      "category": "Blockchain",
+      "filename": "1074_Blockchain.pdf",
+      "latex_length": 7812
+    },
+    {
+      "resume_id": "786",
+      "category": "Python Developer",
+      "filename": "786_Python Developer.pdf",
+      "latex_length": 7704
+    },
+    {
+      "resume_id": "767",
+      "category": "Python Developer",
+      "filename": "767_Python Developer.pdf",
+      "latex_length": 6862
+    },
+    {
+      "resume_id": "1066",
+      "category": "Blockchain",
+      "filename": "1066_Blockchain.pdf",
+      "latex_length": 6346
+    }
+  ],
+  "Wordpress Developer": [
+    {
+      "resume_id": "355",
+      "category": "Web Designing",
+      "filename": "355_Web Designing.pdf",
+      "latex_length": 9578
+    },
+    {
+      "resume_id": "375",
+      "category": "Web Designing",
+      "filename": "375_Web Designing.pdf",
+      "latex_length": 9461
+    },
+    {
+      "resume_id": "372",
+      "category": "Web Designing",
+      "filename": "372_Web Designing.pdf",
+      "latex_length": 9430
+    },
+    {
+      "resume_id": "342",
+      "category": "Web Designing",
+      "filename": "342_Web Designing.pdf",
+      "latex_length": 9394
+    },
+    {
+      "resume_id": "345",
+      "category": "Web Designing",
+      "filename": "345_Web Designing.pdf",
+      "latex_length": 9002
+    },
+    {
+      "resume_id": "367",
+      "category": "Web Designing",
+      "filename": "367_Web Designing.pdf",
+      "latex_length": 8981
+    },
+    {
+      "resume_id": "360",
+      "category": "Web Designing",
+      "filename": "360_Web Designing.pdf",
+      "latex_length": 8889
+    },
+    {
+      "resume_id": "343",
+      "category": "Web Designing",
+      "filename": "343_Web Designing.pdf",
+      "latex_length": 8886
+    },
+    {
+      "resume_id": "385",
+      "category": "Web Designing",
+      "filename": "385_Web Designing.pdf",
+      "latex_length": 8805
+    },
+    {
+      "resume_id": "380",
+      "category": "Web Designing",
+      "filename": "380_Web Designing.pdf",
+      "latex_length": 8647
+    }
+  ]
+}

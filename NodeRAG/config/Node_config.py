@@ -124,6 +124,9 @@ class NodeConfig():
         # Q&A search parameters (Phase 2)
         self.qa_top_k = self.config.get('qa_top_k', 3)
         self.qa_similarity_threshold = self.config.get('qa_similarity_threshold', 0.6)
+        # Q&A content edge parameters — connect Q/Ans nodes to nearest content nodes
+        self.qa_content_edges_k = self.config.get('qa_content_edges_k', 5)
+        self.qa_content_edges_threshold = self.config.get('qa_content_edges_threshold', 0.4)
         
         # Q&A API configuration (Phase 2)
         self.qa_api = self.config.get('qa_api', {})

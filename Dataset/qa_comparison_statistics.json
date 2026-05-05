@@ -1,0 +1,34 @@
+{
+  "llm_baseline": {
+    "avg_latency": 25.301041666666666,
+    "std_latency": 12.938197645909435,
+    "avg_tokens": 3000.616666666667,
+    "queries": 240
+  },
+  "noderag_no_qa": {
+    "avg_latency": 22.5435,
+    "std_latency": 5.2046769521010825,
+    "avg_tokens": 3497.7083333333335,
+    "improvement_vs_llm_pct": 10.898925439499354,
+    "variance_reduction_pct": 59.77278215604781,
+    "token_overhead_pct": 16.566316923743454,
+    "queries": 240
+  },
+  "noderag_with_qa": {
+    "avg_latency": 15.890416666666665,
+    "std_latency": 5.011633311098223,
+    "avg_tokens": 3791.0875,
+    "improvement_vs_llm_pct": 37.19461484622669,
+    "variance_reduction_pct": 61.26482645994583,
+    "token_overhead_pct": 26.343612701833507,
+    "queries": 240
+  },
+  "qa_impact": {
+    "latency_diff_seconds": -6.653083333333337,
+    "latency_diff_pct": -29.51220233474543,
+    "std_diff_seconds": -0.1930436410028591,
+    "std_diff_pct": -3.7090417480172144,
+    "token_diff": 293.3791666666666,
+    "token_diff_pct": 8.387753886473284
+  }
+}
